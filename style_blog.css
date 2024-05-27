@@ -1,0 +1,174 @@
+.contact-img{
+  margin-bottom: -48px;
+}
+
+.bg-wave{
+  background-image: url(/assets/bg/waves.d598c38e.svg);
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+
+
+table {
+
+    border-spacing: 0 !important;
+    border-collapse: separate !important;
+    border-radius: 0.6rem !important;
+    
+    
+}
+
+table, th, td {
+  border: solid #869ab8 0.5px !important;
+  
+}
+
+
+
+.blur{
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+  
+/* top-left border-radius */
+table tr:first-child th:first-child {
+  border-top-left-radius: 0.5rem !important;
+}
+  
+/* top-right border-radius */
+table tr:first-child th:last-child {
+  border-top-right-radius: 0.5rem !important;
+}
+  
+/* bottom-left border-radius */
+table tr:last-child td:first-child {
+  border-bottom-left-radius: 0.5rem !important;
+}
+  
+/* bottom-right border-radius */
+table tr:last-child td:last-child {
+  border-bottom-right-radius: 0.5rem !important;
+}
+
+.font-weight-black{
+  font-weight: 900 !important;
+}
+
+.text-python{
+    color: #3FB422;
+}
+.text-python-hl{
+    color: #acc267;
+}
+.text-hl{
+    color: #f92672;
+}
+.text-hl-yellow{
+  color: #FBBF24;
+}
+.caption{
+    color: #869ab8!important;
+    font-size: 12px;
+}
+.highlight-block{
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px 1px rgba(0,0,0,.25);
+}
+
+.highlight-block pre,
+.highlight-block table {
+    background: #1e1e1e;
+    color: white;
+}
+pre {
+    overflow: auto;
+    -ms-word-wrap: normal;
+    word-wrap: normal;
+    overflow-wrap: normal;
+    white-space: pre;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.image-responsive{
+  max-width: 100%;
+  height: auto;
+}
+
+/* Custom CSS for navbar link hover color */
+.navbar-nav .nav-item .nav-link:hover {
+  color: #CBEAE0 !important;
+}
+
+/* Custom CSS for "Sign in" link hover color */
+.text-center.ml-auto .btn.btn-sm.btn-link.text-white:hover {
+  color: #CBEAE0 !important;
+}
+
+/* Custom CSS for "Install Sheets Add-ons" link text color on hover */
+.navbar-btn.btn.btn-pill.btn-sm.btn-outline-white.text-white.lift.ml-auto:hover {
+  color: #389E7F !important;
+}
+
+.vr{ 
+  
+  border:         none;
+  border-color: #EEEEEE !important;
+  border-left:    2px solid hsla(200, 10%, 50%,100);
+}
+
+
+.vr-active{ 
+  
+  border:         none;
+  border-color: #42BA96 !important;
+  border-left:    2px solid hsla(200, 10%, 50%,100);
+}
+
+.p-toc{
+  line-height: 1.4 !important;
+}
+
+body a:hover {
+  text-decoration: none;
+}
+
+.bg-dark-success {
+  background-color: #359479;
+}
+
+.form-control:focus {
+  border-color: #03d97e !important;
+  box-shadow: 0 0 0 0.2rem rgba(245, 255, 247, 0.25) !important;
+} 
+

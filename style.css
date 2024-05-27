@@ -1,0 +1,341 @@
+.nav-pills .nav-item .nav-link.active:hover {
+  background-color: #389E7F!important; /* Bootstrap's success color with darker shade */
+  color: #e4e4e7!important;
+}
+.nav-link.active {
+  background-color: #42BA96!important; /* Bootstrap success color */
+  color: white!important;
+}
+
+.bg-zinc-100{
+  background-color: #f4f4f5;
+}
+.rounded-pill-right {
+  border-top-right-radius: 50rem !important;
+  border-bottom-right-radius: 50rem !important;
+}
+.rounded-pill-left {
+  border-top-left-radius: 50rem !important;
+  border-bottom-left-radius: 50rem !important;
+}
+.bg-success-light {
+  background-color: #f0fdf4;
+}
+
+.pagination .page-link {
+  color: #42ba96; /* Green color */
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #42ba96; /* Background color for the active page */
+  border-color: #42ba96; /* Border color for the active page */
+}
+
+.rounded-table {
+  border-radius: 10px; /* You can adjust the value to control the amount of rounding */
+  overflow: hidden; /* This ensures that the rounded corners are visible */
+}
+
+.no-select {
+  user-select: none;
+}
+
+.table-rounded {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.border-custom-1 {
+  border: 1px solid #e2e8f0;
+}
+
+.border-custom {
+  border: 2px solid #e2e8f0;
+}
+
+.bg-yellow-50{
+  background-color: #fff7ed;
+}
+
+.bg-purple-50{
+  background-color: #faf5ff;
+}
+
+.bg-blue-50{
+  background-color: #eff6ff;
+}
+
+.bg-green-50{
+  background-color: #f0fdf4;
+}
+
+.border-700 {
+  border-bottom: 1px solid #334155;
+}
+
+.border-200 {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.custom-switch .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #28a745; /* Bootstrap success color */
+}
+
+.nav-link:hover{
+  color: #42BA96 !important;
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #42BA96!important;
+}
+  
+.custom-checkbox .custom-control-input:checked:focus ~ .custom-control-label::before {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 255, 0, 0.25)
+}
+
+.custom-checkbox .custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 0, 0, 0.25)
+}
+
+.custom-checkbox .custom-control-input:active ~ .custom-control-label::before {
+  background-color: #C8FFC8 !important; 
+}
+
+.logo {
+  filter: grayscale(100%) contrast(10%) sepia(60%) invert(100%);
+  /* Adjust the percentage in grayscale() for intensity of grayscale */
+  transition: filter 0.3s ease; /* Adding transition for smooth effect */
+  opacity: 0.6; /* Adjust the value from 0 to 1 for different levels of transparency */
+}
+
+.logo:hover {
+  filter: none; /* Remove the grayscale filter on hover */
+  opacity: 1;
+}
+
+.custom-opacity {
+  opacity: 0.5; /* Adjust the value from 0 to 1 for different opacity levels */
+}
+
+.custom-opacity-title {
+  opacity: 0.8; /* Adjust the value from 0 to 1 for different opacity levels */
+}
+
+.bottom-left-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 250px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.card-img-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Adjust as needed */
+}
+
+.custom-rounded {
+  border-radius: 1rem 1rem 1rem 1rem; /* Custom corner rounding */
+  overflow: hidden; /* Ensure the image doesn't overflow rounded corner */
+}
+
+.custom-rounded-testimonial {
+  border-radius: 1rem; /* Custom corner rounding */
+}
+
+.custom-rounded-testimonial a {
+  border-radius: 1rem 0rem 0rem 1rem; /* Custom corner rounding */
+  overflow: hidden;
+}
+
+/* Custom CSS for navbar link hover color */
+.navbar-nav .nav-item .nav-link:hover {
+  color: #CBEAE0 !important;
+}
+
+/* Custom CSS for "Sign in" link hover color */
+.text-center.ml-auto .btn.btn-sm.btn-link.text-white:hover {
+  color: #CBEAE0 !important;
+}
+
+/* Custom CSS for "Install Sheets Add-ons" link text color on hover */
+.navbar-btn.btn.btn-pill.btn-sm.btn-outline-white.text-white.lift.ml-auto:hover {
+  color: #389E7F !important;
+}
+
+/* Custom CSS for text color on medium-sized screens (tablets) */
+@media (max-width: 991.98px) {
+  .text-md-gray {
+    color: #506690 !important; /* Your desired text color for medium-sized screens */
+  }
+}
+
+.border-width-2 {
+  border-width: 2px !important;
+}
+
+.border-width-4 {
+  border-width: 4px !important;
+}
+
+/* Border changed when in mobile */
+@media screen and (max-width: 768px) {
+  .border-width-4 {
+    border-width: 2px !important;
+  }
+}
+
+.image-gradient-bg {
+  background-color:hsla(353,0%,100%,1);
+  background-image:
+  radial-gradient(at 36% 28%, hsla(153,99%,77%,0.54) 0px, transparent 50%),
+  radial-gradient(at 63% 71%, hsla(181,100%,68%,0.38) 0px, transparent 50%);
+}
+
+.image-gradient-bg-2 {
+  background-color:hsla(242,0%,100%,1);
+  background-image:
+  radial-gradient(at 33% 37%, hsla(258,99%,77%,0.54) 0px, transparent 50%),
+  radial-gradient(at 66% 65%, hsla(206,100%,66%,0.38) 0px, transparent 50%);
+}
+
+.image-gradient-bg-3 {
+  background-color:hsla(353,0%,100%,1);
+  background-image:
+  radial-gradient(at 37% 30%, hsla(157,45%,53%,0.54) 0px, transparent 50%),
+  radial-gradient(at 63% 71%, hsla(29,98%,64%,0.45) 0px, transparent 50%);
+}
+
+.gradient-shape {
+  width: 200px;
+  height: 200px;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.use-case-bg {
+  background-color: #389E7F;
+}
+
+.custom-table th,
+.custom-table td {
+  padding-left: 1.3rem !important;
+  padding-top: 1.2rem !important;
+  padding-bottom: 1rem !important;
+}
+
+.custom-table thead th {
+  vertical-align: middle !important; /* Align content vertically to the middle */
+  padding-top: 0.8rem !important; /* Adjust padding as needed */
+  padding-bottom: 0.8rem !important;
+  padding-right: 0.8rem !important;
+  font-weight: 900 !important;
+  line-height: 1.1rem !important;
+  text-wrap: nowrap !important;
+
+}
+
+.blur{
+  -webkit-filter: blur(3px);
+  filter: blur(5px);
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.form-control:focus {
+  border-color: #03d97e;
+  box-shadow: 0 0 0 0.2rem rgba(245, 255, 247, 0.25);
+} 
+
+.custom-place {
+  border: none !important;
+  position: relative; /* Ensure positioning context */
+  z-index: 1; /* Set a higher z-index to make the button appear above other content */
+  margin-bottom: -720px;
+}
+
+ul.timeline {
+  list-style-type: none;
+  position: relative;
+}
+ul.timeline:before {
+  content: ' ';
+  background: #d4d9df;
+  display: inline-block;
+  position: absolute;
+  left: 9px;
+  width: 2px;
+  height: 100%;
+  z-index: 400;
+}
+ul.timeline > li {
+  margin: 16px 0;
+  padding-left: 6px;
+}
+ul.timeline > li:before {
+  content: ' ';
+  background: white;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid gray;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  z-index: 400;
+}
+ul.timeline > li.hlight:before {
+  content: ' ';
+  background: white;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #02BD94;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  z-index: 400;
+}
+
+/* Remove the timeline line for the sixth step */
+ul.timeline > li:nth-child(5):after {
+  content: ' ';
+  background: #ffffff;
+  display: inline-block;
+  margin-top: 60px;
+  position: absolute;
+  left: 9px;
+  width: 10px;
+  height: 15%;
+  z-index: 400;
+}
+
+.nav-pills .nav-item .nav-link.active-success {
+  background-color: #42BA96; /* Bootstrap's success color */
+  color: #fff; /* Text color for active link */
+  border-radius: 50px; /* Rounded corners */
+}
+
+.nav-pills .nav-item .nav-link.active-success:hover {
+  background-color: #389E7F; /* Bootstrap's success color with darker shade */
+  color: #fff !important;
+}
+
+.custom-link:hover{
+  color: #42BA96 !important;
+}
+
+.dropdown-item:hover{
+  color: #42BA96 !important;
+}

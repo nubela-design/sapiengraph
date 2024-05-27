@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Libs CSS -->
+  <link rel="stylesheet" href="./assets/fonts/Feather/feather.css">
+  <link rel="stylesheet" href="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="./assets/libs/aos/dist/aos.css">
+  <link rel="stylesheet" href="./assets/libs/choices.js/public/assets/styles/choices.min.css">
+  <link rel="stylesheet" href="./assets/libs/flickity-fade/flickity-fade.css">
+  <link rel="stylesheet" href="./assets/libs/flickity/dist/flickity.min.css">
+  <link rel="stylesheet" href="./assets/libs/highlightjs/styles/vs2015.css">
+  <link rel="stylesheet" href="./assets/libs/jarallax/dist/jarallax.css">
+  <link rel="stylesheet" href="./assets/libs/quill/dist/quill.core.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/neuicons@1.9.0/css/neu.min.css">
+
+  <!-- Map -->
+  <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="./assets/css/theme.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Customer results preview</title>
+
+</head>
+
+<body>
+
+  <!-- NAVBAR
+    ================================================== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container">
+
+      <!-- Brand -->
+      <a class="navbar-brand" href="./index.html">
+        <img src="./assets/img/Sapiengraph logo.svg" class="navbar-brand-img" alt="Sapiengraph logo">
+      </a>
+
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fe fe-x"></i>
+        </button>
+
+        <!-- Navigation -->
+        <ul class="navbar-nav ml-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              Home
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="pricing.html">
+              Pricing
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#!">
+              Documentation
+            </a>
+          </li>
+
+        </ul>
+
+        <!-- Button -->
+
+        <div class="text-center ml-auto">
+          <!-- Button -->
+          <a class="btn btn-sm btn-link font-weight-bold text-white text-md-gray" href="signin-illustration.html">
+            Sign in
+          </a>
+
+          <a class="navbar-btn btn btn-pill btn-sm btn-white text-success text-md-gray lift ml-auto shadow-light-lg"
+            href="#!" target="_blank">
+            Set up new account
+          </a>
+
+        </div>
+
+
+
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- FIRST FOLD
+    ================================================== -->
+  <section class="bg-light pt-6 pt-lg-10 pt-xl-11">
+  
+    <div class="container">
+  
+      <div class="row align-items-center">
+  
+        <div class="col-12">
+  
+          <div class="card card-body shadow-light-lg custom-rounded">
+  
+            <div class="row align-items-center justify-content-center">
+  
+              <div class="col-12 col-md-4 col-lg-6">
+                <p class="font-weight-bold lead mb-md-0">
+                  3120 customer results from <span class="text-success">Google</span>
+                </p>
+              </div>
+  
+              <div class="col-12 col-md-8 col-lg-6 text-md-right">
+                <button class="btn btn-xs btn-outline-success mr-2 mb-2 mb-md-0">
+                  Export as xlsx
+                </button>
+                <a class="btn btn-xs btn-success" href="#!" target="_blank">
+                  Open in Google Spreadsheet <i class="fe fe-arrow-right"></i>
+                </a>
+              </div>
+  
+              <div class="col-12 mb-6">
+              
+                <!-- Centered Unlock Button -->
+                <div class="text-center">
+                  <div class=" custom-place btn btn-success btn-pill shadow-lift lift font-weight-bold"><i
+                      class="mr-1 neu neu-so-lock-square"></i>Unlock</div>
+                </div>
+              
+                <div class="table-responsive mb-4">
+                  <table class="table rounded-table custom-table">
+                    <thead style="background-color: #F9FAFB;">
+                      <tr class="font-weight-bold">
+                        <th scope="col" class="small">Company name</th>
+                        <th scope="col" class="small">Twitter ID</th>
+                        <th scope="col" class="small">LinkedIn ID</th>
+                        <th scope="col" class="small">Total employees</th>
+                        <th scope="col" class="small">Country</th>
+                        <th scope="col" class="small">General email</th>
+              
+                      </tr>
+                    </thead>
+                    <tbody class="">
+                      <tr>
+                        <th class="text-nowrap"><img class="img img-fluid mb-1 mr-4" width="20" height="auto"
+                            src="assets/img/logo/IBM logo.svg" alt="company logo"> IBM</th>
+                        <td class="blur">ibm</td>
+                        <td class="blur">ibm</td>
+                        <td class="blur">288,300</td>
+                        <td class="blur">USA</td>
+                        <td class="blur">email@example.com</td>
+              
+                      </tr>
+                      <tr class="blur">
+                        <th class="text-nowrap"><img class="img img-fluid mb-1 mr-4" width="20" height="auto"
+                            src="assets/img/logo/Apple 14.svg" alt="company logo"> Apple</th>
+                        <td>apple</td>
+                        <td>apple</td>
+                        <td>161,000</td>
+                        <td>USA</td>
+                        <td>email@example.com</td>
+              
+                      </tr>
+                      <tr class="blur">
+                        <th class="text-nowrap"><img class="img img-fluid mb-1 mr-4" width="20" height="auto"
+                            src="assets/img/logo/netflix.jpeg" alt="company logo"> Netflix</th>
+                        <td>netflix</td>
+                        <td>netflix</td>
+                        <td>12,800</td>
+                        <td>USA</td>
+                        <td>email@example.com</td>
+              
+                      </tr>
+                      <tr class="blur">
+                        <th class="text-nowrap"><img class="img img-fluid mb-1 mr-4" width="20" height="auto"
+                            src="assets/img/logo/Amazon logo.jpeg" alt="company logo"> Amazon</th>
+                        <td>amazon</td>
+                        <td>amazon</td>
+                        <td>1,541,000</td>
+                        <td>USA</td>
+                        <td>email@example.com</td>
+              
+                      </tr>
+                      <tr class="blur">
+                        <th class="text-nowrap"><img class="img img-fluid mb-1 mr-4" width="20" height="auto"
+                            src="assets/img/logo/Microsoft.svg" alt="company logo"> Microsoft</th>
+                        <td>microsoft</td>
+                        <td>microsoft</td>
+                        <td>221,000</td>
+                        <td>USA</td>
+                        <td>email@example.com</td>
+              
+                      </tr>
+                      <tr class="blur">
+                        <th class="text-nowrap"><img class="img img-fluid mb-1 mr-4" width="20" height="auto"
+                            src="assets/img/logo/IBM logo.svg" alt="company logo"> IBM</th>
+                        <td>ibm</td>
+                        <td>ibm</td>
+                        <td>288,300</td>
+                        <td>USA</td>
+                        <td>email@example.com</td>
+              
+                      </tr>
+                      <tr class="blur">
+                        <th class="text-nowrap"><img class="img img-fluid mb-1 mr-4" width="20" height="auto"
+                            src="assets/img/logo/Apple 14.svg" alt="company logo"> Apple</th>
+                        <td>apple</td>
+                        <td>apple</td>
+                        <td>161,000</td>
+                        <td>USA</td>
+                        <td>email@example.com</td>
+              
+                      </tr>
+                      <tr class="blur">
+                        <th class="text-nowrap"><img class="img img-fluid mb-1 mr-4" width="20" height="auto"
+                            src="assets/img/logo/netflix.jpeg" alt="company logo"> Netflix</th>
+                        <td>netflix</td>
+                        <td>netflix</td>
+                        <td>12,800</td>
+                        <td>USA</td>
+                        <td>email@example.com</td>
+              
+                      </tr>
+                      <tr class="blur">
+                        <th class="text-nowrap"><img class="img img-fluid mb-1 mr-4" width="20" height="auto"
+                            src="assets/img/logo/Amazon logo.jpeg" alt="company logo"> Amazon</th>
+                        <td>amazon</td>
+                        <td>amazon</td>
+                        <td>1,541,000</td>
+                        <td>USA</td>
+                        <td>email@example.com</td>
+              
+                      </tr>
+                      <tr class="blur">
+                        <th class="text-nowrap"><img class="img img-fluid mb-1 mr-4" width="20" height="auto"
+                            src="assets/img/logo/Microsoft.svg" alt="company logo"> Microsoft</th>
+                        <td>microsoft</td>
+                        <td>microsoft</td>
+                        <td>221,000</td>
+                        <td>USA</td>
+                        <td>email@example.com</td>
+              
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              
+                <nav aria-label="pagination">
+                  <ul class="pagination pagination-sm mb-0">
+                    <li class="page-item disabled">
+                      <a class="page-link" href="#" tabindex="-1">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item active">
+                      <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">Next</a>
+                    </li>
+                  </ul>
+                </nav>
+              
+              </div>
+  
+            </div>
+  
+          </div>
+  
+        </div> <!-- / .row -->
+  
+      </div> <!-- / .container -->
+    </div>
+  
+  
+  </section>
+
+ <!-- SECOND FOLD
+    ================================================== -->
+  <section class="bg-light  pt-lg-4 pt-xl-4 pb-8 pb-md-11">
+
+    <div class="container">
+
+      <div class="row">
+      
+        <!-- Selected company-->
+        <div class="col-12 col-md-12 col-lg-8">
+          <div class="card card-body shadow-light-lg mt-7 pb-8 custom-rounded">
+      
+            <div class="row align-items-center justify-content-center">
+      
+              <div class="col-12 d-md-flex align-items-center mb-3 mb-md-5">
+      
+      
+                <img class="img img-fluid border rounded py-4 px-4" width="100" height="auto" alt="company logo"
+                  src="assets/img/logo/Google-logoicon.svg">
+      
+                <div class="ml-md-4 ml-lg-6 mt-4 mt-md-0">
+      
+                  <h1 class="display-4 font-weight-bold mb-3">
+                    Google
+                  </h1>
+      
+                  <a class="small px-4 py-2 bg-success-light text-success border border-success rounded-pill"
+                    href="https://google.com" target="_blank">
+                    https://google.com
+                  </a>
+                </div>
+      
+              </div>
+      
+              <div class="col-12">
+      
+                <p class="lead mb-0 text-muted mt-6 mt-md-5">
+                  A problem isn't truly solved until it's solved for all. Googlers build products that help create
+                  opportunities for everyone, whether down the street or across the globe. Bring your insight,
+                  imagination and a healthy disregard for the impossible. Bring everything that makes you unique.
+                  Together, we can build for everyone.<br>
+                  <br>
+                  Check out our career opportunities at goo.gle/3DLEokh
+                </p>
+      
+              </div>
+      
+            </div>
+      
+          </div>
+        </div>
+
+        <!-- Similar companies-->
+        <div class="col-12 col-md-12 col-lg-4">
+          <div class="card card-body shadow-light-lg mt-7 custom-rounded">
+      
+            <h2 class=" font-weight-bold mb-7">
+              Similar companies
+            </h2>
+      
+            <div class="row align-items-center justify-content-center">
+      
+              <div class="col-12 pb-5 mb-5 border-bottom">
+      
+                <div class="d-flex align-items-center">
+      
+                  <img class="img img-fluid border rounded py-4 px-4" width="48" height="auto" alt="company logo"
+                    src="assets/img/logo/Apple 14.svg">
+      
+                  <p class="lead font-weight-bold ml-4 mt-4">
+                    Apple
+                  </p>
+      
+                </div>
+      
+                <p class="small mb-0 text-muted mt-2 mb-3">
+                  We’re a diverse collective of thinkers and doers, continually reimagin...
+                </p>
+      
+                <a class="small text-success" href="#!">Show more</a>
+      
+              </div>
+      
+              <div class="col-12">
+      
+                <div class="d-flex align-items-center">
+      
+                  <img class="img img-fluid border rounded py-4 px-4" width="48" height="auto" alt="company logo"
+                    src="assets/img/logo/Amazon logo.jpeg">
+      
+                  <p class="lead font-weight-bold ml-4 mt-4">
+                    Amazon
+                  </p>
+      
+                </div>
+      
+                <p class="small mb-0 text-muted mt-2 mb-3">
+                  Amazon is guided by four principles: customer obsession rather than...
+                </p>
+      
+                <a class="small text-success" href="#!">Show more</a>
+      
+              </div>
+      
+            </div>
+      
+          </div>
+        </div>
+      
+      
+      </div> <!-- / .row -->
+
+      </div> <!-- / .container -->
+
+  </section>  
+
+
+  <!-- FOOTER 
+  ================================================== -->
+  <footer class="py-8 py-md-12 bg-black">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4 col-lg-3">
+      
+          <!-- Brand -->
+          <img src="./assets/img/Sapiengraph logo footer.svg" alt="proxycurl logo" class="footer-brand img-fluid mb-2">
+
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+      
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">
+            Sapiengraph
+          </h6>
+
+          <!-- List -->
+          <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
+            <li class="mb-3">
+              <a href="index.html" class="text-reset">
+                Home
+              </a> 
+            </li>
+            <li class="mb-3">
+              <a href="#!" class="text-reset">
+                Blog
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="#pricing" class="text-reset">
+                Pricing
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="terms-of-use.html" class="text-reset">
+                Terms of use
+              </a>
+            </li>
+          </ul>
+
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+      
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">
+            API
+          </h6>
+
+          <!-- List -->
+          <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
+            <li class="mb-3">
+              <a href="#!" class="text-reset">
+                Documentation
+              </a>
+            </li>
+          </ul>
+
+        </div>
+        <div class="col-6 col-md-4 offset-md-4 col-lg-2 offset-lg-0">
+      
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">
+            Company
+          </h6>
+
+          <!-- List -->
+          <ul class="list-unstyled text-muted mb-0">
+            <li class="mb-3">
+              <a href="https://nubela.co" class="text-reset">
+                Nubela Pte Ltd
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="team.html" class="text-reset">
+                Our Team
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="https://nubela.co" class="text-reset">
+                Other Projects by Nubela
+              </a>
+            </li>
+          </ul>
+
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+      
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">
+            Help
+          </h6>
+
+          <!-- List -->
+          <ul class="list-unstyled text-muted mb-0">
+            <li class="mb-3">
+              <a href="mailto:hello@proxycurl.com" class="text-reset">
+                Email us
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </div> <!-- / .row -->
+      <br>
+
+      <hr class="border-dark">
+      <br>
+
+      <div class="text-center">
+        <p class="text-muted caption">Nubela Pte Ltd. All rights reserved.</p>
+      </div>
+
+    </div> <!-- / .container -->
+  </footer>
+
+  <!-- JAVASCRIPT
+    ================================================== -->
+  <!-- Libs JS -->
+  <script src="./assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="./assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+  <script src="./assets/libs/aos/dist/aos.js"></script>
+  <script src="./assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+  <script src="./assets/libs/countup.js/dist/countUp.min.js"></script>
+  <script src="./assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+  <script src="./assets/libs/flickity/dist/flickity.pkgd.min.js"></script>
+  <script src="./assets/libs/flickity-fade/flickity-fade.js"></script>
+  <script src="./assets/libs/highlightjs/highlight.pack.min.js"></script>
+  <script src="./assets/libs/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="./assets/libs/isotope-layout/dist/isotope.pkgd.min.js"></script>
+  <script src="./assets/libs/jarallax/dist/jarallax.min.js"></script>
+  <script src="./assets/libs/jarallax/dist/jarallax-video.min.js"></script>
+  <script src="./assets/libs/jarallax/dist/jarallax-element.min.js"></script>
+  <script src="./assets/libs/quill/dist/quill.min.js"></script>
+  <script src="./assets/libs/smooth-scroll/dist/smooth-scroll.min.js"></script>
+  <script src="./assets/libs/typed.js/lib/typed.min.js"></script>
+
+  <!-- Map -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+  <!-- Theme JS -->
+  <script src="./assets/js/theme.min.js"></script>
+  <script src="script.js"></script>
+  <script src="script-autosearch.js"></script>
+
+</body>
+
+</html>

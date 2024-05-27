@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Libs CSS -->
+  <link rel="stylesheet" href="./assets/fonts/Feather/feather.css">
+  <link rel="stylesheet" href="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="./assets/libs/aos/dist/aos.css">
+  <link rel="stylesheet" href="./assets/libs/choices.js/public/assets/styles/choices.min.css">
+  <link rel="stylesheet" href="./assets/libs/flickity-fade/flickity-fade.css">
+  <link rel="stylesheet" href="./assets/libs/flickity/dist/flickity.min.css">
+  <link rel="stylesheet" href="./assets/libs/highlightjs/styles/vs2015.css">
+  <link rel="stylesheet" href="./assets/libs/jarallax/dist/jarallax.css">
+  <link rel="stylesheet" href="./assets/libs/quill/dist/quill.core.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/neuicons@1.9.0/css/neu.min.css">
+
+  <!-- Map -->
+  <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="./assets/css/theme.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Customer results</title>
+
+</head>
+
+<body>
+
+  <!-- NAVBAR
+    ================================================== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container">
+
+      <!-- Brand -->
+      <a class="navbar-brand" href="./index.html">
+        <img src="./assets/img/Sapiengraph logo.svg" class="navbar-brand-img" alt="Sapiengraph logo">
+      </a>
+
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fe fe-x"></i>
+        </button>
+
+        <!-- Navigation -->
+        <ul class="navbar-nav ml-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              Home
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="pricing.html">
+              Pricing
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#!">
+              Documentation
+            </a>
+          </li>
+
+        </ul>
+
+        <!-- Button -->
+
+        <div class="text-center ml-auto">
+          <!-- Button -->
+          <a class="btn btn-sm btn-link font-weight-bold text-white text-md-gray" href="signin-illustration.html">
+            Sign in
+          </a>
+
+          <a class="navbar-btn btn btn-pill btn-sm btn-white text-success text-md-gray lift ml-auto shadow-light-lg"
+            href="#!" target="_blank">
+            Set up new account
+          </a>
+
+        </div>
+
+
+
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- FIRST FOLD
+    ================================================== -->
+  <section class="bg-light pt-6 pt-lg-10 pt-xl-11">
+  
+    <div class="container">
+  
+      <div class="row align-items-center">
+  
+        <div class="col-12">
+  
+          <div class="card card-body shadow-light-lg custom-rounded">
+  
+            <div class="row align-items-center justify-content-center">
+  
+              <div class="col-12 col-md-6">
+                <p class="font-weight-bold lead mb-md-0">
+                  3120 customer results from <span class="text-success">Google</span>
+                </p>
+              </div>
+  
+              <div class="col-12 col-md-6 text-md-right">
+                <button class="btn btn-xs btn-outline-success mr-2 mb-2 mb-md-0">
+                  Export as xlsx
+                </button>
+                <a class="btn btn-xs btn-success" href="#!" target="_blank">
+                  Open in Google Spreadsheet <i class="fe fe-arrow-right"></i>
+                </a>
+              </div>
+  
+              <div class="col-12 mt-6">
+  
+                <div class="table-responsive mb-4">
+                  <table class="table rounded-table custom-table" >
+                    <thead style="background-color: #F9FAFB;">
+                      <tr class="font-weight-bold">
+                        <th scope="col" class="small">Company name</th>
+                        <th scope="col" class="small">Twitter ID</th>
+                        <th scope="col" class="small">LinkedIn ID</th>
+                        <th scope="col" class="small">Total employees</th>
+                        <th scope="col" class="small">Country</th>
+                        <th scope="col" class="small">General email</th>
+
+                      </tr>
+                    </thead>
+                    <tbody class="">
+                      <tr>
+                        <th class="text-nowrap"><img class="img img-fluid mb-1 mr-4" width="20" height="auto" src="assets/img/logo/IBM logo.svg"
+                          alt="company logo"> IBM</th>
+                        <td>ibm</td>
+                        <td>ibm</td>
+                        <td>288,300</td>
+                        <td>USA</td>
+                        <td>email@example.com</td>
+
+                      </tr>
+                      <tr>
+                        <th class="text-nowrap"><img class="img img-fluid mb-1 mr-4" width="20" height="auto" src="assets/img/logo/Apple 14.svg"
+                          alt="company logo"> Apple</th>
+                        <td>apple</td>
+                        <td>apple</td>
+                        <td>161,000</td>
+                        <td>USA</td>
+                        <td>email@example.com</td>
+
+                      </tr>
+                      <tr>
+                        <th class="text-nowrap"><img class="img img-fluid mb-1 mr-4" width="20" height="auto" src="assets/img/logo/netflix.jpeg"
+                          alt="company logo"> Netflix</th>
+                        <td>netflix</td>
+                        <td>netflix</td>
+                        <td>12,800</td>
+                        <td>USA</td>
+                        <td>email@example.com</td>
+
+                      </tr>
+                      <tr>
+                        <th class="text-nowrap"><img class="img img-fluid mb-1 mr-4" width="20" height="auto" src="assets/img/logo/Amazon logo.jpeg"
+                          alt="company logo"> Amazon</th>
+                        <td>amazon</td>
+                        <td>amazon</td>
+                        <td>1,541,000</td>
+                        <td>USA</td>
+                        <td>email@example.com</td>
+
+                      </tr>
+                      <tr>
+                        <th class="text-nowrap"><img class="img img-fluid mb-1 mr-4" width="20" height="auto" src="assets/img/logo/Microsoft.svg"
+                          alt="company logo"> Microsoft</th>
+                        <td>microsoft</td>
+                        <td>microsoft</td>
+                        <td>221,000</td>
+                        <td>USA</td>
+                        <td>email@example.com</td>
+
+                      </tr>
+                      <tr>
+                        <th class="text-nowrap"><img class="img img-fluid mb-1 mr-4" width="20" height="auto" src="assets/img/logo/IBM logo.svg"
+                          alt="company logo"> IBM</th>
+                        <td>ibm</td>
+                        <td>ibm</td>
+                        <td>288,300</td>
+                        <td>USA</td>
+                        <td>email@example.com</td>
+
+                      </tr>
+                      <tr>
+                        <th class="text-nowrap"><img class="img img-fluid mb-1 mr-4" width="20" height="auto" src="assets/img/logo/Apple 14.svg"
+                          alt="company logo"> Apple</th>
+                        <td>apple</td>
+                        <td>apple</td>
+                        <td>161,000</td>
+                        <td>USA</td>
+                        <td>email@example.com</td>
+
+                      </tr>
+                      <tr>
+                        <th class="text-nowrap"><img class="img img-fluid mb-1 mr-4" width="20" height="auto" src="assets/img/logo/netflix.jpeg"
+                          alt="company logo"> Netflix</th>
+                        <td>netflix</td>
+                        <td>netflix</td>
+                        <td>12,800</td>
+                        <td>USA</td>
+                        <td>email@example.com</td>
+
+                      </tr>
+                      <tr>
+                        <th class="text-nowrap"><img class="img img-fluid mb-1 mr-4" width="20" height="auto" src="assets/img/logo/Amazon logo.jpeg"
+                          alt="company logo"> Amazon</th>
+                        <td>amazon</td>
+                        <td>amazon</td>
+                        <td>1,541,000</td>
+                        <td>USA</td>
+                        <td>email@example.com</td>
+
+                      </tr>
+                      <tr>
+                        <th class="text-nowrap"><img class="img img-fluid mb-1 mr-4" width="20" height="auto" src="assets/img/logo/Microsoft.svg"
+                          alt="company logo"> Microsoft</th>
+                        <td>microsoft</td>
+                        <td>microsoft</td>
+                        <td>221,000</td>
+                        <td>USA</td>
+                        <td>email@example.com</td>
+
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+  
+                <nav aria-label="pagination">
+                  <ul class="pagination pagination-sm mb-0">
+                    <li class="page-item disabled">
+                      <a class="page-link" href="#" tabindex="-1">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item active">
+                      <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">Next</a>
+                    </li>
+                  </ul>
+                </nav>
+  
+              </div>
+  
+            </div>
+  
+          </div>
+  
+        </div> <!-- / .row -->
+  
+      </div> <!-- / .container -->
+    </div>
+  
+  
+  </section>
+
+ <!-- SECOND FOLD
+    ================================================== -->
+  <section class="bg-light  pt-lg-4 pt-xl-4 pb-0 pb-md-11">
+
+    <div class="container">
+
+      <div class="row">
+      
+        <!-- Selected company-->
+        <div class="col-12 col-md-8">
+          <div class="card card-body shadow-light-lg mt-7 pb-8 custom-rounded">
+      
+            <div class="row align-items-center justify-content-center">
+      
+              <div class="col-12 d-md-flex">
+      
+      
+                <img class="img img-fluid border rounded py-4 px-4 mb-5" width="100" height="auto" alt="company logo"
+                  src="assets/img/logo/Google-logoicon.svg">
+      
+                <div class="ml-md-6">
+      
+                  <h1 class="display-4 font-weight-bold mb-3">
+                    Google
+                  </h1>
+      
+                  <a class="small px-4 py-2 bg-success-light text-success border border-success rounded-pill"
+                    href="https://google.com" target="_blank">
+                    https://google.com
+                  </a>
+                </div>
+      
+              </div>
+      
+              <div class="col-12">
+      
+                <p class="lead mb-0 text-muted mt-6 mt-md-5">
+                  A problem isn't truly solved until it's solved for all. Googlers build products that help create
+                  opportunities for everyone, whether down the street or across the globe. Bring your insight,
+                  imagination and a healthy disregard for the impossible. Bring everything that makes you unique.
+                  Together, we can build for everyone.<br>
+                  <br>
+                  Check out our career opportunities at goo.gle/3DLEokh
+                </p>
+      
+              </div>
+      
+            </div>
+      
+          </div>
+        </div>
+
+        <!-- Similar companies-->
+        <div class="col-12 col-md-4 mb-md-n11 mb-lg-n10 mb-xl-n3">
+          <div class="card card-body shadow-light-lg mt-7 custom-rounded">
+      
+            <h2 class=" font-weight-bold mb-7">
+              Similar companies
+            </h2>
+      
+            <div class="row align-items-center justify-content-center">
+      
+              <div class="col-12 pb-5 mb-5 border-bottom">
+      
+                <div class="d-flex align-items-center">
+      
+                  <img class="img img-fluid border rounded py-4 px-4" width="48" height="auto" alt="company logo"
+                    src="assets/img/logo/Apple 14.svg">
+      
+                  <p class="lead font-weight-bold ml-4 mt-4">
+                    Apple
+                  </p>
+      
+                </div>
+      
+                <p class="small mb-0 text-muted mt-2 mb-3">
+                  We’re a diverse collective of thinkers and doers, continually reimagin...
+                </p>
+      
+                <a class="small text-success" href="#!">Show more</a>
+      
+              </div>
+      
+              <div class="col-12 pb-5 mb-5 border-bottom">
+      
+                <div class="d-flex align-items-center">
+      
+                  <img class="img img-fluid border rounded py-4 px-4" width="48" height="auto" alt="company logo"
+                    src="assets/img/logo/Amazon logo.jpeg">
+      
+                  <p class="lead font-weight-bold ml-4 mt-4">
+                    Amazon
+                  </p>
+      
+                </div>
+      
+                <p class="small mb-0 text-muted mt-2 mb-3">
+                  Amazon is guided by four principles: customer obsession rather than...
+                </p>
+      
+                <a class="small text-success" href="#!">Show more</a>
+      
+              </div>
+      
+              <div class="col-12">
+      
+                <div class="d-flex align-items-center">
+      
+                  <img class="img img-fluid border rounded py-4 px-4" width="48" height="auto" alt="company logo"
+                    src="assets/img/logo/Microsoft.svg">
+      
+                  <p class="lead font-weight-bold ml-4 mt-4">
+                    Microsoft
+                  </p>
+      
+                </div>
+      
+                <p class="small mb-0 text-muted mt-2 mb-3">
+                  Every company has a mission. What's ours? To empower every...
+                </p>
+      
+                <a class="small text-success" href="#!">Show more</a>
+      
+              </div>
+      
+            </div>
+      
+          </div>
+        </div>
+          
+      
+          <!-- Search-->
+        <div class="col-12 col-md-8 mt-md-n15 mb-8 mb-md-4">  
+          <div class="card card-body shadow-light-lg mt-7 pb-8 custom-rounded">
+      
+            <div class="row align-items-center justify-content-center">
+      
+              <div class="col-12">
+                <div class="text-center">
+      
+                  <svg class="mb-4 mt-4" xmlns="http://www.w3.org/2000/svg" width="46" height="auto" viewBox="0 0 128 128">
+                    <path
+                      d="m105.2445,0H22.7557C10.188,0,0,10.1881,0,22.7556v82.4888c0,12.5675,10.188,22.7555,22.7557,22.7555h82.4888c12.5675,0,22.7555-10.188,22.7555-22.7555V22.7556C128,10.1881,117.8119,0,105.2445,0Zm-1.2915,52.7263l-.0611-.0503c-2.3908-2.0022-4.8608-3.4288-7.5017-4.3553-2.6408-.9247-5.4562-1.3492-8.545-1.3492h-.0378v-6.7155c-6.9871,0-40.6509.018-40.6796-.009-.9192-.7897-1.9806-1.4211-3.141-1.8493-1.1153-.4119-2.3242-.6386-3.5853-.6386-2.8532,0-5.4382,1.1567-7.3074,3.0258s-3.0258,4.4542-3.0258,7.3074,1.1567,5.4382,3.0258,7.3074c1.8691,1.869,4.4542,3.0258,7.3074,3.0258,1.2323,0,2.4142-.2158,3.5079-.6099,1.1334-.4083,2.1804-1.0146,3.0906-1.7719.0288-.0234,37.5351-.009,41.0628-.009,4.2653,0,7.9802,1.5453,11.1445,4.6341,1.5795,1.5435,2.7686,3.2453,3.5584,5.1018s1.1873,3.8714,1.1873,6.0408v15.9603c0,2.2055-.3958,4.2473-1.1873,6.1218-.7897,1.8763-1.9771,3.5889-3.5584,5.1306-1.5795,1.5435-3.2993,2.702-5.1576,3.4755-1.8583.7718-3.8533,1.1604-5.9851,1.1604h-47.6631l-.0035.0054c-4.3391,0-8.054-1.5453-11.1445-4.6341-3.0888-3.0888-4.6341-6.8414-4.6341-11.2543v-12.3623l.0612.0504c2.3134,1.9284,4.751,3.3191,7.3541,4.2275,2.6012.9067,5.377,1.3331,8.3633,1.3331h.0378v6.7155c7.0464,0,40.7012-.0234,40.7426.009.9139.7718,1.9698,1.3906,3.1176,1.8097,1.1045.4048,2.3009.6242,3.5475.6242,2.8532,0,5.4382-1.1567,7.3074-3.0259,1.8691-1.869,3.0259-4.4542,3.0259-7.3073s-1.1567-5.4382-3.0259-7.3074-4.4542-3.0258-7.3074-3.0258c-1.2466,0-2.4411.2213-3.5457.6242-1.1478.4191-2.2037,1.038-3.1176,1.8097-.0396.0305-37.2616.009-40.7786.009-4.3391,0-8.0539-1.5453-11.1445-4.6341-1.5435-1.5435-2.702-3.2453-3.4756-5.1036-.7718-1.8582-1.1603-3.8713-1.1603-6.0408v-15.9602c0-4.4129,1.5453-8.1655,4.6341-11.2543,1.5435-1.5435,3.2453-2.702,5.1036-3.4756,1.8583-.7718,3.8714-1.1603,6.0408-1.1603h47.6631c4.2653,0,7.9802,1.5453,11.1445,4.6341,1.5795,1.5435,2.7668,3.2543,3.5584,5.1306.7897,1.8763,1.1873,3.9181,1.1873,6.1236v12.5063Zm-58.8652-4.6287c0,1.2935-.5253,2.4682-1.3744,3.3155-.8473.8473-2.022,1.3744-3.3154,1.3744s-2.4682-.5253-3.3155-1.3744c-.8473-.8473-1.3744-2.022-1.3744-3.3155s.5253-2.4681,1.3744-3.3154c.8473-.8491,2.022-1.3744,3.3155-1.3744s2.4681.5253,3.3154,1.3744c.8491.8473,1.3744,2.022,1.3744,3.3154Zm38.064,31.7551c0-1.2935.5253-2.4682,1.3744-3.3155.8473-.8473,2.022-1.3744,3.3155-1.3744s2.4681.5253,3.3154,1.3744c.8473.8473,1.3744,2.022,1.3744,3.3155s-.5253,2.4681-1.3744,3.3154c-.8473.8473-2.022,1.3744-3.3154,1.3744s-2.4682-.5253-3.3155-1.3744c-.8473-.8473-1.3744-2.022-1.3744-3.3154Z"
+                      fill="#00bd94" />
+                  </svg>
+      
+                  <h1 class="h2 font-weight-bold mb-4 mb-md-6">
+                    Search another company
+                  </h1>
+      
+                </div>
+                <div class="input-group border-custom-1 rounded-pill">
+                  <div class="input-group-prepend rounded-pill-left">
+                    <div class="input-group-text rounded-pill-left">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <g fill="currentColor">
+                          <path
+                            d="M16.69 15.629A8.7 8.7 0 0 0 18.75 10c0-4.825-3.925-8.75-8.75-8.75S1.25 5.175 1.25 10s3.925 8.75 8.75 8.75a8.7 8.7 0 0 0 5.629-2.06l5.84 5.84a.747.747 0 0 0 1.061 0 .75.75 0 0 0 0-1.06zM10 17.25c-3.998 0-7.25-3.252-7.25-7.25S6.002 2.75 10 2.75s7.25 3.252 7.25 7.25-3.252 7.25-7.25 7.25">
+                          </path>
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                  <input id="searchInput" type="text" class="form-control rounded-pill-right modal-title"
+                    placeholder="Search company name or domain" autocomplete="off">
+                </div>
+      
+                <div id="searchResultsContainer" class="card card-body border-custom-1 mt-4 mb-4"
+                  style="max-height: 320px; overflow-y: auto; display: none;">
+                  <ul id="searchResults"></ul>
+                </div>
+      
+                <div id="dataCrawled">
+                  <div class="text-center mt-4">
+                    <span class="badge badge-lg badge-secondary text-gray-700 bg-zinc-100 mb-2 mb-md-0">
+                      <span class="text-monospace font-weight-normal">3,290,100</span> companies crawled
+                    </span>
+                    <span class="badge badge-lg badge-secondary text-gray-700 bg-zinc-100 ml-md-2">
+                      <span class="text-monospace font-weight-normal">872,547</span> companies inferred
+                    </span>
+                  </div>
+      
+                </div>
+              </div>
+      
+            </div>
+      
+          </div>
+      
+        </div>
+      
+
+      
+      </div> <!-- / .row -->
+
+      </div> <!-- / .container -->
+
+  </section>  
+
+
+  <!-- FOOTER 
+  ================================================== -->
+  <footer class="py-8 py-md-12 bg-black">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4 col-lg-3">
+      
+          <!-- Brand -->
+          <img src="./assets/img/Sapiengraph logo footer.svg" alt="proxycurl logo" class="footer-brand img-fluid mb-2">
+
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+      
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">
+            Sapiengraph
+          </h6>
+
+          <!-- List -->
+          <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
+            <li class="mb-3">
+              <a href="index.html" class="text-reset">
+                Home
+              </a> 
+            </li>
+            <li class="mb-3">
+              <a href="#!" class="text-reset">
+                Blog
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="#pricing" class="text-reset">
+                Pricing
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="terms-of-use.html" class="text-reset">
+                Terms of use
+              </a>
+            </li>
+          </ul>
+
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+      
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">
+            API
+          </h6>
+
+          <!-- List -->
+          <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
+            <li class="mb-3">
+              <a href="#!" class="text-reset">
+                Documentation
+              </a>
+            </li>
+          </ul>
+
+        </div>
+        <div class="col-6 col-md-4 offset-md-4 col-lg-2 offset-lg-0">
+      
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">
+            Company
+          </h6>
+
+          <!-- List -->
+          <ul class="list-unstyled text-muted mb-0">
+            <li class="mb-3">
+              <a href="https://nubela.co" class="text-reset">
+                Nubela Pte Ltd
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="team.html" class="text-reset">
+                Our Team
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="https://nubela.co" class="text-reset">
+                Other Projects by Nubela
+              </a>
+            </li>
+          </ul>
+
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+      
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">
+            Help
+          </h6>
+
+          <!-- List -->
+          <ul class="list-unstyled text-muted mb-0">
+            <li class="mb-3">
+              <a href="mailto:hello@proxycurl.com" class="text-reset">
+                Email us
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </div> <!-- / .row -->
+      <br>
+
+      <hr class="border-dark">
+      <br>
+
+      <div class="text-center">
+        <p class="text-muted caption">Nubela Pte Ltd. All rights reserved.</p>
+      </div>
+
+    </div> <!-- / .container -->
+  </footer>
+
+  <!-- JAVASCRIPT
+    ================================================== -->
+  <!-- Libs JS -->
+  <script src="./assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="./assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+  <script src="./assets/libs/aos/dist/aos.js"></script>
+  <script src="./assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+  <script src="./assets/libs/countup.js/dist/countUp.min.js"></script>
+  <script src="./assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+  <script src="./assets/libs/flickity/dist/flickity.pkgd.min.js"></script>
+  <script src="./assets/libs/flickity-fade/flickity-fade.js"></script>
+  <script src="./assets/libs/highlightjs/highlight.pack.min.js"></script>
+  <script src="./assets/libs/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="./assets/libs/isotope-layout/dist/isotope.pkgd.min.js"></script>
+  <script src="./assets/libs/jarallax/dist/jarallax.min.js"></script>
+  <script src="./assets/libs/jarallax/dist/jarallax-video.min.js"></script>
+  <script src="./assets/libs/jarallax/dist/jarallax-element.min.js"></script>
+  <script src="./assets/libs/quill/dist/quill.min.js"></script>
+  <script src="./assets/libs/smooth-scroll/dist/smooth-scroll.min.js"></script>
+  <script src="./assets/libs/typed.js/lib/typed.min.js"></script>
+
+  <!-- Map -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+  <!-- Theme JS -->
+  <script src="./assets/js/theme.min.js"></script>
+  <script src="script.js"></script>
+  <script src="script-autosearch.js"></script>
+
+</body>
+
+</html>

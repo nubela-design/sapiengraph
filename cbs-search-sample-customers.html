@@ -1,0 +1,1570 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Libs CSS -->
+  <link rel="stylesheet" href="./assets/fonts/Feather/feather.css">
+  <link rel="stylesheet" href="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="./assets/libs/aos/dist/aos.css">
+  <link rel="stylesheet" href="./assets/libs/choices.js/public/assets/styles/choices.min.css">
+  <link rel="stylesheet" href="./assets/libs/flickity-fade/flickity-fade.css">
+  <link rel="stylesheet" href="./assets/libs/flickity/dist/flickity.min.css">
+  <link rel="stylesheet" href="./assets/libs/highlightjs/styles/vs2015.css">
+  <link rel="stylesheet" href="./assets/libs/jarallax/dist/jarallax.css">
+  <link rel="stylesheet" href="./assets/libs/quill/dist/quill.core.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/neuicons@1.9.0/css/neu.min.css">
+
+  <!-- Map -->
+  <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="./assets/css/theme.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Search customer list from company</title>
+
+</head>
+
+<body>
+
+  <!-- MODAL
+    ==================================================
+  <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalTitle"
+    aria-hidden="true">
+
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <div class="input-group border-custom-1 rounded mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text bg-light">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <g fill="currentColor">
+                    <path
+                      d="M16.69 15.629A8.7 8.7 0 0 0 18.75 10c0-4.825-3.925-8.75-8.75-8.75S1.25 5.175 1.25 10s3.925 8.75 8.75 8.75a8.7 8.7 0 0 0 5.629-2.06l5.84 5.84a.747.747 0 0 0 1.061 0 .75.75 0 0 0 0-1.06zM10 17.25c-3.998 0-7.25-3.252-7.25-7.25S6.002 2.75 10 2.75s7.25 3.252 7.25 7.25-3.252 7.25-7.25 7.25">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <input id="searchInput" type="text" class="form-control bg-light modal-title"
+              placeholder="Search company name or domain" autocomplete="off">
+          </div>
+        </div>
+
+        <div class="modal-body" style="height: 370px; overflow-y: auto;">
+
+          <div id="searchResults"></div>
+
+          <div id="placeholder" class="text-muted text-center">
+            No recent searches
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  -->
+
+  <!-- FIRST FOLD
+    ================================================== -->
+  <section class="bg-white d-flex align-items-center py-9 py-md-14">
+
+    <div class="container">
+
+      <div class="row justify-content-center">
+
+        <div class="col-12 col-md-8">
+
+          <div class="text-center">
+
+            <svg class="mb-4" xmlns="http://www.w3.org/2000/svg" width="64" height="auto" viewBox="0 0 128 128">
+              <path
+                d="m105.2445,0H22.7557C10.188,0,0,10.1881,0,22.7556v82.4888c0,12.5675,10.188,22.7555,22.7557,22.7555h82.4888c12.5675,0,22.7555-10.188,22.7555-22.7555V22.7556C128,10.1881,117.8119,0,105.2445,0Zm-1.2915,52.7263l-.0611-.0503c-2.3908-2.0022-4.8608-3.4288-7.5017-4.3553-2.6408-.9247-5.4562-1.3492-8.545-1.3492h-.0378v-6.7155c-6.9871,0-40.6509.018-40.6796-.009-.9192-.7897-1.9806-1.4211-3.141-1.8493-1.1153-.4119-2.3242-.6386-3.5853-.6386-2.8532,0-5.4382,1.1567-7.3074,3.0258s-3.0258,4.4542-3.0258,7.3074,1.1567,5.4382,3.0258,7.3074c1.8691,1.869,4.4542,3.0258,7.3074,3.0258,1.2323,0,2.4142-.2158,3.5079-.6099,1.1334-.4083,2.1804-1.0146,3.0906-1.7719.0288-.0234,37.5351-.009,41.0628-.009,4.2653,0,7.9802,1.5453,11.1445,4.6341,1.5795,1.5435,2.7686,3.2453,3.5584,5.1018s1.1873,3.8714,1.1873,6.0408v15.9603c0,2.2055-.3958,4.2473-1.1873,6.1218-.7897,1.8763-1.9771,3.5889-3.5584,5.1306-1.5795,1.5435-3.2993,2.702-5.1576,3.4755-1.8583.7718-3.8533,1.1604-5.9851,1.1604h-47.6631l-.0035.0054c-4.3391,0-8.054-1.5453-11.1445-4.6341-3.0888-3.0888-4.6341-6.8414-4.6341-11.2543v-12.3623l.0612.0504c2.3134,1.9284,4.751,3.3191,7.3541,4.2275,2.6012.9067,5.377,1.3331,8.3633,1.3331h.0378v6.7155c7.0464,0,40.7012-.0234,40.7426.009.9139.7718,1.9698,1.3906,3.1176,1.8097,1.1045.4048,2.3009.6242,3.5475.6242,2.8532,0,5.4382-1.1567,7.3074-3.0259,1.8691-1.869,3.0259-4.4542,3.0259-7.3073s-1.1567-5.4382-3.0259-7.3074-4.4542-3.0258-7.3074-3.0258c-1.2466,0-2.4411.2213-3.5457.6242-1.1478.4191-2.2037,1.038-3.1176,1.8097-.0396.0305-37.2616.009-40.7786.009-4.3391,0-8.0539-1.5453-11.1445-4.6341-1.5435-1.5435-2.702-3.2453-3.4756-5.1036-.7718-1.8582-1.1603-3.8713-1.1603-6.0408v-15.9602c0-4.4129,1.5453-8.1655,4.6341-11.2543,1.5435-1.5435,3.2453-2.702,5.1036-3.4756,1.8583-.7718,3.8714-1.1603,6.0408-1.1603h47.6631c4.2653,0,7.9802,1.5453,11.1445,4.6341,1.5795,1.5435,2.7668,3.2543,3.5584,5.1306.7897,1.8763,1.1873,3.9181,1.1873,6.1236v12.5063Zm-58.8652-4.6287c0,1.2935-.5253,2.4682-1.3744,3.3155-.8473.8473-2.022,1.3744-3.3154,1.3744s-2.4682-.5253-3.3155-1.3744c-.8473-.8473-1.3744-2.022-1.3744-3.3155s.5253-2.4681,1.3744-3.3154c.8473-.8491,2.022-1.3744,3.3155-1.3744s2.4681.5253,3.3154,1.3744c.8491.8473,1.3744,2.022,1.3744,3.3154Zm38.064,31.7551c0-1.2935.5253-2.4682,1.3744-3.3155.8473-.8473,2.022-1.3744,3.3155-1.3744s2.4681.5253,3.3154,1.3744c.8473.8473,1.3744,2.022,1.3744,3.3155s-.5253,2.4681-1.3744,3.3154c-.8473.8473-2.022,1.3744-3.3154,1.3744s-2.4682-.5253-3.3155-1.3744c-.8473-.8473-1.3744-2.022-1.3744-3.3154Z"
+                fill="#00bd94" />
+            </svg>
+
+            <h1 class="h2 font-weight-bold mb-4 mb-md-6">
+              Customers by Sapiengraph
+            </h1>
+
+          </div>
+
+          <div class="input-group border-custom-1 rounded-pill mb-4 mb-md-5">
+            <div class="input-group-prepend rounded-pill-left">
+              <div class="input-group-text rounded-pill-left">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <g fill="currentColor">
+                    <path
+                      d="M16.69 15.629A8.7 8.7 0 0 0 18.75 10c0-4.825-3.925-8.75-8.75-8.75S1.25 5.175 1.25 10s3.925 8.75 8.75 8.75a8.7 8.7 0 0 0 5.629-2.06l5.84 5.84a.747.747 0 0 0 1.061 0 .75.75 0 0 0 0-1.06zM10 17.25c-3.998 0-7.25-3.252-7.25-7.25S6.002 2.75 10 2.75s7.25 3.252 7.25 7.25-3.252 7.25-7.25 7.25">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <input id="searchInput" type="text" class="form-control rounded-pill-right modal-title"
+              placeholder="Search company name or domain" autocomplete="off">
+          </div>
+
+          <div id="searchResultsContainer" class="card card-body border-custom-1 mt-4 mb-4"
+            style="max-height: 320px; overflow-y: auto; display: none;">
+            <ul id="searchResults"></ul>
+          </div>
+
+          <div id="dataCrawled" class="text-center">
+            <span class="badge badge-lg badge-secondary text-gray-700 bg-zinc-100">
+              <span class="text-monospace font-weight-normal">3,290,100</span> companies crawled
+            </span>
+            <span class="badge badge-lg badge-secondary text-gray-700 bg-zinc-100 ml-2">
+              <span class="text-monospace font-weight-normal">872,547</span> companies inferred
+            </span>
+          </div>
+
+
+          <!-- Sample list of customers -->
+          <div class="">
+            <div class="row">
+
+              <div class="col-12">
+
+                <div class="position-md-static"
+                  data-flickity='{"wrapAround": true, "pageDots": false, "adaptiveHeight": true}' id="blogSlider">
+
+                  <div class="w-100">
+
+                    <div class="card-body">
+
+                      <div class="card card-body shadow-light-lg border mb-4">
+
+                        <div class="d-inline-flex align-items-center">
+                          <img class="img img-fluid border rounded mb-2 py-2 px-2" width="48" height="auto"
+                            alt="company logo" src="assets/img/logo/Google-logoicon.svg">
+
+                          <div class="ml-2">
+                            <h1 class="font-weight-bold lead mb-0">
+                              Google
+                            </h1>
+
+                            <p class="text-muted text-truncate mb-0">
+                              A problem isn't truly solved until it's solved for all. Googlers...
+                            </p>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <div class="card card-body border mb-4">
+
+                        <h2 class="h3 mb-2">
+                          Sample list of customers
+                        </h2>
+
+                        <div class="py-4 pb-4 border-bottom mb-2">
+                          <div class="list-group list-group-flush">
+                            <div class="list-group-item">
+                              <div class="row align-items-top">
+                                <div class="col-auto">
+
+                                  <div class="d-inline-flex align-items-center mb-2">
+                                    <img class="img-fluid mb-1" width="20" height="auto"
+                                      src="assets/img/logo/Apple 14.svg" alt="company logo">
+
+                                    <p class="mb-1 ml-2 mb-0">
+                                      Apple
+                                    </p>
+                                  </div>
+
+                                  <p class="text-gray-700 mb-0">
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <i class="neu-br-twitter"></i> apple
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <i class="neu-br-linkedin"></i> apple
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="12" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M14 7A5 5 0 1 1 4 7a5 5 0 0 1 10 0M2 20v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4m11.994-8.104a5 5 0 1 0 0-9.791 6.974 6.974 0 0 1 0 9.79M18 16h-1.54A5.97 5.97 0 0 1 18 20v2h3a1 1 0 0 0 1-1v-1a4 4 0 0 0-4-4">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        161,000
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="12" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M2.5 22V2a1 1 0 0 1 2 0v1.618C5.372 3.335 6.76 3 8.5 3c3 0 5 2 8 2 1.431 0 3.375-.512 4.364-.803a.497.497 0 0 1 .636.48v10.584a.995.995 0 0 1-.714.959c-1.012.294-2.892.78-4.286.78-3 0-5-2-8-2-1.74 0-3.128.335-4 .618V22a1 1 0 0 1-2 0">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        USA
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="14" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M22 19V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2m-10-4.331a3 3 0 0 1-1.543-.429L4 10.366V8.034l7.485 4.491c.317.19.712.19 1.03 0L20 8.034v2.332l-6.456 3.874A3 3 0 0 1 12 14.67Z">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        example@email.com
+                                      </span>
+                                    </span>
+
+                                  </p>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="py-4 pb-4 border-bottom mb-2">
+                          <div class="list-group list-group-flush">
+                            <div class="list-group-item">
+                              <div class="row align-items-top">
+                                <div class="col-auto">
+
+                                  <div class="d-inline-flex align-items-center mb-2">
+                                    <img class="img-fluid mb-1" width="20" height="auto"
+                                      src="assets/img/logo/netflix.jpeg" alt="company logo">
+
+                                    <p class="mb-1 ml-2 mb-0">
+                                      Netflix
+                                    </p>
+                                  </div>
+
+                                  <p class="text-gray-700 mb-0">
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <i class="neu-br-twitter"></i> netflix
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <i class="neu-br-linkedin"></i> netflix
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="12" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M14 7A5 5 0 1 1 4 7a5 5 0 0 1 10 0M2 20v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4m11.994-8.104a5 5 0 1 0 0-9.791 6.974 6.974 0 0 1 0 9.79M18 16h-1.54A5.97 5.97 0 0 1 18 20v2h3a1 1 0 0 0 1-1v-1a4 4 0 0 0-4-4">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        12,800
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="12" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M2.5 22V2a1 1 0 0 1 2 0v1.618C5.372 3.335 6.76 3 8.5 3c3 0 5 2 8 2 1.431 0 3.375-.512 4.364-.803a.497.497 0 0 1 .636.48v10.584a.995.995 0 0 1-.714.959c-1.012.294-2.892.78-4.286.78-3 0-5-2-8-2-1.74 0-3.128.335-4 .618V22a1 1 0 0 1-2 0">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        USA
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="14" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M22 19V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2m-10-4.331a3 3 0 0 1-1.543-.429L4 10.366V8.034l7.485 4.491c.317.19.712.19 1.03 0L20 8.034v2.332l-6.456 3.874A3 3 0 0 1 12 14.67Z">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        example@email.com
+                                      </span>
+                                    </span>
+
+                                  </p>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="py-4 pb-4 mb-4">
+                          <div class="list-group list-group-flush">
+                            <div class="list-group-item">
+                              <div class="row align-items-top">
+                                <div class="col-auto">
+
+                                  <div class="d-inline-flex align-items-center mb-2">
+                                    <img class="img-fluid mb-1" width="20" height="auto"
+                                      src="assets/img/logo/IBM logo.svg" alt="company logo">
+
+                                    <p class="mb-1 ml-2 mb-0">
+                                      IBM
+                                    </p>
+                                  </div>
+
+                                  <p class="text-gray-700 mb-0">
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <i class="neu-br-twitter"></i> ibm
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <i class="neu-br-linkedin"></i> ibm
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="12" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M14 7A5 5 0 1 1 4 7a5 5 0 0 1 10 0M2 20v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4m11.994-8.104a5 5 0 1 0 0-9.791 6.974 6.974 0 0 1 0 9.79M18 16h-1.54A5.97 5.97 0 0 1 18 20v2h3a1 1 0 0 0 1-1v-1a4 4 0 0 0-4-4">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        288,300
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="12" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M2.5 22V2a1 1 0 0 1 2 0v1.618C5.372 3.335 6.76 3 8.5 3c3 0 5 2 8 2 1.431 0 3.375-.512 4.364-.803a.497.497 0 0 1 .636.48v10.584a.995.995 0 0 1-.714.959c-1.012.294-2.892.78-4.286.78-3 0-5-2-8-2-1.74 0-3.128.335-4 .618V22a1 1 0 0 1-2 0">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        USA
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="14" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M22 19V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2m-10-4.331a3 3 0 0 1-1.543-.429L4 10.366V8.034l7.485 4.491c.317.19.712.19 1.03 0L20 8.034v2.332l-6.456 3.874A3 3 0 0 1 12 14.67Z">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        example@email.com
+                                      </span>
+                                    </span>
+
+                                  </p>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <a class="btn btn-sm btn-success btn-block" href="cbs-dashboard-listing.html">
+                          View Customers
+                        </a>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="w-100">
+
+                    <div class="card-body">
+
+                      <div class="card card-body shadow-light-lg border mb-4">
+
+                        <div class="d-inline-flex align-items-center">
+                          <img class="img img-fluid border rounded mb-2 py-2 px-2" width="48" height="auto"
+                            alt="company logo" src="assets/img/logo/Apple 14.svg">
+
+                          <div class="ml-2">
+                            <h1 class="font-weight-bold lead mb-0">
+                              Apple
+                            </h1>
+
+                            <p class="text-muted text-truncate mb-0">
+                              We’re a diverse collective of thinkers and doers, continually re...
+                            </p>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <div class="card card-body border mb-4">
+
+                        <h2 class="h3 mb-2">
+                          Sample list of customers
+                        </h2>
+
+                        <div class="py-4 pb-4 border-bottom mb-2">
+                          <div class="list-group list-group-flush">
+                            <div class="list-group-item">
+                              <div class="row align-items-top">
+                                <div class="col-auto">
+
+                                  <div class="d-inline-flex align-items-center mb-2">
+                                    <img class="img-fluid mb-1" width="20" height="auto"
+                                      src="assets/img/logo/Apple 14.svg" alt="company logo">
+
+                                    <p class="mb-1 ml-2 mb-0">
+                                      Apple
+                                    </p>
+                                  </div>
+
+                                  <p class="text-gray-700 mb-0">
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <i class="neu-br-twitter"></i> apple
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <i class="neu-br-linkedin"></i> apple
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="12" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M14 7A5 5 0 1 1 4 7a5 5 0 0 1 10 0M2 20v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4m11.994-8.104a5 5 0 1 0 0-9.791 6.974 6.974 0 0 1 0 9.79M18 16h-1.54A5.97 5.97 0 0 1 18 20v2h3a1 1 0 0 0 1-1v-1a4 4 0 0 0-4-4">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        161,000
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="12" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M2.5 22V2a1 1 0 0 1 2 0v1.618C5.372 3.335 6.76 3 8.5 3c3 0 5 2 8 2 1.431 0 3.375-.512 4.364-.803a.497.497 0 0 1 .636.48v10.584a.995.995 0 0 1-.714.959c-1.012.294-2.892.78-4.286.78-3 0-5-2-8-2-1.74 0-3.128.335-4 .618V22a1 1 0 0 1-2 0">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        USA
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="14" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M22 19V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2m-10-4.331a3 3 0 0 1-1.543-.429L4 10.366V8.034l7.485 4.491c.317.19.712.19 1.03 0L20 8.034v2.332l-6.456 3.874A3 3 0 0 1 12 14.67Z">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        example@email.com
+                                      </span>
+                                    </span>
+
+                                  </p>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="py-4 pb-4 border-bottom mb-2">
+                          <div class="list-group list-group-flush">
+                            <div class="list-group-item">
+                              <div class="row align-items-top">
+                                <div class="col-auto">
+
+                                  <div class="d-inline-flex align-items-center mb-2">
+                                    <img class="img-fluid mb-1" width="20" height="auto"
+                                      src="assets/img/logo/netflix.jpeg" alt="company logo">
+
+                                    <p class="mb-1 ml-2 mb-0">
+                                      Netflix
+                                    </p>
+                                  </div>
+
+                                  <p class="text-gray-700 mb-0">
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <i class="neu-br-twitter"></i> netflix
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <i class="neu-br-linkedin"></i> netflix
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="12" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M14 7A5 5 0 1 1 4 7a5 5 0 0 1 10 0M2 20v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4m11.994-8.104a5 5 0 1 0 0-9.791 6.974 6.974 0 0 1 0 9.79M18 16h-1.54A5.97 5.97 0 0 1 18 20v2h3a1 1 0 0 0 1-1v-1a4 4 0 0 0-4-4">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        12,800
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="12" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M2.5 22V2a1 1 0 0 1 2 0v1.618C5.372 3.335 6.76 3 8.5 3c3 0 5 2 8 2 1.431 0 3.375-.512 4.364-.803a.497.497 0 0 1 .636.48v10.584a.995.995 0 0 1-.714.959c-1.012.294-2.892.78-4.286.78-3 0-5-2-8-2-1.74 0-3.128.335-4 .618V22a1 1 0 0 1-2 0">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        USA
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="14" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M22 19V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2m-10-4.331a3 3 0 0 1-1.543-.429L4 10.366V8.034l7.485 4.491c.317.19.712.19 1.03 0L20 8.034v2.332l-6.456 3.874A3 3 0 0 1 12 14.67Z">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        example@email.com
+                                      </span>
+                                    </span>
+
+                                  </p>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="py-4 pb-4 mb-4">
+                          <div class="list-group list-group-flush">
+                            <div class="list-group-item">
+                              <div class="row align-items-top">
+                                <div class="col-auto">
+
+                                  <div class="d-inline-flex align-items-center mb-2">
+                                    <img class="img-fluid mb-1" width="20" height="auto"
+                                      src="assets/img/logo/IBM logo.svg" alt="company logo">
+
+                                    <p class="mb-1 ml-2 mb-0">
+                                      IBM
+                                    </p>
+                                  </div>
+
+                                  <p class="text-gray-700 mb-0">
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <i class="neu-br-twitter"></i> ibm
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <i class="neu-br-linkedin"></i> ibm
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="12" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M14 7A5 5 0 1 1 4 7a5 5 0 0 1 10 0M2 20v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4m11.994-8.104a5 5 0 1 0 0-9.791 6.974 6.974 0 0 1 0 9.79M18 16h-1.54A5.97 5.97 0 0 1 18 20v2h3a1 1 0 0 0 1-1v-1a4 4 0 0 0-4-4">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        288,300
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="12" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M2.5 22V2a1 1 0 0 1 2 0v1.618C5.372 3.335 6.76 3 8.5 3c3 0 5 2 8 2 1.431 0 3.375-.512 4.364-.803a.497.497 0 0 1 .636.48v10.584a.995.995 0 0 1-.714.959c-1.012.294-2.892.78-4.286.78-3 0-5-2-8-2-1.74 0-3.128.335-4 .618V22a1 1 0 0 1-2 0">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        USA
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="14" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M22 19V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2m-10-4.331a3 3 0 0 1-1.543-.429L4 10.366V8.034l7.485 4.491c.317.19.712.19 1.03 0L20 8.034v2.332l-6.456 3.874A3 3 0 0 1 12 14.67Z">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        example@email.com
+                                      </span>
+                                    </span>
+
+                                  </p>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <a class="btn btn-sm btn-success btn-block" href="cbs-dashboard-listing.html">
+                          View Customers
+                        </a>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="w-100">
+
+                    <div class="card-body">
+
+                      <div class="card card-body shadow-light-lg border mb-4">
+
+                        <div class="d-inline-flex align-items-center">
+                          <img class="img img-fluid border rounded mb-2 py-2 px-2" width="48" height="auto"
+                            alt="company logo" src="assets/img/logo/Amazon logo.jpeg">
+
+                          <div class="ml-2">
+                            <h1 class="font-weight-bold lead mb-0">
+                              Amazon
+                            </h1>
+
+                            <p class="text-muted text-truncate mb-0">
+                              Amazon is guided by four principles: customer obsession rath...
+                            </p>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <div class="card card-body border mb-4">
+
+                        <h2 class="h3 mb-2">
+                          Sample list of customers
+                        </h2>
+
+                        <div class="py-4 pb-4 border-bottom mb-2">
+                          <div class="list-group list-group-flush">
+                            <div class="list-group-item">
+                              <div class="row align-items-top">
+                                <div class="col-auto">
+
+                                  <div class="d-inline-flex align-items-center mb-2">
+                                    <img class="img-fluid mb-1" width="20" height="auto"
+                                      src="assets/img/logo/Apple 14.svg" alt="company logo">
+
+                                    <p class="mb-1 ml-2 mb-0">
+                                      Apple
+                                    </p>
+                                  </div>
+
+                                  <p class="text-gray-700 mb-0">
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <i class="neu-br-twitter"></i> apple
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <i class="neu-br-linkedin"></i> apple
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="12" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M14 7A5 5 0 1 1 4 7a5 5 0 0 1 10 0M2 20v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4m11.994-8.104a5 5 0 1 0 0-9.791 6.974 6.974 0 0 1 0 9.79M18 16h-1.54A5.97 5.97 0 0 1 18 20v2h3a1 1 0 0 0 1-1v-1a4 4 0 0 0-4-4">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        161,000
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="12" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M2.5 22V2a1 1 0 0 1 2 0v1.618C5.372 3.335 6.76 3 8.5 3c3 0 5 2 8 2 1.431 0 3.375-.512 4.364-.803a.497.497 0 0 1 .636.48v10.584a.995.995 0 0 1-.714.959c-1.012.294-2.892.78-4.286.78-3 0-5-2-8-2-1.74 0-3.128.335-4 .618V22a1 1 0 0 1-2 0">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        USA
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="14" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M22 19V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2m-10-4.331a3 3 0 0 1-1.543-.429L4 10.366V8.034l7.485 4.491c.317.19.712.19 1.03 0L20 8.034v2.332l-6.456 3.874A3 3 0 0 1 12 14.67Z">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        example@email.com
+                                      </span>
+                                    </span>
+
+                                  </p>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="py-4 pb-4 border-bottom mb-2">
+                          <div class="list-group list-group-flush">
+                            <div class="list-group-item">
+                              <div class="row align-items-top">
+                                <div class="col-auto">
+
+                                  <div class="d-inline-flex align-items-center mb-2">
+                                    <img class="img-fluid mb-1" width="20" height="auto"
+                                      src="assets/img/logo/netflix.jpeg" alt="company logo">
+
+                                    <p class="mb-1 ml-2 mb-0">
+                                      Netflix
+                                    </p>
+                                  </div>
+
+                                  <p class="text-gray-700 mb-0">
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <i class="neu-br-twitter"></i> netflix
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <i class="neu-br-linkedin"></i> netflix
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="12" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M14 7A5 5 0 1 1 4 7a5 5 0 0 1 10 0M2 20v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4m11.994-8.104a5 5 0 1 0 0-9.791 6.974 6.974 0 0 1 0 9.79M18 16h-1.54A5.97 5.97 0 0 1 18 20v2h3a1 1 0 0 0 1-1v-1a4 4 0 0 0-4-4">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        12,800
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="12" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M2.5 22V2a1 1 0 0 1 2 0v1.618C5.372 3.335 6.76 3 8.5 3c3 0 5 2 8 2 1.431 0 3.375-.512 4.364-.803a.497.497 0 0 1 .636.48v10.584a.995.995 0 0 1-.714.959c-1.012.294-2.892.78-4.286.78-3 0-5-2-8-2-1.74 0-3.128.335-4 .618V22a1 1 0 0 1-2 0">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        USA
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="14" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M22 19V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2m-10-4.331a3 3 0 0 1-1.543-.429L4 10.366V8.034l7.485 4.491c.317.19.712.19 1.03 0L20 8.034v2.332l-6.456 3.874A3 3 0 0 1 12 14.67Z">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        example@email.com
+                                      </span>
+                                    </span>
+
+                                  </p>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="py-4 pb-4 mb-4">
+                          <div class="list-group list-group-flush">
+                            <div class="list-group-item">
+                              <div class="row align-items-top">
+                                <div class="col-auto">
+
+                                  <div class="d-inline-flex align-items-center mb-2">
+                                    <img class="img-fluid mb-1" width="20" height="auto"
+                                      src="assets/img/logo/IBM logo.svg" alt="company logo">
+
+                                    <p class="mb-1 ml-2 mb-0">
+                                      IBM
+                                    </p>
+                                  </div>
+
+                                  <p class="text-gray-700 mb-0">
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <i class="neu-br-twitter"></i> ibm
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <i class="neu-br-linkedin"></i> ibm
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="12" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M14 7A5 5 0 1 1 4 7a5 5 0 0 1 10 0M2 20v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4m11.994-8.104a5 5 0 1 0 0-9.791 6.974 6.974 0 0 1 0 9.79M18 16h-1.54A5.97 5.97 0 0 1 18 20v2h3a1 1 0 0 0 1-1v-1a4 4 0 0 0-4-4">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        288,300
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="12" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M2.5 22V2a1 1 0 0 1 2 0v1.618C5.372 3.335 6.76 3 8.5 3c3 0 5 2 8 2 1.431 0 3.375-.512 4.364-.803a.497.497 0 0 1 .636.48v10.584a.995.995 0 0 1-.714.959c-1.012.294-2.892.78-4.286.78-3 0-5-2-8-2-1.74 0-3.128.335-4 .618V22a1 1 0 0 1-2 0">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        USA
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="14" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M22 19V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2m-10-4.331a3 3 0 0 1-1.543-.429L4 10.366V8.034l7.485 4.491c.317.19.712.19 1.03 0L20 8.034v2.332l-6.456 3.874A3 3 0 0 1 12 14.67Z">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        example@email.com
+                                      </span>
+                                    </span>
+
+                                  </p>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <a class="btn btn-sm btn-success btn-block" href="cbs-dashboard-listing.html">
+                          View Customers
+                        </a>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="w-100">
+
+                    <div class="card-body">
+
+                      <div class="card card-body shadow-light-lg border mb-4">
+
+                        <div class="d-inline-flex align-items-center">
+                          <img class="img img-fluid border rounded mb-2 py-2 px-2" width="48" height="auto"
+                            alt="company logo" src="assets/img/logo/Microsoft.svg">
+
+                          <div class="ml-2">
+                            <h1 class="font-weight-bold lead mb-0">
+                              Microsoft
+                            </h1>
+
+                            <p class="text-muted text-truncate mb-0">
+                              Every company has a mission. What's ours? To empower ever...
+                            </p>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <div class="card card-body border mb-4">
+
+                        <h2 class="h3 mb-2">
+                          Sample list of customers
+                        </h2>
+
+                        <div class="py-4 pb-4 border-bottom mb-2">
+                          <div class="list-group list-group-flush">
+                            <div class="list-group-item">
+                              <div class="row align-items-top">
+                                <div class="col-auto">
+
+                                  <div class="d-inline-flex align-items-center mb-2">
+                                    <img class="img-fluid mb-1" width="20" height="auto"
+                                      src="assets/img/logo/Apple 14.svg" alt="company logo">
+
+                                    <p class="mb-1 ml-2 mb-0">
+                                      Apple
+                                    </p>
+                                  </div>
+
+                                  <p class="text-gray-700 mb-0">
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <i class="neu-br-twitter"></i> apple
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <i class="neu-br-linkedin"></i> apple
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="12" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M14 7A5 5 0 1 1 4 7a5 5 0 0 1 10 0M2 20v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4m11.994-8.104a5 5 0 1 0 0-9.791 6.974 6.974 0 0 1 0 9.79M18 16h-1.54A5.97 5.97 0 0 1 18 20v2h3a1 1 0 0 0 1-1v-1a4 4 0 0 0-4-4">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        161,000
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="12" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M2.5 22V2a1 1 0 0 1 2 0v1.618C5.372 3.335 6.76 3 8.5 3c3 0 5 2 8 2 1.431 0 3.375-.512 4.364-.803a.497.497 0 0 1 .636.48v10.584a.995.995 0 0 1-.714.959c-1.012.294-2.892.78-4.286.78-3 0-5-2-8-2-1.74 0-3.128.335-4 .618V22a1 1 0 0 1-2 0">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        USA
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="14" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M22 19V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2m-10-4.331a3 3 0 0 1-1.543-.429L4 10.366V8.034l7.485 4.491c.317.19.712.19 1.03 0L20 8.034v2.332l-6.456 3.874A3 3 0 0 1 12 14.67Z">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        example@email.com
+                                      </span>
+                                    </span>
+
+                                  </p>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="py-4 pb-4 border-bottom mb-2">
+                          <div class="list-group list-group-flush">
+                            <div class="list-group-item">
+                              <div class="row align-items-top">
+                                <div class="col-auto">
+
+                                  <div class="d-inline-flex align-items-center mb-2">
+                                    <img class="img-fluid mb-1" width="20" height="auto"
+                                      src="assets/img/logo/netflix.jpeg" alt="company logo">
+
+                                    <p class="mb-1 ml-2 mb-0">
+                                      Netflix
+                                    </p>
+                                  </div>
+
+                                  <p class="text-gray-700 mb-0">
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <i class="neu-br-twitter"></i> netflix
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <i class="neu-br-linkedin"></i> netflix
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="12" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M14 7A5 5 0 1 1 4 7a5 5 0 0 1 10 0M2 20v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4m11.994-8.104a5 5 0 1 0 0-9.791 6.974 6.974 0 0 1 0 9.79M18 16h-1.54A5.97 5.97 0 0 1 18 20v2h3a1 1 0 0 0 1-1v-1a4 4 0 0 0-4-4">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        12,800
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="12" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M2.5 22V2a1 1 0 0 1 2 0v1.618C5.372 3.335 6.76 3 8.5 3c3 0 5 2 8 2 1.431 0 3.375-.512 4.364-.803a.497.497 0 0 1 .636.48v10.584a.995.995 0 0 1-.714.959c-1.012.294-2.892.78-4.286.78-3 0-5-2-8-2-1.74 0-3.128.335-4 .618V22a1 1 0 0 1-2 0">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        USA
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="14" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M22 19V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2m-10-4.331a3 3 0 0 1-1.543-.429L4 10.366V8.034l7.485 4.491c.317.19.712.19 1.03 0L20 8.034v2.332l-6.456 3.874A3 3 0 0 1 12 14.67Z">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        example@email.com
+                                      </span>
+                                    </span>
+
+                                  </p>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="py-4 pb-4 mb-4">
+                          <div class="list-group list-group-flush">
+                            <div class="list-group-item">
+                              <div class="row align-items-top">
+                                <div class="col-auto">
+
+                                  <div class="d-inline-flex align-items-center mb-2">
+                                    <img class="img-fluid mb-1" width="20" height="auto"
+                                      src="assets/img/logo/IBM logo.svg" alt="company logo">
+
+                                    <p class="mb-1 ml-2 mb-0">
+                                      IBM
+                                    </p>
+                                  </div>
+
+                                  <p class="text-gray-700 mb-0">
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <i class="neu-br-twitter"></i> ibm
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <i class="neu-br-linkedin"></i> ibm
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="12" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M14 7A5 5 0 1 1 4 7a5 5 0 0 1 10 0M2 20v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4m11.994-8.104a5 5 0 1 0 0-9.791 6.974 6.974 0 0 1 0 9.79M18 16h-1.54A5.97 5.97 0 0 1 18 20v2h3a1 1 0 0 0 1-1v-1a4 4 0 0 0-4-4">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        288,300
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="12" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M2.5 22V2a1 1 0 0 1 2 0v1.618C5.372 3.335 6.76 3 8.5 3c3 0 5 2 8 2 1.431 0 3.375-.512 4.364-.803a.497.497 0 0 1 .636.48v10.584a.995.995 0 0 1-.714.959c-1.012.294-2.892.78-4.286.78-3 0-5-2-8-2-1.74 0-3.128.335-4 .618V22a1 1 0 0 1-2 0">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        USA
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="14" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M22 19V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2m-10-4.331a3 3 0 0 1-1.543-.429L4 10.366V8.034l7.485 4.491c.317.19.712.19 1.03 0L20 8.034v2.332l-6.456 3.874A3 3 0 0 1 12 14.67Z">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        example@email.com
+                                      </span>
+                                    </span>
+
+                                  </p>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <a class="btn btn-sm btn-success btn-block" href="cbs-dashboard-listing.html">
+                          View Customers
+                        </a>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="w-100">
+
+                    <div class="card-body">
+
+                      <div class="card card-body shadow-light-lg border mb-4">
+
+                        <div class="d-inline-flex align-items-center">
+                          <img class="img img-fluid border rounded mb-2 py-2 px-2" width="48" height="auto"
+                            alt="company logo" src="assets/img/logo/netflix.jpeg">
+
+                          <div class="ml-2">
+                            <h1 class="font-weight-bold lead mb-0">
+                              Netflix
+                            </h1>
+
+                            <p class="text-muted text-truncate mb-0">
+                              Netflix is one of the world's leading entertainment services wi...
+                            </p>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <div class="card card-body border mb-4">
+
+                        <h2 class="h3 mb-2">
+                          Sample list of customers
+                        </h2>
+
+                        <div class="py-4 pb-4 border-bottom mb-2">
+                          <div class="list-group list-group-flush">
+                            <div class="list-group-item">
+                              <div class="row align-items-top">
+                                <div class="col-auto">
+
+                                  <div class="d-inline-flex align-items-center mb-2">
+                                    <img class="img-fluid mb-1" width="20" height="auto"
+                                      src="assets/img/logo/Apple 14.svg" alt="company logo">
+
+                                    <p class="mb-1 ml-2 mb-0">
+                                      Apple
+                                    </p>
+                                  </div>
+
+                                  <p class="text-gray-700 mb-0">
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <i class="neu-br-twitter"></i> apple
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <i class="neu-br-linkedin"></i> apple
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="12" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M14 7A5 5 0 1 1 4 7a5 5 0 0 1 10 0M2 20v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4m11.994-8.104a5 5 0 1 0 0-9.791 6.974 6.974 0 0 1 0 9.79M18 16h-1.54A5.97 5.97 0 0 1 18 20v2h3a1 1 0 0 0 1-1v-1a4 4 0 0 0-4-4">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        161,000
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="12" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M2.5 22V2a1 1 0 0 1 2 0v1.618C5.372 3.335 6.76 3 8.5 3c3 0 5 2 8 2 1.431 0 3.375-.512 4.364-.803a.497.497 0 0 1 .636.48v10.584a.995.995 0 0 1-.714.959c-1.012.294-2.892.78-4.286.78-3 0-5-2-8-2-1.74 0-3.128.335-4 .618V22a1 1 0 0 1-2 0">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        USA
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="14" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M22 19V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2m-10-4.331a3 3 0 0 1-1.543-.429L4 10.366V8.034l7.485 4.491c.317.19.712.19 1.03 0L20 8.034v2.332l-6.456 3.874A3 3 0 0 1 12 14.67Z">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        example@email.com
+                                      </span>
+                                    </span>
+
+                                  </p>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="py-4 pb-4 border-bottom mb-2">
+                          <div class="list-group list-group-flush">
+                            <div class="list-group-item">
+                              <div class="row align-items-top">
+                                <div class="col-auto">
+
+                                  <div class="d-inline-flex align-items-center mb-2">
+                                    <img class="img-fluid mb-1" width="20" height="auto"
+                                      src="assets/img/logo/netflix.jpeg" alt="company logo">
+
+                                    <p class="mb-1 ml-2 mb-0">
+                                      Netflix
+                                    </p>
+                                  </div>
+
+                                  <p class="text-gray-700 mb-0">
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <i class="neu-br-twitter"></i> netflix
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <i class="neu-br-linkedin"></i> netflix
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="12" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M14 7A5 5 0 1 1 4 7a5 5 0 0 1 10 0M2 20v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4m11.994-8.104a5 5 0 1 0 0-9.791 6.974 6.974 0 0 1 0 9.79M18 16h-1.54A5.97 5.97 0 0 1 18 20v2h3a1 1 0 0 0 1-1v-1a4 4 0 0 0-4-4">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        12,800
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="12" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M2.5 22V2a1 1 0 0 1 2 0v1.618C5.372 3.335 6.76 3 8.5 3c3 0 5 2 8 2 1.431 0 3.375-.512 4.364-.803a.497.497 0 0 1 .636.48v10.584a.995.995 0 0 1-.714.959c-1.012.294-2.892.78-4.286.78-3 0-5-2-8-2-1.74 0-3.128.335-4 .618V22a1 1 0 0 1-2 0">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        USA
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="14" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M22 19V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2m-10-4.331a3 3 0 0 1-1.543-.429L4 10.366V8.034l7.485 4.491c.317.19.712.19 1.03 0L20 8.034v2.332l-6.456 3.874A3 3 0 0 1 12 14.67Z">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        example@email.com
+                                      </span>
+                                    </span>
+
+                                  </p>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="py-4 pb-4 mb-4">
+                          <div class="list-group list-group-flush">
+                            <div class="list-group-item">
+                              <div class="row align-items-top">
+                                <div class="col-auto">
+
+                                  <div class="d-inline-flex align-items-center mb-2">
+                                    <img class="img-fluid mb-1" width="20" height="auto"
+                                      src="assets/img/logo/IBM logo.svg" alt="company logo">
+
+                                    <p class="mb-1 ml-2 mb-0">
+                                      IBM
+                                    </p>
+                                  </div>
+
+                                  <p class="text-gray-700 mb-0">
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <i class="neu-br-twitter"></i> ibm
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <i class="neu-br-linkedin"></i> ibm
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="12" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M14 7A5 5 0 1 1 4 7a5 5 0 0 1 10 0M2 20v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4m11.994-8.104a5 5 0 1 0 0-9.791 6.974 6.974 0 0 1 0 9.79M18 16h-1.54A5.97 5.97 0 0 1 18 20v2h3a1 1 0 0 0 1-1v-1a4 4 0 0 0-4-4">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        288,300
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="12" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M2.5 22V2a1 1 0 0 1 2 0v1.618C5.372 3.335 6.76 3 8.5 3c3 0 5 2 8 2 1.431 0 3.375-.512 4.364-.803a.497.497 0 0 1 .636.48v10.584a.995.995 0 0 1-.714.959c-1.012.294-2.892.78-4.286.78-3 0-5-2-8-2-1.74 0-3.128.335-4 .618V22a1 1 0 0 1-2 0">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        USA
+                                      </span>
+                                    </span>
+
+                                    <span class="badge badge-sm badge-pill badge-secondary-soft">
+                                      <span class="h6 font-weight-bold">
+                                        <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="14" height="auto"
+                                          viewBox="0 0 24 24">
+                                          <g fill="currentColor">
+                                            <path
+                                              d="M22 19V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2m-10-4.331a3 3 0 0 1-1.543-.429L4 10.366V8.034l7.485 4.491c.317.19.712.19 1.03 0L20 8.034v2.332l-6.456 3.874A3 3 0 0 1 12 14.67Z">
+                                            </path>
+                                          </g>
+                                        </svg>
+                                        example@email.com
+                                      </span>
+                                    </span>
+
+                                  </p>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <a class="btn btn-sm btn-success btn-block" href="cbs-dashboard-listing.html">
+                          View Customers
+                        </a>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div> <!-- / .container -->
+
+  </section>
+
+  <!-- JAVASCRIPT
+    ================================================== -->
+  <!-- Libs JS -->
+  <script src="./assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="./assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+  <script src="./assets/libs/aos/dist/aos.js"></script>
+  <script src="./assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+  <script src="./assets/libs/countup.js/dist/countUp.min.js"></script>
+  <script src="./assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+  <script src="./assets/libs/flickity/dist/flickity.pkgd.min.js"></script>
+  <script src="./assets/libs/flickity-fade/flickity-fade.js"></script>
+  <script src="./assets/libs/highlightjs/highlight.pack.min.js"></script>
+  <script src="./assets/libs/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="./assets/libs/isotope-layout/dist/isotope.pkgd.min.js"></script>
+  <script src="./assets/libs/jarallax/dist/jarallax.min.js"></script>
+  <script src="./assets/libs/jarallax/dist/jarallax-video.min.js"></script>
+  <script src="./assets/libs/jarallax/dist/jarallax-element.min.js"></script>
+  <script src="./assets/libs/quill/dist/quill.min.js"></script>
+  <script src="./assets/libs/smooth-scroll/dist/smooth-scroll.min.js"></script>
+  <script src="./assets/libs/typed.js/lib/typed.min.js"></script>
+
+  <!-- Map -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+  <!-- Theme JS -->
+  <script src="./assets/js/theme.min.js"></script>
+  <script src="script.js"></script>
+  <script src="script-autosearch.js"></script>
+
+</body>
+
+</html>

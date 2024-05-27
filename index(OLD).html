@@ -1,0 +1,1337 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="./assets/fonts/Feather/feather.css">
+    <link rel="stylesheet" href="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="./assets/libs/aos/dist/aos.css">
+    <link rel="stylesheet" href="./assets/libs/choices.js/public/assets/styles/choices.min.css">
+    <link rel="stylesheet" href="./assets/libs/flickity-fade/flickity-fade.css">
+    <link rel="stylesheet" href="./assets/libs/flickity/dist/flickity.min.css">
+    <link rel="stylesheet" href="./assets/libs/highlightjs/styles/vs2015.css">
+    <link rel="stylesheet" href="./assets/libs/jarallax/dist/jarallax.css">
+    <link rel="stylesheet" href="./assets/libs/quill/dist/quill.core.css" />
+
+    <!-- Map -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="./assets/css/theme.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Add custom formulas in Google Sheets to enrich People and Company profiles</title>
+
+  </head>
+  <body>
+
+    <!-- NAVBAR
+    ================================================== -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container">
+
+        <!-- Brand -->
+        <a class="navbar-brand" href="./index.html">
+          <img src="./assets/img/Sapiengraph logo.svg" class="navbar-brand-img" alt="Sapiengraph logo">
+        </a>
+
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+
+          <!-- Toggler -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fe fe-x"></i>
+          </button>
+
+          <!-- Navigation -->
+          <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">
+                Home
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="pricing.html">
+                Pricing
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#!">
+                Documentation
+              </a>
+            </li>
+
+          </ul>
+
+          <!-- Button -->
+
+          <div class="text-center ml-auto">
+            <!-- Button -->
+            <a class="btn btn-sm btn-link text-success" href="signin-illustration.html">
+              Sign in
+            </a>
+
+            <a class="navbar-btn btn btn-sm btn-success lift ml-auto" href="#!" target="_blank">
+            Install Chrome extension <i class="fe fe-arrow-right"></i>
+            </a>
+
+          </div>
+
+
+
+        </div>
+
+      </div>
+    </nav>
+
+    <!-- FIRST FOLD
+    ================================================== -->
+    <section class="mt-n11 pt-12 pt-md-14 mb-7 mb-md-8">
+      <div class="container">
+
+        <div class="row justify-content-center align-items-center">
+
+          <div class="col-12 col-lg-10 text-center">
+
+            <!-- Headin -->
+            <h1 class="display-4 font-weight-bold aos-init aos-animate" data-aos="fade-up" data-aos-delay="50">
+              Enrich data on <span class="text-success">people and businesses </span>within Google Sheets from public sources like Linkedin and Crunchbase
+            </h1>
+
+          </div>
+
+        </div> <!-- / .row -->
+
+      </div> <!-- / .container -->
+    </section>
+
+    <!--Carousell-->
+    <section class="pb-8">
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-12">
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="assets/img/illustrations/lookup people and companies illustration.png" alt="look up people and companies illustration">
+                </div>
+
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="assets/img/illustrations/enrich profiles illustration.png" alt="enrich profiles illustration">
+                </div>
+
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="assets/img/illustrations/get contact details illustration.png" alt="get contact illustration">
+                </div>
+
+              </div>
+
+              <a href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <button class="flickity-button bg-success flickity-prev-next-button previous" type="button" aria-label="Previous">
+                  <svg class="flickity-button-icon" viewBox="0 0 100 100">
+                    <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow">
+                    </path>
+                  </svg>
+                </button>
+              </a>
+              
+              <a href="#carouselExampleIndicators" role="button" data-slide="next">
+                <button class="flickity-button bg-success flickity-prev-next-button next" type="button" aria-label="Previous">
+                  <svg class="flickity-button-icon" viewBox="0 0 100 100">
+                    <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow">
+                    </path>
+                  </svg>
+                </button>
+              </a>
+
+            </div>
+
+          </div>
+
+        </div> <!-- / .row -->
+
+        <div class="row justify-content-center text-center">
+          <div class="col-10 mt-6 mt-md-8 mb-0">
+            <a class="btn btn-success mr-md-3 mb-4 mb-md-0 lift" href="#" target="blank">
+              Install Chrome extension <i class="fe fe-arrow-right"></i>
+            </a>
+            <a class="btn btn-success-soft" href="/proxycurl/docs" target="blank">
+              Read Formula Documentation
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </section>    
+
+    <!-- BRANDS
+    ================================================== -->
+    <section class="border-bottom bg-white">
+      <div class="container pb-8">
+
+        <div class="row justify-content-center">
+
+          <div class="container">
+
+            <div class="row align-items-center justify-content-center px-4 px-md-9 px-lg-13 px-xl-0 pb-0 pb-xl-4 pt-0 pt-xl-4">
+              
+              <div class="col-6 col-sm-4 col-md-2 mb-4 mb-md-0">
+                <img class="svg-shim img-fluid" alt="IBM logo SVG" src="assets/img/brands/ibm.png">
+              </div>
+
+              <div class="col-6 col-sm-4 col-md-2 mb-4 mb-md-0">
+                <img class="svg-shim img-fluid" alt="Rightbound logo SVG" src="assets/img/brands/rightbound.com_logo.svg">
+              </div>
+
+              <div class="col-6 col-sm-4 col-md-2 mb-8 mb-md-0">
+                <img class="svg-shim img-fluid" alt="Linux logo SVG" src="assets/img/brands/LinuxFoundation.png">
+              </div>
+
+              <div class="col-6 col-sm-4 col-md-2 mb-8 mb-md-0">
+                <img class="svg-shim img-fluid" alt="HP logo PNG" src="assets/img/brands/hp.png">
+              </div>
+
+              <div class="col-6 col-sm-4 col-md-2 mb-4 mb-md-0">
+                <img class="svg-shim img-fluid" alt="Agicap logo SVG" src="assets/img/brands/agicap.svg">
+              </div>
+
+              <div class="col-6 col-sm-4 col-md-2 mb-4 mb-md-0">
+
+                <img class="svg-shim img-fluid" alt="Dover logo SVG" src="assets/img/brands/dover.io_logo.svg">
+              </div>
+            </div>
+
+          </div> 
+
+        </div> 
+        
+      </div> 
+    </section>
+
+    <!-- DATA FLOW
+    ================================================== -->
+    <section class="pt-8 pt-md-10 pb-10 pb-md-12 bg-gradient-light">
+
+      <div class="container">
+
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 col-lg-12 col-xl-11 text-center">
+          
+            <h1 class="display-3 font-weight-bold mb-6">
+              Pull <span class="text-success">fresh and rich data</span> on people and companies within your spreadsheet with <span class="text-success">Sapiengraph</span> without involving <span class="text-success">software engineers.</span>
+            </h1>
+
+          </div>
+        </div>
+
+      </div> 
+
+    </section>
+
+    <!-- DATA FLOW CARDS
+    ================================================== -->
+    <section class="mt-n8 pb-10">
+      <div class="container mb-8 mb-xl-8">
+
+        <div class="row justify-content-center mb-0 mb-md-0">
+          
+          <!--People card-->          
+          <div class="col-12 col-md-5 col-lg-6 col-xl-6 mb-6 mb-lg-8 mb-md-8">
+
+            <div class="card accordion card-responsive shadow-light-lg lift lift-lg" id="featuresAccordion">
+
+
+              <!--People-->
+              <div class="card-body">
+
+                <div class="d-flex justify-content-between mb-5 pb-3 ">
+                  <div class="h3 font-weight-bold ">
+                    <img class="img-fluid pr-2" width="40px" src="assets/img/icons/man.svg" alt="Card people icon">
+                    People
+                  </div>
+                  <div class="text-right">
+                    <h5><span class="badge badge-pill badge-secondary-soft font-weight-normal py-2" style="font-family:monospace;" >=SG_PERSON()</span></h5>
+                  
+                    <div class="h6 font-weight-bold">
+                      <a href="#!" class="mr-2 text-secondary"><svg class="mb-1" width="12px" viewBox="0 0 24 24"><path fill="#506690" d="M21,8H9A1,1,0,0,0,8,9V21a1,1,0,0,0,1,1H21a1,1,0,0,0,1-1V9A1,1,0,0,0,21,8ZM20,20H10V10H20ZM6,15a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V3A1,1,0,0,1,3,2H15a1,1,0,0,1,1,1V5a1,1,0,0,1-2,0V4H4V14H5A1,1,0,0,1,6,15Z"/></svg>
+                      Copy </a>
+                      <a href="#!" class="text-secondary mr-2"><svg class="mb-1" width="11px" viewBox="0 0 24 24"><path fill="#506690" d="M21,6a1.009,1.009,0,0,0-.294-.708l-4-4a1,1,0,0,0-.323-.216A.988.988,0,0,0,16,1H4A1,1,0,0,0,3,2V22a1,1,0,0,0,1,1H20a1,1,0,0,0,1-1ZM19,21H5V3H15V6a1,1,0,0,0,1,1h3ZM16,9a1,1,0,0,1,0,2H8A1,1,0,0,1,8,9ZM7,6A1,1,0,0,1,8,5h4a1,1,0,0,1,0,2H8A1,1,0,0,1,7,6Zm10,8a1,1,0,0,1-1,1H8a1,1,0,0,1,0-2h8A1,1,0,0,1,17,14Zm0,4a1,1,0,0,1-1,1H8a1,1,0,0,1,0-2h8A1,1,0,0,1,17,18Z"/></svg>
+                      Docs </a>
+                      </div>
+
+                  </div>
+                  
+                </div>
+
+                <div class="list-group list-group-flush">
+
+                  <div class="list-group-item">
+                  
+                    <!-- Toggle -->
+                    <a class="align-items-center text-decoration-none text-success" href="#" role="button">
+                      <div class="mr-auto">
+                        
+                        <!-- Title -->
+                        <p class="font-weight-bold mb-0">
+                          First/Last name
+                        </p>
+
+                      </div>
+
+                    </a> <!-- / .row -->
+                    
+                  </div> <!-- item 1_1-->
+
+                  <div class="list-group-item">
+                    
+                    <!-- Toggle -->
+                    <a class="align-items-center text-decoration-none text-success" href="#" role="button">
+                      <div class="mr-auto d-md-flex justify-content-between align-items-center">
+                        
+                        <!-- Title -->
+                        <p class="font-weight-bold mb-1 mb-md-0 ">
+                          Work experience history
+                        </p>
+
+                        <div class="text-left text-md-right pt-0">
+                          <h5><span class="badge badge-pill badge-secondary-soft mt-2 font-weight-normal py-2" style="font-family:monospace;" >=SG_PERSON_WORK()</span></h5>
+                        </div>
+
+                      </div>
+
+                    </a> <!-- / .row -->
+                    
+                  </div> <!-- item 1_2-->
+
+                  <div class="list-group-item pt-0">
+                    <div class="blur collapse" id="featuresOne" data-parent="#featuresAccordion">
+
+                      <div class="border-bottom mb-2">
+                    
+                        <div class="align-items-center text-decoration-none text-success">
+
+                          <div class="mr-auto d-md-flex justify-content-between align-items-center">
+                        
+                            <p class="font-weight-bold mb-1 mb-md-0 mt-5 mt-md-0">
+                              Education history
+                            </p>
+
+                            <div class="text-left text-md-right pb-5 pt-0">
+                              <h5><span class="badge badge-pill badge-secondary-soft mb-0 mt-2 mt-md-6 font-weight-normal py-2" style="font-family:monospace;">=SG_PERSON_EDUCATION()</span></h5>
+                            </div>
+
+                          </div>
+    
+                          </div>
+
+                      </div> 
+    
+                      <div class="border-bottom mb-2">
+                        
+                        <div class="align-items-center text-decoration-none text-success">
+
+                          <div class="mr-auto">
+                        
+                            <p class="font-weight-bold pb-1 pt-5">
+                              Twitter/Github/Facebook
+                            </p>
+
+                          </div>
+
+                        </div> 
+
+                      </div> 
+    
+                      <div class="border-bottom mb-2">
+                        
+                        <div class="align-items-center text-decoration-none text-success">
+
+                          <div class="mr-auto">
+                        
+                            <p class="font-weight-bold pb-1 pt-5">
+                              Profile picture
+                            </p>
+
+                          </div>
+
+                        </div> 
+
+                      </div> 
+    
+                      <div class="border-bottom mb-2">
+                        
+                        <div class="align-items-center text-decoration-none text-success">
+
+                          <div class="mr-auto">
+                        
+                            <p class="font-weight-bold pb-1 pt-5">
+                              Occupation
+                            </p>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+    
+                      <div class="border-bottom mb-2">
+                        
+                        <div class="align-items-center text-decoration-none text-success">
+
+                          <div class="mr-auto">
+                        
+                            <p class="font-weight-bold pb-1 pt-5">
+                              Country, state, city
+                            </p>
+
+                          </div>
+
+                        </div> 
+                      </div>
+    
+                      <div class="border-bottom mb-2">
+                        
+                        <div class="align-items-center text-decoration-none text-success">
+
+                          <div class="mr-auto">
+                        
+                            <p class="font-weight-bold pb-1 pt-5">
+                              Languages
+                            </p>
+
+                          </div>
+
+                        </div> 
+
+                      </div>
+    
+                      <div class="border-bottom mb-2">
+                        
+                        <div class="align-items-center text-decoration-none text-success">
+
+                          <div class="mr-auto">
+                        
+                            <p class="font-weight-bold pb-1 pt-5">
+                              Accomplishments
+                            </p>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+    
+                      <div class="border-bottom mb-2">
+                        
+                        <div class="align-items-center text-decoration-none text-success">
+
+                          <div class="mr-auto">
+                        
+                            <p class="font-weight-bold pb-1 pt-5">
+                              Volunteering
+                            </p>
+                          </div>
+
+                        </div>
+
+                      </div>
+    
+                      <div class="border-bottom mb-2">
+                        
+                        <div class="align-items-center text-decoration-none text-success">
+
+                          <div class="mr-auto">
+                        
+                            <p class="font-weight-bold pb-1 pt-5">
+                              Gender
+                            </p>
+
+                          </div>
+
+                        </div> 
+
+                      </div>
+    
+                      <div class="border-bottom mb-2">
+                        
+                        <div class="align-items-center text-decoration-none text-success">
+
+                          <div class="mr-auto">
+                        
+                            <p class="font-weight-bold pb-1 pt-5">
+                              Birth date
+                            </p>
+
+                          </div>
+
+                        </div> 
+
+                      </div>
+    
+                      <div class="border-bottom mb-2">
+                        
+                        <div class="align-items-center text-decoration-none text-success">
+
+                          <div class="mr-auto">
+                        
+                            <p class="font-weight-bold pb-1 pt-5">
+                              ..and more! See the
+                              <a class="text-success" style="text-decoration: underline;" href="/proxycurl/docs#people-api-person-profile-endpoint">
+                                API documentation
+                              </a>
+                            </p>
+
+                          </div>
+
+                        </div>
+                      
+                      </div>
+
+                    </div>
+                    
+                    <a class="text-center" data-toggle="collapse" href="#featuresOne" role="button" aria-controls="featuresOne">
+
+                      <div class="mr-auto mt-5">
+                    
+                        <span class="collapse-chevron btn btn-outline-success btn-rounded-circle shadow shadow-light">
+                          <i class="fe fe-lg fe-chevron-down"></i>
+                        </span>
+
+                      </div>
+
+                    </a> 
+                    
+                  </div>
+
+                </div> <!-- item 1_1-->               
+
+              </div> <!-- card body-->
+
+            </div> <!-- card-->
+
+            <!-- card 1_SUB-->
+              <div class="row mt-7">
+
+                <!-- card 1_1-->                
+                <div class="col-12 col-md-12 col-lg-12 col-xl-6 mb-7 mb-xl-2">
+                  <div class="card accordion card-responsive shadow-light-lg lift lift-lg mt-4" id="featuresAccordion_contact">
+
+                  <div class="col-12 text-center mt-n9">
+            
+                    <!-- arrow -->
+                    <img class="">
+                      <img src="assets/img/icons/arrow_down.svg" width="18"></i>
+                    </a>
+        
+                  </div>
+
+                  <!--Contact-->
+                  <div class="card-body">
+
+                    <h3 class="font-weight-bold mb-7">
+                      <img class="img-fluid pr-2" width="40px" src="assets/img/icons/contact.svg" alt="Card contact icon">
+                      Contact
+                    </h3>      
+                    
+                    <!-- List group-->
+                    <div class="list-group list-group-flush">
+
+                      <!--Personal email-->
+                      <div class="list-group-item">
+                      
+                        <!-- Toggle -->
+                        <a class="align-items-center text-decoration-none text-success" href="#" role="button">
+                          <div class="mr-auto">
+                            
+                            <!-- Title -->
+                            <p class="font-weight-bold mb-0">
+                              Personal email
+                            </p>
+    
+                          </div>
+    
+                        </a> <!-- / .row -->
+                        
+                      </div>
+    
+                      <!--Phone Number-->
+                      <div class="list-group-item">
+                        
+                        <!-- Toggle -->
+                        <a class="align-items-center text-decoration-none text-success" href="#" role="button">
+                          <div class="mr-auto">
+                            
+                            <!-- Title -->
+                            <p class="font-weight-bold mb-0">
+                              Phone number
+                            </p>
+    
+                          </div>
+    
+                        </a> <!-- / .row -->
+                        
+                      </div>
+  
+                      <!--API Doc-->
+                      <div class="list-group-item">
+                        <div class="blur collapse" id="featurescontact" data-parent="#featuresAccordion_contact">
+                          <div class="border-bottom">
+                          
+                            <div class="align-items-center text-decoration-none text-success">
+                              <div class="mr-auto">
+                              
+                                <p class="font-weight-bold pb-1">
+                                  Work email
+                                </p>
+
+                              </div>
+                            </div>
+
+                          </div> 
+
+                          <div class="border-bottom mb-2">
+                          
+                            <div class="align-items-center text-decoration-none text-success">
+
+                              <div class="mr-auto">
+                              
+                              <p class="font-weight-bold pb-1 pt-5">
+                              ...and more! See the 
+                              <a class="text-success" style="text-decoration: underline;" href="/proxycurl/docs#contact-api">
+                                API documentation
+                              </a>
+                              </p>
+                              </div>
+
+                            </div> 
+                          
+                          </div> 
+                        </div>
+  
+                        <!-- Toggle -->
+                        <a class="text-center" data-toggle="collapse" href="#featurescontact" role="button" aria-expanded="false" aria-controls="featurescontact">
+                          <div class="mr-auto">
+                            
+                          <!-- Chevron -->
+                          <span class="collapse-chevron btn btn-outline-success btn-rounded-circle shadow shadow-light">
+                            <i class="fe fe-lg fe-chevron-down"></i>
+                          </span>
+    
+                          </div>  
+    
+                        </a> <!-- / .row -->                      
+                        <!-- Collapse -->
+                        
+                      </div>
+    
+                    </div> <!-- item 1_1-->
+                    
+                  </div> <!-- card-body-->
+
+                  </div>
+                </div>
+
+                <!-- card 1_2-->
+                <div class="col-12 col-md-12 col-lg-12 col-xl-6 mb-8 mb-md-0">              
+                  <div class="card accordion card-responsive shadow-light-lg lift lift-lg mt-4" id="featuresAccordion_salary">
+
+                    <div class="col-12 text-center mt-n9">
+            
+                      <!-- arrow -->
+                      <img class="">
+                        <img src="assets/img/icons/arrow_down.svg" width="18"></i>
+                      </a>
+          
+                    </div>
+
+                    <div class="card-body pb-14">
+
+                      <h3 class="font-weight-bold mb-6">
+                        <img class="img-fluid pr-2" width="40px" src="assets/img/icons/salary.svg" alt="Card salary icon">
+                        Salary
+                      </h3>
+                    
+                      <div class="list-group list-group-flush pt-4">
+
+                        <div class="list-group-item ">
+                      
+                          <!-- Toggle -->
+                          <a class=" align-items-center text-decoration-none text-success" href="#" role="button">
+  
+                            <div class="mr-auto">
+  
+                              <span class="badge badge-pill badge-success-soft">
+                                <span class="h6 text-uppercase">Coming soon!</span>
+                              </span>
+      
+                            </div>
+      
+                          </a> <!-- / .row -->
+                      
+                        </div> <!-- item 3_1-->                   
+    
+                      </div> <!-- List group--> 
+                    
+                    </div> <!-- card-body-->
+
+                  </div>
+                </div>
+
+              </div> <!--row-->
+          
+          </div> <!-- card 1-->
+
+          <!--Companies card-->          
+          <div class="col-12 col-md-5 col-lg-6 col-xl-6 mb-2 mb-lg-8 mb-md-8">
+
+            <div class="card accordion card-responsive shadow-light-lg lift lift-lg" id="featuresAccordion2">
+
+              <!--Companies-->
+              <div class="card-body">
+
+                <div class="d-flex justify-content-between mb-5 pb-3 ">
+                  <div class="h3 font-weight-bold ">
+                    <img class="img-fluid pr-2" width="40px" src="assets/img/icons/company.svg" alt="Card image cap">
+                    Companies
+                  </div>
+                  <div class="text-right">
+                    <h5><span class="badge badge-pill badge-secondary-soft font-weight-normal py-2" style="font-family:monospace;" >=SG_COMPANY()</span></h5>
+                 
+                    <div class="h6 font-weight-bold">
+                      <a href="#!" class="mr-2 text-secondary"><svg class="mb-1" width="12px" viewBox="0 0 24 24"><path fill="#506690" d="M21,8H9A1,1,0,0,0,8,9V21a1,1,0,0,0,1,1H21a1,1,0,0,0,1-1V9A1,1,0,0,0,21,8ZM20,20H10V10H20ZM6,15a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V3A1,1,0,0,1,3,2H15a1,1,0,0,1,1,1V5a1,1,0,0,1-2,0V4H4V14H5A1,1,0,0,1,6,15Z"/></svg>
+                      Copy </a>
+                      <a href="#!" class="text-secondary mr-2"><svg class="mb-1" width="11px" viewBox="0 0 24 24"><path fill="#506690" d="M21,6a1.009,1.009,0,0,0-.294-.708l-4-4a1,1,0,0,0-.323-.216A.988.988,0,0,0,16,1H4A1,1,0,0,0,3,2V22a1,1,0,0,0,1,1H20a1,1,0,0,0,1-1ZM19,21H5V3H15V6a1,1,0,0,0,1,1h3ZM16,9a1,1,0,0,1,0,2H8A1,1,0,0,1,8,9ZM7,6A1,1,0,0,1,8,5h4a1,1,0,0,1,0,2H8A1,1,0,0,1,7,6Zm10,8a1,1,0,0,1-1,1H8a1,1,0,0,1,0-2h8A1,1,0,0,1,17,14Zm0,4a1,1,0,0,1-1,1H8a1,1,0,0,1,0-2h8A1,1,0,0,1,17,18Z"/></svg>
+                      Docs </a>
+                      </div>
+                 
+                  </div>
+                </div>
+
+                <!-- List group-->
+                <div class="list-group list-group-flush">
+
+                  <div class="list-group-item">
+                   
+                    <!-- Toggle -->
+                    <a class="align-items-center text-decoration-none text-success" href="#" role="button">
+                      <div class="mr-auto">
+                        
+                        <!-- Title -->
+                        <p class="font-weight-bold mb-0">
+                          Name
+                        </p>
+
+                      </div>
+
+                    </a> <!-- / .row -->
+                    
+                  </div> <!-- item 1_1-->
+
+                  <div class="list-group-item">
+                    
+                    <!-- Toggle -->
+                    <a class="align-items-center text-decoration-none text-success" href="#" role="button">
+                      <div class="mr-auto">
+                        
+                        <!-- Title -->
+                        <p class="font-weight-bold mb-0">
+                          Website
+                        </p>
+
+                      </div>
+
+                    </a> <!-- / .row -->
+                    
+                  </div> <!-- item 1_2-->
+
+                  <div class="list-group-item pt-0">
+                    <div class="blur collapse" id="features2" data-parent="#featuresAccordion2">
+                    <div class="border-bottom mb-2">
+                    
+                    <div class="align-items-center text-decoration-none text-success">
+                    <div class="mr-auto">
+                    
+                    <p class="font-weight-bold pb-1 pt-5">
+                    Funding data
+                    </p>
+                    </div>
+                    </div> 
+                    </div> 
+                    <div class="border-bottom mb-2">
+                    
+                    <div class="align-items-center text-decoration-none text-success">
+                    <div class="mr-auto">
+                    
+                    <p class="font-weight-bold pb-1 pt-5">
+                    Website
+                    </p>
+                    </div>
+                    </div> 
+                    </div> 
+                    <div class="border-bottom mb-2">
+                    
+                    <div class="align-items-center text-decoration-none text-success">
+                    <div class="mr-auto">
+                    
+                    <p class="font-weight-bold pb-1 pt-5">
+                    Company size
+                    </p>
+                    </div>
+                    </div> 
+                    </div> 
+                    <div class="border-bottom mb-2">
+                    
+                    <div class="align-items-center text-decoration-none text-success">
+                    <div class="mr-auto">
+                    
+                    <p class="font-weight-bold pb-1 pt-5">
+                    HQ addresses
+                    </p>
+                    </div>
+                    </div> 
+                    </div> 
+                    <div class="border-bottom mb-2">
+                    
+                    <div class="align-items-center text-decoration-none text-success">
+                    <div class="mr-auto">
+                    
+                    <p class="font-weight-bold pb-1 pt-5">
+                    Industry type
+                    </p>
+                    </div>
+                    </div> 
+                    </div> 
+                    <div class="border-bottom mb-2">
+                    
+                    <div class="align-items-center text-decoration-none text-success">
+                    <div class="mr-auto">
+                    
+                    <p class="font-weight-bold pb-1 pt-5">
+                    Specialities
+                    </p>
+                    </div>
+                    </div> 
+                    </div> 
+                    <div class="border-bottom mb-2">
+                    
+                    <div class="align-items-center text-decoration-none text-success">
+                    <div class="mr-auto">
+                    
+                    <p class="font-weight-bold pb-1 pt-5">
+                    Year founded
+                    </p>
+                    </div>
+                    </div> 
+                    </div> 
+                    <div class="border-bottom mb-2">
+                    
+                    <div class="align-items-center text-decoration-none text-success">
+                    <div class="mr-auto">
+                    
+                    <p class="font-weight-bold pb-1 pt-5">
+                    Tagline
+                    </p>
+                    </div>
+                    </div> 
+                    </div> 
+                    <div class="border-bottom mb-2">
+                    
+                    <div class="align-items-center text-decoration-none text-success">
+                    <div class="mr-auto">
+                    
+                    <p class="font-weight-bold pb-1 pt-5">
+                    Similar companies
+                    </p>
+                    </div>
+                    </div> 
+                    </div> 
+                    <div class="border-bottom mb-2">
+                    
+                    <div class="align-items-center text-decoration-none text-success">
+                    <div class="mr-auto">
+                    
+                    <p class="font-weight-bold pb-1 pt-5">
+                    Acquisitions
+                    </p>
+                    </div>
+                    </div> 
+                    </div> 
+                    <div class="border-bottom mb-2">
+                    
+                    <div class="align-items-center text-decoration-none text-success">
+                    <div class="mr-auto">
+                    
+                    <p class="font-weight-bold pb-1 pt-5">
+                    Categories
+                    </p>
+                    </div>
+                    </div> 
+                    </div> 
+                    <div class="border-bottom mb-2">
+                    
+                    <div class="align-items-center text-decoration-none text-success">
+                    <div class="mr-auto">
+                    
+                    <p class="font-weight-bold pb-1 pt-5">
+                    ...and more! See the
+                    <a class="text-success" style="text-decoration: underline;" href="/proxycurl/docs#company-api-company-profile-endpoint">
+                      API documentation
+                    </a>
+                    </p>
+                    </div>
+                    </div> 
+                    </div> 
+                    </div>
+                    
+                    <a class="text-center" data-toggle="collapse" href="#features2" role="button" aria-controls="features2">
+                    <div class="mr-auto mt-5">
+                    
+                    <span class="collapse-chevron btn btn-outline-success btn-rounded-circle shadow shadow-light">
+                    <i class="fe fe-lg fe-chevron-down"></i>
+                    </span>
+                    </div>
+                    </a> 
+                    
+                  </div>
+
+                </div> <!-- item 1_1-->
+
+              </div> <!-- card body-->
+
+            </div> <!-- card-->
+
+            <!-- card 2_sub-->
+            <div class="row mt-7 ">
+
+              <!-- card 2_1-->                
+              <div class="col-12 col-md-12 col-lg-12 col-xl-6 mb-7 mb-xl-2">   
+
+                <div class="card accordion card-responsive shadow-light-lg lift lift-lg mt-4" id="featuresAccordion_jobs">
+
+                  <div class="col-12 text-center mt-n9">
+            
+                    <!-- arrow -->
+                    <img class="">
+                      <img src="assets/img/icons/arrow_down.svg" width="18"></i>
+                    </a>
+        
+                  </div>
+
+                  <!--Jobs-->
+                  <div class="card-body pb-14">
+
+                    <h3 class="font-weight-bold mb-6">
+                      <img class="img-fluid pr-2" width="40px" src="assets/img/icons/jobs.svg" alt="jobs icon">
+                      Jobs
+                    </h3>
+
+                    <div class="list-group list-group-flush pt-4">
+
+                      <div class="list-group-item ">
+                    
+                        <!-- Toggle -->
+                        <a class=" align-items-center text-decoration-none text-success" href="#" role="button">
+
+                          <div class="mr-auto">
+
+                            <span class="badge badge-pill badge-success-soft">
+                              <span class="h6 text-uppercase">Coming soon!</span>
+                            </span>
+    
+                          </div>
+    
+                        </a> <!-- / .row -->
+                    
+                      </div> <!-- item 3_1-->                   
+  
+                    </div> <!-- List group--> 
+                  
+                  </div> <!-- card-body-->
+
+                </div>
+
+              </div>
+
+              <!-- card 2_2-->
+              <div class="col-12 col-md-12 col-lg-12 col-xl-6 mb-8 mb-md-0">      
+                       
+                <div class="card accordion card-responsive shadow-light-lg lift lift-lg mt-4" id="featuresAccordion_customer">
+
+                  <div class="col-12 text-center mt-n9">
+            
+                    <!-- arrow -->
+                    <img class="">
+                      <img src="assets/img/icons/arrow_down.svg" width="18"></i>
+                    </a>
+        
+                  </div>
+
+                  <!--Customers-->
+                  <div class="card-body pb-14">
+
+                    <h3 class="font-weight-bold mb-6">
+                      <img class="img-fluid pr-2" width="40px" src="assets/img/icons/customer.svg" alt="customer icon">
+                      Customers
+                    </h3>      
+                  
+                    <div class="list-group list-group-flush pt-4">
+
+                      <div class="list-group-item ">
+                    
+                        <!-- Toggle -->
+                        <a class=" align-items-center text-decoration-none text-success" href="#" role="button">
+
+                          <div class="mr-auto">
+
+                            <span class="badge badge-pill badge-success-soft">
+                              <span class="h6 text-uppercase">Coming soon!</span>
+                            </span>
+    
+                          </div>
+    
+                        </a> <!-- / .row -->
+                    
+                      </div> <!-- item 3_1-->                   
+  
+                    </div> <!-- List group--> 
+                  
+                  </div> <!-- card-body-->
+
+                </div>
+
+              </div>
+
+            </div> <!--row-->
+
+          </div> <!-- card 2-->
+
+        </div> <!-- row-->
+
+        <div class="row justify-content-center text-center">
+          <div class="col-10 mt-4 mt-md-0 mb-0 mb-md-0">
+            <a class="col-12 col-sm-2 col-md-4 col-lg-3 col-xl-5 btn btn-success  mr-md-3 mb-4 mb-md-0" href="#" target="blank">
+              Learn more about Proxycurl API
+            </a>
+            <a class="col-12 col-sm-2 col-md-4 col-lg-3 col-xl-5 btn btn-success-soft" href="#" target="blank">
+              View API Docs
+            </a>
+          </div>
+        </div> <!-- Button-->
+
+      </div> <!-- / .container -->    
+    </section>
+
+    <!-- PRICING
+    ================================================== -->
+    <section class="pt-8 pt-md-11 pb-10 pb-md-14 bg-success" id="pricing">
+
+      <!-- Shape -->
+      <div class="shape shape-blur-3 svg-shim text-white">
+        <svg viewBox="0 0 1738 487" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h1420.92s713.43 457.505 0 485.868C707.502 514.231 0 0 0 0z" fill="url(#paint0_linear)"/><defs><linearGradient id="paint0_linear" x1="0" y1="0" x2="1049.98" y2="912.68" gradientUnits="userSpaceOnUse"><stop stop-color="currentColor" stop-opacity=".075"/><stop offset="1" stop-color="currentColor" stop-opacity="0"/></linearGradient></defs></svg>
+      </div>
+
+      <!-- Content -->
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-8 text-center">
+            
+            <!-- Heading -->
+            <h1 class="display-2 text-white">
+              Sapiengraph Pricing
+            </h1>
+
+            <!-- Text -->
+            <p class="lead text-white-80 mb-6 mb-md-8">
+              Transparent pricing for all levels of use. No contracts. No hidden fees.
+            </p>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+
+    </section>
+
+    <!-- SHAPE
+    ================================================== -->
+    <div class="position-relative">
+      <div class="shape shape-bottom shape-fluid-x svg-shim text-light">
+        <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor"/></svg>
+      </div>
+    </div>
+
+    <!-- PRICING TABLE
+    ================================================== -->
+    <section class="mt-n8 mt-md-n12 mb-12">
+      <div class="container-fluid" style="max-width: 1280px;">
+
+        <div class="form-row justify-content-center align-items-center">
+
+          <div class="col-12">
+
+            <div class="card shadow-lg mb-lg-5 mb-6">
+
+              <div class="card-body">
+
+                <!-- Table -->
+                <div class="row">
+                  <div class="col-12">
+                    <table class="table table-responsive table-borderless table-hover table-striped">
+                      
+                      <thead class="text-success lead">
+                        <tr>
+                          <th scope="col"></th>
+                          <th scope="col" class="text-uppercase">Free Trial</th>
+                          <th scope="col" class="text-uppercase">Lite</th>
+                          <th scope="col" class="text-uppercase">Pro</th>
+                          <th scope="col" class="text-uppercase">Business</th>
+                          <th scope="col" class="text-uppercase">Enterprise</th>
+                        </tr>
+                      </thead>
+    
+                      <tbody>
+                        <tr>
+                          <th scope="row" class="text-primary text-success lead">Pricing</th>
+                          <td>FREE</td>
+                          <td>$9.90 / mo</td>
+                          <td>$99 / mo</td>
+                          <td>$500 / mo</td>
+                          <td>Contact us</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="text-primary text-success lead">Credits</th>
+                          <td>One time trial of 10 credits</td>
+                          <td>100 credits / mo</td>
+                          <td>4600 credits / mo</td>
+                          <td>25000 credits / mo</td>
+                          <td>Contact us</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="text-primary text-success lead">Formulas</th>
+                          <td>None</td>
+                          <td>Use our formulas up to 100 times</td>
+                          <td>Use our formulas up to 4600 times</td>
+                          <td>Use our formulas up to 25000 times</td>
+                          <td>Contact us</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <!--CTA-->
+    
+                  <!-- Submit -->
+                  <a class="btn w-100 btn-success lift" href="#" target="blank">
+                    Install Chrome extension <i class="fe fe-arrow-right"></i>
+                  </a>
+     
+              </div>
+
+            </div>
+
+          </div>      
+
+        </div>
+
+      </div> <!-- / .container -->
+    </section>
+
+    <!-- COMPLIANCE
+    ================================================== -->
+    <section class="pt-8 pt-md-11 pb-10 pb-md-12 bg-white border-bottom">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-6 order-md-2 mb-4 mb-md-0 pt-6 pt-md-0">
+            
+            <!-- Image -->
+            <img src="assets/img/illustrations/compliant_logo.png" alt="GDPR Illustration" class="img-fluid mb-6 mb-md-0">
+
+          </div>
+          <div class="col-12 col-md-6 order-md-1 pr-6 pr-md-0 pr-lg-0 pr-xl-10">
+
+            <!-- Heading -->
+            <h2 class="display-3 font-weight-bold mb-6">
+              <span class="text-success"> Stay compliant </span>with Sapiengraph
+            </h2>
+
+            <!-- Text -->
+            <p class="font-size-lg text-muted mb-4">
+              We abide by strict standards of legal compliance in the obtaining and processing data.
+            </p>
+            <p class="font-size-lg text-muted mb-4">
+              Safeguard your data with our Security and Compliance feature. Data privacy is as important as data enrichment, and our platform considers security and privacy as first-class features along with compliance.
+            </p>
+            <p class="font-size-lg text-muted">
+              We're CCPA and GDPR compliant, and we're in the process of being SOC 2 certified.
+            </p>            
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+
+    <!-- FOOTER 
+    ================================================== -->
+    <footer class="py-8 py-md-11 bg-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-4 col-lg-3">
+        
+            <!-- Brand -->
+            <img src="./assets/img/Sapiengraph logo.svg" alt="proxycurl logo" class="footer-brand img-fluid mb-2">
+
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+        
+            <!-- Heading -->
+            <h6 class="font-weight-bold text-uppercase text-gray-700">
+              Sapiengraph
+            </h6>
+
+            <!-- List -->
+            <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
+              <li class="mb-3">
+                <a href="index.html" class="text-reset">
+                  Home
+                </a> 
+              </li>
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Blog
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="#pricing" class="text-reset">
+                  Pricing
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="terms-of-use.html" class="text-reset">
+                  Terms of use
+                </a>
+              </li>
+            </ul>
+
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+        
+            <!-- Heading -->
+            <h6 class="font-weight-bold text-uppercase text-gray-700">
+              API
+            </h6>
+
+            <!-- List -->
+            <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Documentation
+                </a>
+              </li>
+            </ul>
+
+          </div>
+          <div class="col-6 col-md-4 offset-md-4 col-lg-2 offset-lg-0">
+        
+            <!-- Heading -->
+            <h6 class="font-weight-bold text-uppercase text-gray-700">
+              Company
+            </h6>
+
+            <!-- List -->
+            <ul class="list-unstyled text-muted mb-0">
+              <li class="mb-3">
+                <a href="https://nubela.co" class="text-reset">
+                  Nubela Pte Ltd
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="team.html" class="text-reset">
+                  Our Team
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="https://nubela.co" class="text-reset">
+                  Other Projects by Nubela
+                </a>
+              </li>
+            </ul>
+
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+        
+            <!-- Heading -->
+            <h6 class="font-weight-bold text-uppercase text-gray-700">
+              Help
+            </h6>
+
+            <!-- List -->
+            <ul class="list-unstyled text-muted mb-0">
+              <li class="mb-3">
+                <a href="mailto:hello@proxycurl.com" class="text-reset">
+                  Email us
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div> <!-- / .row -->
+        <br>
+
+        <hr>
+        <br>
+
+        <div class="text-center">
+          <p class="caption">Nubela Pte Ltd. All rights reserved.</p>
+        </div>
+
+      </div> <!-- / .container -->
+    </footer>
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    <!-- Libs JS -->
+    <script src="./assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="./assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+    <script src="./assets/libs/aos/dist/aos.js"></script>
+    <script src="./assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="./assets/libs/countup.js/dist/countUp.min.js"></script>
+    <script src="./assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+    <script src="./assets/libs/flickity/dist/flickity.pkgd.min.js"></script>
+    <script src="./assets/libs/flickity-fade/flickity-fade.js"></script>
+    <script src="./assets/libs/highlightjs/highlight.pack.min.js"></script>
+    <script src="./assets/libs/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="./assets/libs/isotope-layout/dist/isotope.pkgd.min.js"></script>
+    <script src="./assets/libs/jarallax/dist/jarallax.min.js"></script>
+    <script src="./assets/libs/jarallax/dist/jarallax-video.min.js"></script>
+    <script src="./assets/libs/jarallax/dist/jarallax-element.min.js"></script>
+    <script src="./assets/libs/quill/dist/quill.min.js"></script>
+    <script src="./assets/libs/smooth-scroll/dist/smooth-scroll.min.js"></script>
+    <script src="./assets/libs/typed.js/lib/typed.min.js"></script>
+
+    <!-- Map -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+    <!-- Theme JS -->
+    <script src="./assets/js/theme.min.js"></script>
+
+
+  </body>
+</html>

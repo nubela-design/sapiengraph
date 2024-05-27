@@ -1,0 +1,866 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="./assets/fonts/Feather/feather.css">
+    <link rel="stylesheet" href="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="./assets/libs/aos/dist/aos.css">
+    <link rel="stylesheet" href="./assets/libs/choices.js/public/assets/styles/choices.min.css">
+    <link rel="stylesheet" href="./assets/libs/flickity-fade/flickity-fade.css">
+    <link rel="stylesheet" href="./assets/libs/flickity/dist/flickity.min.css">
+    <link rel="stylesheet" href="./assets/libs/highlightjs/styles/vs2015.css">
+    <link rel="stylesheet" href="./assets/libs/jarallax/dist/jarallax.css">
+    <link rel="stylesheet" href="./assets/libs/quill/dist/quill.core.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+    <!-- Map -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="./assets/css/theme.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Title -->
+    <title>Export LinkedIn Search Results</title>
+
+  </head>
+  <body>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content">
+
+          <div class="modal-header">
+
+            <h5 class="modal-title" id="exampleModalLabel">
+              Filter only 
+              <div class="btn-group mb-2">
+                <div class="dropdown">
+                  <button class="btn btn-light btn-xs dropdown-toggle mt-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    People
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">All</a>
+                    <a class="dropdown-item text-success border-left border-success" href="#">People</a>
+                    <a class="dropdown-item" href="#">Posts</a>
+                    <a class="dropdown-item" href="#">Companies</a>
+                    <a class="dropdown-item" href="#">Products</a>
+                    <a class="dropdown-item" href="#">Groups</a>
+                    <a class="dropdown-item" href="#">Services</a>
+                    <a class="dropdown-item" href="#">Events</a>
+                    <a class="dropdown-item" href="#">Courses</a>
+                    <a class="dropdown-item" href="#">Schools</a>
+                  </div>
+                </div>
+              </div>
+              by
+            </h5>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+
+          </div>
+
+          <div class="modal-body">
+            
+            <div class="mb-6">
+
+              <h2 class="h4 font-weight-bold">
+                Connections
+              </h2>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">
+                  1st
+                </label>
+              </div>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                <label class="custom-control-label" for="customCheck2">
+                  2nd
+                </label>
+              </div>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="customCheck3">
+                <label class="custom-control-label" for="customCheck3">
+                  3rd+
+                </label>
+              </div>
+
+            </div>
+
+            <div class="mb-6">
+
+              <h2 class="h4 font-weight-bold">
+                Locations
+              </h2>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="PapuaNewGuinea">
+                <label class="custom-control-label" for="PapuaNewGuinea">
+                  Papua New Guinea
+                </label>
+              </div>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="Australia">
+                <label class="custom-control-label" for="Australia">
+                  Australia
+                </label>
+              </div>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="US">
+                <label class="custom-control-label" for="US">
+                  United States
+                </label>
+              </div>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="PM">
+                <label class="custom-control-label" for="PM">
+                  Port Moresby
+                </label>
+              </div>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="QA">
+                <label class="custom-control-label" for="QA">
+                  Queensland, Australia
+                </label>
+              </div>
+
+              <button class="btn btn-outline-secondary btn-xs">
+                <i class="fe fe-plus"></i> Add a location
+              </button>
+
+            </div>
+
+            <div class="mb-6">
+
+              <h2 class="h4 font-weight-bold">
+                Current company
+              </h2>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="newMining">
+                <label class="custom-control-label" for="newMining">
+                  Newcrest Mining
+                </label>
+              </div>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="okTedi">
+                <label class="custom-control-label" for="okTedi">
+                  Ok Tedi Mining Limited
+                </label>
+              </div>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="PNGair">
+                <label class="custom-control-label" for="PNGair">
+                  PNG Air
+                </label>
+              </div>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="telkomPNG">
+                <label class="custom-control-label" for="telkomPNG">
+                  Telkom PNG
+                </label>
+              </div>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="univPNG">
+                <label class="custom-control-label" for="univPNG">
+                  PNG University of Technology
+                </label>
+              </div>
+
+              <button class="btn btn-outline-secondary btn-xs">
+                <i class="fe fe-plus"></i> Add a company
+              </button>
+
+            </div>
+
+            <div class="mb-6">
+
+              <h2 class="h4 font-weight-bold">
+                Past company
+              </h2>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="NMI">
+                <label class="custom-control-label" for="NMI">
+                  Newcrest Mengi
+                </label>
+              </div>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="OKT">
+                <label class="custom-control-label" for="OKT">
+                  OK Tedi Mining Limited
+                </label>
+              </div>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="TPNG">
+                <label class="custom-control-label" for="TPNG">
+                  Talikom PNG
+                </label>
+              </div>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="BL">
+                <label class="custom-control-label" for="BL">
+                  Bemobile Limited
+                </label>
+              </div>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="BFGI">
+                <label class="custom-control-label" for="BFGI">
+                  BSP Financial Group Limited
+                </label>
+              </div>
+
+              <button class="btn btn-outline-secondary btn-xs">
+                <i class="fe fe-plus"></i> Add a company
+              </button>
+
+            </div>
+
+            <div class="mb-6">
+
+              <h2 class="h4 font-weight-bold">
+                School
+              </h2>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="SOU">
+                <label class="custom-control-label" for="SOU">
+                  Southern Cross University
+                </label>
+              </div>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="CQU">
+                <label class="custom-control-label" for="CQU">
+                  CQUniversity
+                </label>
+              </div>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="SP">
+                <label class="custom-control-label" for="SP">
+                  Singapore Polytechnic
+                </label>
+              </div>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="DWU">
+                <label class="custom-control-label" for="DWU">
+                  Divine World University
+                </label>
+              </div>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="TNS">
+                <label class="custom-control-label" for="TNS">
+                  The New School
+                </label>
+              </div>
+
+              <button class="btn btn-outline-secondary btn-xs">
+                <i class="fe fe-plus"></i> Add a company
+              </button>
+
+            </div>
+
+            <div class="mb-6">
+
+              <h2 class="h4 font-weight-bold">
+                Industry
+              </h2>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="OGM">
+                <label class="custom-control-label" for="OGM">
+                  Oil, Gas, and Mining
+                </label>
+              </div>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="TIM">
+                <label class="custom-control-label" for="TIM">
+                  Technology, Information and Media
+                </label>
+              </div>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="mining">
+                <label class="custom-control-label" for="mining">
+                  Mining
+                </label>
+              </div>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="proService">
+                <label class="custom-control-label" for="proService">
+                  Professional Services
+                </label>
+              </div>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="MAT">
+                <label class="custom-control-label" for="MAT">
+                  Media and Telecommunications
+                </label>
+              </div>
+
+              <button class="btn btn-outline-secondary btn-xs">
+                <i class="fe fe-plus"></i> Add a company
+              </button>
+
+            </div>
+
+            <div class="mb-6">
+
+              <h2 class="h4 font-weight-bold">
+                Profile language
+              </h2>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="englishOpt">
+                <label class="custom-control-label" for="englishOpt">
+                  English
+                </label>
+              </div>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="spanishOpt">
+                <label class="custom-control-label" for="spanishOpt">
+                  Spanish
+                </label>
+              </div>
+
+            </div>
+
+            <div class="mb-6">
+
+              <h2 class="h4 font-weight-bold">
+                Open to
+              </h2>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="proBono">
+                <label class="custom-control-label" for="proBono">
+                  Pro bono consulting and volunteering
+                </label>
+              </div>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="nonProfit">
+                <label class="custom-control-label" for="nonProfit">
+                  Joining a nonprofit board
+                </label>
+              </div>
+
+            </div>
+
+            <div class="mb-6">
+
+              <h2 class="h4 font-weight-bold">
+                Service categories
+              </h2>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="Telecommunications">
+                <label class="custom-control-label" for="Telecommunications">
+                  Telecommunications
+                </label>
+              </div>
+
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="infoTech">
+                <label class="custom-control-label" for="infoTech">
+                  Information Technology
+                </label>
+              </div>
+
+              <button class="btn btn-outline-secondary btn-xs">
+                <i class="fe fe-plus"></i> Add a service
+              </button>
+
+            </div>
+
+            <div class="mb-4">
+
+              <h2 class="h4 font-weight-bold">
+                Keywords
+              </h2>
+
+              <form>
+
+                <div class="form-group">
+                  <label for="firstName">First name</label>
+                  <input type="text" class="form-control" id="firstName">
+                </div>
+
+                <div class="form-group">
+                  <label for="lastName">Last name</label>
+                  <input type="text" class="form-control" id="lastName">
+                </div>
+
+                <div class="form-group">
+                  <label for="titleRole">Title</label>
+                  <input type="text" class="form-control" id="titleRole">
+                </div>
+
+                <div class="form-group">
+                  <label for="companyTag">Company</label>
+                  <input type="text" class="form-control" id="companyTag">
+                </div>
+
+                <div class="form-group">
+                  <label for="schoolTag">School</label>
+                  <input type="text" class="form-control" id="schoolTag">
+                </div>
+
+              </form>
+
+            </div>
+
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary">Reset</button>
+            <button type="button" class="btn btn-success">Show results</button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CONTENT
+    ================================================== -->
+    <section>
+      <div class="container-fluid">
+
+        <div class="row">
+
+          <div class="col-12 col-md-6 bg-light pl-md-10 pr-md-10 pt-md-12 pt-8 pb-md-12 pb-8">
+
+            <a class="navbar-brand" href="./index.html">
+              <img src="./assets/img/Sapiengraph logo.svg" class="navbar-brand-img mb-md-10 mb-4" alt="Sapiengraph logo">
+            </a>
+
+            <h1 class="font-weight-bold mb-8">
+              Export LinkedIn Search Results
+            </h1>
+
+            <div class="card shadow-light-lg shadow-light mb-4">
+
+              <div class="card-body">
+
+                <h2 class="h5 mb-4">
+                  Search results about "<span class="text-info">kevin png</span>"
+                </h2>
+
+                <div class="btn-group mb-2">
+                  <div class="dropdown">
+                    <button class="btn btn-success btn-xs dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      People
+                    </button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="btn-group mb-2">
+                  <div class="dropdown">
+                    <button class="btn btn-outline-secondary btn-xs dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Connections
+                    </button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="btn-group mb-2">
+                  <div class="dropdown">
+                    <button class="btn btn-outline-secondary btn-xs dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Locations
+                    </button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="btn-group mb-2">
+                  <div class="dropdown">
+                    <button class="btn btn-outline-secondary btn-xs dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Current company
+                    </button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                
+                <button class="btn btn-block btn-outline-secondary btn-xs" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  All filters
+                </button>
+
+              </div>
+
+            </div>
+
+            <div class="card shadow-light-lg shadow-light">
+              <div class="card-body">
+
+                <h2 class="text-muted h6 text-uppercase mb-4 mb-md-6">
+                  207 results
+                </h2>
+
+                <div class="list-group list-group-flush mb-6">
+
+                  <div class="list-group-item">
+                    <div class="row align-items-center">
+
+                      <div class="col-1 mb-md-4">
+
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+
+                      </div>
+
+                      <div class="col-auto">
+
+                        <!-- Avatar -->
+                        <div class="avatar avatar-xl">
+                          <img class="avatar-img rounded-circle" src="assets/img/avatars/avatar-1.jpg" alt="...">
+                        </div>
+
+                      </div>
+
+                      <div class="col-6 ms-n5">
+
+                        <!-- Heading -->
+                        <p class="font-weight-bold mb-0">
+                          Kevin P'ng <span class="small font-weight-normal text-muted"> • 3rd+</span>
+                        </p>
+
+                        <p class="d-block small text-gray-700 mb-0">
+                          Commercial Director at BW: Workplace Experts
+                        </p>
+
+                        <p class="text-muted small mb-0">
+                          London
+                        </p>
+
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="list-group-item">
+                    <div class="row align-items-center">
+
+                      <div class="col-1 mb-md-4">
+
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+
+                      </div>
+
+                      <div class="col-auto">
+
+                        <!-- Avatar -->
+                        <div class="avatar avatar-xl">
+                          <img class="avatar-img rounded-circle" src="assets/img/avatars/avatar-2.jpg" alt="...">
+                        </div>
+
+                      </div>
+
+                      <div class="col-6 ms-n5">
+
+                        <!-- Heading -->
+                        <p class="font-weight-bold mb-0">
+                          kelvin P. <span class="small font-weight-normal text-muted"> • 3rd+</span>
+                        </p>
+
+                        <p class="d-block small text-gray-700 mb-0">
+                          --
+                        </p>
+
+                        <p class="text-muted small mb-0">
+                          Singapore
+                        </p>
+
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="list-group-item">
+                    <div class="row align-items-center">
+
+                      <div class="col-1 mb-md-4">
+
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+
+                      </div>
+
+                      <div class="col-auto">
+
+                        <!-- Avatar -->
+                        <div class="avatar avatar-xl">
+                          <img class="avatar-img rounded-circle" src="assets/img/avatars/avatar-3.jpg" alt="...">
+                        </div>
+
+                      </div>
+
+                      <div class="col-6 ms-n5">
+
+                        <!-- Heading -->
+                        <p class="font-weight-bold mb-0">
+                          Kevin Tan <span class="small font-weight-normal text-muted"> • 3rd+</span>
+                        </p>
+
+                        <p class="d-block small text-gray-700 mb-0">
+                          INVESTING IS A LIFELONG JOURNEY
+                        </p>
+
+                        <p class="text-muted small mb-0">
+                          Kuala Lumpur
+                        </p>
+
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="list-group-item">
+                    <div class="row align-items-center">
+
+                      <div class="col-1 mb-md-4">
+
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+
+                      </div>
+
+                      <div class="col-auto">
+
+                        <!-- Avatar -->
+                        <div class="avatar avatar-xl">
+                          <img class="avatar-img rounded-circle" src="assets/img/avatars/avatar-4.jpg" alt="...">
+                        </div>
+
+                      </div>
+
+                      <div class="col-6 ms-n5">
+
+                        <!-- Heading -->
+                        <p class="font-weight-bold mb-0">
+                          Kevin P. <span class="small font-weight-normal text-muted"> • 3rd+</span>
+                        </p>
+
+                        <p class="d-block small text-gray-700 mb-0">
+                          --
+                        </p>
+
+                        <p class="text-muted small mb-0">
+                          Singapore
+                        </p>
+
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="list-group-item">
+                    <div class="row align-items-center">
+
+                      <div class="col-1 mb-md-4">
+
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+
+                      </div>
+
+                      <div class="col-auto">
+
+                        <!-- Avatar -->
+                        <div class="avatar avatar-xl">
+                          <img class="avatar-img rounded-circle" src="assets/img/avatars/avatar-5.jpg" alt="...">
+                        </div>
+
+                      </div>
+
+                      <div class="col-6 ms-n5">
+
+                        <!-- Heading -->
+                        <p class="font-weight-bold mb-0">
+                          Kevin Murray <span class="small font-weight-normal text-muted"> • 3rd+</span>
+                        </p>
+
+                        <p class="d-block small text-gray-700 mb-0">
+                          Head of Global Transactional Solutions at Westpac PNG
+                        </p>
+
+                        <p class="text-muted small mb-0">
+                          Greater Perth Area
+                        </p>
+
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="mb-0">
+                  <button class="btn btn-outline-success btn-block lift lift-lg mb-2">
+                    Purchase sample for $0.99
+                  </button>
+                  <p class="mb-0 h6 text-muted">
+                    Generate a quick sample which is deductable towards your final amount for $0.99. We are not able to generate a quick sample for your export without incurring costs, hence we need you to pay a small amount to cover the cost of compute.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+          
+          </div>
+
+          <div class="col-12 col-md-6 pr-md-10 pl-md-10 pt-md-12 pt-8">
+
+            <div class="mb-md-12"></div>
+
+            <h2 class="h1 font-weight-bold mb-8">
+              Order details
+            </h2>
+
+            <div class="card shadow-light shadow-light-lg border border-success mt-8">
+              <div class="card-body">
+
+                <div class="form-group mb-6">
+                  <label for="emailInput">Email address</label>
+                  <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="workemail@example.com">
+                </div>
+
+                <h3 class="text-muted h6 text-uppercase mb-2">
+                  Profiles
+                </h3>
+
+                <p class="text-gray-700 mb-4">
+                  <span class="text-dark font-weight-bold">207</span> results
+                </p>
+
+                <h3 class="text-muted h6 text-uppercase mb-2">
+                  Pricing
+                </h3>
+
+                <div class="mb-6">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="100records" value="option100">
+                    <label class="form-check-label" for="100records">
+                      $4.99 or $0.05 per result, whichever is lower<br>
+                      <small class="small text-muted">
+                        Up to 100 records
+                      </small>
+                    </label>
+                  </div>
+  
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="1000records" value="option1000" checked>
+                    <label class="form-check-label" for="1000records">
+                      $39 or $0.04 per result, whichever is lower<br>
+                      <small class="small text-muted">
+                        Up to 1000 records
+                      </small>
+                    </label>
+                  </div> 
+                  
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="10000records" value="option10000">
+                    <label class="form-check-label" for="10000records">
+                      $299 or $0.01 per record, whichever is lower<br>
+                      <small class="small text-muted">
+                        Up to 10000 records
+                      </small>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="mb-6">
+                  <h3 class="text-muted h6 text-uppercase mb-2">
+                    Total
+                  </h3>
+  
+                  <p class="font-weight-bold h2 mb-0">
+                    $8.28
+                  </p>
+  
+                  <p class="small text-muted mb-0">
+                    $0.04 x 207 results
+                  </p>
+                </div>
+
+                <button class="btn btn-block btn-success lift lift-lg" disabled>
+                  Pay and Export data in 60s
+                </button>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- JAVASCRIPT -->
+    <!-- Map JS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    
+    <!-- Vendor JS -->
+    <script src="./assets/js/vendor.bundle.js"></script>
+    
+    <!-- Theme JS -->
+    <script src="./assets/js/theme.bundle.js"></script>
+
+  </body>
+</html>

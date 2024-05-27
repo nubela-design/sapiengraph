@@ -1,0 +1,855 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Libs CSS -->
+  <link rel="stylesheet" href="./assets/fonts/Feather/feather.css">
+  <link rel="stylesheet" href="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="./assets/libs/aos/dist/aos.css">
+  <link rel="stylesheet" href="./assets/libs/choices.js/public/assets/styles/choices.min.css">
+  <link rel="stylesheet" href="./assets/libs/flickity-fade/flickity-fade.css">
+  <link rel="stylesheet" href="./assets/libs/flickity/dist/flickity.min.css">
+  <link rel="stylesheet" href="./assets/libs/highlightjs/styles/vs2015.css">
+  <link rel="stylesheet" href="./assets/libs/jarallax/dist/jarallax.css">
+  <link rel="stylesheet" href="./assets/libs/quill/dist/quill.core.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- Map -->
+  <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="./assets/css/theme.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Search customer list from company</title>
+
+</head>
+
+<body>
+
+  <!-- MODAL
+    ================================================== -->
+  <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalTitle"
+    aria-hidden="true">
+
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <div class="input-group border-custom-1 rounded mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text bg-light">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <g fill="currentColor">
+                    <path
+                      d="M16.69 15.629A8.7 8.7 0 0 0 18.75 10c0-4.825-3.925-8.75-8.75-8.75S1.25 5.175 1.25 10s3.925 8.75 8.75 8.75a8.7 8.7 0 0 0 5.629-2.06l5.84 5.84a.747.747 0 0 0 1.061 0 .75.75 0 0 0 0-1.06zM10 17.25c-3.998 0-7.25-3.252-7.25-7.25S6.002 2.75 10 2.75s7.25 3.252 7.25 7.25-3.252 7.25-7.25 7.25">
+                    </path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <input id="searchInput" type="text" class="form-control bg-light modal-title"
+              placeholder="Search company name or domain" autocomplete="off">
+          </div>
+        </div>
+
+        <div class="modal-body" style="height: 370px; overflow-y: auto;">
+
+          <div id="searchResults"></div>
+
+          <div id="placeholder" class="text-muted text-center">
+            No recent searches
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- NAVBAR
+    ================================================== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container">
+
+      <!-- Brand -->
+      <a class="navbar-brand" href="./index.html">
+        <img src="./assets/img/Sapiengraph logo.svg" class="navbar-brand-img" alt="Sapiengraph logo">
+      </a>
+
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fe fe-x"></i>
+        </button>
+
+        <!-- Navigation -->
+        <ul class="navbar-nav ml-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              Home
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="pricing.html">
+              Pricing
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#!">
+              Documentation
+            </a>
+          </li>
+
+        </ul>
+
+        <!-- Button -->
+
+        <div class="text-center ml-auto">
+          <!-- Button -->
+          <a class="btn btn-sm btn-link font-weight-bold text-white text-md-gray" href="signin-illustration.html">
+            Sign in
+          </a>
+
+          <a class="navbar-btn btn btn-pill btn-sm btn-white text-success text-md-gray lift ml-auto shadow-light-lg"
+            href="#!" target="_blank">
+            Set up new account
+          </a>
+
+        </div>
+
+
+
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- FIRST FOLD
+    ================================================== -->
+  <section class="bg-light pt-9 pt-lg-10 pt-xl-11 pb-0 pb-md-11">
+
+    <div class="container">
+
+      <div class="row align-items-center">
+
+        <div class="col-12">
+
+          <div class="text-center">
+            <h1 class="display-2 font-weight-bold mb-2">
+              Customers by Sapiengraph
+            </h1>
+
+            <p class="text-muted lead mb-6 mb-md-8">
+              Search customer list of a company
+            </p>
+          </div>
+
+          <div class="card shadow-light-lg">
+
+            <div class="card-header">
+
+              <a type="button" class="text-muted w-100 rounded border-custom-1 bg-light py-3 px-4 mb-0"
+                data-toggle="modal" data-target="#searchModal">
+                <svg class="mr-2 mb-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <g fill="currentColor">
+                    <path
+                      d="M16.69 15.629A8.7 8.7 0 0 0 18.75 10c0-4.825-3.925-8.75-8.75-8.75S1.25 5.175 1.25 10s3.925 8.75 8.75 8.75a8.7 8.7 0 0 0 5.629-2.06l5.84 5.84a.747.747 0 0 0 1.061 0 .75.75 0 0 0 0-1.06zM10 17.25c-3.998 0-7.25-3.252-7.25-7.25S6.002 2.75 10 2.75s7.25 3.252 7.25 7.25-3.252 7.25-7.25 7.25">
+                    </path>
+                  </g>
+                </svg>
+                Search company name or domain
+              </a>
+
+            </div>
+
+            <div class="card-body">
+
+              <p class="mb-6 text-gray-700">
+                <span class="font-weight-bold text-dark text-monospace">3,910,888</span> companies crawled <span
+                  class="ml-2 font-weight-bold text-dark text-monospace">210,238</span> customers inferred
+              </p>
+
+              <div class="card card-row border-custom-1 mb-0">
+
+                <div class="row">
+
+                  <div class="col-12 position-md-static">
+
+                    <!-- Slider -->
+                    <div class="position-md-static"
+                      data-flickity='{"wrapAround": true, "pageDots": false, "adaptiveHeight": true}' id="blogSlider">
+
+                      <div class="w-100">
+
+                        <div class="card-body">
+
+                          <div class="row align-items-top mb-6 mb-md-8 border-bottom">
+                            <div class="col-auto">
+
+                              <img class="img img-fluid border rounded py-4 px-4" width="96" height="auto"
+                                alt="company logo" src="assets/img/logo/Google-logoicon.svg">
+
+                            </div>
+                            <div class="col ms-n5">
+
+                              <h1 class="font-weight-bold mb-3">
+                                Google
+                              </h1>
+
+                              <a class="px-4 py-2 small bg-success-light text-success border border-success rounded"
+                                href="https://google.com" target="_blank">
+                                https://google.com
+                              </a>
+
+                              <p class="mb-6 text-muted mt-5 text-truncate">
+                                A problem isn't truly solved until it's solved for all. Googlers build products that
+                                help
+                                create
+                                opportunities for everyone, whether down the street or across the globe. Bring your
+                                insight,
+                                imagination and a healthy disregard for the impossible. Bring everything that makes you
+                                unique.
+                                Together, we can build for everyone.
+                              </p>
+
+                            </div>
+                          </div>
+
+                          <h2 class="mb-4 font-weight-bold">
+                            Sample list of customers
+                          </h2>
+
+                          <div class="table-responsive mb-4">
+                            <table class="table table-sm table-bordered rounded-table">
+                              <thead style="background-color: #F9FAFB;">
+                                <tr>
+                                  <th scope="col">Company name</th>
+                                  <th scope="col">Twitter ID</th>
+                                  <th scope="col">LinkedIn ID</th>
+                                  <th scope="col">Total employees</th>
+                                  <th scope="col">Country</th>
+                                  <th scope="col">General email</th>
+                                  <th scope="col">Logo</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th>IBM</th>
+                                  <td>ibm</td>
+                                  <td>ibm</td>
+                                  <td>288,300</td>
+                                  <td>USA</td>
+                                  <td>email@example.com</td>
+                                  <td><img class="img img-fluid" width="24" height="auto"
+                                      src="assets/img/logo/IBM logo.svg" alt="company logo"></td>
+                                </tr>
+                                <tr>
+                                  <th>Apple</th>
+                                  <td>apple</td>
+                                  <td>apple</td>
+                                  <td>161,000</td>
+                                  <td>USA</td>
+                                  <td>email@example.com</td>
+                                  <td><img class="img img-fluid" width="24" height="auto"
+                                      src="assets/img/logo/Apple 14.svg" alt="company logo"></td>
+                                </tr>
+                                <tr>
+                                  <th>Netflix</th>
+                                  <td>netflix</td>
+                                  <td>netflix</td>
+                                  <td>12,800</td>
+                                  <td>USA</td>
+                                  <td>email@example.com</td>
+                                  <td><img class="img img-fluid" width="24" height="auto"
+                                      src="assets/img/logo/netflix.jpeg" alt="company logo"></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+
+                          <a class="btn btn-success btn-block" href="cbs-dashboard-listing.html">
+                            View Customers
+                          </a>
+
+                        </div>
+
+                      </div>
+
+                      <div class="w-100">
+
+                        <div class="card-body">
+
+                          <div class="row align-items-top mb-6 mb-md-8 border-bottom">
+                            <div class="col-auto">
+
+                              <img class="img img-fluid border rounded py-4 px-4" width="96" height="auto"
+                                alt="company logo" src="assets/img/logo/Apple 14.svg">
+
+                            </div>
+                            <div class="col ms-n5">
+
+                              <h1 class="font-weight-bold mb-3">
+                                Apple
+                              </h1>
+
+                              <a class="px-4 py-2 small bg-success-light text-success border border-success rounded"
+                                href="https://apple.com" target="_blank">
+                                https://apple.com
+                              </a>
+
+                              <p class="mb-6 text-muted mt-5 text-truncate">
+                                We’re a diverse collective of thinkers and doers, continually reimagining what’s
+                                possible to help us
+                                all do what we love in new ways. And the same innovation that goes into our products
+                                also applies to
+                                our practices — strengthening our commitment to leave the world better than we found it.
+                                This is where
+                                your work can make a difference in people’s lives. Including your own.
+                              </p>
+
+                            </div>
+                          </div>
+
+                          <h2 class="mb-4 font-weight-bold">
+                            Sample list of customers
+                          </h2>
+
+                          <div class="table-responsive mb-4">
+                            <table class="table table-sm table-bordered rounded-table">
+                              <thead style="background-color: #F9FAFB;">
+                                <tr>
+                                  <th scope="col">Company name</th>
+                                  <th scope="col">Twitter ID</th>
+                                  <th scope="col">LinkedIn ID</th>
+                                  <th scope="col">Total employees</th>
+                                  <th scope="col">Country</th>
+                                  <th scope="col">General email</th>
+                                  <th scope="col">Logo</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th>IBM</th>
+                                  <td>ibm</td>
+                                  <td>ibm</td>
+                                  <td>288,300</td>
+                                  <td>USA</td>
+                                  <td>email@example.com</td>
+                                  <td><img class="img img-fluid" width="24" height="auto"
+                                      src="assets/img/logo/IBM logo.svg" alt="company logo"></td>
+                                </tr>
+                                <tr>
+                                  <th>Apple</th>
+                                  <td>apple</td>
+                                  <td>apple</td>
+                                  <td>161,000</td>
+                                  <td>USA</td>
+                                  <td>email@example.com</td>
+                                  <td><img class="img img-fluid" width="24" height="auto"
+                                      src="assets/img/logo/Apple 14.svg" alt="company logo"></td>
+                                </tr>
+                                <tr>
+                                  <th>Netflix</th>
+                                  <td>netflix</td>
+                                  <td>netflix</td>
+                                  <td>12,800</td>
+                                  <td>USA</td>
+                                  <td>email@example.com</td>
+                                  <td><img class="img img-fluid" width="24" height="auto"
+                                      src="assets/img/logo/netflix.jpeg" alt="company logo"></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+
+                          <a class="btn btn-success btn-block" href="cbs-dashboard-listing.html">
+                            View Customers
+                          </a>
+
+                        </div>
+
+                      </div>
+
+                      <div class="w-100">
+
+                        <div class="card-body">
+
+                          <div class="row align-items-top mb-6 mb-md-8 border-bottom">
+                            <div class="col-auto">
+
+                              <img class="img img-fluid border rounded py-4 px-4" width="96" height="auto"
+                                alt="company logo" src="assets/img/logo/Amazon logo.jpeg">
+
+                            </div>
+                            <div class="col ms-n5">
+
+                              <h1 class="font-weight-bold mb-3">
+                                Amazon
+                              </h1>
+
+                              <a class="px-4 py-2 small bg-success-light text-success border border-success rounded"
+                                href="https://amazon.com" target="_blank">
+                                https://amazon.com
+                              </a>
+
+                              <p class="mb-6 text-muted mt-5 text-truncate">
+                                Amazon is guided by four principles: customer obsession rather than competitor focus,
+                                passion for
+                                invention, commitment to operational excellence, and long-term thinking. We are driven
+                                by the
+                                excitement of building technologies, inventing products, and providing services that
+                                change lives. We
+                                embrace new ways of doing things, make decisions quickly, and are not afraid to fail. We
+                                have the
+                                scope and capabilities of a large company, and the spirit and heart of a small one.
+                              </p>
+
+                            </div>
+                          </div>
+
+                          <h2 class="mb-4 font-weight-bold">
+                            Sample list of customers
+                          </h2>
+
+                          <div class="table-responsive mb-4">
+                            <table class="table table-sm table-bordered rounded-table">
+                              <thead style="background-color: #F9FAFB;">
+                                <tr>
+                                  <th scope="col">Company name</th>
+                                  <th scope="col">Twitter ID</th>
+                                  <th scope="col">LinkedIn ID</th>
+                                  <th scope="col">Total employees</th>
+                                  <th scope="col">Country</th>
+                                  <th scope="col">General email</th>
+                                  <th scope="col">Logo</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th>IBM</th>
+                                  <td>ibm</td>
+                                  <td>ibm</td>
+                                  <td>288,300</td>
+                                  <td>USA</td>
+                                  <td>email@example.com</td>
+                                  <td><img class="img img-fluid" width="24" height="auto"
+                                      src="assets/img/logo/IBM logo.svg" alt="company logo"></td>
+                                </tr>
+                                <tr>
+                                  <th>Apple</th>
+                                  <td>apple</td>
+                                  <td>apple</td>
+                                  <td>161,000</td>
+                                  <td>USA</td>
+                                  <td>email@example.com</td>
+                                  <td><img class="img img-fluid" width="24" height="auto"
+                                      src="assets/img/logo/Apple 14.svg" alt="company logo"></td>
+                                </tr>
+                                <tr>
+                                  <th>Netflix</th>
+                                  <td>netflix</td>
+                                  <td>netflix</td>
+                                  <td>12,800</td>
+                                  <td>USA</td>
+                                  <td>email@example.com</td>
+                                  <td><img class="img img-fluid" width="24" height="auto"
+                                      src="assets/img/logo/netflix.jpeg" alt="company logo"></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+
+                          <a class="btn btn-success btn-block" href="cbs-dashboard-listing.html">
+                            View Customers
+                          </a>
+
+                        </div>
+
+                      </div>
+
+                      <div class="w-100">
+
+                        <div class="card-body">
+
+                          <div class="row align-items-top mb-6 mb-md-8 border-bottom">
+                            <div class="col-auto">
+
+                              <img class="img img-fluid border rounded py-4 px-4" width="96" height="auto"
+                                alt="company logo" src="assets/img/logo/Microsoft.svg">
+
+                            </div>
+                            <div class="col ms-n5">
+
+                              <h1 class="font-weight-bold mb-3">
+                                Microsoft
+                              </h1>
+
+                              <a class="px-4 py-2 small bg-success-light text-success border border-success rounded"
+                                href="https://microsoft.com" target="_blank">
+                                https://microsoft.com
+                              </a>
+
+                              <p class="mb-6 text-muted mt-5 text-truncate">
+                                Every company has a mission. What's ours? To empower every person and every organization
+                                to achieve
+                                more. We believe technology can and should be a force for good and that meaningful
+                                innovation
+                                contributes to a brighter world in the future and today. Our culture doesn’t just
+                                encourage curiosity;
+                                it embraces it. Each day we make progress together by showing up as our authentic
+                                selves. We show up
+                                with a learn-it-all mentality. We show up cheering on others, knowing their success
+                                doesn't diminish
+                                our own. We show up every day open to learning our own biases, changing our behavior,
+                                and inviting in
+                                differences. Because impact matters.
+                              </p>
+
+                            </div>
+                          </div>
+
+                          <h2 class="mb-4 font-weight-bold">
+                            Sample list of customers
+                          </h2>
+
+                          <div class="table-responsive mb-4">
+                            <table class="table table-sm table-bordered rounded-table">
+                              <thead style="background-color: #F9FAFB;">
+                                <tr>
+                                  <th scope="col">Company name</th>
+                                  <th scope="col">Twitter ID</th>
+                                  <th scope="col">LinkedIn ID</th>
+                                  <th scope="col">Total employees</th>
+                                  <th scope="col">Country</th>
+                                  <th scope="col">General email</th>
+                                  <th scope="col">Logo</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th>IBM</th>
+                                  <td>ibm</td>
+                                  <td>ibm</td>
+                                  <td>288,300</td>
+                                  <td>USA</td>
+                                  <td>email@example.com</td>
+                                  <td><img class="img img-fluid" width="24" height="auto"
+                                      src="assets/img/logo/IBM logo.svg" alt="company logo"></td>
+                                </tr>
+                                <tr>
+                                  <th>Apple</th>
+                                  <td>apple</td>
+                                  <td>apple</td>
+                                  <td>161,000</td>
+                                  <td>USA</td>
+                                  <td>email@example.com</td>
+                                  <td><img class="img img-fluid" width="24" height="auto"
+                                      src="assets/img/logo/Apple 14.svg" alt="company logo"></td>
+                                </tr>
+                                <tr>
+                                  <th>Netflix</th>
+                                  <td>netflix</td>
+                                  <td>netflix</td>
+                                  <td>12,800</td>
+                                  <td>USA</td>
+                                  <td>email@example.com</td>
+                                  <td><img class="img img-fluid" width="24" height="auto"
+                                      src="assets/img/logo/netflix.jpeg" alt="company logo"></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+
+                          <a class="btn btn-success btn-block" href="cbs-dashboard-listing.html">
+                            View Customers
+                          </a>
+
+                        </div>
+
+                      </div>
+
+                      <div class="w-100">
+
+                        <div class="card-body">
+
+                          <div class="row align-items-top mb-6 mb-md-8 border-bottom">
+                            <div class="col-auto">
+
+                              <img class="img img-fluid border rounded py-4 px-4" width="96" height="auto"
+                                alt="company logo" src="assets/img/logo/netflix.jpeg">
+
+                            </div>
+                            <div class="col ms-n5">
+
+                              <h1 class="font-weight-bold mb-3">
+                                Netflix
+                              </h1>
+
+                              <a class="px-4 py-2 small bg-success-light text-success border border-success rounded"
+                                href="https://netflix.com" target="_blank">
+                                https://netflix.com
+                              </a>
+
+                              <p class="mb-6 text-muted mt-5 text-truncate">
+                                Netflix is one of the world's leading entertainment services with over 247 million paid
+                                memberships in
+                                over 190 countries enjoying TV series, films and games across a wide variety of genres
+                                and languages.
+                                Members can play, pause and resume watching as much as they want, anytime, anywhere, and
+                                can change
+                                their plans at any time.
+                              </p>
+
+                            </div>
+                          </div>
+
+                          <h2 class="mb-4 font-weight-bold">
+                            Sample list of customers
+                          </h2>
+
+                          <div class="table-responsive mb-4">
+                            <table class="table table-sm table-bordered rounded-table">
+                              <thead style="background-color: #F9FAFB;">
+                                <tr>
+                                  <th scope="col">Company name</th>
+                                  <th scope="col">Twitter ID</th>
+                                  <th scope="col">LinkedIn ID</th>
+                                  <th scope="col">Total employees</th>
+                                  <th scope="col">Country</th>
+                                  <th scope="col">General email</th>
+                                  <th scope="col">Logo</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th>IBM</th>
+                                  <td>ibm</td>
+                                  <td>ibm</td>
+                                  <td>288,300</td>
+                                  <td>USA</td>
+                                  <td>email@example.com</td>
+                                  <td><img class="img img-fluid" width="24" height="auto"
+                                      src="assets/img/logo/IBM logo.svg" alt="company logo"></td>
+                                </tr>
+                                <tr>
+                                  <th>Apple</th>
+                                  <td>apple</td>
+                                  <td>apple</td>
+                                  <td>161,000</td>
+                                  <td>USA</td>
+                                  <td>email@example.com</td>
+                                  <td><img class="img img-fluid" width="24" height="auto"
+                                      src="assets/img/logo/Apple 14.svg" alt="company logo"></td>
+                                </tr>
+                                <tr>
+                                  <th>Netflix</th>
+                                  <td>netflix</td>
+                                  <td>netflix</td>
+                                  <td>12,800</td>
+                                  <td>USA</td>
+                                  <td>email@example.com</td>
+                                  <td><img class="img img-fluid" width="24" height="auto"
+                                      src="assets/img/logo/netflix.jpeg" alt="company logo"></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+
+                          <a class="btn btn-success btn-block" href="cbs-dashboard-listing.html">
+                            View Customers
+                          </a>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div> <!-- / .row -->
+
+      </div>
+
+    </div> <!-- / .container -->
+
+  </section>
+
+  <!-- FOOTER 
+    ================================================== -->
+  <footer class="py-8 py-md-11 bg-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4 col-lg-3">
+
+          <!-- Brand -->
+          <img src="./assets/img/Sapiengraph logo.svg" alt="proxycurl logo" class="footer-brand img-fluid mb-2">
+
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">
+            Sapiengraph
+          </h6>
+
+          <!-- List -->
+          <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
+            <li class="mb-3">
+              <a href="index.html" class="text-reset">
+                Home
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="#!" class="text-reset">
+                Blog
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="#pricing" class="text-reset">
+                Pricing
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="terms-of-use.html" class="text-reset">
+                Terms of use
+              </a>
+            </li>
+          </ul>
+
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">
+            API
+          </h6>
+
+          <!-- List -->
+          <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
+            <li class="mb-3">
+              <a href="#!" class="text-reset">
+                Documentation
+              </a>
+            </li>
+          </ul>
+
+        </div>
+        <div class="col-6 col-md-4 offset-md-4 col-lg-2 offset-lg-0">
+
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">
+            Company
+          </h6>
+
+          <!-- List -->
+          <ul class="list-unstyled text-muted mb-0">
+            <li class="mb-3">
+              <a href="https://nubela.co" class="text-reset">
+                Nubela Pte Ltd
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="team.html" class="text-reset">
+                Our Team
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="https://nubela.co" class="text-reset">
+                Other Projects by Nubela
+              </a>
+            </li>
+          </ul>
+
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">
+            Help
+          </h6>
+
+          <!-- List -->
+          <ul class="list-unstyled text-muted mb-0">
+            <li class="mb-3">
+              <a href="mailto:hello@proxycurl.com" class="text-reset">
+                Email us
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </div> <!-- / .row -->
+      <br>
+
+      <hr>
+      <br>
+
+      <div class="text-center">
+        <p class="caption">Nubela Pte Ltd. All rights reserved.</p>
+      </div>
+
+    </div> <!-- / .container -->
+  </footer>
+
+  <!-- JAVASCRIPT
+    ================================================== -->
+  <!-- Libs JS -->
+  <script src="./assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="./assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+  <script src="./assets/libs/aos/dist/aos.js"></script>
+  <script src="./assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+  <script src="./assets/libs/countup.js/dist/countUp.min.js"></script>
+  <script src="./assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+  <script src="./assets/libs/flickity/dist/flickity.pkgd.min.js"></script>
+  <script src="./assets/libs/flickity-fade/flickity-fade.js"></script>
+  <script src="./assets/libs/highlightjs/highlight.pack.min.js"></script>
+  <script src="./assets/libs/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="./assets/libs/isotope-layout/dist/isotope.pkgd.min.js"></script>
+  <script src="./assets/libs/jarallax/dist/jarallax.min.js"></script>
+  <script src="./assets/libs/jarallax/dist/jarallax-video.min.js"></script>
+  <script src="./assets/libs/jarallax/dist/jarallax-element.min.js"></script>
+  <script src="./assets/libs/quill/dist/quill.min.js"></script>
+  <script src="./assets/libs/smooth-scroll/dist/smooth-scroll.min.js"></script>
+  <script src="./assets/libs/typed.js/lib/typed.min.js"></script>
+
+  <!-- Map -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+  <!-- Theme JS -->
+  <script src="./assets/js/theme.min.js"></script>
+  <script src="script.js"></script>
+  <script src="script-autocomplete.js"></script>
+
+</body>
+
+</html>

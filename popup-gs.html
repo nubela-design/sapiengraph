@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Libs CSS -->
+  <link rel="stylesheet" href="./assets/fonts/Feather/feather.css">
+  <link rel="stylesheet" href="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="./assets/libs/aos/dist/aos.css">
+  <link rel="stylesheet" href="./assets/libs/choices.js/public/assets/styles/choices.min.css">
+  <link rel="stylesheet" href="./assets/libs/flickity-fade/flickity-fade.css">
+  <link rel="stylesheet" href="./assets/libs/flickity/dist/flickity.min.css">
+  <link rel="stylesheet" href="./assets/libs/highlightjs/styles/vs2015.css">
+  <link rel="stylesheet" href="./assets/libs/jarallax/dist/jarallax.css">
+  <link rel="stylesheet" href="./assets/libs/quill/dist/quill.core.css" />
+
+  <!-- Map -->
+  <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="./assets/css/theme.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Google Sheets Popup</title>
+
+</head>
+
+<body>
+
+  <!-- POPUP/MODAL-->
+  <div id="myModal" class="modal modalpopup fade" data-backdrop="false" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <div class="modal-body">
+
+          <div class="mt-n2">
+            <button type="button" class="close " data-dismiss="modal" aria-label="close">&times;</button>
+          </div>
+
+          <div class="text-center mt-7">
+
+            <img class="img" style="width: 200px;" src="assets/img/Sapiengraph logo.svg">
+
+          </div>
+
+          <div class=" row justify-content-center text-center">
+            <div class="col-10">
+
+              <h2 class="h3 font-weight-bold mt-7"> Welcome to Sapiengraph!</h2>
+              <p class="h5 mb-7 text-muted">Follow these three simple steps to enable Sapiengraph extension.</p>
+
+              <div class="text-center pb-4">
+                <button type="button" class="btn btn-success btn-block lift" data-dismiss="modal" data-toggle="modal"
+                  data-target="#myModalStep1">Follow the instructions</button>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- POPUP/MODAL STEP 1-->
+  <div id="myModalStep1" class="modal modalpopup1 fade" data-backdrop="false" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+  
+        <div class="modal-body">
+  
+  
+          <div class="mt-n2">
+            <button type="button" class="close " data-dismiss="modal" aria-label="close">&times;</button>
+          </div>
+  
+          <div class="text-center mt-7">
+  
+            <img class="img" style="width: 200px;" src="assets/img/Sapiengraph logo.svg">
+  
+  
+            <div class="row mt-9 justify-content-center">
+  
+              <div class="col-auto">
+  
+  
+                <!-- Step -->
+                <div class="row no-gutters align-items-center mb-md-5">
+                  <div class="col-auto">
+  
+                    <a href="#!" class="btn btn-sm btn-rounded-circle btn-success disabled opacity-1">
+                      <span>1</span>
+                    </a>
+  
+                  </div>
+                  <div class="col">
+  
+                    <hr class="d-none d-md-block mr-n7 border-success">
+  
+                  </div>
+                </div> <!-- / .row -->
+              </div> <!-- / .row -->
+  
+              <div class="col-auto">
+  
+  
+                <!-- Step -->
+                <div class="row no-gutters align-items-center mb-md-5">
+                  <div class="col-auto">
+  
+                    <a href="#!" class="btn btn-sm btn-rounded-circle btn-outline-success disabled opacity-1">
+                      <span>2</span>
+                    </a>
+  
+                  </div>
+                  <div class="col">
+  
+                    <hr class="d-none d-md-block mr-n7">
+  
+                  </div>
+                </div> <!-- / .row -->
+              </div> <!-- / .row -->
+  
+  
+              <div class="col-auto">
+  
+  
+  
+                <!-- Step -->
+                <div class="row no-gutters align-items-center mb-md-5">
+                  <div class="col-auto">
+  
+                    <a href="#!" class="btn btn-sm btn-rounded-circle btn-outline-success disabled opacity-1">
+                      <span>3</span>
+                    </a>
+  
+                  </div>
+                </div> <!-- / .row -->
+              </div>
+  
+            </div> <!-- / .row History -->
+  
+          </div>
+  
+          <div class=" row justify-content-center text-center">
+            <div class="col-11">
+  
+              <p class="lead mb-4 mt-5 font-weight-bold">Open the extensions menu ></p>
+  
+              <img class="img-fluid rounded mb-8" src="assets/img/illustrations/popup/sg-1.png">
+  
+              <div class="text-center pb-4">
+                <button type="button" class="btn btn-success btn-block lift" data-dismiss="modal" data-toggle="modal"
+                  data-target="#myModalStep2">Next step</button>
+              </div>
+  
+  
+            </div>
+          </div>
+  
+  
+  
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- POPUP/MODAL STEP 2-->
+  <div id="myModalStep2" class="modal modalpopup2 fade" data-backdrop="false" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+  
+        <div class="modal-body">
+  
+  
+          <div class="mt-n2">
+            <button type="button" class="close " data-dismiss="modal" aria-label="close">&times;</button>
+          </div>
+  
+          <div class="text-center mt-7">
+  
+            <img class="img" style="width: 200px;" src="assets/img/Sapiengraph logo.svg">
+  
+  
+            <div class="row mt-9 justify-content-center">
+  
+              <div class="col-auto">
+  
+  
+                <!-- Step -->
+                <div class="row no-gutters align-items-center mb-md-5">
+                  <div class="col-auto">
+  
+                    <a href="#!" class="btn btn-sm btn-rounded-circle btn-success disabled opacity-1">
+                      <span>1</span>
+                    </a>
+  
+                  </div>
+                  <div class="col">
+  
+                    <hr class="d-none d-md-block mr-n7 border-success">
+  
+                  </div>
+                </div> <!-- / .row -->
+              </div> <!-- / .row -->
+  
+              <div class="col-auto">
+  
+  
+                <!-- Step -->
+                <div class="row no-gutters align-items-center mb-md-5">
+                  <div class="col-auto">
+  
+                    <a href="#!" class="btn btn-sm btn-rounded-circle btn-success disabled opacity-1">
+                      <span>2</span>
+                    </a>
+  
+                  </div>
+                  <div class="col">
+  
+                    <hr class="d-none d-md-block border-success mr-n7">
+  
+                  </div>
+                </div> <!-- / .row -->
+              </div> <!-- / .row -->
+  
+  
+              <div class="col-auto">
+  
+  
+  
+                <!-- Step -->
+                <div class="row no-gutters align-items-center mb-md-5">
+                  <div class="col-auto">
+  
+                    <a href="#!" class="btn btn-sm btn-rounded-circle btn-outline-success disabled opacity-1">
+                      <span>3</span>
+                    </a>
+  
+                  </div>
+                </div> <!-- / .row -->
+              </div>
+  
+            </div> <!-- / .row History -->
+  
+          </div>
+  
+          <div class=" row justify-content-center text-center">
+            <div class="col-11">
+  
+              <p class="lead mb-4 mt-5 font-weight-bold">Choose Sapiengraph > Show Sidebar</p>
+  
+              <img class="img-fluid rounded mb-8" src="assets/img/illustrations/popup/sg-2.png">
+  
+              <div class="text-center pb-4">
+                <button type="button" class="btn btn-success btn-block lift" data-dismiss="modal" data-toggle="modal"
+                  data-target="#myModalStep3">Next step</button>
+              </div>
+  
+  
+            </div>
+          </div>
+  
+  
+  
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- POPUP/MODAL STEP 3-->
+  <div id="myModalStep3" class="modal fade modalpopup3" data-backdrop="false" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+  
+        <div class="modal-body">
+  
+  
+          <div class="mt-n2">
+            <button type="button" class="close " data-dismiss="modal" aria-label="close">&times;</button>
+          </div>
+  
+          <div class="text-center mt-7">
+  
+            <img class="img" style="width: 200px;" src="assets/img/Sapiengraph logo.svg">
+  
+  
+            <div class="row mt-9 justify-content-center">
+  
+              <div class="col-auto">
+  
+  
+                <!-- Step -->
+                <div class="row no-gutters align-items-center mb-md-5">
+                  <div class="col-auto">
+  
+                    <a href="#!" class="btn btn-sm btn-rounded-circle btn-success disabled opacity-1">
+                      <span>1</span>
+                    </a>
+  
+                  </div>
+                  <div class="col">
+  
+                    <hr class="d-none d-md-block mr-n7 border-success">
+  
+                  </div>
+                </div> <!-- / .row -->
+              </div> <!-- / .row -->
+  
+              <div class="col-auto">
+  
+  
+                <!-- Step -->
+                <div class="row no-gutters align-items-center mb-md-5">
+                  <div class="col-auto">
+  
+                    <a href="#!" class="btn btn-sm btn-rounded-circle btn-success disabled opacity-1">
+                      <span>2</span>
+                    </a>
+  
+                  </div>
+                  <div class="col">
+  
+                    <hr class="d-none d-md-block border-success mr-n7">
+  
+                  </div>
+                </div> <!-- / .row -->
+              </div> <!-- / .row -->
+  
+  
+              <div class="col-auto">
+  
+  
+  
+                <!-- Step -->
+                <div class="row no-gutters align-items-center mb-md-5">
+                  <div class="col-auto">
+  
+                    <a href="#!" class="btn btn-sm btn-rounded-circle btn-success disabled opacity-1">
+                      <span>3</span>
+                    </a>
+  
+                  </div>
+                </div> <!-- / .row -->
+              </div>
+  
+            </div> <!-- / .row History -->
+  
+          </div>
+  
+          <div class=" row justify-content-center text-center">
+            <div class="col-11">
+  
+              <p class="lead mb-4 mt-5 font-weight-bold">Allow the permission to enable Sapiengraph's add on</p>
+  
+              <img class="img-fluid rounded mb-8" src="assets/img/illustrations/popup/sg-3-.png">
+  
+              <div class="text-center pb-4">
+                <button type="button" class="btn btn-success btn-block lift" data-dismiss="modal" data-toggle="modal"
+                  data-target="#myModalStep4">Continue</button>
+              </div>
+  
+  
+            </div>
+          </div>
+  
+  
+  
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- POPUP/MODAL STEP 4-->
+  <div id="myModalStep4" class="modal fade" data-backdrop="false" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+  
+        <div class="modal-body">
+  
+  
+          <div class="mt-n2">
+            <button type="button" class="close" data-dismiss="modal" aria-label="close">&times;</button>
+          </div>
+  
+          <div class="text-center mt-7">
+  
+            <img class="img" style="width: 200px;" src="assets/img/Sapiengraph logo.svg">
+  
+          </div>
+  
+          <div class=" row justify-content-center text-center">
+            <div class="col-10">
+
+              <h2>
+              <span class="badge badge-lg badge-rounded-circle bg-success mt-9">
+                <i class="fe fe-check text-white"></i>
+              </span>
+              </h2>
+
+              <h2 class="h3 font-weight-bold mt-5"> That's it, you're all set!</h2>
+              <p class="h5 mb-7 text-muted">You've finished all the steps, now apply the steps on your Google Sheets.</p>
+
+
+              <div class="form-check mb-2 align-items-center">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label" for="defaultCheck1">
+                  <span class="small">Never show again</span>
+                </label>
+              </div>
+              <div class="text-center pb-4">
+                <button type="button" class="btn btn-success btn-block lift" data-dismiss="modal" data-toggle="modal"
+                  data-target="#myModalStep4">Close the tutorial</button>
+              </div>
+
+
+            </div>
+          </div>
+  
+  
+  
+  
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="vh-100" style="background-image: url('assets/img/img/gs-background.png'); background-size: cover;"></div>
+
+  <!-- JAVASCRIPT
+    ================================================== -->
+  <!-- Libs JS -->
+  <script src="./assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="./assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+  <script src="./assets/libs/aos/dist/aos.js"></script>
+  <script src="./assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+  <script src="./assets/libs/countup.js/dist/countUp.min.js"></script>
+  <script src="./assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+  <script src="./assets/libs/flickity/dist/flickity.pkgd.min.js"></script>
+  <script src="./assets/libs/flickity-fade/flickity-fade.js"></script>
+  <script src="./assets/libs/highlightjs/highlight.pack.min.js"></script>
+  <script src="./assets/libs/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="./assets/libs/isotope-layout/dist/isotope.pkgd.min.js"></script>
+  <script src="./assets/libs/jarallax/dist/jarallax.min.js"></script>
+  <script src="./assets/libs/jarallax/dist/jarallax-video.min.js"></script>
+  <script src="./assets/libs/jarallax/dist/jarallax-element.min.js"></script>
+  <script src="./assets/libs/quill/dist/quill.min.js"></script>
+  <script src="./assets/libs/smooth-scroll/dist/smooth-scroll.min.js"></script>
+  <script src="./assets/libs/typed.js/lib/typed.min.js"></script>
+
+  <!-- Map -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+  <!-- Theme JS -->
+  <script src="./assets/js/theme.min.js"></script>
+
+  <!-- Auto popup-->
+  <script>
+    $(document).ready(function () {
+      $("#myModal").modal('show');
+    });
+
+
+
+  </script>
+
+
+
+
+</body>
+
+</html>

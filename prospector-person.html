@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Libs CSS -->
+  <link rel="stylesheet" href="./assets/fonts/Feather/feather.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/neuicons@1.9.0/css/neu.min.css">  
+  <link rel="stylesheet" href="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="./assets/libs/aos/dist/aos.css">
+  <link rel="stylesheet" href="./assets/libs/choices.js/public/assets/styles/choices.min.css">
+  <link rel="stylesheet" href="./assets/libs/flickity-fade/flickity-fade.css">
+  <link rel="stylesheet" href="./assets/libs/flickity/dist/flickity.min.css">
+  <link rel="stylesheet" href="./assets/libs/highlightjs/styles/vs2015.css">
+  <link rel="stylesheet" href="./assets/libs/jarallax/dist/jarallax.css">
+  <link rel="stylesheet" href="./assets/libs/quill/dist/quill.core.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Map -->
+  <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="./assets/css/theme.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Sapiengraph Prospector</title>
+
+</head>
+
+<body style="overflow: visible;">
+
+  <!-- NAVBAR
+    ================================================== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container">
+
+      <!-- Brand -->
+      <a class="navbar-brand" href="./index.html">
+        <img src="./assets/img/Sapiengraph logo.svg" class="navbar-brand-img" alt="Sapiengraph logo">
+      </a>
+
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fe fe-x"></i>
+        </button>
+
+        <!-- Navigation -->
+        <ul class="navbar-nav ml-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              Home
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="pricing.html">
+              Pricing
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#!">
+              Documentation
+            </a>
+          </li>
+
+        </ul>
+
+        <!-- Button -->
+
+        <div class="text-center ml-auto">
+          <!-- Button -->
+          <a class="btn btn-sm btn-link font-weight-bold text-white text-md-gray" href="signin-illustration.html">
+            Sign in
+          </a>
+
+          <a class="navbar-btn btn btn-pill btn-sm btn-white text-success text-md-gray lift ml-auto shadow-light-lg"
+            href="#!" target="_blank">
+            Set up new account
+          </a>
+
+        </div>
+
+
+
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- FIRST FOLD
+      ================================================== -->
+  <section class="pt-8 pt-md-10 pb-9 bg-light">
+    <div class="container-fluid">
+
+      <div class="row mb-2 mb-md-6 align-items-center justify-content-between">
+        <div class="pl-6 pl-md-9 col-6 h1 font-weight-bold">Person Prospector</div>
+        <div class="ml-auto pr-6 pr-md-9">
+          <div class="btn btn-sm btn-secondary-soft btn-pill mt-n3 text-muted disabled">
+            <i class="neu neu-so-save"></i>Save search
+          </div>
+        </div>
+      </div>
+
+      <!-- NAVS-->
+      <div class="row justify-content-between px-md-6">
+        <div class="col-12 mb-6">
+          <div class="card card-body custom-rounded border py-4">
+            <ul class="nav nav-pills nav-justified flex-column flex-sm-row">
+              <li class="nav-item text-left text-md-center">
+                <a class="nav-link text-muted font-weight-bold" href="#"><i class="neu neu-bookmark"></i> Saved</a>
+              </li>
+              <li class="nav-item text-left text-md-center">
+                <a class="nav-link active-success font-weight-bold" href="#"><i class="neu neu-user-2"></i> People</a>
+              </li>
+              <li class="nav-item text-left text-md-center">
+                <a class="nav-link text-muted font-weight-bold" href="#"><i class="neu neu-company"></i> Companies</a>
+              </li>
+              <li class="nav-item text-left text-md-center">
+                <a class="nav-link text-muted font-weight-bold" href="#"><i class="neu neu-groups"></i> Customers</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FILTER-->
+        <div class="col-12 col-lg-4 mb-6 mb-lg-0">
+          <div class="card card-body custom-rounded shadow-light border">
+            <div class="d-flex align-items-center mb-n2">
+              <div class="font-weight-bold h3 font-weight-bold"><span class="mr-1">Filter Criteria</span>
+                <div class="btn btn-outline-secondary btn-pill btn-xs font-weight-bold h3 font-weight-bold mt-2 disabled">Reset</div>
+              </div>
+        
+              <button class="btn btn-xs btn-success btn-rounded-circle lift font-weight-bold ml-auto mt-n2 d-none d-lg-block"><i class="fe fe-chevron-left"></i>
+              </button>
+            </div>
+            <hr>
+        
+            <!-- OVERVIEW/filter-->
+            <div class="accordion" id="peopleOverviewAccordion">
+              <div class="card">
+        
+                <!-- list group-->
+                <div class="list-group list-group-flush">
+        
+                  <!-- list group item 1-->
+                  <div class="list-group-item">
+        
+                    <!-- toggle-->
+                    <a class="d-flex align-items-center text-reset text-decoration-none" data-toggle="collapse"
+                      href="#peopleOverview" role="button" aria-expanded="false" aria-controls="peopleOverview">
+                      <div class="mt-5 mb-4 font-weight-bold lead mr-auto"><i class="fe fe-zap mr-3"></i>Overview</div>
+                      <!-- chevron-->
+                      <span class="collapse-chevron text-muted ml-4 mb-n3">
+                        <i class="fe fe-lg fe-chevron-down"></i>
+                      </span>
+                    </a>
+        
+                    <!-- collapse-->
+                    <div class="collapse show" id="peopleOverview" data-parent="#peopleOverviewAccordion">
+                      <div class="card-body bg-light border rounded mb-5">
+                        <form>
+                          <div class="form-group mb-5">
+                            <label for="exampleInputCompany" class="font-weight-bold">Current company</label>
+                            <input type="text" class="form-control form-control-sm" placeholder="E.g. Apple, Amazon, Microsoft"
+                              id="exampleInputCompany" aria-describedby="emailHelp">
+                          </div>
+                          <div class="form-group mb-5">
+                            <label for="exampleInputCompany" class="font-weight-bold">Name</label>
+                            <input type="text" class="form-control form-control-sm" placeholder="Bill Gates, Jeff Bezos"
+                              id="exampleInputCompany" aria-describedby="emailHelp">
+                          </div>
+                          <div class="form-group mb-5">
+                            <label for="exampleInputCompany" class="font-weight-bold">Job Title</label>
+                            <input type="text" class="form-control form-control-sm"
+                              placeholder="E.g. CEO, CTO, Senior Software Engineer" id="exampleInputCompany"
+                              aria-describedby="emailHelp">
+                          </div>
+                          <div class="form-group mb-5">
+                            <label for="exampleInputCompany" class="font-weight-bold">Past company</label>
+                            <input type="text" class="form-control form-control-sm" placeholder="E.g. Google, IBM, Twitter"
+                              id="exampleInputCompany" aria-describedby="emailHelp">
+                          </div>
+                          <div class="form-group mb-5">
+                            <label for="exampleInputCompany" class="font-weight-bold">Location</label>
+                            <input type="text" class="form-control form-control-sm"
+                              placeholder="E.g. United States, San Francisco, London" id="exampleInputCompany"
+                              aria-describedby="emailHelp">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputCompany" class="font-weight-bold">Past School</label>
+                            <input type="text" class="form-control form-control-sm"
+                              placeholder="E.g. University of Oxford, Cambridge University" id="exampleInputCompany"
+                              aria-describedby="emailHelp">
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <div class="btn btn-success btn-pill btn-block disabled"><i class="neu neu-search"></i> Search criteria</div>
+        
+          </div>
+        </div>
+
+        <!-- RESULT-->
+        <div class="col-12 col-lg-8 pl-lg-3">
+          <div class="card card-body custom-rounded bg-white text-center border pb-lg-13">
+            <p class=" pt-4 pt-lg-11 text-gray-500 d-none d-md-block"><i class="fe fe-arrow-left mr-2"></i> Filter and search your criteria to show the result</p>
+            <div class="h4 pt-4 pt-lg-11 text-muted d-block d-md-none"><i class="fe fe-arrow-up"></i> <p class="mt-3">Filter and search your criteria to show the result</p></div>
+            <div class="d-none d-md-block">
+              <img class="img img-fluid mt-5" style="max-width: 400px;" alt="Prospector search illustration" src="assets/img/illustrations/prospector-search.png">
+            </div>
+            <div class="d-flex justify-content-center d-block d-md-none">
+              <img class="img img-fluid mt-6" style="max-width: 100%;" alt="Prospector search illustration" src="assets/img/illustrations/prospector-search.png">
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- FOOTER 
+    ================================================== -->
+  <footer class="py-8 py-md-12 bg-black">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4 col-lg-3">
+
+          <!-- Brand -->
+          <img src="./assets/img/Sapiengraph logo footer.svg" alt="proxycurl logo" class="footer-brand img-fluid mb-2">
+
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">
+            Sapiengraph
+          </h6>
+
+          <!-- List -->
+          <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
+            <li class="mb-3">
+              <a href="index.html" class="text-reset">
+                Home
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="#!" class="text-reset">
+                Blog
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="#pricing" class="text-reset">
+                Pricing
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="terms-of-use.html" class="text-reset">
+                Terms of use
+              </a>
+            </li>
+          </ul>
+
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">
+            API
+          </h6>
+
+          <!-- List -->
+          <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
+            <li class="mb-3">
+              <a href="#!" class="text-reset">
+                Documentation
+              </a>
+            </li>
+          </ul>
+
+        </div>
+        <div class="col-6 col-md-4 offset-md-4 col-lg-2 offset-lg-0">
+
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">
+            Company
+          </h6>
+
+          <!-- List -->
+          <ul class="list-unstyled text-muted mb-0">
+            <li class="mb-3">
+              <a href="https://nubela.co" class="text-reset">
+                Nubela Pte Ltd
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="team.html" class="text-reset">
+                Our Team
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="https://nubela.co" class="text-reset">
+                Other Projects by Nubela
+              </a>
+            </li>
+          </ul>
+
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">
+            Help
+          </h6>
+
+          <!-- List -->
+          <ul class="list-unstyled text-muted mb-0">
+            <li class="mb-3">
+              <a href="mailto:hello@proxycurl.com" class="text-reset">
+                Email us
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </div> <!-- / .row -->
+      <br>
+
+      <hr class="border-dark">
+      <br>
+
+      <div class="text-center">
+        <p class="text-muted caption">Nubela Pte Ltd. All rights reserved.</p>
+      </div>
+
+    </div> <!-- / .container -->
+  </footer>
+
+  <!-- JAVASCRIPT
+    ================================================== -->
+  <!-- Libs JS -->
+  <script src="./assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="./assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+  <script src="./assets/libs/aos/dist/aos.js"></script>
+  <script src="./assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+  <script src="./assets/libs/countup.js/dist/countUp.min.js"></script>
+  <script src="./assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+  <script src="./assets/libs/flickity/dist/flickity.pkgd.min.js"></script>
+  <script src="./assets/libs/flickity-fade/flickity-fade.js"></script>
+  <script src="./assets/libs/highlightjs/highlight.pack.min.js"></script>
+  <script src="./assets/libs/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="./assets/libs/isotope-layout/dist/isotope.pkgd.min.js"></script>
+  <script src="./assets/libs/jarallax/dist/jarallax.min.js"></script>
+  <script src="./assets/libs/jarallax/dist/jarallax-video.min.js"></script>
+  <script src="./assets/libs/jarallax/dist/jarallax-element.min.js"></script>
+  <script src="./assets/libs/quill/dist/quill.min.js"></script>
+  <script src="./assets/libs/smooth-scroll/dist/smooth-scroll.min.js"></script>
+  <script src="./assets/libs/typed.js/lib/typed.min.js"></script>
+
+  <!-- Map -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+  <!-- Theme JS -->
+  <script src="./assets/js/theme.min.js"></script>
+
+  <!-- Content Change JS-->
+  <script>
+// Hide submenus
+$('#body-row .collapse').collapse('hide'); 
+
+// Collapse/Expand icon
+$('#collapse-icon').addClass('fa-angle-double-left'); 
+
+// Collapse click
+$('[data-toggle=sidebar-colapse]').click(function() {
+    SidebarCollapse();
+});
+
+function SidebarCollapse () {
+    $('.menu-collapsed').toggleClass('d-none');
+    $('.sidebar-submenu').toggleClass('d-none');
+    $('.submenu-icon').toggleClass('d-none');
+    $('#sidebar-container').toggleClass('sidebar-expanded sidebar-collapsed');
+    
+    // Treating d-flex/d-none on separators with title
+    var SeparatorTitle = $('.sidebar-separator-title');
+    if ( SeparatorTitle.hasClass('d-flex') ) {
+        SeparatorTitle.removeClass('d-flex');
+    } else {
+        SeparatorTitle.addClass('d-flex');
+    }
+    
+    // Collapse/Expand icon
+    $('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
+}
+  </script> <!-- Sales-->
+
+</body>
+
+</html>
