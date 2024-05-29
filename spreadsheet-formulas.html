@@ -188,95 +188,200 @@
 
   <!-- FIRST FOLD
     ================================================== -->
-  <section class="py-8 py-md-11">
+  <section class="py-8 py-md-10">
     <div class="container">
 
       <div class="row justify-content-center">
 
         <div class="col-12 col-md-10">
 
-          <div class="text-center">
+          <div class="text-center mb-6 mb-md-8">
           
-            <h1 class="display-3 font-weight-bolder mb-6 mb-md-8" data-aos="fade-up">
+            <h1 class="display-3 font-weight-bolder" data-aos="fade-up">
               Add B2B Data Enrichment Formulas to <span class="text-success">Excel / Google Sheets</span>
             </h1>
 
           </div>
 
-          <h2 class="font-weight-bold text-center h3 mb-4">
-            Pull rich data about people
-          </h2>
+          <!-- People table -->
+          <div class="mb-6 mb-md-8">
 
-          <div class="table-responsive">
+            <h2 class="font-weight-bold text-center h3 mb-4">
+              <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="22" height="auto" viewBox="0 0 24 24"><g fill="currentColor"><path d="M21 20v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4M8 12h8a1 1 0 0 0 1-1V7a5 5 0 0 0-5.491-4.977C8.909 2.271 7 4.603 7 7.215V11a1 1 0 0 0 1 1"></path></g></svg>
+              Pull rich data about people
+            </h2>
+  
+            <div class="table-responsive">
+  
+              <table class="table table-bordered rounded-table table-hover custom-table">
+  
+                <thead style="background-color: #F9FAFB;">
+                  <tr>
+                    <th scope="col">A</th>
+                    <th scope="col">B</th>
+                    <th scope="col">C</th>
+                    <th scope="col">D</th>
+                  </tr>
+                </thead>
+  
+                <tbody class="small">
+  
+                  <tr>
+                    <th scope="row" class="text-nowrap">
+                      Get person's first name
+                    </th>
+                    <td>
+                      https://www.linkedin.com/in/johnrmarty
+                    </td>
+                    <td class="text-nowrap">
+                      <span class="border rounded h6 py-2 px-2 text-monospace copy-text" style="background-color: #f0fdf4;">
+                        =SG_PERSON(A2, "first_name")
+                        <svg class="bg-white border rounded copy-icon" data-toggle="tooltip" data-placement="top" title="Copy" style="padding: 2px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg" width="20" height="auto" viewBox="0 0 24 24"><path d="M18,5.25h-.25v-.25c0-.96484-.78516-1.75-1.75-1.75h-1.35352c-.32812-1.15283-1.38965-2-2.64648-2s-2.31836.84717-2.64648,2h-1.35352c-.96484,0-1.75.78516-1.75,1.75v.25h-.25c-1.5166,0-2.75,1.2334-2.75,2.75v12c0,1.5166,1.2334,2.75,2.75,2.75h12c1.5166,0,2.75-1.2334,2.75-2.75v-12c0-1.5166-1.2334-2.75-2.75-2.75ZM7.75,5c0-.1377.1123-.25.25-.25h2c.41406,0,.75-.33594.75-.75,0-.68945.56055-1.25,1.25-1.25s1.25.56055,1.25,1.25c0,.41406.33594.75.75.75h2c.1377,0,.25.1123.25.25v2c0,.1377-.1123.25-.25.25h-8c-.1377,0-.25-.1123-.25-.25v-2ZM19.25,20c0,.68945-.56055,1.25-1.25,1.25H6c-.68945,0-1.25-.56055-1.25-1.25v-12c0-.68945.56055-1.25,1.25-1.25h.25v.25c0,.96484.78516,1.75,1.75,1.75h8c.96484,0,1.75-.78516,1.75-1.75v-.25h.25c.68945,0,1.25.56055,1.25,1.25v12ZM16.75,12c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,15c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,18c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75Z" fill="currentColor"/></svg>
+                      </span>
+                    </td>
+                    <td>
+                      John
+                    </td>
+                  </tr>
+  
+                  <tr>
+                    <th scope="row" class="text-nowrap">
+                      Get profile's current company
+                    </th>
+                    <td>
+                      https://www.linkedin.com/in/johnrmarty
+                    </td>
+                    <td class="text-nowrap">
+                      <span class="border rounded h6 py-2 px-2 text-monospace copy-text" style="background-color: #f0fdf4;">
+                        =SG_PERSON_WORK(A2, "company")
+                        <svg class="bg-white border rounded copy-icon" data-toggle="tooltip" data-placement="top" title="Copy" style="padding: 2px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg" width="20" height="auto" viewBox="0 0 24 24"><path d="M18,5.25h-.25v-.25c0-.96484-.78516-1.75-1.75-1.75h-1.35352c-.32812-1.15283-1.38965-2-2.64648-2s-2.31836.84717-2.64648,2h-1.35352c-.96484,0-1.75.78516-1.75,1.75v.25h-.25c-1.5166,0-2.75,1.2334-2.75,2.75v12c0,1.5166,1.2334,2.75,2.75,2.75h12c1.5166,0,2.75-1.2334,2.75-2.75v-12c0-1.5166-1.2334-2.75-2.75-2.75ZM7.75,5c0-.1377.1123-.25.25-.25h2c.41406,0,.75-.33594.75-.75,0-.68945.56055-1.25,1.25-1.25s1.25.56055,1.25,1.25c0,.41406.33594.75.75.75h2c.1377,0,.25.1123.25.25v2c0,.1377-.1123.25-.25.25h-8c-.1377,0-.25-.1123-.25-.25v-2ZM19.25,20c0,.68945-.56055,1.25-1.25,1.25H6c-.68945,0-1.25-.56055-1.25-1.25v-12c0-.68945.56055-1.25,1.25-1.25h.25v.25c0,.96484.78516,1.75,1.75,1.75h8c.96484,0,1.75-.78516,1.75-1.75v-.25h.25c.68945,0,1.25.56055,1.25,1.25v12ZM16.75,12c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,15c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,18c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75Z" fill="currentColor"/></svg>
+                      </span>
+                    </td>
+                    <td class="text-nowrap">
+                      FF Real Estate
+                    </td>
+                  </tr>
+  
+                  <tr>
+                    <th scope="row" class="text-nowrap">
+                      Get profile's current job title
+                    </th>
+                    <td>
+                      https://www.linkedin.com/in/johnrmarty
+                    </td>
+                    <td class="text-nowrap">
+                      <span class="border rounded h6 py-2 px-2 text-monospace copy-text" style="background-color: #f0fdf4;">
+                        =SG_PERSON_WORK(A2, "title")
+                        <svg class="bg-white border rounded copy-icon" data-toggle="tooltip" data-placement="top" title="Copy" style="padding: 2px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg" width="20" height="auto" viewBox="0 0 24 24"><path d="M18,5.25h-.25v-.25c0-.96484-.78516-1.75-1.75-1.75h-1.35352c-.32812-1.15283-1.38965-2-2.64648-2s-2.31836.84717-2.64648,2h-1.35352c-.96484,0-1.75.78516-1.75,1.75v.25h-.25c-1.5166,0-2.75,1.2334-2.75,2.75v12c0,1.5166,1.2334,2.75,2.75,2.75h12c1.5166,0,2.75-1.2334,2.75-2.75v-12c0-1.5166-1.2334-2.75-2.75-2.75ZM7.75,5c0-.1377.1123-.25.25-.25h2c.41406,0,.75-.33594.75-.75,0-.68945.56055-1.25,1.25-1.25s1.25.56055,1.25,1.25c0,.41406.33594.75.75.75h2c.1377,0,.25.1123.25.25v2c0,.1377-.1123.25-.25.25h-8c-.1377,0-.25-.1123-.25-.25v-2ZM19.25,20c0,.68945-.56055,1.25-1.25,1.25H6c-.68945,0-1.25-.56055-1.25-1.25v-12c0-.68945.56055-1.25,1.25-1.25h.25v.25c0,.96484.78516,1.75,1.75,1.75h8c.96484,0,1.75-.78516,1.75-1.75v-.25h.25c.68945,0,1.25.56055,1.25,1.25v12ZM16.75,12c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,15c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,18c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75Z" fill="currentColor"/></svg>
+                      </span>
+                    </td>
+                    <td class="text-nowrap">
+                      Co-Founder
+                    </td>
+                  </tr>
+  
+                </tbody>
+  
+              </table>
+  
+            </div>
 
-            <table class="table table-bordered rounded-table table-hover custom-table">
+          </div>
 
-              <thead style="background-color: #F9FAFB;">
-                <tr>
-                  <th scope="col">A</th>
-                  <th scope="col">B</th>
-                  <th scope="col">C</th>
-                  <th scope="col">D</th>
-                </tr>
-              </thead>
+          <!-- Company table -->
+          <div class="mb-6 mb-md-8">
 
-              <tbody class="small">
+            <h2 class="font-weight-bold text-center h3 mb-4">
+              <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="24" height="auto" viewBox="0 0 24 24"><g fill="currentColor"><path d="M7 22h2a1 1 0 0 0 1-1v-1.893c0-.996.68-1.92 1.664-2.08A2 2 0 0 1 14 19v2a1 1 0 0 0 1 1h2a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2m8-17.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-4-9a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-4-9a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"></path></g></svg>
+              Pull rich data on companies
+            </h2>
+  
+            <div class="table-responsive">
+  
+              <table class="table table-bordered rounded-table table-hover custom-table">
+  
+                <thead style="background-color: #F9FAFB;">
+                  <tr>
+                    <th scope="col">A</th>
+                    <th scope="col">B</th>
+                    <th scope="col">C</th>
+                    <th scope="col">D</th>
+                  </tr>
+                </thead>
+  
+                <tbody class="small">
+  
+                  <tr>
+                    <th scope="row" class="text-nowrap">
+                      Get company name
+                    </th>
+                    <td>
+                      https://www.linkedin.com/in/johnrmarty
+                    </td>
+                    <td class="text-nowrap">
+                      <span class="border rounded h6 py-2 px-2 text-monospace copy-text" style="background-color: #f0fdf4;">
+                        =SG_PERSON(A2, "first_name")
+                        <svg class="bg-white border rounded copy-icon" data-toggle="tooltip" data-placement="top" title="Copy" style="padding: 2px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg" width="20" height="auto" viewBox="0 0 24 24"><path d="M18,5.25h-.25v-.25c0-.96484-.78516-1.75-1.75-1.75h-1.35352c-.32812-1.15283-1.38965-2-2.64648-2s-2.31836.84717-2.64648,2h-1.35352c-.96484,0-1.75.78516-1.75,1.75v.25h-.25c-1.5166,0-2.75,1.2334-2.75,2.75v12c0,1.5166,1.2334,2.75,2.75,2.75h12c1.5166,0,2.75-1.2334,2.75-2.75v-12c0-1.5166-1.2334-2.75-2.75-2.75ZM7.75,5c0-.1377.1123-.25.25-.25h2c.41406,0,.75-.33594.75-.75,0-.68945.56055-1.25,1.25-1.25s1.25.56055,1.25,1.25c0,.41406.33594.75.75.75h2c.1377,0,.25.1123.25.25v2c0,.1377-.1123.25-.25.25h-8c-.1377,0-.25-.1123-.25-.25v-2ZM19.25,20c0,.68945-.56055,1.25-1.25,1.25H6c-.68945,0-1.25-.56055-1.25-1.25v-12c0-.68945.56055-1.25,1.25-1.25h.25v.25c0,.96484.78516,1.75,1.75,1.75h8c.96484,0,1.75-.78516,1.75-1.75v-.25h.25c.68945,0,1.25.56055,1.25,1.25v12ZM16.75,12c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,15c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,18c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75Z" fill="currentColor"/></svg>
+                      </span>
+                    </td>
+                    <td>
+                      John
+                    </td>
+                  </tr>
+  
+                  <tr>
+                    <th scope="row" class="text-nowrap">
+                      Get profile's current company
+                    </th>
+                    <td>
+                      https://www.linkedin.com/in/johnrmarty
+                    </td>
+                    <td class="text-nowrap">
+                      <span class="border rounded h6 py-2 px-2 text-monospace copy-text" style="background-color: #f0fdf4;">
+                        =SG_PERSON_WORK(A2, "company")
+                        <svg class="bg-white border rounded copy-icon" data-toggle="tooltip" data-placement="top" title="Copy" style="padding: 2px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg" width="20" height="auto" viewBox="0 0 24 24"><path d="M18,5.25h-.25v-.25c0-.96484-.78516-1.75-1.75-1.75h-1.35352c-.32812-1.15283-1.38965-2-2.64648-2s-2.31836.84717-2.64648,2h-1.35352c-.96484,0-1.75.78516-1.75,1.75v.25h-.25c-1.5166,0-2.75,1.2334-2.75,2.75v12c0,1.5166,1.2334,2.75,2.75,2.75h12c1.5166,0,2.75-1.2334,2.75-2.75v-12c0-1.5166-1.2334-2.75-2.75-2.75ZM7.75,5c0-.1377.1123-.25.25-.25h2c.41406,0,.75-.33594.75-.75,0-.68945.56055-1.25,1.25-1.25s1.25.56055,1.25,1.25c0,.41406.33594.75.75.75h2c.1377,0,.25.1123.25.25v2c0,.1377-.1123.25-.25.25h-8c-.1377,0-.25-.1123-.25-.25v-2ZM19.25,20c0,.68945-.56055,1.25-1.25,1.25H6c-.68945,0-1.25-.56055-1.25-1.25v-12c0-.68945.56055-1.25,1.25-1.25h.25v.25c0,.96484.78516,1.75,1.75,1.75h8c.96484,0,1.75-.78516,1.75-1.75v-.25h.25c.68945,0,1.25.56055,1.25,1.25v12ZM16.75,12c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,15c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,18c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75Z" fill="currentColor"/></svg>
+                      </span>
+                    </td>
+                    <td class="text-nowrap">
+                      FF Real Estate
+                    </td>
+                  </tr>
+  
+                  <tr>
+                    <th scope="row" class="text-nowrap">
+                      Get profile's current job title
+                    </th>
+                    <td>
+                      https://www.linkedin.com/in/johnrmarty
+                    </td>
+                    <td class="text-nowrap">
+                      <span class="border rounded h6 py-2 px-2 text-monospace copy-text" style="background-color: #f0fdf4;">
+                        =SG_PERSON_WORK(A2, "title")
+                        <svg class="bg-white border rounded copy-icon" data-toggle="tooltip" data-placement="top" title="Copy" style="padding: 2px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg" width="20" height="auto" viewBox="0 0 24 24"><path d="M18,5.25h-.25v-.25c0-.96484-.78516-1.75-1.75-1.75h-1.35352c-.32812-1.15283-1.38965-2-2.64648-2s-2.31836.84717-2.64648,2h-1.35352c-.96484,0-1.75.78516-1.75,1.75v.25h-.25c-1.5166,0-2.75,1.2334-2.75,2.75v12c0,1.5166,1.2334,2.75,2.75,2.75h12c1.5166,0,2.75-1.2334,2.75-2.75v-12c0-1.5166-1.2334-2.75-2.75-2.75ZM7.75,5c0-.1377.1123-.25.25-.25h2c.41406,0,.75-.33594.75-.75,0-.68945.56055-1.25,1.25-1.25s1.25.56055,1.25,1.25c0,.41406.33594.75.75.75h2c.1377,0,.25.1123.25.25v2c0,.1377-.1123.25-.25.25h-8c-.1377,0-.25-.1123-.25-.25v-2ZM19.25,20c0,.68945-.56055,1.25-1.25,1.25H6c-.68945,0-1.25-.56055-1.25-1.25v-12c0-.68945.56055-1.25,1.25-1.25h.25v.25c0,.96484.78516,1.75,1.75,1.75h8c.96484,0,1.75-.78516,1.75-1.75v-.25h.25c.68945,0,1.25.56055,1.25,1.25v12ZM16.75,12c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,15c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,18c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75Z" fill="currentColor"/></svg>
+                      </span>
+                    </td>
+                    <td class="text-nowrap">
+                      Co-Founder
+                    </td>
+                  </tr>
+  
+                </tbody>
+  
+              </table>
+  
+            </div>
 
-                <tr>
-                  <th scope="row" class="text-nowrap">
-                    Get person's first name
-                  </th>
-                  <td>
-                    https://www.linkedin.com/in/johnrmarty
-                  </td>
-                  <td class="text-nowrap">
-                    <span class="border rounded h6 py-2 px-2 text-monospace" style="background-color: #f0fdf4;">
-                      =SG_PERSON(A2, "first_name")
-                    </span>
-                  </td>
-                  <td>
-                    John
-                  </td>
-                </tr>
+          </div>
 
-                <tr>
-                  <th scope="row" class="text-nowrap">
-                    Get profile's current company
-                  </th>
-                  <td>
-                    https://www.linkedin.com/in/johnrmarty
-                  </td>
-                  <td class="text-nowrap">
-                    <span class="border rounded h6 py-2 px-2 text-monospace" style="background-color: #f0fdf4;">
-                      =SG_PERSON_WORK(A2, "company")
-                      <svg class="bg-white border rounded" style="padding: 2px;" xmlns="http://www.w3.org/2000/svg" width="20" height="auto" viewBox="0 0 24 24"><path d="M18,5.25h-.25v-.25c0-.96484-.78516-1.75-1.75-1.75h-1.35352c-.32812-1.15283-1.38965-2-2.64648-2s-2.31836.84717-2.64648,2h-1.35352c-.96484,0-1.75.78516-1.75,1.75v.25h-.25c-1.5166,0-2.75,1.2334-2.75,2.75v12c0,1.5166,1.2334,2.75,2.75,2.75h12c1.5166,0,2.75-1.2334,2.75-2.75v-12c0-1.5166-1.2334-2.75-2.75-2.75ZM7.75,5c0-.1377.1123-.25.25-.25h2c.41406,0,.75-.33594.75-.75,0-.68945.56055-1.25,1.25-1.25s1.25.56055,1.25,1.25c0,.41406.33594.75.75.75h2c.1377,0,.25.1123.25.25v2c0,.1377-.1123.25-.25.25h-8c-.1377,0-.25-.1123-.25-.25v-2ZM19.25,20c0,.68945-.56055,1.25-1.25,1.25H6c-.68945,0-1.25-.56055-1.25-1.25v-12c0-.68945.56055-1.25,1.25-1.25h.25v.25c0,.96484.78516,1.75,1.75,1.75h8c.96484,0,1.75-.78516,1.75-1.75v-.25h.25c.68945,0,1.25.56055,1.25,1.25v12ZM16.75,12c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,15c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,18c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75Z" fill="currentColor" stroke-width="0"/></svg>
-                    </span>
-                  </td>
-                  <td class="text-nowrap">
-                    FF Real Estate
-                  </td>
-                </tr>
+          <div class="text-center">
 
-                <tr>
-                  <th scope="row" class="text-nowrap">
-                    Get profile's current job title
-                  </th>
-                  <td>
-                    https://www.linkedin.com/in/johnrmarty
-                  </td>
-                  <td class="text-nowrap">
-                    <span class="border rounded h6 py-2 px-2 text-monospace" style="background-color: #f0fdf4;">
-                      =SG_PERSON_WORK(A2, "title")
-                    </span>
-                  </td>
-                  <td class="text-nowrap">
-                    Co-Founder
-                  </td>
-                </tr>
+            <button class="btn btn-success lift">
+              Sign Up For Free Trial
+            </button>
 
-              </tbody>
-
-            </table>
+            <button class="btn btn-outline-success lift ml-3">
+              See Formulas
+            </button>
 
           </div>
 
@@ -289,7 +394,7 @@
 
   <!-- BRANDS
     ================================================== -->
-  <section class="bg-white pb-10 mb-n8 mb-md-n13" id="customersection">
+  <section class="bg-white pb-10" id="customersection">
 
     <div class="container">
 
@@ -349,574 +454,280 @@
 
   </section>
 
-  <!--  B2B ENRICHMENT
-  ================================================== -->
-  <section class="pt-8 pt-md-14 pb-10 bg-light">
+  <!-- USE CASES
+    ================================================== -->
+    <section class="jarallax" data-jarallax data-speed=".6" style="background-image: url(assets/img/photos/background/imagery-anna-blur.png);">
+      <div class="container pt-8 pt-md-11 pb-8 pb-md-11">
+  
+        <div class="card shadow-dark-lg aos-init aos-animate" data-aos="fade-up">
+          <div class="card-body rounded">
+              
+            <div class="row justify-content-between">
+  
+            <div class="col-12 col-md-5 order-md-2 mb-6 mb-md-0">
+            
+              <!-- Badge -->
+              <span class="badge badge-info rounded-pill badge-lg badge-float badge-float-outside text-uppercase mt-n1 mr-3">
+                Sapiengraph use-case Story
+              </span>
+            
+              <!-- Image -->
+              <img class="img-fluid rounded mb-2 d-none d-md-block" src="assets/img/photos/imagery-anna.png">
+            
+              <!-- Image mobile-->
+              <img class="img-fluid rounded d-block d-md-none" src="assets/img/photos/imagery-anna-mobile.png">
+            
+            </div>
+  
+            <div class="col-12 col-md-7 order-md-1 pr-8">
+  
+              <div class="d-block">
+  
+              <!-- Image -->
+              <img class="img-fluid rounded mr-4 mb-5" alt="agicap logo" style="width: 128px;" src="assets/img/Sapiengraph logo.svg">            
+  
+              <!-- Title 1-->
+              <h2 class="h2 font-weight-bold mb-4">
+                Getting data on profiles for <span class="text-success">personalizing cold emails with AI</span>
+              </h2>
+  
+              <!-- Desc-->
+              <p class="font-size-lg text-muted mb-5"> 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+  
+              <!-- Link to blog-->
+              <a class="font-size-lg text-success font-weight-bold" href="#!"> 
+                Continue Story <i class="fe fe-arrow-right"></i>
+              </a>
+  
+              </div>
+  
+            </div> <!-- Banner story 1-->
+  
+            </div> <!-- / .row company and general-->          
+          </div> <!-- / .card-body-->
+        </div> <!-- BANNER STORY-->
+  
+      </div> <!-- / .container -->
+    </section>
 
-    <!-- Content heading -->
+  <!-- Search, contact data and jobs
+  ================================================== -->
+  <section class="py-8 py-md-10">
     <div class="container">
+
       <div class="row justify-content-center">
 
-        <div class="col-12 col-md-8 col-lg-12 col-xl-11 text-center">
+        <div class="col-12 col-md-10">
+
+          <div class="text-center mb-6 mb-md-8">
           
-          <!-- Heading -->
-          <h2 class="display-2 font-weight-bold mb-6 text-black">
-            B2B Enrichment in <span class="text-success">Excel</span>
-          </h2>
-
-          <h4 class="text-muted">
-            Add formulas to your spreadsheet for B2B enrichment superpowers.
-          </h4>
-
-        </div>
-      </div> <!-- / .row -->
-    </div> <!-- container heading--> 
-
-  </section>
-  
-  <section class="mt-n8 pb-8 border-bottom">
-
-    <div class="container mb-xl-8">
-
-      <div class="row justify-content-center mb-0 mb-md-0">
-        
-        <!-- Card 1-->
-        <div class="col-12 col-md-6 col-lg-6 col-xl-6 mb-6 mb-lg-8 mb-md-8" data-aos="fade-up">
-
-          <div class="card border custom-rounded accordion card-responsive shadow-light-lg lift lift-lg" id="featuresAccordion">
-
-            <img src="assets/img/illustrations/SG_B2B Enrichment People.png" alt="People data in excel illustration" class="card-img-top">
-
-            <div class="card-body">
-
-              <!-- content -->
-              <h3 class="font-weight-bold">
-                <img class="img-fluid pr-2 pb-1" width="40px" src="assets/icons/b2b-people.svg" alt="Card people icon">
-                <a class="text-success" href="https://nubela.co/proxycurl/docs#people-api-person-profile-endpoint">
-                  People
-                </a>
-              </h3>
-        
-              <!-- List group-->
-              <div>
-        
-                <div class="py-6 border-bottom">
-                
-                  <!-- Title -->
-                  <p class="font-weight-bold text-success mb-2">
-                    First/Last name
-                  </p>
-                
-                  <div class="mb-2">
-                    <small class="text-uppercase font-weight-bold h6">
-                      Formula
-                    </small>
-                
-                    <p class="h6 font-weight-bold badge-secondary-soft px-1 py-1 mb-0 rounded">
-                      =SG_PERSON("https://www.linkedin.com/in/williamhgates/", "first_name")
-                    </p>
-                  </div>
-                
-                  <svg class="py-2" style="width: 24px; height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <g fill="currentColor">
-                      <path
-                        d="m16.634 13.697-4.068 4.069a.8.8 0 0 1-1.132 0l-4.068-4.069a.8.8 0 0 1 .565-1.366H9.5a1 1 0 0 0 1-1V7a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v4.331a1 1 0 0 0 1 1h1.569a.8.8 0 0 1 .565 1.366">
-                      </path>
-                    </g>
-                  </svg>
-                
-                  <div class="mb-0">
-                    <p class="text-uppercase font-weight-bold h6 mb-0">
-                      Output
-                    </p>
-                
-                    <div class="badge badge-xs badge-secondary-soft font-weight-bold mb-0">
-                      Bill
-                    </div>
-                  </div>
-                
-                </div> <!-- item 1_1-->
-        
-                <div class="py-6 border-bottom">
-                
-                  <!-- Title -->
-                  <p class="font-weight-bold text-success mb-2">
-                    Work experience history
-                  </p>
-                
-                  <div class="mb-2">
-                    <small class="text-uppercase font-weight-bold h6">
-                      Formula
-                    </small>
-                
-                    <p class="h6 font-weight-bold badge-secondary-soft px-1 py-1 mb-0 rounded">
-                      =SG_PERSON_WORK("https://www.linkedin.com/in/johnrmarty", "title", 1)
-                    </p>
-                  </div>
-                
-                  <svg style="width: 24px; height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <g fill="currentColor">
-                      <path
-                        d="m16.634 13.697-4.068 4.069a.8.8 0 0 1-1.132 0l-4.068-4.069a.8.8 0 0 1 .565-1.366H9.5a1 1 0 0 0 1-1V7a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v4.331a1 1 0 0 0 1 1h1.569a.8.8 0 0 1 .565 1.366">
-                      </path>
-                    </g>
-                  </svg>
-                
-                  <div class="mb-0">
-                    <p class="text-uppercase font-weight-bold h6 mb-0">
-                      Output
-                    </p>
-                
-                    <div class="badge badge-xs badge-secondary-soft font-weight-bold mb-0">
-                      Founder
-                    </div>
-                  </div>
-                
-                </div> <!-- item 1_2-->
-        
-                <div class="pt-6">
-                  <div class="collapse" id="featuresOne" data-parent="#featuresAccordion">
-        
-                    <div class="py-6 border-bottom">
-                    
-                      <!-- Title -->
-                      <p class="font-weight-bold text-success mb-2">
-                        Personal email
-                      </p>
-                    
-                      <div class="mb-2">
-                        <small class="text-uppercase font-weight-bold h6">
-                          Formula
-                        </small>
-                    
-                        <p class="h6 font-weight-bold badge-secondary-soft px-1 py-1 mb-0 rounded">
-                          =SG_PERSONAL_EMAILS("https://www.linkedin.com/in/johnrmarty")
-                        </p>
-                      </div>
-                    
-                      <svg style="width: 24px; height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <g fill="currentColor">
-                          <path
-                            d="m16.634 13.697-4.068 4.069a.8.8 0 0 1-1.132 0l-4.068-4.069a.8.8 0 0 1 .565-1.366H9.5a1 1 0 0 0 1-1V7a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v4.331a1 1 0 0 0 1 1h1.569a.8.8 0 0 1 .565 1.366">
-                          </path>
-                        </g>
-                      </svg>
-                    
-                      <div class="mb-0">
-                        <p class="text-uppercase font-weight-bold h6 mb-0">
-                          Output
-                        </p>
-                    
-                        <div class="badge badge-xs badge-secondary-soft font-weight-bold mb-0">
-                          johnrmarty@gmail.com
-                        </div>
-                      </div>
-                    
-                    </div> <!-- item 1_3-->
-        
-                    <div class="py-6 border-bottom">
-                    
-                      <!-- Title -->
-                      <p class="font-weight-bold text-success mb-2">
-                        Phone number
-                      </p>
-                    
-                      <div class="mb-2">
-                        <small class="text-uppercase font-weight-bold h6">
-                          Formula
-                        </small>
-                    
-                        <p class="h6 font-weight-bold badge-secondary-soft px-1 py-1 mb-0 rounded">
-                          =SG_PERSONAL_NUMBERS("https://www.linkedin.com/in/johnrmarty/")
-                        </p>
-                      </div>
-                    
-                      <svg style="width: 24px; height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <g fill="currentColor">
-                          <path
-                            d="m16.634 13.697-4.068 4.069a.8.8 0 0 1-1.132 0l-4.068-4.069a.8.8 0 0 1 .565-1.366H9.5a1 1 0 0 0 1-1V7a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v4.331a1 1 0 0 0 1 1h1.569a.8.8 0 0 1 .565 1.366">
-                          </path>
-                        </g>
-                      </svg>
-                    
-                      <div class="mb-0">
-                        <p class="text-uppercase font-weight-bold h6 mb-0">
-                          Output
-                        </p>
-                    
-                        <div class="badge badge-xs badge-secondary-soft font-weight-bold mb-0">
-                          +19707495020
-                        </div>
-                      </div>
-                    
-                    </div> <!-- item 1_4-->
-        
-                    <div class="py-6 border-bottom">
-                    
-                      <!-- Title -->
-                      <p class="font-weight-bold text-success mb-2">
-                        Salary range
-                      </p>
-                    
-                      <div class="mb-2">
-                        <small class="text-uppercase font-weight-bold h6">
-                          Formula
-                        </small>
-                    
-                        <p class="h6 font-weight-bold badge-secondary-soft px-1 py-1 mb-0 rounded">
-                          No formula for this yet
-                        </p>
-                      </div>
-                    
-                      <svg style="width: 24px; height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <g fill="currentColor">
-                          <path
-                            d="m16.634 13.697-4.068 4.069a.8.8 0 0 1-1.132 0l-4.068-4.069a.8.8 0 0 1 .565-1.366H9.5a1 1 0 0 0 1-1V7a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v4.331a1 1 0 0 0 1 1h1.569a.8.8 0 0 1 .565 1.366">
-                          </path>
-                        </g>
-                      </svg>
-                    
-                      <div class="mb-0">
-                        <p class="text-uppercase font-weight-bold h6 mb-0">
-                          Output
-                        </p>
-                    
-                        <div class="badge badge-xs badge-secondary-soft font-weight-bold mb-0">
-                          None
-                        </div>
-                      </div>
-                    
-                    </div> <!-- item 1_5-->
-        
-                    <div class="mb-2">
-                    
-                      <!-- Title -->
-                      <p class="font-weight-bold mb-5 mt-5">
-                        And More. See <a class="text-success" style="text-decoration: underline;"
-                          href="https://sapiengraph.com/docs#sapiengraph-documentation">API Docs</a>
-                      </p>
-                    
-                    </div> <!-- item and more-->
-        
-                  </div>
-        
-                  <!-- Toggle -->
-                  <a class="text-center" data-toggle="collapse" href="#featuresOne" role="button" aria-expanded="false"
-                    aria-controls="featuresOne">
-                    <div class="mr-auto">
-        
-                      <!-- Chevron -->
-                      <span class="collapse-chevron btn btn-outline-success btn-rounded-circle shadow shadow-light">
-                        <i class="fe fe-lg fe-chevron-down"></i>
-                      </span>
-        
-                    </div>
-        
-                  </a> <!-- / .row -->
-        
-                </div>
-        
-              </div> <!-- item 1_1-->
-        
-            </div>
-        
-          </div> <!-- card-->
-        
-        </div> <!-- card 1-->
-
-        <!-- Card 2-->
-        <div class="col-12 col-md-6 col-lg-6 col-xl-6 mb-6 mb-lg-8 mb-md-8" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="card border custom-rounded accordion card-responsive shadow-light-lg lift lift-lg" id="featuresAccordion2">
-
-            <img src="assets/img/illustrations/SG_B2B Enrichment Company.png" alt="Company data in excel illustration" class="card-img-top">
-
-            <div class="card-body">
-
-              <!-- content -->
-              <h3 class="font-weight-bold">
-                <img class="img-fluid pr-2 pb-1" width="40px" src="assets/icons/b2b-company.svg" alt="Card people icon">
-                <a class="text-success" href="https://nubela.co/proxycurl/docs#people-api-person-profile-endpoint">
-                  Company
-                </a>
-              </h3>
-        
-              <!-- List group-->
-              <div>
-        
-                <div class="py-6 border-bottom">
-                
-                  <!-- Title -->
-                  <p class="font-weight-bold text-success mb-2">
-                    Name
-                  </p>
-                
-                  <div class="mb-2">
-                    <small class="text-uppercase font-weight-bold h6">
-                      Formula
-                    </small>
-                
-                    <p class="h6 font-weight-bold badge-secondary-soft px-1 py-1 mb-0 rounded">
-                      =SG_COMPANY("https://www.linkedin.com/company/google/", "name")
-                    </p>
-                  </div>
-                
-                  <svg class="py-2" style="width: 24px; height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <g fill="currentColor">
-                      <path
-                        d="m16.634 13.697-4.068 4.069a.8.8 0 0 1-1.132 0l-4.068-4.069a.8.8 0 0 1 .565-1.366H9.5a1 1 0 0 0 1-1V7a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v4.331a1 1 0 0 0 1 1h1.569a.8.8 0 0 1 .565 1.366">
-                      </path>
-                    </g>
-                  </svg>
-                
-                  <div class="mb-0">
-                    <p class="text-uppercase font-weight-bold h6 mb-0">
-                      Output
-                    </p>
-                
-                    <div class="badge badge-xs badge-secondary-soft font-weight-bold mb-0">
-                      Google
-                    </div>
-                  </div>
-                
-                </div> <!-- item 1_1-->
-        
-                <div class="py-6 border-bottom">
-                
-                  <!-- Title -->
-                  <p class="font-weight-bold text-success mb-2">
-                    Profile picture
-                  </p>
-                
-                  <div class="mb-2">
-                    <small class="text-uppercase font-weight-bold h6">
-                      Formula
-                    </small>
-                
-                    <p class="h6 font-weight-bold badge-secondary-soft px-1 py-1 mb-0 rounded">
-                      =SG_COMPANY("https://www.linkedin.com/company/google/", "profile_pic_url")
-                    </p>
-                  </div>
-                
-                  <svg style="width: 24px; height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <g fill="currentColor">
-                      <path
-                        d="m16.634 13.697-4.068 4.069a.8.8 0 0 1-1.132 0l-4.068-4.069a.8.8 0 0 1 .565-1.366H9.5a1 1 0 0 0 1-1V7a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v4.331a1 1 0 0 0 1 1h1.569a.8.8 0 0 1 .565 1.366">
-                      </path>
-                    </g>
-                  </svg>
-                
-                  <div class="mb-0">
-                    <p class="text-uppercase font-weight-bold h6 mb-0">
-                      Output
-                    </p>
-                
-                    <div class="h6 font-weight-bold badge-secondary-soft px-1 py-1 mb-0 rounded text-truncate">
-                      https://s3.us-west-000.backblazeb2.com/proxycurl/company/google/profile?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=0004d7f56a0400b0000000001%2F20240318%2Fus-west-000%2Fs3%2Faws4_request&X-Amz-Date=20240318T084406Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=049d5adcd2cb6e83d72e295d715a4b326b4ab486977dbe2105dfdbd10abe8c56
-                    </div>
-                  </div>
-                
-                </div> <!-- item 1_2-->
-        
-                <div class="pt-6">
-                  <div class="collapse" id="featuresTwo" data-parent="#featuresAccordion">
-        
-                    <div class="py-6 border-bottom">
-                    
-                      <!-- Title -->
-                      <p class="font-weight-bold text-success mb-2">
-                        Open jobs
-                      </p>
-                    
-                      <div class="mb-2">
-                        <small class="text-uppercase font-weight-bold h6">
-                          Formula
-                        </small>
-                    
-                        <p class="h6 font-weight-bold badge-secondary-soft px-1 py-1 mb-0 rounded">
-                          =SG_JOBS_SEARCH("https://www.linkedin.com/company/google/",1, "software engineer")
-                        </p>
-                      </div>
-                    
-                      <svg style="width: 24px; height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <g fill="currentColor">
-                          <path
-                            d="m16.634 13.697-4.068 4.069a.8.8 0 0 1-1.132 0l-4.068-4.069a.8.8 0 0 1 .565-1.366H9.5a1 1 0 0 0 1-1V7a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v4.331a1 1 0 0 0 1 1h1.569a.8.8 0 0 1 .565 1.366">
-                          </path>
-                        </g>
-                      </svg>
-                    
-                      <div class="mb-0">
-                        <p class="text-uppercase font-weight-bold h6 mb-0">
-                          Output
-                        </p>
-                    
-                        <div class="h6 font-weight-bold badge-secondary-soft px-1 py-1 mb-0 rounded">
-                          https://www.linkedin.com/jobs/view/software-engineer-core-at-google-3812100874
-                        </div>
-                      </div>
-                    
-                    </div> <!-- item 1_3-->
-        
-                    <div class="py-6 border-bottom">
-                    
-                      <!-- Title -->
-                      <p class="font-weight-bold text-success mb-2">
-                        Title
-                      </p>
-                    
-                      <div class="mb-2">
-                        <small class="text-uppercase font-weight-bold h6">
-                          Formula
-                        </small>
-                    
-                        <p class="h6 font-weight-bold badge-secondary-soft px-1 py-1 mb-0 rounded">
-                          =SG_JOB("https://www.linkedin.com/jobs/view/software-engineer-core-at-google-3812100874/", "title")
-                        </p>
-                      </div>
-                    
-                      <svg style="width: 24px; height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <g fill="currentColor">
-                          <path
-                            d="m16.634 13.697-4.068 4.069a.8.8 0 0 1-1.132 0l-4.068-4.069a.8.8 0 0 1 .565-1.366H9.5a1 1 0 0 0 1-1V7a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v4.331a1 1 0 0 0 1 1h1.569a.8.8 0 0 1 .565 1.366">
-                          </path>
-                        </g>
-                      </svg>
-                    
-                      <div class="mb-0">
-                        <p class="text-uppercase font-weight-bold h6 mb-0">
-                          Output
-                        </p>
-                    
-                        <div class="badge badge-xs badge-secondary-soft font-weight-bold mb-0">
-                          Software Engineer, Core
-                        </div>
-                      </div>
-                    
-                    </div> <!-- item 1_4-->
-        
-                    <div class="mb-2">
-                    
-                      <!-- Title -->
-                      <p class="font-weight-bold mb-5 mt-5">
-                        And More. See <a class="text-success" style="text-decoration: underline;"
-                          href="https://sapiengraph.com/docs#sapiengraph-documentation">API Docs</a>
-                      </p>
-                    
-                    </div> <!-- item and more-->
-        
-                  </div>
-        
-                  <!-- Toggle -->
-                  <a class="text-center" data-toggle="collapse" href="#featuresTwo" role="button" aria-expanded="false"
-                    aria-controls="featuresTwo">
-                    <div class="mr-auto">
-        
-                      <!-- Chevron -->
-                      <span class="collapse-chevron btn btn-outline-success btn-rounded-circle shadow shadow-light">
-                        <i class="fe fe-lg fe-chevron-down"></i>
-                      </span>
-        
-                    </div>
-        
-                  </a> <!-- / .row -->
-        
-                </div>
-        
-              </div> <!-- item 1_1-->
-        
-            </div>
-        
-          </div> <!-- card-->
-        
-        </div> <!-- card 2-->
-
-      </div> <!-- row-->
-
-      <div class="d-md-flex justify-content-center align-items-center">
-
-        <button class="btn btn-rounded-circle btn-success btn-block lift d-block d-md-none px-6 mr-2 mb-3 mb-md-0">
-          Sign Up For Free Trial
-        </button>
-
-        <button class="btn btn-rounded-circle btn-success lift d-none d-md-block px-6 mr-2 mb-3 mb-md-0">
-          Sign Up For Free Trial
-        </button>
-
-        <button class="btn btn-rounded-circle btn-success-soft btn-block lift d-block d-md-none px-6">
-          Learn more about B2B Enrichment in Excel
-        </button>
-  
-        <button class="btn btn-rounded-circle btn-success-soft d-none d-md-block px-6 lift">
-          Learn more about B2B Enrichment in Excel
-        </button>
-
-      </div>
-
-    </div> <!-- / .container -->    
-
-  </section>
-
-  <!-- PROSPECTOR
-  ================================================== -->
-  <section class="py-8 py-md-11 bg-light border-bottom">
-
-    <div class="container">
-
-      <div class="row">
-        <div class="col-12">
-          <div class="text-center">
-            <h2 class="display-2 font-weight-bold">
-              Finally, a Prospector that lets you <span class="text-success">export data to Excel</span>
+            <h2 class="display-3 font-weight-bolder">
+              Search, contact data and jobs
             </h2>
-      
-            <h4 class="text-muted lead mb-8">
-              Identify people and company prospects and get emails and phone numbers
-            </h4>
-          </div>
-          
-          <!-- Image grid -->
-          <div class="d-flex flex-column mb-6 mb-md-0">
-          
-            <!-- Image -->
-            <img class="img-fluid rounded shadow-light-lg align-self-start border border-gray" src="assets/img/illustrations/propsector-demo.png"
-              alt="..." style="min-height: 1px; max-width: 100%;" data-aos="fade-up">
-          
-            <!-- Image -->
-            <img class=" img-fluid rounded shadow-lift align-self-end mr-n2 mr-md-n6 mr-xl-n12 border border-success" src="assets/img/illustrations/propsector-demo-filter.png"
-              alt="..." style="min-height: 1px; max-width: 18%; margin-top: -69%; margin-bottom: 10%;" data-aos="fade-up" data-aos-delay="100">
-          
-          </div>
-    
-          <!--
-          <img class="img-fluid mb-6 shadow-light-lg custom-rounded" alt="o0o" src="assets/img/illustrations/propsector-demo.png">
-          -->
 
-          <div class="d-md-flex justify-content-center align-items-center">
+            <p class="text-muted lead">
+              Lorem ipsum dolor si amet ardhanny rosprelando
+            </p>
 
-            <button class="btn btn-rounded-circle btn-success btn-block lift d-block d-md-none px-6 mr-2 mb-3 mb-md-0">
+          </div>
+
+          <!-- Lookup person table -->
+          <div class="mb-6 mb-md-8">
+
+            <h2 class="font-weight-bold text-center h3 mb-4">
+              <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="22" height="auto" viewBox="0 0 24 24"><g fill="currentColor"><path d="M21 20v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4M8 12h8a1 1 0 0 0 1-1V7a5 5 0 0 0-5.491-4.977C8.909 2.271 7 4.603 7 7.215V11a1 1 0 0 0 1 1"></path></g></svg>
+              Lookup a person
+            </h2>
+  
+            <div class="table-responsive">
+  
+              <table class="table table-bordered rounded-table table-hover custom-table">
+  
+                <thead style="background-color: #F9FAFB;">
+                  <tr>
+                    <th scope="col">A (First Name)</th>
+                    <th scope="col">B (Last Name)</th>
+                    <th scope="col">C (Company Name)</th>
+                    <th scope="col">D (Formula)</th>
+                    <th scope="col">D (Output)</th>
+                  </tr>
+                </thead>
+  
+                <tbody class="small">
+  
+                  <tr>
+                    <th scope="row" class="text-nowrap">
+                      John
+                    </th>
+                    <td class="text-nowrap">
+                      Marty
+                    </td>
+                    <td class="text-nowrap">
+                      FF Real Estate
+                    </td>
+                    <td class="text-nowrap">
+                      <span class="border rounded h6 py-2 px-2 text-monospace copy-text" style="background-color: #f0fdf4;">
+                        =SG_LOOKUP_PERSON(A2, C2, A2)
+                        <svg class="bg-white border rounded copy-icon" data-toggle="tooltip" data-placement="top" title="Copy" style="padding: 2px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg" width="20" height="auto" viewBox="0 0 24 24"><path d="M18,5.25h-.25v-.25c0-.96484-.78516-1.75-1.75-1.75h-1.35352c-.32812-1.15283-1.38965-2-2.64648-2s-2.31836.84717-2.64648,2h-1.35352c-.96484,0-1.75.78516-1.75,1.75v.25h-.25c-1.5166,0-2.75,1.2334-2.75,2.75v12c0,1.5166,1.2334,2.75,2.75,2.75h12c1.5166,0,2.75-1.2334,2.75-2.75v-12c0-1.5166-1.2334-2.75-2.75-2.75ZM7.75,5c0-.1377.1123-.25.25-.25h2c.41406,0,.75-.33594.75-.75,0-.68945.56055-1.25,1.25-1.25s1.25.56055,1.25,1.25c0,.41406.33594.75.75.75h2c.1377,0,.25.1123.25.25v2c0,.1377-.1123.25-.25.25h-8c-.1377,0-.25-.1123-.25-.25v-2ZM19.25,20c0,.68945-.56055,1.25-1.25,1.25H6c-.68945,0-1.25-.56055-1.25-1.25v-12c0-.68945.56055-1.25,1.25-1.25h.25v.25c0,.96484.78516,1.75,1.75,1.75h8c.96484,0,1.75-.78516,1.75-1.75v-.25h.25c.68945,0,1.25.56055,1.25,1.25v12ZM16.75,12c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,15c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,18c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75Z" fill="currentColor"/></svg>
+                      </span>
+                    </td>
+                    <td>
+                      https://www.linkedin.com/in/johnrmarty
+                    </td>
+                  </tr>
+  
+                </tbody>
+  
+              </table>
+  
+            </div>
+
+          </div>
+
+          <!-- Lookup company table -->
+          <div class="mb-6 mb-md-8">
+
+            <h2 class="font-weight-bold text-center h3 mb-4">
+              <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="24" height="auto" viewBox="0 0 24 24"><g fill="currentColor"><path d="M7 22h2a1 1 0 0 0 1-1v-1.893c0-.996.68-1.92 1.664-2.08A2 2 0 0 1 14 19v2a1 1 0 0 0 1 1h2a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2m8-17.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-4-9a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-4-9a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"></path></g></svg>
+              Lookup a company
+            </h2>
+  
+            <div class="table-responsive">
+  
+              <table class="table table-bordered rounded-table table-hover custom-table">
+  
+                <thead style="background-color: #F9FAFB;">
+                  <tr>
+                    <th scope="col">A (Company Name)</th>
+                    <th scope="col">B (Formula)</th>
+                    <th scope="col">C (Output)</th>
+                  </tr>
+                </thead>
+  
+                <tbody class="small">
+  
+                  <tr>
+                    <th scope="row" class="text-nowrap">
+                      Apple
+                    </th>
+                    <td class="text-nowrap">
+                      <span class="border rounded h6 py-2 px-2 text-monospace copy-text" style="background-color: #f0fdf4;">
+                        =SG_LOOKUP_COMPANY("Apple")
+                        <svg class="bg-white border rounded copy-icon" data-toggle="tooltip" data-placement="top" title="Copy" style="padding: 2px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg" width="20" height="auto" viewBox="0 0 24 24"><path d="M18,5.25h-.25v-.25c0-.96484-.78516-1.75-1.75-1.75h-1.35352c-.32812-1.15283-1.38965-2-2.64648-2s-2.31836.84717-2.64648,2h-1.35352c-.96484,0-1.75.78516-1.75,1.75v.25h-.25c-1.5166,0-2.75,1.2334-2.75,2.75v12c0,1.5166,1.2334,2.75,2.75,2.75h12c1.5166,0,2.75-1.2334,2.75-2.75v-12c0-1.5166-1.2334-2.75-2.75-2.75ZM7.75,5c0-.1377.1123-.25.25-.25h2c.41406,0,.75-.33594.75-.75,0-.68945.56055-1.25,1.25-1.25s1.25.56055,1.25,1.25c0,.41406.33594.75.75.75h2c.1377,0,.25.1123.25.25v2c0,.1377-.1123.25-.25.25h-8c-.1377,0-.25-.1123-.25-.25v-2ZM19.25,20c0,.68945-.56055,1.25-1.25,1.25H6c-.68945,0-1.25-.56055-1.25-1.25v-12c0-.68945.56055-1.25,1.25-1.25h.25v.25c0,.96484.78516,1.75,1.75,1.75h8c.96484,0,1.75-.78516,1.75-1.75v-.25h.25c.68945,0,1.25.56055,1.25,1.25v12ZM16.75,12c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,15c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,18c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75Z" fill="currentColor"/></svg>
+                      </span>
+                    </td>
+                    <td class="text-nowrap">
+                      https://www.linkedin.com/company/apple
+                    </td>
+                  </tr>
+  
+                </tbody>
+  
+              </table>
+  
+            </div>
+
+          </div>
+
+          <!-- Search and Prospect (like LinkedIn Sales Navigator, but in your spreadsheet) -->
+          <div class="mb-6 mb-md-8">
+
+            <h2 class="font-weight-bold text-center h3 mb-4">
+              <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="24" height="auto" viewBox="0 0 24 24"><g fill="currentColor"><path d="M7 22h2a1 1 0 0 0 1-1v-1.893c0-.996.68-1.92 1.664-2.08A2 2 0 0 1 14 19v2a1 1 0 0 0 1 1h2a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2m8-17.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-4-9a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-4-9a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"></path></g></svg>
+              Search and Prospect (like LinkedIn Sales Navigator, but in your spreadsheet)
+            </h2>
+  
+            <div class="table-responsive">
+  
+              <table class="table table-bordered rounded-table table-hover custom-table"> 
+  
+                <tbody class="small">
+  
+                  <tr>
+                    <th scope="row" class="text-nowrap">
+                      Find anyone based in the US named either "Sarah Jackson" or "Sarah Johnson"
+                    </th>
+                    <td class="text-nowrap">
+                      <span class="border rounded h6 py-2 px-2 text-monospace copy-text" style="background-color: #f0fdf4;">
+                        =SG_PERSON_SEARCH("US", 10, "Sarah", "Jackson OR Johnson")
+                        <svg class="bg-white border rounded copy-icon" data-toggle="tooltip" data-placement="top" title="Copy" style="padding: 2px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg" width="20" height="auto" viewBox="0 0 24 24"><path d="M18,5.25h-.25v-.25c0-.96484-.78516-1.75-1.75-1.75h-1.35352c-.32812-1.15283-1.38965-2-2.64648-2s-2.31836.84717-2.64648,2h-1.35352c-.96484,0-1.75.78516-1.75,1.75v.25h-.25c-1.5166,0-2.75,1.2334-2.75,2.75v12c0,1.5166,1.2334,2.75,2.75,2.75h12c1.5166,0,2.75-1.2334,2.75-2.75v-12c0-1.5166-1.2334-2.75-2.75-2.75ZM7.75,5c0-.1377.1123-.25.25-.25h2c.41406,0,.75-.33594.75-.75,0-.68945.56055-1.25,1.25-1.25s1.25.56055,1.25,1.25c0,.41406.33594.75.75.75h2c.1377,0,.25.1123.25.25v2c0,.1377-.1123.25-.25.25h-8c-.1377,0-.25-.1123-.25-.25v-2ZM19.25,20c0,.68945-.56055,1.25-1.25,1.25H6c-.68945,0-1.25-.56055-1.25-1.25v-12c0-.68945.56055-1.25,1.25-1.25h.25v.25c0,.96484.78516,1.75,1.75,1.75h8c.96484,0,1.75-.78516,1.75-1.75v-.25h.25c.68945,0,1.25.56055,1.25,1.25v12ZM16.75,12c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,15c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,18c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75Z" fill="currentColor"/></svg>
+                      </span>
+                    </td>
+                  </tr>
+  
+                </tbody>
+  
+              </table>
+  
+            </div>
+
+          </div>
+
+          <!-- Get phone numbers and emails -->
+          <div class="mb-6 mb-md-8">
+
+            <h2 class="font-weight-bold text-center h3 mb-4">
+              <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="24" height="auto" viewBox="0 0 24 24"><g fill="currentColor"><path d="M7 22h2a1 1 0 0 0 1-1v-1.893c0-.996.68-1.92 1.664-2.08A2 2 0 0 1 14 19v2a1 1 0 0 0 1 1h2a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2m8-17.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-4-9a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-4-9a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"></path></g></svg>
+              Get phone numbers and emails
+            </h2>
+  
+            <div class="table-responsive">
+  
+              <table class="table table-bordered rounded-table table-hover custom-table"> 
+  
+                <tbody class="small">
+  
+                  <tr>
+                    <th scope="row" class="text-nowrap">
+                      Get phone number
+                    </th>
+                    <td class="text-nowrap">
+                      <span class="border rounded h6 py-2 px-2 text-monospace copy-text" style="background-color: #f0fdf4;">
+                        =SG_PERSONAL_NUMBERS("https://www.linkedin.com/in/johnrmarty/")
+                        <svg class="bg-white border rounded copy-icon" data-toggle="tooltip" data-placement="top" title="Copy" style="padding: 2px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg" width="20" height="auto" viewBox="0 0 24 24"><path d="M18,5.25h-.25v-.25c0-.96484-.78516-1.75-1.75-1.75h-1.35352c-.32812-1.15283-1.38965-2-2.64648-2s-2.31836.84717-2.64648,2h-1.35352c-.96484,0-1.75.78516-1.75,1.75v.25h-.25c-1.5166,0-2.75,1.2334-2.75,2.75v12c0,1.5166,1.2334,2.75,2.75,2.75h12c1.5166,0,2.75-1.2334,2.75-2.75v-12c0-1.5166-1.2334-2.75-2.75-2.75ZM7.75,5c0-.1377.1123-.25.25-.25h2c.41406,0,.75-.33594.75-.75,0-.68945.56055-1.25,1.25-1.25s1.25.56055,1.25,1.25c0,.41406.33594.75.75.75h2c.1377,0,.25.1123.25.25v2c0,.1377-.1123.25-.25.25h-8c-.1377,0-.25-.1123-.25-.25v-2ZM19.25,20c0,.68945-.56055,1.25-1.25,1.25H6c-.68945,0-1.25-.56055-1.25-1.25v-12c0-.68945.56055-1.25,1.25-1.25h.25v.25c0,.96484.78516,1.75,1.75,1.75h8c.96484,0,1.75-.78516,1.75-1.75v-.25h.25c.68945,0,1.25.56055,1.25,1.25v12ZM16.75,12c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,15c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,18c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75Z" fill="currentColor"/></svg>
+                      </span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row" class="text-nowrap">
+                      Get personal email address
+                    </th>
+                    <td class="text-nowrap">
+                      <span class="border rounded h6 py-2 px-2 text-monospace copy-text" style="background-color: #f0fdf4;">
+                        =SG_PERSONAL_EMAILS("https://www.linkedin.com/in/williamhgates")
+                        <svg class="bg-white border rounded copy-icon" data-toggle="tooltip" data-placement="top" title="Copy" style="padding: 2px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg" width="20" height="auto" viewBox="0 0 24 24"><path d="M18,5.25h-.25v-.25c0-.96484-.78516-1.75-1.75-1.75h-1.35352c-.32812-1.15283-1.38965-2-2.64648-2s-2.31836.84717-2.64648,2h-1.35352c-.96484,0-1.75.78516-1.75,1.75v.25h-.25c-1.5166,0-2.75,1.2334-2.75,2.75v12c0,1.5166,1.2334,2.75,2.75,2.75h12c1.5166,0,2.75-1.2334,2.75-2.75v-12c0-1.5166-1.2334-2.75-2.75-2.75ZM7.75,5c0-.1377.1123-.25.25-.25h2c.41406,0,.75-.33594.75-.75,0-.68945.56055-1.25,1.25-1.25s1.25.56055,1.25,1.25c0,.41406.33594.75.75.75h2c.1377,0,.25.1123.25.25v2c0,.1377-.1123.25-.25.25h-8c-.1377,0-.25-.1123-.25-.25v-2ZM19.25,20c0,.68945-.56055,1.25-1.25,1.25H6c-.68945,0-1.25-.56055-1.25-1.25v-12c0-.68945.56055-1.25,1.25-1.25h.25v.25c0,.96484.78516,1.75,1.75,1.75h8c.96484,0,1.75-.78516,1.75-1.75v-.25h.25c.68945,0,1.25.56055,1.25,1.25v12ZM16.75,12c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,15c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,18c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75Z" fill="currentColor"/></svg>
+                      </span>
+                    </td>
+                  </tr>
+  
+                </tbody>
+  
+              </table>
+  
+            </div>
+
+          </div>
+
+          <div class="text-center">
+
+            <button class="btn btn-success lift">
               Sign Up For Free Trial
             </button>
-    
-            <button class="btn btn-rounded-circle btn-success lift d-none d-md-block px-6 mr-2 mb-3 mb-md-0">
-              Sign Up For Free Trial
+
+            <button class="btn btn-outline-success lift ml-3">
+              See Formulas
             </button>
-    
-            <button class="btn btn-rounded-circle btn-success-soft btn-block lift d-block d-md-none px-6">
-              Learn more about Prospector
-            </button>
-      
-            <button class="btn btn-rounded-circle btn-success-soft d-none d-md-block px-6 lift">
-              Learn more about Prospector
-            </button>
-    
+
           </div>
 
         </div>
-      </div>
 
-    </div>
+      </div> <!-- / .row -->
 
+    </div> <!-- / .container -->
   </section>
 
   <!-- JOB CHANGE TRACKING
@@ -1180,32 +991,7 @@
 
   <!-- Theme JS -->
   <script src="./assets/js/theme.min.js"></script>
-    // Function to show content by default
-    function showDefaultContent() {
-      const contents = document.querySelectorAll('.content');
-      contents.forEach(content => {
-        if (content.id === 'hrContent') {
-          content.style.display = 'block';
-        } else {
-          content.style.display = 'none';
-        }
-      });
-    }
-
-    // Show HR content by default when the page loads
-    document.addEventListener('DOMContentLoaded', showDefaultContent);
-
-    // Function to switch content on button click
-    function showContent(contentId) {
-      const contents = document.querySelectorAll('.content');
-      contents.forEach(content => {
-        if (content.id === contentId) {
-          content.style.display = 'block';
-        } else {
-          content.style.display = 'none';
-        }
-      });
-    }
+  <script src="script.js"></script>
 
 </body>
 

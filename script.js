@@ -1,3 +1,32 @@
+// Copy text
+$(document).ready(function(){
+  // Initialize tooltips
+  $('[data-toggle="tooltip"]').tooltip();
+
+  // Copy text on click
+  $('.copy-icon').click(function(){
+    var textToCopy = $(this).closest('.copy-text').text().trim();
+    var tempInput = $('<input>');
+    $('body').append(tempInput);
+    tempInput.val(textToCopy).select();
+    document.execCommand('copy');
+    tempInput.remove();
+
+    // Show tooltip with "Copied!" message
+    $(this).tooltip('hide')
+           .attr('data-original-title', 'Copied!')
+           .tooltip('show');
+
+    // Revert tooltip back to "Copy" after 2 seconds
+    var that = $(this);
+    setTimeout(function(){
+      that.tooltip('hide')
+          .attr('data-original-title', 'Copy')
+          .tooltip();
+    }, 2000);
+  });
+});
+
 document.addEventListener('DOMContentLoaded', function() {
 
   const toggleSwitch = document.getElementById('billingSwitch');
