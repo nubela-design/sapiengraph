@@ -1,0 +1,197 @@
+// Width
+.w-auto {
+  &-lg {
+    @media (min-width: $lg) {
+      width: auto !important;
+    }
+  }
+}
+
+// button loading
+#exportGS {
+  // Spinner
+  .lds-ring,
+  .lds-ring div {
+    box-sizing: border-box;
+  }
+  .lds-ring {
+    display: none;
+    position: relative;
+    width: 24px;
+    height: 24px;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border: 3px solid currentColor;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: currentColor transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  &.button--loading {
+    background-color: $muted !important;
+    border: 1px solid $muted !important;
+    cursor: wait;
+
+    .lds-ring {
+      display: inline-flex;
+      align-self: center;
+    }
+  }
+
+  @keyframes button-loading-spinner {
+    from {
+      transform: rotate(0turn);
+    }
+    to {
+      transform: rotate(1turn);
+    }
+  }
+}
+
+// alert
+/* Style the alert container */
+.alert-export {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+  display: none;
+}
+
+/* Add an animation to the alert container */
+.alert-export.animate {
+  animation: alert-animation 0.5s ease-out;
+}
+
+@keyframes alert-animation {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+// Default ava
+.ava {
+  border-radius: 50% !important;
+  height: 40px !important;
+  width: 40px;
+  background: $muted;
+}
+
+// Skeloton Animation
+.skeleton {
+  .ava {
+    border-radius: 50% !important;
+    height: 40px !important;
+    width: 40px;
+    background: rgba(130, 130, 130, 0.2);
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      color-stop(8%, rgba(130, 130, 130, 0.2)),
+      color-stop(18%, rgba(130, 130, 130, 0.3)),
+      color-stop(33%, rgba(130, 130, 130, 0.2))
+    );
+    background: linear-gradient(
+      to right,
+      rgba(130, 130, 130, 0.2) 8%,
+      rgba(130, 130, 130, 0.3) 18%,
+      rgba(130, 130, 130, 0.2) 33%
+    );
+    background-size: 800px 100px;
+    animation: wave-squares 2s infinite ease-out;
+  }
+  .line {
+    height: 12px;
+    margin-bottom: 6px;
+    border-radius: 2px;
+    background: rgba(130, 130, 130, 0.2);
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      color-stop(8%, rgba(130, 130, 130, 0.2)),
+      color-stop(18%, rgba(130, 130, 130, 0.3)),
+      color-stop(33%, rgba(130, 130, 130, 0.2))
+    );
+    background: linear-gradient(
+      to right,
+      rgba(130, 130, 130, 0.2) 8%,
+      rgba(130, 130, 130, 0.3) 18%,
+      rgba(130, 130, 130, 0.2) 33%
+    );
+    background-size: 800px 100px;
+    animation: wave-lines 2s infinite ease-out;
+  }
+  .skeleton .line:last-child {
+    margin-bottom: 0;
+  }
+  .h8 {
+    height: 8px !important;
+  }
+  .h10 {
+    height: 10px !important;
+  }
+  .h12 {
+    height: 12px !important;
+  }
+  .h15 {
+    height: 15px !important;
+  }
+  .h17 {
+    height: 17px !important;
+  }
+  .h20 {
+    height: 20px !important;
+  }
+  .h25 {
+    height: 25px !important;
+  }
+  .w40 {
+    width: 40% !important;
+  }
+}
+
+@keyframes wave-lines {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+@keyframes wave-squares {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}

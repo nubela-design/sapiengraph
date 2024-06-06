@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="./assets/fonts/Feather/feather.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css"
+    />
+    <link rel="stylesheet" href="./assets/libs/aos/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/libs/choices.js/public/assets/styles/choices.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/libs/flickity-fade/flickity-fade.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/libs/flickity/dist/flickity.min.css"
+    />
+    <link rel="stylesheet" href="./assets/libs/highlightjs/styles/vs2015.css" />
+    <link rel="stylesheet" href="./assets/libs/jarallax/dist/jarallax.css" />
+    <link rel="stylesheet" href="./assets/libs/quill/dist/quill.core.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- Map -->
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="./assets/css/theme.min.css" />
+    <link rel="stylesheet" href="./assets/css/style-2.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>5-Minute Growth Tools by Sapiengraph</title>
+  </head>
+
+  <body>
+    <!-- NAVBAR
+    ================================================== -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+      <div class="container-fluid">
+        <!-- Brand -->
+        <a class="navbar-brand" href="./index.html">
+          <img
+            src="./assets/img/Sapiengraph logo.svg"
+            class="navbar-brand-img"
+            alt="Sapiengraph logo"
+          />
+        </a>
+
+        <!-- Toggler -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <!-- Toggler -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fe fe-x"></i>
+          </button>
+
+          <!-- Navigation -->
+          <ul class="navbar-nav ml-auto">
+            <li class="dropdown nav-item">
+              <a
+                class="dropdown-toggle nav-link"
+                id="navbarAccount"
+                data-toggle="dropdown"
+                href="#"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Products <i class="fe fe-chevron-down"></i>
+              </a>
+
+              <div class="dropdown-menu pb-4" aria-labelledby="navbarSolutions">
+                <div class="row justify-content-center">
+                  <div class="col-12">
+                    <h2
+                      class="small text-uppercase font-weight-bold text-success mb-1"
+                    >
+                      <svg
+                        class="d-inline-flex mb-2"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="auto"
+                        viewBox="0 0 24 24"
+                      >
+                        <g fill="currentColor">
+                          <path
+                            d="m7.303 13.51 2.83-1.415a4.4 4.4 0 0 0 1.962-1.962l1.414-2.83a.548.548 0 0 1 .981 0l1.415 2.83a4.4 4.4 0 0 0 1.962 1.962l2.83 1.414a.548.548 0 0 1 0 .981l-2.83 1.415a4.4 4.4 0 0 0-1.962 1.962l-1.414 2.83a.548.548 0 0 1-.982 0l-1.414-2.83a4.4 4.4 0 0 0-1.962-1.962l-2.83-1.414a.548.548 0 0 1 0-.981m.354-6.693L8.87 6.21a.235.235 0 0 0 0-.42l-1.213-.606a1.88 1.88 0 0 1-.84-.841L6.21 3.13a.235.235 0 0 0-.42 0l-.607 1.213a1.88 1.88 0 0 1-.84.84L3.13 5.79a.235.235 0 0 0 0 .42l1.213.607c.363.182.658.477.84.84L5.79 8.87a.235.235 0 0 0 .42 0l.606-1.212a1.88 1.88 0 0 1 .841-.841"
+                          ></path>
+                        </g>
+                      </svg>
+                      5-Minute Growth Tools
+                    </h2>
+
+                    <div class="dropdown-item">
+                      <a class="dropdown-link custom-link" href="#">
+                        B2B Enrichment for Excel / Google Sheets
+                      </a>
+                    </div>
+
+                    <div class="dropdown-item">
+                      <a class="dropdown-link custom-link pl-4" href="#">
+                        ᴸ Formula Documentation
+                      </a>
+                    </div>
+
+                    <div class="dropdown-item">
+                      <a
+                        class="dropdown-link custom-link"
+                        href="prospector.html"
+                      >
+                        Prospector with Export
+                      </a>
+                    </div>
+
+                    <div class="dropdown-item">
+                      <a class="dropdown-link custom-link" href="#">
+                        Job Change Monitor
+                        <span class="text-success font-weight-bold"
+                          >(FREE)</span
+                        >
+                      </a>
+                    </div>
+
+                    <div class="dropdown-item mb-0">
+                      <a class="dropdown-link custom-link" href="#"> API </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="dropdown nav-item">
+              <a
+                class="dropdown-toggle nav-link"
+                id="navbarAccount"
+                data-toggle="dropdown"
+                href="#"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Solutions <i class="fe fe-chevron-down"></i>
+              </a>
+
+              <div class="dropdown-menu pb-4" aria-labelledby="navbarSolutions">
+                <div class="row justify-content-center">
+                  <div class="col-12">
+                    <div class="dropdown-item mb-2">
+                      <a class="dropdown-link custom-link" href="#">
+                        Spreadsheet Template Gallery
+                        <span class="text-success font-weight-bold">
+                          (FREE)
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="pricing.html"> Pricing </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html"> Blog </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#!"> FAQ </a>
+            </li>
+          </ul>
+
+          <!-- Button -->
+
+          <div class="text-center ml-auto">
+            <!-- Button -->
+            <a
+              class="btn btn-sm btn-link font-weight-bold text-white text-md-gray"
+              href="signin-illustration.html"
+            >
+              Sign in
+            </a>
+
+            <a
+              class="navbar-btn btn btn-pill btn-sm btn-white text-success text-md-gray lift ml-auto shadow-light-lg"
+              href="#!"
+              target="_blank"
+            >
+              Set up new account
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="py-5">
+        <div class="container">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-12 col-lg-10">
+              <!-- Image Illustration -->
+              <figure class="text-center">
+                <img
+                  src="./assets/img/illustrations/Sapiengraph-illustration-1_1.png"
+                  alt=""
+                  srcset=""
+                  class="h-auto mb-3"
+                  width="400"
+                />
+              </figure>
+              <!-- /Image Illustration -->
+
+              <!-- Title -->
+              <h1 class="text-center">
+                <span class="fw-600 text-color-primary">Find an email</span>
+                from a social media profile.
+              </h1>
+              <!-- Title -->
+
+              <!-- Search Form -->
+              <section class="search-1 d-flex w-100 bg-white p-2 mb-5">
+                <form
+                  action=""
+                  method="POST"
+                  accept-charset="utf-8"
+                  class="w-100 d-inline-flex flex-column flex-lg-row"
+                  enctype="multipart/form-data"
+                >
+                  <input
+                    class="w-100 border-0 px-5 mb-2 mb-lg-0 py-3"
+                    type="text"
+                    name="url"
+                    placeholder="Enter Twitter/Facebook/LinkedIn profile URLs"
+                  />
+                  <button
+                    type="submit"
+                    class="border-0 bg-primary text-white px-5 py-3 ms-lg-2"
+                  >
+                    Find Email Address
+                  </button>
+                </form>
+              </section>
+              <!-- /Search Form -->
+
+              <!-- Result Section -->
+              <section
+                class="w-100 p-5 d-flex align-items-center justify-content-center flex-column border-color-primary border-primary rounded-lg bg-gray-light"
+              >
+                <h2 class="text-black text-center">s*****@nubela.co</h2>
+                <a
+                  href="javascript:void(0);"
+                  class="border-0 btn btn-sapiengraph-primary text-white px-5 py-3 ms-lg-2 cursor-pointer rounded-pill"
+                >
+                  Get Sapiengraph To Unlock Email
+                </a>
+              </section>
+              <!-- /Result Section -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER 
+      ================================================== -->
+    <footer class="py-8 py-md-11 bg-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-4 col-lg-3">
+            <!-- Brand -->
+            <img
+              src="./assets/img/Sapiengraph logo.svg"
+              alt="proxycurl logo"
+              class="footer-brand img-fluid mb-2"
+            />
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-2">
+            <!-- Heading -->
+            <h6 class="font-weight-bold text-uppercase text-gray-700">
+              Sapiengraph
+            </h6>
+
+            <!-- List -->
+            <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
+              <li class="mb-3">
+                <a href="index.html" class="text-reset"> Home </a>
+              </li>
+              <li class="mb-3">
+                <a href="#pricing" class="text-reset"> Pricing </a>
+              </li>
+              <li class="mb-3">
+                <a href="#!" class="text-reset"> Blog </a>
+              </li>
+              <li class="mb-3">
+                <a href="terms-of-use.html" class="text-reset">
+                  Terms Of Use
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="#" class="text-reset"> Privacy Policy </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-2">
+            <!-- Heading -->
+            <h6 class="font-weight-bold text-uppercase text-gray-700">
+              Products
+            </h6>
+
+            <!-- List -->
+            <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  B2B Data Enrichment for Excel / Google Sheets
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="prospector.html" class="text-reset">
+                  Prospector with Export
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="#!" class="text-reset"> Job Change Monitor (FREE) </a>
+              </li>
+              <li class="mb-3">
+                <a href="#!" class="text-reset">
+                  Spreadsheet Template Gallery
+                </a>
+              </li>
+              <li class="mb-3">
+                <a
+                  href="https://nubela.co/proxycurl"
+                  class="text-reset"
+                  target="_blank"
+                >
+                  API
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-4 offset-md-4 col-lg-2 offset-lg-0">
+            <!-- Heading -->
+            <h6 class="font-weight-bold text-uppercase text-gray-700">
+              Solution
+            </h6>
+
+            <ul class="list-unstyled text-muted mb-6">
+              <li class="mb-3">
+                <a href="#" class="text-reset"> Solution </a>
+              </li>
+            </ul>
+
+            <!-- Heading -->
+            <h6 class="font-weight-bold text-uppercase text-gray-700">
+              Company
+            </h6>
+
+            <!-- List -->
+            <ul class="list-unstyled text-muted mb-0">
+              <li class="mb-3">
+                <a href="https://nubela.co" class="text-reset"> Company </a>
+              </li>
+              <li class="mb-3">
+                <a href="team.html" class="text-reset"> Team </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-2">
+            <!-- Heading -->
+            <h6 class="font-weight-bold text-uppercase text-gray-700">Help</h6>
+
+            <!-- List -->
+            <ul class="list-unstyled text-muted mb-0">
+              <li class="mb-3">
+                <a href="mailto:hello@sapiengraph.com" class="text-reset">
+                  Email us
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="#" class="text-reset"> Support </a>
+              </li>
+              <li class="mb-3">
+                <a href="#" class="text-reset"> FAQ </a>
+              </li>
+              <li class="mb-3">
+                <a href="#" class="text-reset"> Refund Policy </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- / .row -->
+        <br />
+
+        <hr />
+        <br />
+
+        <div class="text-center">
+          <p class="caption">Nubela Pte Ltd. All rights reserved.</p>
+        </div>
+      </div>
+      <!-- / .container -->
+    </footer>
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    <!-- Libs JS -->
+    <script src="./assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="./assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+    <script src="./assets/libs/aos/dist/aos.js"></script>
+    <script src="./assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="./assets/libs/countup.js/dist/countUp.min.js"></script>
+    <script src="./assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+    <script src="./assets/libs/flickity/dist/flickity.pkgd.min.js"></script>
+    <script src="./assets/libs/flickity-fade/flickity-fade.js"></script>
+    <script src="./assets/libs/highlightjs/highlight.pack.min.js"></script>
+    <script src="./assets/libs/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="./assets/libs/isotope-layout/dist/isotope.pkgd.min.js"></script>
+    <script src="./assets/libs/jarallax/dist/jarallax.min.js"></script>
+    <script src="./assets/libs/jarallax/dist/jarallax-video.min.js"></script>
+    <script src="./assets/libs/jarallax/dist/jarallax-element.min.js"></script>
+    <script src="./assets/libs/quill/dist/quill.min.js"></script>
+    <script src="./assets/libs/smooth-scroll/dist/smooth-scroll.min.js"></script>
+    <script src="./assets/libs/typed.js/lib/typed.min.js"></script>
+
+    <!-- Map -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js"></script>
+
+    <!-- Theme JS -->
+    <script src="./assets/js/theme.min.js"></script>
+
+    <!-- Content Change JS-->
+    <script>
+      // Function to show content by default
+      function showDefaultContent() {
+        const contents = document.querySelectorAll(".content");
+        contents.forEach((content) => {
+          if (content.id === "hrContent") {
+            content.style.display = "block";
+          } else {
+            content.style.display = "none";
+          }
+        });
+      }
+
+      // Show HR content by default when the page loads
+      document.addEventListener("DOMContentLoaded", showDefaultContent);
+
+      // Function to switch content on button click
+      function showContent(contentId) {
+        const contents = document.querySelectorAll(".content");
+        contents.forEach((content) => {
+          if (content.id === contentId) {
+            content.style.display = "block";
+          } else {
+            content.style.display = "none";
+          }
+        });
+      }
+    </script>
+    <script>
+      function showContent(contentId, button) {
+        const contents = document.querySelectorAll(".content");
+        const buttons = document.querySelectorAll(".btn");
+
+        contents.forEach((content) => {
+          content.style.display = "none";
+        });
+
+        buttons.forEach((btn) => {
+          btn.classList.remove("active");
+        });
+
+        document.getElementById(contentId).style.display = "block";
+        button.classList.add("active");
+      }
+    </script>
+    <script>
+      $(document).ready(function () {
+        function showContent(contentId, button) {
+          $(".content").fadeOut(0); // Fade out all content elements
+          $("#" + contentId).fadeIn(600); // Fade in the content associated with the clicked button
+
+          $(".btn").removeClass("active"); // Remove 'active' class from all buttons
+          $(button).addClass("active"); // Add 'active' class to the clicked button
+        }
+
+        $("#btnHR").on("click", function () {
+          showContent("hrContent", this);
+        });
+
+        $("#btnVC").on("click", function () {
+          showContent("vcContent", this);
+        });
+
+        $("#btnSales").on("click", function () {
+          showContent("salesContent", this);
+        });
+      });
+    </script>
+
+    <!-- Content switching HR,VCs,Sales-->
+    <script>
+      $(document).ready(function () {
+        var currentContent = 1; // Track the current content being displayed
+        var interval; // Variable to hold the interval
+
+        // Function to toggle between contents with smooth transition
+        function toggleContent() {
+          if (currentContent === 1) {
+            $("#hrContent1").fadeOut(300, function () {
+              $("#hrContent2").fadeIn(300);
+            });
+            currentContent = 2;
+          } else {
+            $("#hrContent2").fadeOut(300, function () {
+              $("#hrContent1").fadeIn(300);
+            });
+            currentContent = 1;
+          }
+        }
+
+        // Set interval to automatically change content every 5 seconds (5000 milliseconds)
+        interval = setInterval(toggleContent, 10000);
+
+        // Function to handle hover events
+        $(".content-section").hover(
+          function () {
+            clearInterval(interval); // Pause content switching on hover
+          },
+          function () {
+            interval = setInterval(toggleContent, 10000); // Resume content switching when hover ends
+          }
+        );
+
+        // Click event for previous button
+        $("#prevButton").on("click", function () {
+          clearInterval(interval); // Stop the interval
+          toggleContent();
+          interval = setInterval(toggleContent, 10000); // Restart the interval after manual interaction
+        });
+
+        // Click event for next button
+        $("#nextButton").on("click", function () {
+          clearInterval(interval); // Stop the interval
+          toggleContent();
+          interval = setInterval(toggleContent, 10000); // Restart the interval after manual interaction
+        });
+      });
+    </script>
+    <!-- HR-->
+
+    <script>
+      $(document).ready(function () {
+        var currentContent = 1; // Track the current content being displayed
+        var interval; // Variable to hold the interval
+
+        // Function to toggle between contents with smooth transition
+        function toggleContent() {
+          if (currentContent === 1) {
+            $("#vcContent1").fadeOut(300, function () {
+              $("#vcContent2").fadeIn(300);
+            });
+            currentContent = 2;
+          } else {
+            $("#vcContent2").fadeOut(300, function () {
+              $("#vcContent1").fadeIn(300);
+            });
+            currentContent = 1;
+          }
+        }
+
+        // Set interval to automatically change content every 5 seconds (5000 milliseconds)
+        interval = setInterval(toggleContent, 10000);
+
+        // Function to handle hover events
+        $(".content-section").hover(
+          function () {
+            clearInterval(interval); // Pause content switching on hover
+          },
+          function () {
+            interval = setInterval(toggleContent, 10000); // Resume content switching when hover ends
+          }
+        );
+
+        // Click event for previous button
+        $("#prevButton").on("click", function () {
+          clearInterval(interval); // Stop the interval
+          toggleContent();
+          interval = setInterval(toggleContent, 10000); // Restart the interval after manual interaction
+        });
+
+        // Click event for next button
+        $("#nextButton").on("click", function () {
+          clearInterval(interval); // Stop the interval
+          toggleContent();
+          interval = setInterval(toggleContent, 10000); // Restart the interval after manual interaction
+        });
+      });
+    </script>
+    <!-- VC-->
+
+    <script>
+      $(document).ready(function () {
+        var currentContent = 1; // Track the current content being displayed
+        var interval; // Variable to hold the interval
+
+        // Function to toggle between contents with smooth transition
+        function toggleContent() {
+          if (currentContent === 1) {
+            $("#salesContent1").fadeOut(300, function () {
+              $("#salesContent2").fadeIn(300);
+            });
+            currentContent = 2;
+          } else {
+            $("#salesContent2").fadeOut(300, function () {
+              $("#salesContent1").fadeIn(300);
+            });
+            currentContent = 1;
+          }
+        }
+
+        // Set interval to automatically change content every 5 seconds (5000 milliseconds)
+        interval = setInterval(toggleContent, 10000);
+
+        // Function to handle hover events
+        $(".content-section").hover(
+          function () {
+            clearInterval(interval); // Pause content switching on hover
+          },
+          function () {
+            interval = setInterval(toggleContent, 10000); // Resume content switching when hover ends
+          }
+        );
+
+        // Click event for previous button
+        $("#prevButton").on("click", function () {
+          clearInterval(interval); // Stop the interval
+          toggleContent();
+          interval = setInterval(toggleContent, 10000); // Restart the interval after manual interaction
+        });
+
+        // Click event for next button
+        $("#nextButton").on("click", function () {
+          clearInterval(interval); // Stop the interval
+          toggleContent();
+          interval = setInterval(toggleContent, 10000); // Restart the interval after manual interaction
+        });
+      });
+    </script>
+    <!-- Sales-->
+  </body>
+</html>
