@@ -482,70 +482,74 @@
     <div class="container">
       <div class="row justify-content-center align-items-center">
         <div class="col-12 col-lg-9 text-center">
-          <!-- Image Illustration -->
-          <figure class="text-center">
-            <img
-              src="./assets/img/illustrations/Sapiengraph-illustration-1_1.png"
-              alt=""
-              srcset=""
-              class="h-auto mb-3"
-              width="400"
-            />
-          </figure>
-          <!-- /Image Illustration -->
-    
-          <!-- Title -->
-          <h1 class="text-center">
-            <span class="fw-600 text-color-primary">Find an email</span>
-            from a social media profile.
-          </h1>
-          <!-- Title -->
-    
-          <!-- Search Form -->
-          <section class="d-flex w-100 bg-white p-2 mb-5 border-primary bg-gray-light rounded-8">
-            <form
-              action=""
-              method="POST"
-              accept-charset="utf-8"
-              class="w-100 d-inline-flex flex-column"
-              enctype="multipart/form-data"
-            >
-              <input
-                class="w-100 border-0 px-5 mb-5 py-3 rounded-4 border-primary no-outline"
-                type="text"
-                name="url"
-                placeholder="Enter Twitter/Facebook/LinkedIn profile URLs"
-              />
 
-              <!-- Captcha -->
-              <div class="text-center">
-                <div class="g-recaptcha mb-5 d-inline-block" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" style="transform-origin: 0 0;"></div>
-              </div>
-              <!-- /Captcha -->
+          <!-- Email Lookup Tool Card -->
+          <div class="card">
+            <div class="card-body w-100 p-5 mb-5 bg-gray-light rounded-8">
 
-              <button
-                type="submit"
-                class="border-0 btn btn-sapiengraph-primary text-white px-5 py-3 ms-lg-2 cursor-pointer rounded-4"
+              <!-- Image Illustration -->
+              <figure class="text-center">
+                <img
+                  src="./assets/img/illustrations/Sapiengraph-illustration-1_1.png"
+                  alt=""
+                  srcset=""
+                  class="h-auto mb-3"
+                  width="400"
+                />
+              </figure>
+              <!-- /Image Illustration -->
+        
+              <!-- Title -->
+              <h2 class="text-center">
+                <span class="fw-600 text-color-primary">Find an email</span>
+                from a social media profile.
+              </h2>
+              <!-- Title -->
+        
+              <!-- Search Form -->
+              <section class="d-flex mb-4">
+                <form
+                  action=""
+                  method="POST"
+                  accept-charset="utf-8"
+                  class="w-100 d-inline-flex flex-column"
+                  enctype="multipart/form-data"
+                >
+                  <!-- Input Url -->
+                  <div class="mb-3">
+                    <!-- <label for="inputUrlProfile" class="form-label">Email address</label> -->
+                    <input type="text" name="inputUrlProfile" class="form-control" id="inputUrlProfile" placeholder="Enter Twitter/Facebook/LinkedIn profile URLs">
+                  </div>
+                  <!-- /Input Url -->
+
+                  <!-- Captcha -->
+                  <div class="text-center">
+                    <div class="g-recaptcha mb-5 d-inline-block" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" style="transform-origin: 0 0;"></div>
+                  </div>
+                  <!-- /Captcha -->
+
+                  <!-- Button Submit -->
+                  <button type="submit" class="btn btn-success">Find Email Address</button>
+                  <!-- /Button Submit -->
+                </form>
+              </section>
+              <!-- /Search Form -->
+        
+              <!-- Result Section -->
+              <section
+                class="w-100 p-5 d-flex align-items-center justify-content-center flex-column border-color-primary border-primary rounded-lg bg-gray-light"
               >
-                Find Email Address
-              </button>
-            </form>
-          </section>
-          <!-- /Search Form -->
-    
-          <!-- Result Section -->
-          <section
-          class="w-100 p-5 d-flex align-items-center justify-content-center flex-column border-color-primary border-primary rounded-lg bg-gray-light"
-        >
-          <h2 class="text-black text-center">s*****@nubela.co</h2>
-          <a
-            href="javascript:void(0);"
-            class="border-0 btn btn-sapiengraph-primary text-white px-5 py-3 ms-lg-2 cursor-pointer rounded-4"
-          >
-            Get Sapiengraph To Unlock Email
-          </a>
-        </section>
-        <!-- /Result Section -->
+                <h2 class="text-black text-center">s*****@nubela.co</h2>
+                <!-- Button get unclock with sapiengraph -->
+                <a href="javascript:void(0);" type="submit" class="btn btn-success">Get Sapiengraph To Unlock Email</a>
+                <!-- /Button get unclock with sapiengraph -->
+              </section>
+              <!-- /Result Section -->
+
+            </div>
+          </div>
+          <!-- /Email Lookup Tool Card -->
+
         </div>
       </div>
     </div>
