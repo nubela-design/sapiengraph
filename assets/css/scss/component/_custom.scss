@@ -200,3 +200,24 @@
 .rounded-4{
   border-radius: .25rem !important;
 }
+
+.rounded-8{
+  border-radius: .5rem !important;
+}
+
+// Outline Custom
+.no-outline {
+  outline: none !important;
+
+  &:hover {
+    outline: none !important;
+  }
+
+  &:focus {
+    outline: none !important;
+  }
+
+  &:active {
+    outline: none !important;
+  }
+}

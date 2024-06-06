@@ -844,6 +844,23 @@
   border-radius: 0.25rem !important;
 }
 
+.rounded-8 {
+  border-radius: 0.5rem !important;
+}
+
+.no-outline {
+  outline: none !important;
+}
+.no-outline:hover {
+  outline: none !important;
+}
+.no-outline:focus {
+  outline: none !important;
+}
+.no-outline:active {
+  outline: none !important;
+}
+
 /*--- Scroll Horizontal ---*/
 .scroll {
   white-space: nowrap;
