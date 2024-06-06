@@ -649,13 +649,13 @@
 /*--- /Button ---*/
 .search-1 {
   border: 1px solid #00bd94;
-  border-radius: 30px;
+  border-radius: 8px;
 }
 .search-1 input {
   color: #333 !important;
   background-color: white !important;
   font-size: 16px !important;
-  border-radius: 30px;
+  border-radius: 4px;
 }
 .search-1 input:active {
   outline: none !important;
@@ -666,7 +666,7 @@
 .search-1 button {
   cursor: pointer;
   border: none;
-  border-radius: 30px;
+  border-radius: 4px;
   white-space: nowrap;
 }
 .search-1 button:hover {
@@ -840,6 +840,10 @@
     background-position: 468px 0;
   }
 }
+.rounded-4 {
+  border-radius: 0.25rem !important;
+}
+
 /*--- Scroll Horizontal ---*/
 .scroll {
   white-space: nowrap;
