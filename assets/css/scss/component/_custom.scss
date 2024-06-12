@@ -221,3 +221,19 @@
     outline: none !important;
   }
 }
+
+// Ratings Check
+.rating {
+  color: $muted;
+
+  &.checked {
+    color: #389E7F !important;
+  }
+}
+
+// Dropdown Text Hover
+.dropdown-item {
+  &:hover {
+    color: #389E7F !important;
+  }
+}
