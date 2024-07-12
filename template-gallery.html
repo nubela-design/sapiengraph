@@ -334,7 +334,7 @@
 
                 <!-- Button Download -->
                 <button type="button" class="btn btn-outline-success w-100" data-toggle="modal"
-                  data-target="#downloadModal">
+                  data-target="#modalDownloadATT">
                   Download
                 </button>
               </div>
@@ -406,7 +406,7 @@
 
                 <!-- Button Download -->
                 <button type="button" class="btn btn-outline-success w-100" data-toggle="modal"
-                  data-target="#downloadModal">
+                  data-target="#modalDownloadLTT">
                   Download
                 </button>
               </div>
@@ -478,7 +478,7 @@
 
                 <!-- Button Download -->
                 <button type="button" class="btn btn-outline-success w-100" data-toggle="modal"
-                  data-target="#downloadModal">
+                  data-target="#modalDownloadCET">
                   Download
                 </button>
               </div>
@@ -489,13 +489,82 @@
     </section>
   </main>
 
-  <!-- Modal Download -->
-  <!-- Modal -->
-  <div class="modal fade" id="downloadModal" tabindex="-1" aria-labelledby="downloadModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+  <!-- Modal Download ATT -->
+  <div class="modal fade" id="modalDownloadATT" tabindex="-1" aria-labelledby="modalDownloadATTLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="downloadModalLabel">Download File</h5>
+          <h5 class="modal-title" id="modalDownloadATTLabel">Download Applicant Tracking Template</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="inputName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="inputName" aria-describedby="inputName" placeholder="input your name">
+            </div>
+            <div class="mb-3">
+              <label for="inputCompanyName" class="form-label">Company Name</label>
+              <input type="text" class="form-control" id="inputCompanyName" aria-describedby="inputCompanyName" placeholder="input your company name">
+            </div>
+            <div class="mb-3">
+              <label for="inputPositionName" class="form-label">Position in company</label>
+              <input type="text" class="form-control" id="inputPositionName" aria-describedby="inputPositionName" placeholder="ex: CXO/Product Manager/Others">
+            </div>
+            <div class="mb-3">
+              <label for="inputWorkEmail" class="form-label">Work email address</label>
+              <input type="email" class="form-control" id="inputWorkEmail" aria-describedby="inputWorkEmail" placeholder="ex: name@company.com">
+            </div>
+            <button type="submit" class="btn btn-success w-100 mt-3">Send File To Email</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Download LTT -->
+  <div class="modal fade" id="modalDownloadLTT" tabindex="-1" aria-labelledby="modalDownloadLTTLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalDownloadLTTLabel">Download Lead Tracker Template</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="inputName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="inputName" aria-describedby="inputName" placeholder="input your name">
+            </div>
+            <div class="mb-3">
+              <label for="inputCompanyName" class="form-label">Company Name</label>
+              <input type="text" class="form-control" id="inputCompanyName" aria-describedby="inputCompanyName" placeholder="input your company name">
+            </div>
+            <div class="mb-3">
+              <label for="inputPositionName" class="form-label">Position in company</label>
+              <input type="text" class="form-control" id="inputPositionName" aria-describedby="inputPositionName" placeholder="ex: CXO/Product Manager/Others">
+            </div>
+            <div class="mb-3">
+              <label for="inputWorkEmail" class="form-label">Work email address</label>
+              <input type="email" class="form-control" id="inputWorkEmail" aria-describedby="inputWorkEmail" placeholder="ex: name@company.com">
+            </div>
+            <button type="submit" class="btn btn-success w-100 mt-3">Send File To Email</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Download CET -->
+  <div class="modal fade" id="modalDownloadCET" tabindex="-1" aria-labelledby="modalDownloadCETLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalDownloadCETLabel">Download CRM Enrichment Template</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
