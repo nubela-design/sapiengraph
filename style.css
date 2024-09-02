@@ -1,7 +1,12 @@
 .nav-pills .nav-item .nav-link.active:hover {
   background-color: #389E7F!important; /* Bootstrap's success color with darker shade */
-  color: #e4e4e7!important;
+  color: #ffffff!important;
 }
+
+.nav-muted {
+  color: #869AB8;
+}
+
 .nav-link.active {
   background-color: #42BA96!important; /* Bootstrap success color */
   color: white!important;
@@ -43,6 +48,13 @@
 .table-rounded {
   border-radius: 10px;
   overflow: hidden;
+}
+
+.custom-table-cell {
+  max-width: 250px; /* Adjust the max-width as needed */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .border-custom-1 {
