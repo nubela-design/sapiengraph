@@ -353,9 +353,19 @@ ul.timeline > li:nth-child(5):after {
 }
 
 .fixed-button-inside-td {
-  position: fixed;
+  position: absolute; /* Position relative to the nearest positioned ancestor */
   background-color: white !important;
-  bottom: 20px; /* Atur jarak dari bawah layar */
-  right: -10px;  /* Atur jarak dari kanan layar */
-  z-index: 1000; /* Agar tombol berada di atas elemen lain */
+  right: 0px; /* Adjust as necessary */
+  z-index: 1000; /* Ensure it's on top of other elements */
+  width: 160px;
+  margin: 0;
+}
+
+.fixed-button-inside-tr {
+  position: absolute; /* Position relative to the nearest positioned ancestor */
+  background-color: #F9FAFB !important;
+  right: 0px; /* Adjust as necessary */
+  width: 160px;
+  margin: 0;
+  z-index: 1000; /* Ensure it's on top of other elements */
 }
