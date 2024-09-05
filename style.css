@@ -351,3 +351,11 @@ ul.timeline > li:nth-child(5):after {
 .dropdown-item:hover{
   color: #42BA96 !important;
 }
+
+.fixed-button-inside-td {
+  position: fixed;
+  background-color: white !important;
+  bottom: 20px; /* Atur jarak dari bawah layar */
+  right: -10px;  /* Atur jarak dari kanan layar */
+  z-index: 1000; /* Agar tombol berada di atas elemen lain */
+}
