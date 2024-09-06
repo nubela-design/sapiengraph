@@ -253,6 +253,24 @@
 
 }
 
+.custom-table-mobile th,
+.custom-table-mobile td {
+  padding-left: 0.5rem !important;
+  padding-top: 1.2rem !important;
+  padding-bottom: 1rem !important;
+}
+
+.custom-table-mobile thead th {
+  vertical-align: middle !important; /* Align content vertically to the middle */
+  padding-top: 0.8rem !important; /* Adjust padding as needed */
+  padding-bottom: 0.8rem !important;
+  padding-right: 0rem !important;
+  font-weight: 900 !important;
+  line-height: 1.1rem !important;
+  text-wrap: nowrap !important;
+
+}
+
 .blur{
   -webkit-filter: blur(3px);
   filter: blur(5px);
