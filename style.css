@@ -357,15 +357,33 @@ ul.timeline > li:nth-child(5):after {
   background-color: white !important;
   right: 0px; /* Adjust as necessary */
   z-index: 1000; /* Ensure it's on top of other elements */
-  width: 160px;
+  width: 120px;
   margin: 0;
 }
 
-.fixed-button-inside-tr {
+.fixed-button-inside-th {
   position: absolute; /* Position relative to the nearest positioned ancestor */
   background-color: #F9FAFB !important;
   right: 0px; /* Adjust as necessary */
-  width: 160px;
+  width: 120px;
   margin: 0;
   z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+.fixed-checkbox {
+  position: absolute; /* Position relative to the nearest positioned ancestor */
+  background-color:  #F9FAFB !important;
+  left: 16px; /* Adjust as necessary */
+  z-index: 1000; /* Ensure it's on top of other elements */
+  width: 0px;
+  margin: 0;
+}
+
+.fixed-checkbox-inside-tr {
+  position: absolute; /* Position relative to the nearest positioned ancestor */
+  background-color:  white !important;
+  left: 16px; /* Adjust as necessary */
+  z-index: 1000; /* Ensure it's on top of other elements */
+  width: 0px;
+  margin: 0;
 }
