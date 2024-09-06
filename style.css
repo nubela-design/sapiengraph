@@ -391,7 +391,7 @@ ul.timeline > li:nth-child(5):after {
 .fixed-checkbox {
   position: absolute; /* Position relative to the nearest positioned ancestor */
   background-color:  #F9FAFB !important;
-  left: 16px; /* Adjust as necessary */
+  left: 14px; /* Adjust as necessary */
   z-index: 1000; /* Ensure it's on top of other elements */
   width: 0px;
   margin: 0;
@@ -400,7 +400,7 @@ ul.timeline > li:nth-child(5):after {
 .fixed-checkbox-inside-tr {
   position: absolute; /* Position relative to the nearest positioned ancestor */
   background-color:  white !important;
-  left: 16px; /* Adjust as necessary */
+  left: 14px; /* Adjust as necessary */
   z-index: 1000; /* Ensure it's on top of other elements */
   width: 0px;
   margin: 0;
