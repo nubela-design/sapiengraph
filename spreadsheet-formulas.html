@@ -21,6 +21,9 @@
   <!-- Map -->
   <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
 
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
   <!-- Theme CSS -->
   <link rel="stylesheet" href="./assets/css/theme.min.css">
   <link rel="stylesheet" href="style.css">
@@ -31,6 +34,132 @@
 </head>
 
 <body>
+
+  <!-- Download Modal Lead Tracker -->
+  <div class="modal fade" id="downloadModalLeadTracker" tabindex="-1" role="dialog"
+    aria-labelledby="downloadModalLeadTrackerLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+  
+        <div class="modal-body">
+          <div class="d-flex justify-content-end align-items-center mb-4">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+  
+          <div class="text-center mb-5 mb-md-6">
+            <i class="ph-bold ph-user-list px-4 py-4 badge-success-soft rounded-pill h1"></i>
+          </div>
+  
+          <h2 class="font-weight-bold text-center h3">
+            Download Lead Tracker Template
+          </h2>
+  
+          <p class="text-center text-muted">
+            Fill in your name and email address to receive a download link.
+          </p>
+  
+          <div class="form-group">
+            <label class="form-label" for="modalPaymentName">Name</label>
+            <input class="form-control" id="modalPaymentName" type="text" placeholder="Enter your full name">
+          </div>
+  
+          <div class="form-group mb-6">
+            <label class="form-label" for="modalPaymentName">Email</label>
+            <input class="form-control" id="modalPaymentName" type="text" placeholder="Enter your email address">
+          </div>
+  
+          <button type="submit" class="btn btn-success btn-block">Download Lead Tracker Template</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  
+  <!-- Download Modal CRM Enrichment -->
+  <div class="modal fade" id="downloadModalCRMEnrichment" tabindex="-1" role="dialog"
+    aria-labelledby="downloadModalCRMEnrichmentLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+  
+        <div class="modal-body">
+          <div class="d-flex justify-content-end align-items-center mb-4">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+  
+          <div class="text-center mb-5 mb-md-6">
+            <i class="ph-bold ph-identification-card px-4 py-4 badge-success-soft rounded-pill h1"></i>
+          </div>
+  
+          <h2 class="font-weight-bold text-center h3">
+            Download CRM Enrichment Template
+          </h2>
+  
+          <p class="text-center text-muted">
+            Fill in your name and email address to receive a download link.
+          </p>
+  
+          <div class="form-group">
+            <label class="form-label" for="modalPaymentName">Name</label>
+            <input class="form-control" id="modalPaymentName" type="text" placeholder="Enter your full name">
+          </div>
+  
+          <div class="form-group mb-6">
+            <label class="form-label" for="modalPaymentName">Email</label>
+            <input class="form-control" id="modalPaymentName" type="text" placeholder="Enter your email address">
+          </div>
+  
+          <button type="submit" class="btn btn-success btn-block">Download CRM Enrichment Template</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  
+  <!-- Download Modal Applicant Tracking -->
+  <div class="modal fade" id="downloadModalApplicantTracking" tabindex="-1" role="dialog"
+    aria-labelledby="downloadModalApplicantTrackingLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+  
+        <div class="modal-body">
+          <div class="d-flex justify-content-end align-items-center mb-4">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+  
+          <div class="text-center mb-5 mb-md-6">
+            <i class="ph-bold ph-user-focus px-4 py-4 badge-success-soft rounded-pill h1"></i>
+          </div>
+  
+          <h2 class="font-weight-bold text-center h3">
+            Download Applicant Tracking Template
+          </h2>
+  
+          <p class="text-center text-muted">
+            Fill in your name and email address to receive a download link.
+          </p>
+  
+          <div class="form-group">
+            <label class="form-label" for="modalPaymentName">Name</label>
+            <input class="form-control" id="modalPaymentName" type="text" placeholder="Enter your full name">
+          </div>
+  
+          <div class="form-group mb-6">
+            <label class="form-label" for="modalPaymentName">Email</label>
+            <input class="form-control" id="modalPaymentName" type="text" placeholder="Enter your email address">
+          </div>
+  
+          <button type="submit" class="btn btn-success btn-block">Download Applicant Tracking Template</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
 
   <!-- NAVBAR
     ================================================== -->
@@ -1045,7 +1174,9 @@
                           <p class="text-muted mb-0">
                             Made for the sales and business development team to enrich lead data easily, identify sales opportunities accordingly, and close deals efficiently.
                           </p>
-    
+
+                          <button class="btn btn-outline-success lift btn-xs mt-6" data-toggle="modal" data-target="#downloadModalLeadTracker"><i class="ph-bold ph-download-simple"></i> Download Lead Tracker Template</button>
+
                         </blockquote>
                       </div>
     
@@ -1065,6 +1196,8 @@
                           <p class="text-muted mb-0">
                             Enrich your leads in CRM with one click. Get all the latest information about your leads, such as contact details, roles, and company in this all-in-one template.
                           </p>
+
+                          <button class="btn btn-outline-success lift btn-xs mt-6" data-toggle="modal" data-target="#downloadModalCRMEnrichment"><i class="ph-bold ph-download-simple"></i> Download CRM Enrichment Template</button>
     
                         </blockquote>
                       </div>
@@ -1085,6 +1218,8 @@
                           <p class="text-muted mb-0">
                             This applicant tracking template helps recruiters understand candidates’ backgrounds, reach out to qualified candidates, and organize the hiring process.
                           </p>
+
+                          <button class="btn btn-outline-success lift btn-xs mt-6" data-toggle="modal" data-target="#downloadModalApplicantTracking"><i class="ph-bold ph-download-simple"></i> Download Applicant Tracking Template</button>
     
                         </blockquote>
                       </div>
