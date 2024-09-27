@@ -37,13 +37,19 @@
         <div class="col-12 col-lg-6 px-0 px-lg-3">
           <div class="card shadow-light-lg pt-6">
 
-            <div class="card-header border-0 text-center">
+            <div class="card-header border-0 text-center pb-0">
               <!-- Image -->
-              <img class="img mb-5" width="60" alt="Sapiengraph logo"
+              <img class="img img-fluid mb-4" width="72" alt="Sapiengraph logo"
                 src="assets/img/logo/Sapiengraph_logo-Icon-Primary.svg">
 
-              <h4 class="text-dark mb-0">Welcome to Sapiengraph</h4>
-              <p class="text-muted">Sign up with Sapiengraph for free</p>
+              <!-- Heading -->
+              <h1 class="lead font-weight-bold mb-0 fw-bold text-center">
+                Welcome to Sapiengraph
+              </h1>
+
+              <p class="lead text-muted mb-4 text-center">
+                Sign up with Sapiengraph for free
+              </p>
             </div>
 
             <!-- Body -->
@@ -52,17 +58,17 @@
               <!-- Form -->
               <form>
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
+                  <!-- <label for="exampleInputEmail1">Email address</label> -->
                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                     placeholder="Enter your email">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
+                  <!-- <label for="exampleInputPassword1">Password</label> -->
                   <input type="password" class="form-control" id="exampleInputPassword1"
                     placeholder="Input your password">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Re-type password</label>
+                  <!-- <label for="exampleInputPassword1">Re-type password</label> -->
                   <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Re-type password">
                 </div>
                 <div class="form-group mb-5">
@@ -90,19 +96,20 @@
                   </div>
                   <!-- /Captcha -->
                 </div>
-                <div class="form-group form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label small" for="exampleCheck1">I agree to the <a href="#" target="_blank"
-                      rel="noopener noreferrer">Terms of Use</a></label>
+                <div class="custom-control custom-checkbox">
+                  <input class="custom-control-input" type="checkbox" value="" id="customCheck">
+                  <label class="h6 text-muted custom-control-label text-left pt-1" for="customCheck">
+                    I agree to the <a href="#" target="_blank" rel="noopener noreferrer">Terms of Use</a>
+                  </label>
                 </div>
-                <div class="mt-6 mb-4">
-                  <button class="btn w-100 btn-success lift rounded-pill" type="submit">
+                <div class="my-4">
+                  <button class="btn w-100 btn-success lift rounded" type="submit">
                     Continue
                   </button>
                 </div>
                 <div class="d-flex justify-content-center align-items-center">
-                  <p class="text-muted mb-0">Already have an account?</p>
-                  <a href="login.html" class="text-success ml-2">Sign in</a>
+                  <p class="text-muted small mb-0">Already have an account?</p>
+                  <a href="login.html" class="text-success small ml-2">Sign in</a>
                 </div>
               </form>
 
@@ -110,7 +117,7 @@
 
           </div>
         </div>
-        <div class="col-12 col-lg-6 align-items-start justify-content-center d-none d-lg-inline-flex px-lg-6">
+        <div class="col-12 col-lg-6 align-items-center justify-content-center d-none d-lg-inline-flex px-lg-6">
 
           <!-- Image -->
           <img class="w-100 h-auto" alt="Sapiengraph illustration"
