@@ -1,111 +1,122 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Libs CSS -->
-    <link rel="stylesheet" href="./assets/fonts/Feather/feather.css">
-    <link rel="stylesheet" href="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="./assets/libs/aos/dist/aos.css">
-    <link rel="stylesheet" href="./assets/libs/choices.js/public/assets/styles/choices.min.css">
-    <link rel="stylesheet" href="./assets/libs/flickity-fade/flickity-fade.css">
-    <link rel="stylesheet" href="./assets/libs/flickity/dist/flickity.min.css">
-    <link rel="stylesheet" href="./assets/libs/highlightjs/styles/vs2015.css">
-    <link rel="stylesheet" href="./assets/libs/jarallax/dist/jarallax.css">
-    <link rel="stylesheet" href="./assets/libs/quill/dist/quill.core.css" />
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Map -->
-    <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+  <!-- Libs CSS -->
+  <link rel="stylesheet" href="./assets/fonts/Feather/feather.css">
+  <link rel="stylesheet" href="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="./assets/libs/aos/dist/aos.css">
+  <link rel="stylesheet" href="./assets/libs/choices.js/public/assets/styles/choices.min.css">
+  <link rel="stylesheet" href="./assets/libs/flickity-fade/flickity-fade.css">
+  <link rel="stylesheet" href="./assets/libs/flickity/dist/flickity.min.css">
+  <link rel="stylesheet" href="./assets/libs/highlightjs/styles/vs2015.css">
+  <link rel="stylesheet" href="./assets/libs/jarallax/dist/jarallax.css">
+  <link rel="stylesheet" href="./assets/libs/quill/dist/quill.core.css" />
 
-    <!-- Theme CSS -->
-    <link rel="stylesheet" href="./assets/css/theme.min.css">
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- Title -->
-    <title>Sign in to Sapiengraph</title>
-  </head>
-  <body class="bg-light">
+  <!-- Map -->
+  <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
 
-    <!-- CONTENT -->
-    <section class="section-border border-success">
-      <div class="container d-flex flex-column">
-        <div class="row align-items-center justify-content-center gx-0 min-vh-100">
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="./assets/css/theme.min.css">
+  <link rel="stylesheet" href="style.css">
 
-          <div class="col-12 col-lg-6 order-md-2 mt-auto mt-md-0 pt-10 pt-md-0 d-none d-lg-block">
+  <!-- Title -->
+  <title>Sign in to Sapiengraph</title>
+</head>
 
-            <!-- Image -->
-            <img class="img-fluid rounded" alt="Sapiengraph illustration" src="assets/img/illustrations/Signin-illustration-01.png">
+<body class="bg-light">
 
-          </div>
+  <!-- CONTENT -->
+  <section class="min-vh-100 py-lg-10 section-border border-success d-flex align-items-center justify-content-center">
+    <div class="container-fluid container-lg">
+      <div class="row">
 
-          <div class="col-12 col-lg-6 text-center order-md-1 mt-10 mt-md-0 pb-8 py-md-11">
+        <div class="col-12 col-lg-6 px-0 px-lg-3">
 
-            <div class="card card-body border shadow-light-lg">
-
-              <img class="img img-fluid mb-4" width="72" alt="Sapiengraph logo" src="assets/img/logo/Sapiengraph_logo-Icon-Primary.svg">
+          <div class="card border shadow-light-lg pt-6">
+            <div class="card-header border-0 text-center pb-0">
+              <img class="img img-fluid mb-4" width="72" alt="Sapiengraph logo"
+                src="assets/img/logo/Sapiengraph_logo-Icon-Primary.svg">
 
               <!-- Heading -->
               <h1 class="lead font-weight-bold mb-0 fw-bold text-center">
                 Welcome to Sapiengraph
               </h1>
-  
+
               <p class="lead text-muted mb-4 text-center">
                 Sign in to access your account
               </p>
-  
+            </div>
+            <div class="card-body pt-0">
               <a class="btn btn-outline-success mb-4 lift w-100" href="install-extension.html">
-                <img class="mb-1 mr-2" alt="Google SVG logo" src="assets/img/logo/Google-logoicon-rounded.svg">Sign in with Google
+                <img class="mb-1 mr-2" alt="Google SVG logo" src="assets/img/logo/Google-logoicon-rounded.svg">Sign in
+                with Google
               </a>
-  
+
               <p class="text-muted text-center">or</p>
-  
-              <form class="mb-2">
+
+              <form class="mb-4">
                 <div class="form-group">
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Enter email">
                 </div>
                 <div class="text-center">
-                  <div class="g-recaptcha mb-5 d-inline-block"
-                    data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" style="transform-origin: 0 0;">
+                  <div class="g-recaptcha mb-5 d-inline-block" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                    style="transform-origin: 0 0;">
                   </div>
                 </div>
                 <a href="signin-prefilled.html" type="submit" class="btn btn-success w-100 lift">Continue</a>
               </form>
-  
-              <div class="mb-4">
+
+              <div class="d-flex justify-content-center align-items-center mb-3">
                 <a class="text-success small" href="forgot-password.html">Forgot password?</a>
-                •
+                <span class="d-inline-block mx-2">•</span>
                 <a class="text-success small" href="signup-illustration.html">Create an account</a>
               </div>
-  
+
               <div class="custom-control custom-checkbox">
                 <input class="custom-control-input" type="checkbox" value="" id="customCheck">
-                <label class="h6 text-muted custom-control-label text-left" for="customCheck">
-                  I want to opt out of monthly free Sapiengraph credits and fresh profile scraping. We might send LinkedIn profiles that you view or want to scrape to our servers for parsing purposes. These updates grant you free monthly Sapiengraph credits.
+                <label class="h6 text-muted custom-control-label text-left pt-1" for="customCheck">
+                  I want to opt out of monthly free Sapiengraph credits and fresh profile scraping. We might send
+                  LinkedIn
+                  profiles that you view or want to scrape to our servers for parsing purposes. These updates grant you
+                  free monthly Sapiengraph credits.
                 </label>
               </div>
-
             </div>
-
           </div>
 
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-    </section>
+        </div>
 
-    <!-- JAVASCRIPT -->
-    <!-- Map JS -->
-    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
-    
-    <!-- Vendor JS -->
-    <script src="./assets/js/vendor.bundle.js"></script>
-    
-    <!-- Theme JS -->
-    <script src="./assets/js/theme.bundle.js"></script>
+        <div class="col-12 col-lg-6 align-items-center justify-content-center d-none d-lg-inline-flex px-lg-6">
 
-    <!-- Google Recaptcha -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+          <!-- Image -->
+          <img class="img-fluid rounded" alt="Sapiengraph illustration"
+            src="assets/img/illustrations/Signin-illustration-01.png">
 
-  </body>
+        </div>
+
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
+
+  <!-- JAVASCRIPT -->
+  <!-- Map JS -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+  <!-- Vendor JS -->
+  <script src="./assets/js/vendor.bundle.js"></script>
+
+  <!-- Theme JS -->
+  <script src="./assets/js/theme.bundle.js"></script>
+
+  <!-- Google Recaptcha -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</body>
+
 </html>
