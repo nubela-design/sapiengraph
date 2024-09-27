@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Libs CSS -->
+  <link rel="stylesheet" href="./assets/fonts/Feather/feather.css">
+  <link rel="stylesheet" href="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="./assets/libs/aos/dist/aos.css">
+  <link rel="stylesheet" href="./assets/libs/choices.js/public/assets/styles/choices.min.css">
+  <link rel="stylesheet" href="./assets/libs/flickity-fade/flickity-fade.css">
+  <link rel="stylesheet" href="./assets/libs/flickity/dist/flickity.min.css">
+  <link rel="stylesheet" href="./assets/libs/highlightjs/styles/vs2015.css">
+  <link rel="stylesheet" href="./assets/libs/jarallax/dist/jarallax.css">
+  <link rel="stylesheet" href="./assets/libs/quill/dist/quill.core.css" />
+
+  <!-- Map -->
+  <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="./assets/css/theme.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Title -->
+  <title>Sign in to Sapiengraph</title>
+</head>
+
+<body class="bg-light">
+
+  <!-- Content -->
+  <section class="min-vh-100 py-lg-10 section-border border-success d-flex align-items-center justify-content-center">
+    <div class="container-fluid container-lg">
+      <div class="row">
+        <div class="col-12 col-lg-6 px-0 px-lg-3">
+          <div class="card shadow-light-lg pt-6">
+
+            <div class="card-header border-0 text-center">
+              <!-- Image -->
+              <img class="img" width="60" alt="Sapiengraph logo"
+                src="assets/img/logo/Sapiengraph_logo-Icon-Primary.svg">
+            </div>
+
+            <!-- Body -->
+            <div class="card-body">
+
+              <!-- Form -->
+              <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Input your password">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Re-type password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Re-type password">
+                </div>
+                <div class="form-group mb-5">
+                  <label for="exampleFormControlSelect1">How did you find out about Proxycurl?</label>
+                  <select class="form-control" id="exampleFormControlSelect1">
+                    <option value="" selected="">Select your option</option>
+                    <option value="GOOGLE">Search engine (Google, Bing etc.)</option>
+                    <option value="NEWSLETTER">Newsletter</option>
+                    <option value="NUBELA">One of you reached out to me</option>
+                    <option value="WORD_OF_MOUTH">Someone told me</option>
+                    <option value="REDDIT">Reddit</option>
+                    <option value="YOUTUBE">YouTube</option>
+                    <option value="HACKER_NEWS">Hacker News</option>
+                    <option value="TWITTER">Twitter</option>
+                    <option value="GITHUB">GitHub</option>
+                    <option value="UDEMY_LANGCHAIN_COURSE">Udemy Langchain course</option>
+                    <option value="OTHERS">Others</option>
+                  </select>
+                </div>
+                <div class="mb-4">
+                  <!-- Captcha -->
+                  <div class="text-center">
+                    <div class="g-recaptcha mb-3 d-inline-block" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                      style="transform-origin: 0 0;"></div>
+                  </div>
+                  <!-- /Captcha -->
+                </div>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label small" for="exampleCheck1">I agree to the <a href="#" target="_blank" rel="noopener noreferrer">Terms of Use</a></label>
+                </div>
+                <div class="mt-6 mb-4">
+                  <button class="btn w-100 btn-success lift rounded-pill" type="submit">
+                    Continue
+                  </button>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                  <p class="text-muted mb-0">Already have an account?</p>
+                  <a href="login.html" class="text-success ml-2">Sign in</a>
+                </div>
+              </form>
+
+            </div>
+
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 align-items-start justify-content-center d-none d-lg-inline-flex px-lg-6">
+
+          <!-- Image -->
+          <img class="w-100 h-auto" alt="Sapiengraph illustration"
+            src="assets/img/illustrations/Signin-illustration-01.png">
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Content -->
+
+  <!-- JAVASCRIPT -->
+  <!-- Map JS -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+  <!-- Vendor JS -->
+  <script src="./assets/js/vendor.bundle.js"></script>
+
+  <!-- Theme JS -->
+  <script src="./assets/js/theme.bundle.js"></script>
+
+  <!-- Google Captcha API -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</body>
+
+</html>
