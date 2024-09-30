@@ -1,18 +1,18 @@
 .nav-pills .nav-item .nav-link.active:hover {
-  background-color: #389E7F!important; /* Bootstrap's success color with darker shade */
-  color: #ffffff!important;
+  background-color: #389e7f !important; /* Bootstrap's success color with darker shade */
+  color: #ffffff !important;
 }
 
 .nav-muted {
-  color: #869AB8;
+  color: #869ab8;
 }
 
 .nav-link.active {
-  background-color: #42BA96!important; /* Bootstrap success color */
-  color: white!important;
+  background-color: #42ba96 !important; /* Bootstrap success color */
+  color: white !important;
 }
 
-.bg-zinc-100{
+.bg-zinc-100 {
   background-color: #f4f4f5;
 }
 .rounded-pill-right {
@@ -65,19 +65,19 @@
   border: 2px solid #e2e8f0;
 }
 
-.bg-yellow-50{
+.bg-yellow-50 {
   background-color: #fff7ed;
 }
 
-.bg-purple-50{
+.bg-purple-50 {
   background-color: #faf5ff;
 }
 
-.bg-blue-50{
+.bg-blue-50 {
   background-color: #eff6ff;
 }
 
-.bg-green-50{
+.bg-green-50 {
   background-color: #f0fdf4;
 }
 
@@ -93,24 +93,26 @@
   background-color: #28a745; /* Bootstrap success color */
 }
 
-.nav-link:hover{
-  color: #42BA96 !important;
+.nav-link:hover {
+  color: #42ba96 !important;
 }
 
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
-  background-color: #42BA96!important;
+  background-color: #42ba96 !important;
 }
-  
-.custom-checkbox .custom-control-input:checked:focus ~ .custom-control-label::before {
-  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 255, 0, 0.25)
+
+.custom-checkbox
+  .custom-control-input:checked:focus
+  ~ .custom-control-label::before {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 255, 0, 0.25);
 }
 
 .custom-checkbox .custom-control-input:focus ~ .custom-control-label::before {
-  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 0, 0, 0.25)
+  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
 }
 
 .custom-checkbox .custom-control-input:active ~ .custom-control-label::before {
-  background-color: #C8FFC8 !important; 
+  background-color: #c8ffc8 !important;
 }
 
 .logo {
@@ -164,17 +166,17 @@
 
 /* Custom CSS for navbar link hover color */
 .navbar-nav .nav-item .nav-link:hover {
-  color: #CBEAE0 !important;
+  color: #cbeae0 !important;
 }
 
 /* Custom CSS for "Sign in" link hover color */
 .text-center.ml-auto .btn.btn-sm.btn-link.text-white:hover {
-  color: #CBEAE0 !important;
+  color: #cbeae0 !important;
 }
 
 /* Custom CSS for "Install Sheets Add-ons" link text color on hover */
 .navbar-btn.btn.btn-pill.btn-sm.btn-outline-white.text-white.lift.ml-auto:hover {
-  color: #389E7F !important;
+  color: #389e7f !important;
 }
 
 /* Custom CSS for text color on medium-sized screens (tablets) */
@@ -200,30 +202,43 @@
 }
 
 .image-gradient-bg {
-  background-color:hsla(353,0%,100%,1);
-  background-image:
-  radial-gradient(at 36% 28%, hsla(153,99%,77%,0.54) 0px, transparent 50%),
-  radial-gradient(at 63% 71%, hsla(181,100%,68%,0.38) 0px, transparent 50%);
+  background-color: hsla(353, 0%, 100%, 1);
+  background-image: radial-gradient(
+      at 36% 28%,
+      hsla(153, 99%, 77%, 0.54) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 63% 71%, hsla(181, 100%, 68%, 0.38) 0px, transparent 50%);
 }
 
 .image-gradient-bg-2 {
-  background-color:hsla(242,0%,100%,1);
-  background-image:
-  radial-gradient(at 33% 37%, hsla(258,99%,77%,0.54) 0px, transparent 50%),
-  radial-gradient(at 66% 65%, hsla(206,100%,66%,0.38) 0px, transparent 50%);
+  background-color: hsla(242, 0%, 100%, 1);
+  background-image: radial-gradient(
+      at 33% 37%,
+      hsla(258, 99%, 77%, 0.54) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 66% 65%, hsla(206, 100%, 66%, 0.38) 0px, transparent 50%);
 }
 
 .image-gradient-bg-3 {
-  background-color:hsla(353,0%,100%,1);
-  background-image:
-  radial-gradient(at 37% 30%, hsla(157,45%,53%,0.54) 0px, transparent 50%),
-  radial-gradient(at 63% 71%, hsla(29,98%,64%,0.45) 0px, transparent 50%);
+  background-color: hsla(353, 0%, 100%, 1);
+  background-image: radial-gradient(
+      at 37% 30%,
+      hsla(157, 45%, 53%, 0.54) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 63% 71%, hsla(29, 98%, 64%, 0.45) 0px, transparent 50%);
 }
 
 .gradient-shape {
   width: 200px;
   height: 200px;
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -232,7 +247,7 @@
 }
 
 .use-case-bg {
-  background-color: #389E7F;
+  background-color: #389e7f;
 }
 
 .custom-table th,
@@ -250,7 +265,6 @@
   font-weight: 900 !important;
   line-height: 1.1rem !important;
   text-wrap: nowrap !important;
-
 }
 
 .custom-table-mobile th,
@@ -268,25 +282,24 @@
   font-weight: 900 !important;
   line-height: 1.1rem !important;
   text-wrap: nowrap !important;
-
 }
 
-.blur{
+.blur {
   -webkit-filter: blur(3px);
   filter: blur(5px);
   -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
 .form-control:focus {
   border-color: #03d97e;
   box-shadow: 0 0 0 0.2rem rgba(245, 255, 247, 0.25);
-} 
+}
 
 .custom-place {
   border: none !important;
@@ -300,7 +313,7 @@ ul.timeline {
   position: relative;
 }
 ul.timeline:before {
-  content: ' ';
+  content: " ";
   background: #d4d9df;
   display: inline-block;
   position: absolute;
@@ -314,7 +327,7 @@ ul.timeline > li {
   padding-left: 6px;
 }
 ul.timeline > li:before {
-  content: ' ';
+  content: " ";
   background: white;
   display: inline-block;
   position: absolute;
@@ -326,12 +339,12 @@ ul.timeline > li:before {
   z-index: 400;
 }
 ul.timeline > li.hlight:before {
-  content: ' ';
+  content: " ";
   background: white;
   display: inline-block;
   position: absolute;
   border-radius: 50%;
-  border: 3px solid #02BD94;
+  border: 3px solid #02bd94;
   left: 0px;
   width: 20px;
   height: 20px;
@@ -340,7 +353,7 @@ ul.timeline > li.hlight:before {
 
 /* Remove the timeline line for the sixth step */
 ul.timeline > li:nth-child(5):after {
-  content: ' ';
+  content: " ";
   background: #ffffff;
   display: inline-block;
   margin-top: 60px;
@@ -352,22 +365,22 @@ ul.timeline > li:nth-child(5):after {
 }
 
 .nav-pills .nav-item .nav-link.active-success {
-  background-color: #42BA96; /* Bootstrap's success color */
+  background-color: #42ba96; /* Bootstrap's success color */
   color: #fff; /* Text color for active link */
   border-radius: 50px; /* Rounded corners */
 }
 
 .nav-pills .nav-item .nav-link.active-success:hover {
-  background-color: #389E7F; /* Bootstrap's success color with darker shade */
+  background-color: #389e7f; /* Bootstrap's success color with darker shade */
   color: #fff !important;
 }
 
-.custom-link:hover{
-  color: #42BA96 !important;
+.custom-link:hover {
+  color: #42ba96 !important;
 }
 
-.dropdown-item:hover{
-  color: #42BA96 !important;
+.dropdown-item:hover {
+  color: #42ba96 !important;
 }
 
 .fixed-button-inside-td {
@@ -381,7 +394,7 @@ ul.timeline > li:nth-child(5):after {
 
 .fixed-button-inside-th {
   position: absolute; /* Position relative to the nearest positioned ancestor */
-  background-color: #F9FAFB !important;
+  background-color: #f9fafb !important;
   right: 0px; /* Adjust as necessary */
   width: 120px;
   margin: 0;
@@ -390,7 +403,7 @@ ul.timeline > li:nth-child(5):after {
 
 .fixed-checkbox {
   position: absolute; /* Position relative to the nearest positioned ancestor */
-  background-color:  #F9FAFB !important;
+  background-color: #f9fafb !important;
   left: 14px; /* Adjust as necessary */
   z-index: 1000; /* Ensure it's on top of other elements */
   width: 0px;
@@ -399,9 +412,20 @@ ul.timeline > li:nth-child(5):after {
 
 .fixed-checkbox-inside-tr {
   position: absolute; /* Position relative to the nearest positioned ancestor */
-  background-color:  white !important;
+  background-color: white !important;
   left: 14px; /* Adjust as necessary */
   z-index: 1000; /* Ensure it's on top of other elements */
   width: 0px;
   margin: 0;
+}
+
+/* Rifki */
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 575.98px) {
+  .card-full-mobile {
+    min-height: 100vh;
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+  }
 }
