@@ -33,12 +33,12 @@
   <!-- CONTENT -->
   <section class="min-vh-100 py-lg-10 d-flex align-items-center justify-content-center">
     <div class="container-fluid container-lg">
-      <div class="row justify-content-center justify-content-lg-between align-items-center">
+      <div class="row justify-content-center align-items-center">
 
         <div class="col-12 col-md-8 col-lg-6 px-0 px-lg-3">
 
           <div class="card border shadow-light-lg pt-6">
-            <div class="card-header border-0 text-center pb-4">
+            <div class="card-header border-0 text-center pb-0">
               <img class="img img-fluid mb-4" width="72" alt="Sapiengraph logo"
                 src="assets/img/logo/Sapiengraph_logo-Icon-Primary.svg">
 
@@ -47,11 +47,17 @@
                 Welcome to Sapiengraph
               </h1>
 
-              <p class="text-muted mb-4 text-center">
+              <p class="lead text-muted mb-4 text-center">
                 Sign in to access your account
               </p>
             </div>
             <div class="card-body pt-0">
+              <a class="btn btn-outline-success mb-4 lift w-100" href="install-extension.html">
+                <img class="mb-1 mr-2" alt="Google SVG logo" src="assets/img/logo/Google-logoicon-rounded.svg">Sign in
+                with Google
+              </a>
+
+              <p class="text-muted text-center">or</p>
 
               <form class="mb-4">
                 <div class="form-group">
@@ -59,7 +65,7 @@
                     placeholder="Enter email">
                 </div>
                 <div class="text-center">
-                  <div class="g-recaptcha mb-3 d-inline-block" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                  <div class="g-recaptcha mb-5 d-inline-block" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
                     style="transform-origin: 0 0;">
                   </div>
                 </div>
@@ -72,13 +78,21 @@
                 <a class="text-success small" href="signup-illustration.html">Create an account</a>
               </div>
 
-
+              <div class="custom-control custom-checkbox">
+                <input class="custom-control-input" type="checkbox" value="" id="customCheck">
+                <label class="h6 text-muted custom-control-label text-left pt-1" for="customCheck">
+                  I want to opt out of monthly free Sapiengraph credits and fresh profile scraping. We might send
+                  LinkedIn
+                  profiles that you view or want to scrape to our servers for parsing purposes. These updates grant you
+                  free monthly Sapiengraph credits.
+                </label>
+              </div>
             </div>
           </div>
 
         </div>
 
-        <div class="col-12 col-lg-5 align-items-center justify-content-center d-none d-lg-inline-flex px-lg-6">
+        <div class="col-12 col-lg-6 align-items-center justify-content-center d-none d-lg-inline-flex px-lg-6">
 
           <!-- Image -->
           <img class="img-fluid rounded" alt="Sapiengraph illustration"
