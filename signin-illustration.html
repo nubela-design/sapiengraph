@@ -53,20 +53,20 @@
             </div>
             <div class="card-body pt-0 w-100 pb-5">
 
-              <form class="mb-4">
+              <form class="mb-4" onsubmit="return validateForm()">
                 <div class="form-group">
                   <label for="email">
                     Email Address
                   </label>
                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                    placeholder="Enter your email">
+                    placeholder="Enter your email" required>
                 </div>
                 <div class="text-center">
                   <div class="g-recaptcha mb-3 d-inline-block" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
                     style="transform-origin: 0 0;">
                   </div>
                 </div>
-                <a href="signin-prefilled.html" type="submit" class="btn btn-success w-100 lift">Continue</a>
+                <button type="submit" class="btn btn-success w-100 lift">Continue</button>
               </form>
 
               <div class="d-flex justify-content-center align-items-center">
@@ -105,6 +105,20 @@
 
   <!-- Google Recaptcha -->
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+  <!-- Show validation before go to the link-->
+  <script>
+    function validateForm() {
+      const emailInput = document.getElementById('exampleInputEmail1');
+      if (!emailInput.value) {
+        alert('Please enter your email address.');
+        return false; // Prevent form submission
+      }
+      // Add additional validation as needed
+      window.location.href = "signin-prefilled.html"; // Redirect if validation passes
+      return false; // Prevent default form submission
+    }
+  </script>
 
 </body>
 
