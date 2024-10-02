@@ -34,8 +34,8 @@
   <section class="min-vh-100 py-lg-10 d-flex align-items-center justify-content-center">
     <div class="container-fluid container-lg">
       <div class="row justify-content-center align-items-center">
-        <div class="col-12 col-md-8 col-lg-6 px-0 px-lg-3">
-          <div class="card border shadow-light-lg py-6 card-full-mobile">
+        <div class="col-12 col-md-12 col-lg-6 px-0 px-lg-3">
+          <div class="card border shadow-light-lg py-6 card-full-mobile px-md-14 px-lg-0">
 
             <div class="card-header border-0 text-center w-100">
               <!-- Image -->
@@ -58,6 +58,14 @@
               <!-- Form -->
               <form>
                 <div class="form-group">
+                  <label for="firstName">First Name</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" required>
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" required>
+                </div>
+                <div class="form-group">
                   <label for="exampleInputEmail1">Email address</label>
                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                     placeholder="Enter your email" required>
@@ -73,7 +81,7 @@
                 </div>
                 <div class="form-group mb-5">
                   <label for="exampleFormControlSelect1">How did you find out about Sapiengraph?</label>
-                  <select class="form-control" id="exampleFormControlSelect1">
+                  <select class="form-control custom-select" id="exampleFormControlSelect1">
                     <option value="" selected="">Select your option</option>
                     <option value="GOOGLE">Search engine (Google, Bing etc.)</option>
                     <option value="NEWSLETTER">Newsletter</option>
@@ -90,7 +98,7 @@
                 </div>
                 <div class="mb-4">
                   <!-- Captcha -->
-                  <div class="text-center">
+                  <div class="text-left">
                     <div class="g-recaptcha mb-3 d-inline-block" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
                       style="transform-origin: 0 0;"></div>
                   </div>
