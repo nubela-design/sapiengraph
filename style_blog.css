@@ -10,8 +10,6 @@
   background-position: 50%;
 }
 
-
-
 table {
 
     border-spacing: 0 !important;
@@ -25,8 +23,6 @@ table, th, td {
   border: solid #869ab8 0.5px !important;
   
 }
-
-
 
 .blur{
   -webkit-filter: blur(3px);
@@ -172,3 +168,11 @@ body a:hover {
   box-shadow: 0 0 0 0.2rem rgba(245, 255, 247, 0.25) !important;
 } 
 
+/* Rifki */
+body {
+  overflow: unset !important;
+}
+
+.top-2 {
+  top: 2rem !important;
+}
