@@ -58,11 +58,15 @@
                 Sign in with Google
               </button>
 
-              <p class="text-muted text-center my-5">Or continue with</p>
+              <p class="text-muted text-center my-5">Or continue with email</p>
             
-              <a class="btn btn-outline-success w-100 lift mb-2" href="signin-illustration-email-only.html">
-                <i class="fe fe-mail"></i> Sign in with email
-              </a>
+              <form class="mb-4" onsubmit="return validateForm()">
+                <div class="form-group">
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Enter your email" required>
+                </div>
+                <button type="submit" class="btn btn-outline-success w-100 lift">Continue</button>
+              </form>
             
               <div class="d-flex justify-content-center align-items-center mb-0">
                 <a class="text-success small" href="forgot-password.html">Forgot password?</a>
