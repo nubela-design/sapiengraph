@@ -53,30 +53,18 @@
             </div>
             <div class="card-body pt-0 w-100 pb-5">
 
-              <button class="btn btn-success w-100 mb-3">
+              <button class="btn btn-success w-100 lift">
                 <img src="assets/img/logo/Google-logoicon-rounded.svg" alt="Google Logo" class="img-fluid" style="width: 20px; height: 20px;">
                 Sign in with Google
               </button>
 
-              <p class="text-muted text-center">or</p>
+              <p class="text-muted text-center my-6">Or continue with</p>
             
-              <form class="mb-4" onsubmit="return validateForm()">
-                <div class="form-group">
-                  <label for="email">
-                    Email Address
-                  </label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                    placeholder="Enter your email" required>
-                </div>
-                <div class="text-center">
-                  <div class="g-recaptcha mb-3 d-inline-block" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-                    style="transform-origin: 0 0;">
-                  </div>
-                </div>
-                <button type="submit" class="btn btn-outline-success w-100 lift">Continue</button>
-              </form>
+              <a class="btn btn-outline-success w-100 lift mb-2" href="signin-illustration-email-only.html">
+                <i class="fe fe-mail"></i> Sign in with email
+              </a>
             
-              <div class="d-flex justify-content-center align-items-center">
+              <div class="d-flex justify-content-center align-items-center mb-0">
                 <a class="text-success small" href="forgot-password.html">Forgot password?</a>
                 <span class="d-inline-block mx-2">•</span>
                 <a class="text-success small" href="signup-illustration.html">Create an account</a>
