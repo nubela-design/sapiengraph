@@ -1,3 +1,8 @@
+/* Roy - 8 Oct 2024 */
+.form-control {
+  border: 1.5px solid #ced4da;
+}
+
 .nav-pills .nav-item .nav-link.active:hover {
   background-color: #389e7f !important; /* Bootstrap's success color with darker shade */
   color: #ffffff !important;
