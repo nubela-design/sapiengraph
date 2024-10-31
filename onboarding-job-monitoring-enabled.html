@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="./assets/css/theme.min.css">
   <link rel="stylesheet" href="style.css">
 
-  <title>Monitor Job Popup</title>
+  <title>Enabled - Monitor Job Popup</title>
 
 </head>
 
@@ -54,7 +54,8 @@
               <p class="small mb-6 text-muted">You will receive an email when this profile has a job change.</p>
 
               <div class="text-center">
-                <a href="onboarding-job-monitoring-enabled.html" class="btn btn-success btn-block lift">Monitor Bill Gates For Job Change</a>
+                <button type="button" class="btn btn-success btn-block lift" data-dismiss="modal" data-toggle="modal"
+                  data-target="#">Monitor Bill Gates For Job Change</button>
               </div>
 
             </div>
@@ -71,51 +72,33 @@
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8);">
     </div>
 
-    <div class="row">
-      <!-- Added highlighted text and arrow -->
-      <div class="border border-success custom-rounded shadow-light" style="position: fixed; top: 47%; right: 28%; transform: translate(-50%, -50%); text-align: center; background-color: #494847;">
-        <h3 class="rounded px-5 pt-4 pb-2 text-white font-weight-bold">
-          Click this button to monitor
+    <div class="row justify-content-center">
+      <!-- Updated styles for centering -->
+      <div class="border border-success custom-rounded shadow-light pb-6 pt-4" style="position: fixed; top: 39%; right: 21%; transform: translate(-50%, -50%); text-align: center; background-color: #494847;">
+        <h3 class="rounded px-5 py-3 mb-2 text-white font-weight-bold" style="max-width: 400px;">
+          You’ve successfully monitored this profile. Go to dashboard to track all the monitored profiles.
         </h3>
+        <a class="btn btn-success btn-sm btn-pill" href="https://sapiengraph-dashboard-red.vercel.app/job-change-monitor.html">Go to dashboard</a>
       </div>
     </div>
 
-    <div style="position: fixed; top: 62.5%; right: 32.3%; transform: translate(-50%, -50%);">
+    <div style="position: fixed; top: 62.5%; right: 30.5%; transform: translate(-50%, -50%);">
     
-      <a class="btn btn-xs btn-pill btn-success px-4" href="#" data-toggle="modal" data-target="#myModal">
+      <a class="btn btn-xs btn-pill btn-outline-success px-4" style="background-color: #fff;">
         <svg id="a" class="mt-n1 mr-1" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 128 128">
           <path
             d="m105.24,0H22.76C10.19,0,0,10.19,0,22.76v82.49C0,117.81,10.19,128,22.76,128h82.49c12.57,0,22.76-10.19,22.76-22.76V22.76C128,10.19,117.81,0,105.24,0Zm-1.29,52.73l-.06-.05c-2.39-2-4.86-3.43-7.5-4.36-2.64-.92-5.46-1.35-8.55-1.35h-.04v-6.72c-6.99,0-40.65.02-40.68,0-.92-.79-1.98-1.42-3.14-1.85-1.12-.41-2.32-.64-3.59-.64-2.85,0-5.44,1.16-7.31,3.03s-3.03,4.45-3.03,7.31,1.16,5.44,3.03,7.31c1.87,1.87,4.45,3.03,7.31,3.03,1.23,0,2.41-.22,3.51-.61,1.13-.41,2.18-1.01,3.09-1.77.03-.02,37.54,0,41.06,0,4.27,0,7.98,1.55,11.14,4.63,1.58,1.54,2.77,3.25,3.56,5.1s1.19,3.87,1.19,6.04v15.96c0,2.21-.4,4.25-1.19,6.12-.79,1.88-1.98,3.59-3.56,5.13-1.58,1.54-3.3,2.7-5.16,3.48-1.86.77-3.85,1.16-5.99,1.16h-47.67c-4.34,0-8.05-1.54-11.14-4.63-3.09-3.09-4.63-6.84-4.63-11.25v-12.36l.06.05c2.31,1.93,4.75,3.32,7.35,4.23,2.6.91,5.38,1.33,8.36,1.33h.04v6.72c7.05,0,40.7-.02,40.74,0,.91.77,1.97,1.39,3.12,1.81,1.1.4,2.3.62,3.55.62,2.85,0,5.44-1.16,7.31-3.03,1.87-1.87,3.03-4.45,3.03-7.31s-1.16-5.44-3.03-7.31-4.45-3.03-7.31-3.03c-1.25,0-2.44.22-3.55.62-1.15.42-2.2,1.04-3.12,1.81-.04.03-37.26,0-40.78,0-4.34,0-8.05-1.55-11.14-4.63-1.54-1.54-2.7-3.25-3.48-5.1-.77-1.86-1.16-3.87-1.16-6.04v-15.96c0-4.41,1.55-8.17,4.63-11.25,1.54-1.54,3.25-2.7,5.1-3.48,1.86-.77,3.87-1.16,6.04-1.16h47.66c4.27,0,7.98,1.55,11.14,4.63,1.58,1.54,2.77,3.25,3.56,5.13.79,1.88,1.19,3.92,1.19,6.12v12.51Zm-58.87-4.63c0,1.29-.53,2.47-1.37,3.32-.85.85-2.02,1.37-3.32,1.37s-2.47-.53-3.32-1.37c-.85-.85-1.37-2.02-1.37-3.32s.53-2.47,1.37-3.32c.85-.85,2.02-1.37,3.32-1.37s2.47.53,3.32,1.37c.85.85,1.37,2.02,1.37,3.32Zm38.06,31.76c0-1.29.53-2.47,1.37-3.32.85-.85,2.02-1.37,3.32-1.37s2.47.53,3.32,1.37c.85.85,1.37,2.02,1.37,3.32s-.53,2.47-1.37,3.32c-.85.85-2.02,1.37-3.32,1.37s-2.47-.53-3.32-1.37c-.85-.85-1.37-2.02-1.37-3.32Z"
-            fill="#fff" />
+            fill="#42BA96"/>
         </svg>
-        <span style="font-family: system-ui, 'Open Sans', 'Helvetica Neue', sans-serif;">Monitor job change</span>
+        <span class="text-success" style="font-family: system-ui, 'Open Sans', 'Helvetica Neue', sans-serif;">Monitoring enabled</span>
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="caret-small" aria-hidden="true" role="none" data-supported-dps="16x16" fill="#42BA96" fill-opacity="0.9" width="16"  height="16" >
+          <path d="M8 11L3 6h10z" fill-rule="evenodd" fill-opacity="0.9"></path>
+        </svg>
       </a>
-      <svg class="mt-n8" fill="none" height="150" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M10.25 19.25L6.75 15.75L10.25 12.25" stroke="#389E7F" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M6.75 15.75H12.75C14.9591 15.75 16.75 13.9591 16.75 11.75V4.75" stroke="#389E7F" stroke-linecap="round"
-          stroke-linejoin="round" />
+      <svg class="mt-n9" fill="none" height="150" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 10.5L15.5 7L12 10.5" stroke="#389E7F" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.5 7V13C15.5 15.2091 13.7091 17 11.5 17H4.5" stroke="#389E7F" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </div>
     
-    <!-- Added highlighted text and arrow -->
-    <!-- <div style="position: fixed; top: 57%; left: 53%; transform: translate(-50%, -50%); text-align: center;">
-      <h3 class="rounded px-5 py-3 mb-n2 ml-8 text-white">
-        Click this button to monitor
-      </h3>
-      <svg fill="none" height="150" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M10.25 19.25L6.75 15.75L10.25 12.25" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M6.75 15.75H12.75C14.9591 15.75 16.75 13.9591 16.75 11.75V4.75" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div> -->
-    <!-- <div class="btn btn-xs btn-pill btn-success px-4"
-      style="position: fixed; top: 62.5%; left: 42%; transform: translate(-50%, -50%); border: 2px solid #fff;">
-      <svg id="a" class="mt-n1 mr-1" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 128 128">
-        <path
-          d="m105.24,0H22.76C10.19,0,0,10.19,0,22.76v82.49C0,117.81,10.19,128,22.76,128h82.49c12.57,0,22.76-10.19,22.76-22.76V22.76C128,10.19,117.81,0,105.24,0Zm-1.29,52.73l-.06-.05c-2.39-2-4.86-3.43-7.5-4.36-2.64-.92-5.46-1.35-8.55-1.35h-.04v-6.72c-6.99,0-40.65.02-40.68,0-.92-.79-1.98-1.42-3.14-1.85-1.12-.41-2.32-.64-3.59-.64-2.85,0-5.44,1.16-7.31,3.03s-3.03,4.45-3.03,7.31,1.16,5.44,3.03,7.31c1.87,1.87,4.45,3.03,7.31,3.03,1.23,0,2.41-.22,3.51-.61,1.13-.41,2.18-1.01,3.09-1.77.03-.02,37.54,0,41.06,0,4.27,0,7.98,1.55,11.14,4.63,1.58,1.54,2.77,3.25,3.56,5.1s1.19,3.87,1.19,6.04v15.96c0,2.21-.4,4.25-1.19,6.12-.79,1.88-1.98,3.59-3.56,5.13-1.58,1.54-3.3,2.7-5.16,3.48-1.86.77-3.85,1.16-5.99,1.16h-47.67c-4.34,0-8.05-1.54-11.14-4.63-3.09-3.09-4.63-6.84-4.63-11.25v-12.36l.06.05c2.31,1.93,4.75,3.32,7.35,4.23,2.6.91,5.38,1.33,8.36,1.33h.04v6.72c7.05,0,40.7-.02,40.74,0,.91.77,1.97,1.39,3.12,1.81,1.1.4,2.3.62,3.55.62,2.85,0,5.44-1.16,7.31-3.03,1.87-1.87,3.03-4.45,3.03-7.31s-1.16-5.44-3.03-7.31-4.45-3.03-7.31-3.03c-1.25,0-2.44.22-3.55.62-1.15.42-2.2,1.04-3.12,1.81-.04.03-37.26,0-40.78,0-4.34,0-8.05-1.55-11.14-4.63-1.54-1.54-2.7-3.25-3.48-5.1-.77-1.86-1.16-3.87-1.16-6.04v-15.96c0-4.41,1.55-8.17,4.63-11.25,1.54-1.54,3.25-2.7,5.1-3.48,1.86-.77,3.87-1.16,6.04-1.16h47.66c4.27,0,7.98,1.55,11.14,4.63,1.58,1.54,2.77,3.25,3.56,5.13.79,1.88,1.19,3.92,1.19,6.12v12.51Zm-58.87-4.63c0,1.29-.53,2.47-1.37,3.32-.85.85-2.02,1.37-3.32,1.37s-2.47-.53-3.32-1.37c-.85-.85-1.37-2.02-1.37-3.32s.53-2.47,1.37-3.32c.85-.85,2.02-1.37,3.32-1.37s2.47.53,3.32,1.37c.85.85,1.37,2.02,1.37,3.32Zm38.06,31.76c0-1.29.53-2.47,1.37-3.32.85-.85,2.02-1.37,3.32-1.37s2.47.53,3.32,1.37c.85.85,1.37,2.02,1.37,3.32s-.53,2.47-1.37,3.32c-.85.85-2.02,1.37-3.32,1.37s-2.47-.53-3.32-1.37c-.85-.85-1.37-2.02-1.37-3.32Z"
-          fill="#fff" />
-      </svg>
-      <span style="font-family: system-ui, 'Open Sans', 'Helvetica Neue', sans-serif;">Monitor job change</span>
-    </div> -->
   </div>
 
 
