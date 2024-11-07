@@ -94,6 +94,10 @@
   border-bottom: 1px solid #e2e8f0;
 }
 
+.border-50 {
+  border-bottom: 1px solid #eef1f5;
+}
+
 .custom-switch .custom-control-input:checked ~ .custom-control-label::before {
   background-color: #28a745; /* Bootstrap success color */
 }
@@ -441,4 +445,56 @@ ul.timeline > li:nth-child(5):after {
   background-repeat: no-repeat;
   background-position: right 1rem center;
   background-size: 10px 5px;
+}
+
+@media (min-width: 1200px) and (max-width: 1670px) {
+  .col-lg-custom {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    margin-bottom: 32px !important;
+  }
+}
+
+.card-header-section {
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Memastikan semua card memiliki tinggi yang sama */
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Mengisi tinggi card */
+}
+
+.credits-section {
+  margin-top: auto;
+  margin-bottom: 1.5rem !important; /* Jarak tetap ke bawah */
+  flex-shrink: 0; /* Mencegah credits section dari mengecil */
+}
+
+.features-section {
+  flex-grow: 1; /* Mengisi ruang yang tersisa */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .card-header-section {
+    min-height: 240px;
+  }
+}
+
+@media (max-width: 992px) {
+  .card-header-section {
+    min-height: 200px;
+  }
 }
