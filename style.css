@@ -493,7 +493,7 @@ ul.timeline > li:nth-child(5):after {
 /* Responsive adjustments */
 @media (min-width: 1671px) and (max-width: 2186px) {
   .credits-section {
-    min-height: 72px; /* Menyesuaikan untuk 2 baris teks */
+    min-height: 60px; /* Menyesuaikan untuk 2 baris teks */
   }
 }
 
