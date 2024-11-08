@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Libs CSS -->
+  <link rel="stylesheet" href="./assets/fonts/Feather/feather.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/neuicons@1.9.0/css/neu.min.css" />
+  <link rel="stylesheet" href="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="./assets/libs/aos/dist/aos.css" />
+  <link rel="stylesheet" href="./assets/libs/choices.js/public/assets/styles/choices.min.css" />
+  <link rel="stylesheet" href="./assets/libs/flickity-fade/flickity-fade.css" />
+  <link rel="stylesheet" href="./assets/libs/flickity/dist/flickity.min.css" />
+  <link rel="stylesheet" href="./assets/libs/highlightjs/styles/vs2015.css" />
+  <link rel="stylesheet" href="./assets/libs/jarallax/dist/jarallax.css" />
+  <link rel="stylesheet" href="./assets/libs/quill/dist/quill.core.css" />
+  <link rel="stylesheet" href="./style_blog.css" />
+
+  <!-- Map -->
+  <link href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" rel="stylesheet" />
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="./assets/css/theme.min.css" />
+
+  <!-- Import Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style-2.css" />
+
+  <title>Sapiengraph - Lead Store</title>
+
+  <!-- Import jquery -->
+  <script src="./assets/libs/jquery/dist/jquery.min.js"></script>
+
+  <!-- Import Bootstrap -->
+  <script src="./assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="bg-light">
+  <!-- NAVBAR
+  ================================================== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container-fluid">
+      <!-- Brand -->
+      <a class="navbar-brand" href="./index.html">
+        <img src="./assets/img/Sapiengraph logo.svg" class="navbar-brand-img" alt="Sapiengraph logo" />
+      </a>
+
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fe fe-x"></i>
+        </button>
+
+        <!-- Navigation -->
+        <ul class="navbar-nav ml-auto">
+          <li class="dropdown nav-item">
+            <a class="dropdown-toggle nav-link" id="navbarAccount" data-toggle="dropdown" href="#" aria-haspopup="true"
+              aria-expanded="false">
+              Products <i class="fe fe-chevron-down"></i>
+            </a>
+
+            <div class="dropdown-menu pb-4" aria-labelledby="navbarSolutions">
+              <div class="row justify-content-center">
+                <div class="col-12">
+                  <h2 class="small text-uppercase font-weight-bold text-success mb-1">
+                    <svg class="d-inline-flex mb-2" xmlns="http://www.w3.org/2000/svg" width="18" height="auto"
+                      viewBox="0 0 24 24">
+                      <g fill="currentColor">
+                        <path
+                          d="m7.303 13.51 2.83-1.415a4.4 4.4 0 0 0 1.962-1.962l1.414-2.83a.548.548 0 0 1 .981 0l1.415 2.83a4.4 4.4 0 0 0 1.962 1.962l2.83 1.414a.548.548 0 0 1 0 .981l-2.83 1.415a4.4 4.4 0 0 0-1.962 1.962l-1.414 2.83a.548.548 0 0 1-.982 0l-1.414-2.83a4.4 4.4 0 0 0-1.962-1.962l-2.83-1.414a.548.548 0 0 1 0-.981m.354-6.693L8.87 6.21a.235.235 0 0 0 0-.42l-1.213-.606a1.88 1.88 0 0 1-.84-.841L6.21 3.13a.235.235 0 0 0-.42 0l-.607 1.213a1.88 1.88 0 0 1-.84.84L3.13 5.79a.235.235 0 0 0 0 .42l1.213.607c.363.182.658.477.84.84L5.79 8.87a.235.235 0 0 0 .42 0l.606-1.212a1.88 1.88 0 0 1 .841-.841">
+                        </path>
+                      </g>
+                    </svg>
+                    5-Minute Growth Tools
+                  </h2>
+
+                  <div class="dropdown-item">
+                    <a class="dropdown-link custom-link" href="#">
+                      B2B Enrichment for Excel / Google Sheets
+                    </a>
+                  </div>
+
+                  <div class="dropdown-item">
+                    <a class="dropdown-link custom-link pl-4" href="#">
+                      ᴸ Formula Documentation
+                    </a>
+                  </div>
+
+                  <div class="dropdown-item">
+                    <a class="dropdown-link custom-link" href="prospector.html">
+                      Prospector with Export
+                    </a>
+                  </div>
+
+                  <div class="dropdown-item">
+                    <a class="dropdown-link custom-link" href="#">
+                      Job Change Monitor
+                      <span class="text-success font-weight-bold">(FREE)</span>
+                    </a>
+                  </div>
+
+                  <div class="dropdown-item mb-0">
+                    <a class="dropdown-link custom-link" href="#"> API </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="dropdown nav-item">
+            <a class="dropdown-toggle nav-link" id="navbarAccount" data-toggle="dropdown" href="#" aria-haspopup="true"
+              aria-expanded="false">
+              Solutions <i class="fe fe-chevron-down"></i>
+            </a>
+
+            <div class="dropdown-menu pb-4" aria-labelledby="navbarSolutions">
+              <div class="row justify-content-center">
+                <div class="col-12">
+                  <div class="dropdown-item mb-2">
+                    <a class="dropdown-link custom-link" href="template-gallery.html">
+                      Spreadsheet Template Gallery
+                      <span class="text-success font-weight-bold">(FREE)</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="pricing.html"> Pricing </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html"> Blog </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#!"> FAQ </a>
+          </li>
+        </ul>
+
+        <!-- Button -->
+
+        <div class="text-center ml-auto">
+          <!-- Button -->
+          <a class="btn btn-sm btn-link font-weight-bold text-white text-md-gray" href="signin-illustration.html">
+            Sign in
+          </a>
+
+          <a class="navbar-btn btn btn-pill btn-sm btn-white text-success text-md-gray lift ml-auto shadow-light-lg"
+            href="#!" target="_blank">
+            Set up new account
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content
+  ================================================== -->
+  <main>
+    <!-- Headline -->
+    <section class="pt-5 pb-2 pb-md-4 py-lg-8 bg-white border-bottom">
+      <div class="container">
+        <div class="row justify-content-between align-items-center mb-md-2 mb-lg-2">
+          <div class="col-12 col-lg-6 order-lg-2 mb-6 mb-lg-0 text-center">
+            <!-- Image -->
+            <img class="img-fluid rounded" src="./assets/img/illustrations/placeholder-light.png" data-aos="fade-up" />
+          </div>
+
+          <div class="col-12 col-lg-5 order-lg-1 text-center text-lg-left">
+            <!-- Heading -->
+            <h1 class="display-3 font-weight-bold">
+              <span class="text-success"> Lead </span>
+              Store
+            </h1>
+
+            <!-- Text -->
+            <p class="lead custom-opacity text-muted mb-6 mb-lg-6">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero rem sunt repellat illo, at doloremque
+              voluptatum placeat unde corrupti temporibus nemo quibusdam perferendis ab.
+            </p>
+
+            <!-- Title -->
+            <!-- <p class="h1 mb-4 font-weight-bold">
+                <span class="text-success">Spreadsheet</span><br />Template
+                Gallery
+              </p> -->
+
+            <!-- Desc-->
+            <!-- <p class="lead custom-opacity text-secondary">
+                Choose from any of these
+                <span class="text-success">Sapiengraph-powered templates</span>
+                that you can start using immediately to supercharge your
+                <span class="text-success"
+                  >lead generation, recruitment pipeline, investment due
+                  diligence</span
+                >
+                and more!
+              </p> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="py-5">
+      <div class="container">
+
+        <!-- Card Search -->
+        <div class="card mb-6">
+          <div class="card-body p-3">
+            <form class="">
+              <div class="row justify-content-between align-items-center mx-0">
+                <div class="col-12 col-lg-4 px-0">
+                  <select class="custom-select custom-select-sm mb-2 mb-lg-0" id="inputSearchBy">
+                    <option value="1" selected>Search by Company</option>
+                    <option value="2">Search by Keyword</option>
+                  </select>
+                </div>
+                <div class="col-12 col-lg-7 px-0">
+                  <input type="search" class="form-control border-lg-0" placeholder="Search leads..." aria-label="Search">
+                </div>
+                <div class="col-12 col-lg-1 px-0 text-right">
+                  <button class="btn btn-sm btn-success w-100 w-lg-auto mt-3 mt-lg-0" type="submit">
+                    <i class="fe fe-search"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="row justify-content-center align-items-stretch mt-5">
+
+          <!-- Card -->
+          <div class="col-12 col-md-6 col-lg-4 d-inline-flex">
+            <div class="card card-fill mb-7 mb-md-5 lift">
+
+              <!-- Body -->
+              <div class="card-body text-center">
+                <!-- Shape -->
+                <div class="shape shape-bottom-100 shape-fluid-x text-white">
+                  <img src="./assets/img/shapes/curves/curve-1-w.svg" alt="" srcset="" class="text-white" />
+                </div>
+
+                <!-- Title -->
+                <h2 class="mb-0">
+                  Lead Package 1
+                </h2>
+
+                <hr />
+
+                <!-- Button Download Sample -->
+                <a href="signin-illustration.html" type="button"
+                  class="btn btn-sm btn-success-soft rounded-pill w-100 lift" data-toggle="tooltip" data-placement="top"
+                  title="Sign in to see preview of 3 rows of data">
+                  Download Sample Data
+                </a>
+
+                <hr />
+
+                <div class="d-flex justify-content-between align-content-center">
+                  <p class="mb-0 text-muted">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi, minima commodi soluta, vel amet,
+                    expedita sapiente tempora officia itaque non? Consequatur repellat aut atque dolorem laboriosam vel,
+                    quisquam ad?
+                  </p>
+                </div>
+
+                <hr />
+
+                <h5 class="mb-1 text-muted small">
+                  Type Data
+                </h5>
+                <h3 class="mb-0 text-success">
+                  Top Lead
+                </h3>
+
+                <hr />
+
+                <!-- Price -->
+                <div class="d-flex justify-content-center">
+                  <span class="h3 mb-0 mt-2">$</span>
+                  <span class="price display-3 mb-0" data-annual="0" data-monthly="0">1000</span>
+                </div>
+
+                <hr />
+
+                <!-- Button Download -->
+                <button type="button" class="btn btn-sm btn-success rounded-pill w-100 text-uppercase lift">
+                  Buy it now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div class="col-12 col-md-6 col-lg-4 d-inline-flex">
+            <div class="card card-fill mb-7 mb-md-5 lift">
+
+              <!-- Body -->
+              <div class="card-body text-center">
+                <!-- Shape -->
+                <div class="shape shape-bottom-100 shape-fluid-x text-white">
+                  <img src="./assets/img/shapes/curves/curve-1-w.svg" alt="" srcset="" class="text-white" />
+                </div>
+
+                <!-- Title -->
+                <h2 class="mb-0">
+                  Lead Package 2
+                </h2>
+
+                <hr />
+
+                <!-- Button Download Sample -->
+                <a href="signin-illustration.html" type="button"
+                  class="btn btn-sm btn-success-soft rounded-pill w-100 lift" data-toggle="tooltip" data-placement="top"
+                  title="Sign in to see preview of 3 rows of data">
+                  Download Sample Data
+                </a>
+
+                <hr />
+
+                <div class="d-flex justify-content-between align-content-center">
+                  <p class="mb-0 text-muted">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quaerat fugit vitae perspiciatis
+                    nulla accusamus cupiditate neque sit veritatis, explicabo blanditiis. Natus consectetur vero atque
+                    quisquam placeat voluptas quidem laborum.
+                  </p>
+                </div>
+
+                <hr />
+
+                <h5 class="mb-1 text-muted small">
+                  Type Data
+                </h5>
+                <h3 class="mb-0 text-success">
+                  Customer Profile
+                </h3>
+
+                <hr />
+
+                <!-- Price -->
+                <div class="d-flex justify-content-center">
+                  <span class="h3 mb-0 mt-2">$</span>
+                  <span class="price display-3 mb-0" data-annual="0" data-monthly="0">500</span>
+                </div>
+
+                <hr />
+
+                <!-- Button Download -->
+                <button type="button" class="btn btn-sm btn-success rounded-pill w-100 text-uppercase lift">
+                  Buy it now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div class="col-12 col-md-6 col-lg-4 d-inline-flex">
+            <div class="card card-fill mb-7 mb-md-5 lift">
+
+              <!-- Body -->
+              <div class="card-body text-center">
+                <!-- Shape -->
+                <div class="shape shape-bottom-100 shape-fluid-x text-white">
+                  <img src="./assets/img/shapes/curves/curve-1-w.svg" alt="" srcset="" class="text-white" />
+                </div>
+
+                <!-- Title -->
+                <h2 class="mb-0">
+                  Lead Package 3
+                </h2>
+
+                <hr />
+
+                <!-- Button Download Sample -->
+                <a href="signin-illustration.html" type="button"
+                  class="btn btn-sm btn-success-soft rounded-pill w-100 lift" data-toggle="tooltip" data-placement="top"
+                  title="Sign in to see preview of 3 rows of data">
+                  Download Sample Data
+                </a>
+
+                <hr />
+
+                <div class="d-flex justify-content-between align-content-center">
+                  <p class="mb-0 text-muted">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil officiis, temporibus omnis
+                    laboriosam consequatur laudantium modi perferendis ab aperiam eligendi quibusdam iste similique at?
+                    Iusto ex recusandae doloribus fuga voluptatem.
+                  </p>
+                </div>
+
+                <hr />
+
+                <h5 class="mb-1 text-muted small">
+                  Type Data
+                </h5>
+                <h3 class="mb-0 text-success">
+                  Lead List for Microsoft
+                </h3>
+
+                <hr />
+
+                <!-- Price -->
+                <div class="d-flex justify-content-center">
+                  <span class="h3 mb-0 mt-2">$</span>
+                  <span class="price display-3 mb-0" data-annual="0" data-monthly="0">2500</span>
+                </div>
+
+                <hr />
+
+                <!-- Button Download -->
+                <button type="button" class="btn btn-sm btn-success rounded-pill w-100 text-uppercase lift">
+                  Buy it now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div class="col-12 col-md-6 col-lg-4 d-inline-flex">
+            <div class="card card-fill mb-7 mb-md-5 lift">
+
+              <!-- Body -->
+              <div class="card-body text-center">
+                <!-- Shape -->
+                <div class="shape shape-bottom-100 shape-fluid-x text-white">
+                  <img src="./assets/img/shapes/curves/curve-1-w.svg" alt="" srcset="" class="text-white" />
+                </div>
+
+                <!-- Title -->
+                <h2 class="mb-0">
+                  Lead Package 4
+                </h2>
+
+                <hr />
+
+                <!-- Button Download Sample -->
+                <a href="signin-illustration.html" type="button"
+                  class="btn btn-sm btn-success-soft rounded-pill w-100 lift" data-toggle="tooltip" data-placement="top"
+                  title="Sign in to see preview of 3 rows of data">
+                  Download Sample Data
+                </a>
+
+                <hr />
+
+                <div class="d-flex justify-content-between align-content-center">
+                  <p class="mb-0 text-muted">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis iste dolorum sapiente alias. Iure
+                    quia tempore commodi eaque laudantium accusamus nobis sed labore natus. Totam, voluptas fugit!
+                    Accusamus, quibusdam inventore!
+                  </p>
+                </div>
+
+                <hr />
+
+                <h5 class="mb-1 text-muted small">
+                  Type Data
+                </h5>
+                <h3 class="mb-0 text-success">
+                  Top Lead
+                </h3>
+
+                <hr />
+
+                <!-- Price -->
+                <div class="d-flex justify-content-center">
+                  <span class="h3 mb-0 mt-2">$</span>
+                  <span class="price display-3 mb-0" data-annual="0" data-monthly="0">2000</span>
+                </div>
+
+                <hr />
+
+                <!-- Button Download -->
+                <button type="button" class="btn btn-sm btn-success rounded-pill w-100 text-uppercase lift">
+                  Buy it now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div class="col-12 col-md-6 col-lg-4 d-inline-flex">
+            <div class="card card-fill mb-7 mb-md-5 lift">
+
+              <!-- Body -->
+              <div class="card-body text-center">
+                <!-- Shape -->
+                <div class="shape shape-bottom-100 shape-fluid-x text-white">
+                  <img src="./assets/img/shapes/curves/curve-1-w.svg" alt="" srcset="" class="text-white" />
+                </div>
+
+                <!-- Title -->
+                <h2 class="mb-0">
+                  Lead Package 5
+                </h2>
+
+                <hr />
+
+                <!-- Button Download Sample -->
+                <a href="signin-illustration.html" type="button"
+                  class="btn btn-sm btn-success-soft rounded-pill w-100 lift" data-toggle="tooltip" data-placement="top"
+                  title="Sign in to see preview of 3 rows of data">
+                  Download Sample Data
+                </a>
+
+                <hr />
+
+                <div class="d-flex justify-content-between align-content-center">
+                  <p class="mb-0 text-muted">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, non? Illum blanditiis consequatur a
+                    ullam inventore at omnis deleniti quasi eaque nihil cupiditate laboriosam culpa, autem perspiciatis
+                    quam, adipisci id?
+                  </p>
+                </div>
+
+                <hr />
+
+                <h5 class="mb-1 text-muted small">
+                  Type Data
+                </h5>
+                <h3 class="mb-0 text-success">
+                  Customer Profile
+                </h3>
+
+                <hr />
+
+                <!-- Price -->
+                <div class="d-flex justify-content-center">
+                  <span class="h3 mb-0 mt-2">$</span>
+                  <span class="price display-3 mb-0" data-annual="0" data-monthly="0">1750</span>
+                </div>
+
+                <hr />
+
+                <!-- Button Download -->
+                <button type="button" class="btn btn-sm btn-success rounded-pill w-100 text-uppercase lift">
+                  Buy it now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div class="col-12 col-md-6 col-lg-4 d-inline-flex">
+            <div class="card card-fill mb-7 mb-md-5 lift">
+
+              <!-- Body -->
+              <div class="card-body text-center">
+                <!-- Shape -->
+                <div class="shape shape-bottom-100 shape-fluid-x text-white">
+                  <img src="./assets/img/shapes/curves/curve-1-w.svg" alt="" srcset="" class="text-white" />
+                </div>
+
+                <!-- Title -->
+                <h2 class="mb-0">
+                  Lead Package 6
+                </h2>
+
+                <hr />
+
+                <!-- Button Download Sample -->
+                <a href="signin-illustration.html" type="button"
+                  class="btn btn-sm btn-success-soft rounded-pill w-100 lift" data-toggle="tooltip" data-placement="top"
+                  title="Sign in to see preview of 3 rows of data">
+                  Download Sample Data
+                </a>
+
+                <hr />
+
+                <div class="d-flex justify-content-between align-content-center">
+                  <p class="mb-0 text-muted">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sed, repudiandae doloremque dolorem
+                    excepturi quia inventore tenetur iure minima quibusdam atque perspiciatis obcaecati asperiores
+                    exercitationem ut cupiditate temporibus maiores a!
+                  </p>
+                </div>
+
+                <hr />
+
+                <h5 class="mb-1 text-muted small">
+                  Type Data
+                </h5>
+                <h3 class="mb-0 text-success">
+                  Lead List for Apple
+                </h3>
+
+                <hr />
+
+                <!-- Price -->
+                <div class="d-flex justify-content-center">
+                  <span class="h3 mb-0 mt-2">$</span>
+                  <span class="price display-3 mb-0" data-annual="0" data-monthly="0">1500</span>
+                </div>
+
+                <hr />
+
+                <!-- Button Download -->
+                <button type="button" class="btn btn-sm btn-success rounded-pill w-100 text-uppercase lift">
+                  Buy it now
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal Download ATT -->
+  <div class="modal fade" id="modalDownloadATT" tabindex="-1" aria-labelledby="modalDownloadATTLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalDownloadATTLabel">Download Applicant Tracking Template</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="inputName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="inputName" aria-describedby="inputName"
+                placeholder="input your name">
+            </div>
+            <div class="mb-3">
+              <label for="inputCompanyName" class="form-label">Company Name</label>
+              <input type="text" class="form-control" id="inputCompanyName" aria-describedby="inputCompanyName"
+                placeholder="input your company name">
+            </div>
+            <div class="mb-3">
+              <label for="inputPositionName" class="form-label">Position in company</label>
+              <input type="text" class="form-control" id="inputPositionName" aria-describedby="inputPositionName"
+                placeholder="ex: CXO/Product Manager/Others">
+            </div>
+            <div class="mb-3">
+              <label for="inputWorkEmail" class="form-label">Work email address</label>
+              <input type="email" class="form-control" id="inputWorkEmail" aria-describedby="inputWorkEmail"
+                placeholder="ex: name@company.com">
+            </div>
+            <button type="submit" class="btn btn-success w-100 mt-3">Send File To Email</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Download LTT -->
+  <div class="modal fade" id="modalDownloadLTT" tabindex="-1" aria-labelledby="modalDownloadLTTLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalDownloadLTTLabel">Download Lead Tracker Template</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="inputName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="inputName" aria-describedby="inputName"
+                placeholder="input your name">
+            </div>
+            <div class="mb-3">
+              <label for="inputCompanyName" class="form-label">Company Name</label>
+              <input type="text" class="form-control" id="inputCompanyName" aria-describedby="inputCompanyName"
+                placeholder="input your company name">
+            </div>
+            <div class="mb-3">
+              <label for="inputPositionName" class="form-label">Position in company</label>
+              <input type="text" class="form-control" id="inputPositionName" aria-describedby="inputPositionName"
+                placeholder="ex: CXO/Product Manager/Others">
+            </div>
+            <div class="mb-3">
+              <label for="inputWorkEmail" class="form-label">Work email address</label>
+              <input type="email" class="form-control" id="inputWorkEmail" aria-describedby="inputWorkEmail"
+                placeholder="ex: name@company.com">
+            </div>
+            <button type="submit" class="btn btn-success w-100 mt-3">Send File To Email</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Download CET -->
+  <div class="modal fade" id="modalDownloadCET" tabindex="-1" aria-labelledby="modalDownloadCETLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalDownloadCETLabel">Download CRM Enrichment Template</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="inputName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="inputName" aria-describedby="inputName"
+                placeholder="input your name">
+            </div>
+            <div class="mb-3">
+              <label for="inputCompanyName" class="form-label">Company Name</label>
+              <input type="text" class="form-control" id="inputCompanyName" aria-describedby="inputCompanyName"
+                placeholder="input your company name">
+            </div>
+            <div class="mb-3">
+              <label for="inputPositionName" class="form-label">Position in company</label>
+              <input type="text" class="form-control" id="inputPositionName" aria-describedby="inputPositionName"
+                placeholder="ex: CXO/Product Manager/Others">
+            </div>
+            <div class="mb-3">
+              <label for="inputWorkEmail" class="form-label">Work email address</label>
+              <input type="email" class="form-control" id="inputWorkEmail" aria-describedby="inputWorkEmail"
+                placeholder="ex: name@company.com">
+            </div>
+            <button type="submit" class="btn btn-success w-100 mt-3">Send File To Email</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER 
+  ================================================== -->
+  <footer class="py-8 py-md-11 bg-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4 col-lg-3">
+          <!-- Brand -->
+          <img src="./assets/img/Sapiengraph logo.svg" alt="proxycurl logo" class="footer-brand img-fluid mb-2" />
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">
+            Sapiengraph
+          </h6>
+
+          <!-- List -->
+          <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
+            <li class="mb-3">
+              <a href="index.html" class="text-reset"> Home </a>
+            </li>
+            <li class="mb-3">
+              <a href="#pricing" class="text-reset"> Pricing </a>
+            </li>
+            <li class="mb-3">
+              <a href="#!" class="text-reset"> Blog </a>
+            </li>
+            <li class="mb-3">
+              <a href="terms-of-use.html" class="text-reset">
+                Terms Of Use
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="#" class="text-reset"> Privacy Policy </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">
+            Products
+          </h6>
+
+          <!-- List -->
+          <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
+            <li class="mb-3">
+              <a href="#!" class="text-reset">
+                B2B Data Enrichment for Excel / Google Sheets
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="prospector.html" class="text-reset">
+                Prospector with Export
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="#!" class="text-reset"> Job Change Monitor (FREE) </a>
+            </li>
+            <li class="mb-3">
+              <a href="#!" class="text-reset">
+                Spreadsheet Template Gallery
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="https://nubela.co/proxycurl" class="text-reset" target="_blank">
+                API
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4 offset-md-4 col-lg-2 offset-lg-0">
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">
+            Solution
+          </h6>
+
+          <ul class="list-unstyled text-muted mb-6">
+            <li class="mb-3">
+              <a href="#" class="text-reset"> Solution </a>
+            </li>
+          </ul>
+
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">
+            Company
+          </h6>
+
+          <!-- List -->
+          <ul class="list-unstyled text-muted mb-0">
+            <li class="mb-3">
+              <a href="https://nubela.co" class="text-reset"> Company </a>
+            </li>
+            <li class="mb-3">
+              <a href="team.html" class="text-reset"> Team </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">Help</h6>
+
+          <!-- List -->
+          <ul class="list-unstyled text-muted mb-0">
+            <li class="mb-3">
+              <a href="mailto:hello@sapiengraph.com" class="text-reset">
+                Email us
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="#" class="text-reset"> Support </a>
+            </li>
+            <li class="mb-3">
+              <a href="#" class="text-reset"> FAQ </a>
+            </li>
+            <li class="mb-3">
+              <a href="#" class="text-reset"> Refund Policy </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- / .row -->
+      <br />
+
+      <hr />
+      <br />
+
+      <div class="text-center">
+        <p class="caption">Nubela Pte Ltd. All rights reserved.</p>
+      </div>
+    </div>
+    <!-- / .container -->
+  </footer>
+
+  <!-- JAVASCRIPT
+    ================================================== -->
+  <!-- Libs JS -->
+  <script src="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+  <script src="./assets/libs/aos/dist/aos.js"></script>
+  <script src="./assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+  <script src="./assets/libs/countup.js/dist/countUp.min.js"></script>
+  <script src="./assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+  <script src="./assets/libs/flickity/dist/flickity.pkgd.min.js"></script>
+  <script src="./assets/libs/flickity-fade/flickity-fade.js"></script>
+  <script src="./assets/libs/highlightjs/highlight.pack.min.js"></script>
+  <script src="./assets/libs/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="./assets/libs/isotope-layout/dist/isotope.pkgd.min.js"></script>
+  <script src="./assets/libs/jarallax/dist/jarallax.min.js"></script>
+  <script src="./assets/libs/jarallax/dist/jarallax-video.min.js"></script>
+  <script src="./assets/libs/jarallax/dist/jarallax-element.min.js"></script>
+  <script src="./assets/libs/quill/dist/quill.min.js"></script>
+  <script src="./assets/libs/smooth-scroll/dist/smooth-scroll.min.js"></script>
+  <script src="./assets/libs/typed.js/lib/typed.min.js"></script>
+
+  <!-- Map -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js"></script>
+
+  <!-- Theme JS -->
+  <script src="./assets/js/theme.min.js"></script>
+</body>
+
+</html>
