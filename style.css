@@ -529,7 +529,13 @@ ul.timeline > li:nth-child(5):after {
 }
 
 /* Responsive adjustments */
-@media (min-width: 1671px) and (max-width: 2124px) {
+@media (min-width: 1710px) and (max-width: 2321px) {
+  .fresh-data-content {
+    min-height: 100px;
+  }
+}
+
+@media (min-width: 1671px) and (max-width: 1709px) {
   .fresh-data-section {
     min-height: 190px; /* Increased height to accommodate 2 lines of text */
   }
