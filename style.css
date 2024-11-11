@@ -476,7 +476,7 @@ ul.timeline > li:nth-child(5):after {
 }
 
 .credits-section {
-  min-height: 48px;
+  min-height: 60px;
   margin-top: auto;
   margin-bottom: 1.5rem !important;
   flex-shrink: 0;
@@ -491,9 +491,9 @@ ul.timeline > li:nth-child(5):after {
 }
 
 /* Responsive adjustments */
-@media (min-width: 1671px) and (max-width: 2186px) {
+@media (min-width: 1671px) {
   .credits-section {
-    min-height: 60px; /* Menyesuaikan untuk 2 baris teks */
+    min-height: 90px; /* Menyesuaikan untuk 2 baris teks */
   }
 }
 
@@ -502,7 +502,7 @@ ul.timeline > li:nth-child(5):after {
     min-height: 240px;
   }
   .credits-section {
-    min-height: 48px;
+    min-height: 60px;
   }
 }
 
@@ -511,12 +511,12 @@ ul.timeline > li:nth-child(5):after {
     min-height: 200px;
   }
   .credits-section {
-    min-height: 48px;
+    min-height: 60px;
   }
 }
 
 .fresh-data-section {
-  min-height: 160px; /* Default height */
+  min-height: 120px; /* Default height */
   display: flex;
   flex-direction: column;
 }
@@ -531,19 +531,19 @@ ul.timeline > li:nth-child(5):after {
 /* Responsive adjustments */
 @media (min-width: 1671px) and (max-width: 2124px) {
   .fresh-data-section {
-    min-height: 200px; /* Increased height to accommodate 2 lines of text */
+    min-height: 190px; /* Increased height to accommodate 2 lines of text */
   }
 }
 
 @media (max-width: 1200px) {
   .fresh-data-section {
-    min-height: 160px;
+    min-height: 120px;
   }
 }
 
 @media (max-width: 992px) {
   .fresh-data-section {
-    min-height: 160px;
+    min-height: 120px;
   }
 }
 /*---*/
