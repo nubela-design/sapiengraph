@@ -515,6 +515,15 @@ ul.timeline > li:nth-child(5):after {
   }
 }
 
+@media (max-width: 767px) {
+  .card-header-section {
+    min-height: 100px;
+  }
+  .credits-section {
+    min-height: 30px;
+  }
+}
+
 .fresh-data-section {
   min-height: 120px; /* Default height */
   display: flex;
@@ -535,9 +544,15 @@ ul.timeline > li:nth-child(5):after {
   }
 }
 
-@media (min-width: 899px) and (max-width: 1368px) {
+@media (min-width: 1063px) and (max-width: 1368px) {
   .fresh-data-content {
     min-height: 105px;
+  }
+}
+
+@media (min-width: 899px) and (max-width: 1062px) {
+  .fresh-data-content {
+    min-height: 130px;
   }
 }
 
