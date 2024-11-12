@@ -476,7 +476,7 @@ ul.timeline > li:nth-child(5):after {
 }
 
 .credits-section {
-  min-height: 60px;
+  min-height: 50px;
   margin-top: auto;
   margin-bottom: 1.5rem !important;
   flex-shrink: 0;
@@ -491,9 +491,9 @@ ul.timeline > li:nth-child(5):after {
 }
 
 /* Responsive adjustments */
-@media (min-width: 1671px) {
+@media (min-width: 1395px) and (max-width: 2380px) {
   .credits-section {
-    min-height: 90px; /* Menyesuaikan untuk 2 baris teks */
+    min-height: 70px; /* Menyesuaikan untuk 2 baris teks */
   }
 }
 
@@ -525,7 +525,7 @@ ul.timeline > li:nth-child(5):after {
 }
 
 .fresh-data-section {
-  min-height: 120px; /* Default height */
+  min-height: 220px; /* Default height */
   display: flex;
   flex-direction: column;
 }
@@ -568,21 +568,26 @@ ul.timeline > li:nth-child(5):after {
   }
 }
 
-@media (min-width: 1671px) and (max-width: 1709px) {
+@media (min-width: 1687px) and (max-width: 1709px) {
   .fresh-data-section {
-    min-height: 190px; /* Increased height to accommodate 2 lines of text */
+    min-height: 220px; /* Increased height to accommodate 2 lines of text */
+  }
+}
+@media (min-width: 1395px) and (max-width: 1686px) {
+  .fresh-data-section {
+    min-height: 250px; /* Increased height to accommodate 2 lines of text */
   }
 }
 
 @media (max-width: 1200px) {
   .fresh-data-section {
-    min-height: 120px;
+    min-height: 220px;
   }
 }
 
 @media (max-width: 992px) {
   .fresh-data-section {
-    min-height: 120px;
+    min-height: 200px;
   }
 }
 
@@ -642,3 +647,15 @@ ul.timeline > li:nth-child(5):after {
   }
 }
 /*---*/
+
+@media (min-width: 1200px) and (max-width: 1394px) {
+  .h1-custom {
+    font-size: 1.7rem !important;
+  }
+  .p-custom {
+    font-size: 0.8rem !important;
+  }
+  .button-custom {
+    font-size: 0.8rem !important;
+  }
+}
