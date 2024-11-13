@@ -525,7 +525,7 @@ ul.timeline > li:nth-child(5):after {
 }
 
 .fresh-data-section {
-  min-height: 220px; /* Default height */
+  min-height: 230px; /* Default height */
   display: flex;
   flex-direction: column;
 }
@@ -568,26 +568,34 @@ ul.timeline > li:nth-child(5):after {
   }
 }
 
+
 @media (min-width: 1687px) and (max-width: 1709px) {
   .fresh-data-section {
-    min-height: 220px; /* Increased height to accommodate 2 lines of text */
+    min-height: 230px; /* Increased height to accommodate 2 lines of text */
   }
 }
+
 @media (min-width: 1395px) and (max-width: 1686px) {
   .fresh-data-section {
-    min-height: 250px; /* Increased height to accommodate 2 lines of text */
+    min-height: 270px; /* Increased height to accommodate 2 lines of text */
+  }
+}
+
+@media (min-width: 1201) and (max-width: 1394px) {
+  .fresh-data-section {
+    min-height: 270px; /* Increased height to accommodate 2 lines of text */
   }
 }
 
 @media (max-width: 1200px) {
   .fresh-data-section {
-    min-height: 220px;
+    min-height: 250px;
   }
 }
 
 @media (max-width: 992px) {
   .fresh-data-section {
-    min-height: 200px;
+    min-height: 250px;
   }
 }
 
