@@ -182,7 +182,7 @@
           <div class="col-12 text-center">
             <!-- Heading -->
             <h1 class="display-3 font-weight-bold">
-              <span class="text-success"> Lead </span>
+              <span class="text-success">Lead</span>
               Store
             </h1>
 
@@ -214,12 +214,12 @@
       </div>
     </section>
 
-    <!-- Gallery -->
+    <!-- Content -->
     <section class="py-5">
-      <div class="container">
+      <div class="container-fluid">
 
         <!-- Card Search -->
-        <div class="card border mb-6">
+        <div class="card border mb-6 mt-4">
           <div class="card-body p-3">
             <form class="">
               <div class="row justify-content-between align-items-center mx-0">
@@ -243,390 +243,296 @@
           </div>
         </div>
 
-        <div class="row justify-content-center align-items-stretch mt-5">
+        <div class="row">
+          <div class="col-12 col-lg-3">
+            <div class="sticky-top pt-3">
+              <div class="card border">
+                <div class="card-body">
+                  
+                  <!-- Collapse -->
+                  <div class="collapse show" id="filterCollapse">
+                    <!-- Select -->
+                    <div class="form-group mb-3">
+                      <label class="small text-muted">Data Type</label>
+                      <div class="custom-control custom-checkbox mb-2">
+                        <input type="checkbox" class="custom-control-input" id="topLead">
+                        <label class="custom-control-label" for="topLead">Top Lead</label>
+                      </div>
+                      <div class="custom-control custom-checkbox mb-2">
+                        <input type="checkbox" class="custom-control-input" id="customerProfile">
+                        <label class="custom-control-label" for="customerProfile">Customer Profile</label>
+                      </div>
+                    </div>
+                    <!-- Select -->
+                    <div class="form-group mb-3">
+                      <label class="small text-muted">Region</label>
+                      <div class="custom-control custom-checkbox mb-2">
+                        <input type="checkbox" class="custom-control-input" id="india">
+                        <label class="custom-control-label" for="india">India</label>
+                      </div>
+                      <div class="custom-control custom-checkbox mb-2">
+                        <input type="checkbox" class="custom-control-input" id="europe">
+                        <label class="custom-control-label" for="europe">Europe</label>
+                      </div>
+                      <div class="custom-control custom-checkbox mb-2">
+                        <input type="checkbox" class="custom-control-input" id="northAmerica">
+                        <label class="custom-control-label" for="northAmerica">North America</label>
+                      </div>
+                    </div>
 
-          <!-- Card -->
-          <div class="col-12 col-md-6 d-inline-flex">
-            <div class="card card-body border mb-7 mb-md-5 lift">
-
-              <h2 class="h3 font-weight-bold">
-                Lead Package 1
-              </h2>
-            
-              <h3 class="h1 font-weight-bold mb-0">
-                $588
-              </h3>
-
-              <div class="mb-5 border-200 mt-4">
-                <button class="btn btn-sm btn-success rounded-pill w-100 lift mb-3">
-                  Buy it now
-                </button>
-                <a href="signin-illustration.html" type="button"
-                  class="btn btn-sm btn-success-soft rounded-pill w-100 lift" data-toggle="tooltip" data-placement="top"
-                  title="Sign in to see preview of 3 rows of data">
-                  Download sample data
-                </a>
+                  </div>
+                </div>
               </div>
-
-              <hr />
-
-              <small class="h6 font-weight-bold text-muted">
-                Type Data
-              </small>
-              <h3 class="mb-0 text-success">
-                Top Lead
-              </h3>
-
-              <hr />
-
-              <p class="text-gray-700 small mb-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi, minima commodi soluta, vel amet,
-                expedita sapiente tempora officia itaque non? Consequatur repellat aut atque dolorem laboriosam vel,
-                quisquam ad?
-              </p>
-
             </div>
           </div>
+          <div class="col-12 col-lg-9 pt-3">
 
-          <!-- Card -->
-          <div class="col-12 col-md-6 d-inline-flex">
-            <div class="card card-body border mb-7 mb-md-5 lift">
+            <!-- Card -->
+            <div class="card border mb-4">
+              <div class="card-body">
+                <div class="row mx-0 align-items-center">
+                  <div class="col-12 col-md px-0">
+                    <h3 class="h3 font-weight-bold mb-4 mb-md-0">
+                      Lead Package 1
+                    </h3>
+                  </div>
+                  <div class="col-12 col-md-auto px-0">
+                    <a href="signin-illustration.html" type="button"
+                      class="btn btn-sm btn-success rounded-pill w-100 lift" data-toggle="tooltip"
+                      data-placement="top" title="Sign in to see preview of 3 rows of data">
+                      <i class="fe fe-download mr-2"></i>Download sample
+                    </a>
+                  </div>
+                </div>
 
-              <h2 class="h3 font-weight-bold">
-                Lead Package 2
-              </h2>
-            
-              <h3 class="h1 font-weight-bold mb-0">
-                $1588
-              </h3>
+                <hr />
 
-              <div class="mb-5 border-200 mt-4">
-                <button class="btn btn-sm btn-success rounded-pill w-100 lift mb-3">
-                  Buy it now
-                </button>
-                <a href="signin-illustration.html" type="button"
-                  class="btn btn-sm btn-success-soft rounded-pill w-100 lift" data-toggle="tooltip" data-placement="top"
-                  title="Sign in to see preview of 3 rows of data">
-                  Download sample data
-                </a>
+                <p class="text-gray-700 small mb-4">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi, minima commodi soluta, vel amet,
+                  expedita sapiente tempora officia itaque non? Consequatur repellat aut atque dolorem laboriosam vel,
+                  quisquam ad?
+                </p>
+
+                <div class="row mx-0 align-items-center">
+                  <div class="col-12 col-md px-0">
+                    <span class="small badge badge-success-soft">Top Lead</span>
+                  </div>
+                  <div class="col-12 col-md-auto px-0 text-right mt-3 mt-md-0">
+                    <a href="lead-store-profile.html" class="h4 text-success font-weight-bolder d-inline-flex align-items-center mb-0">
+                      Learn more <i class="fe fe-arrow-right ml-2"></i>
+                    </a>
+                  </div>
+                </div>
+
               </div>
-
-              <hr />
-
-              <small class="h6 font-weight-bold text-muted">
-                Type Data
-              </small>
-              <h3 class="mb-0 text-success">
-                Customer Profile
-              </h3>
-
-              <hr />
-
-              <p class="text-gray-700 small mb-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi, minima commodi soluta, vel amet,
-                expedita sapiente tempora officia itaque non? Consequatur repellat aut atque dolorem laboriosam vel,
-                quisquam ad?
-              </p>
-
             </div>
-          </div>
 
-          <!-- Card -->
-          <div class="col-12 col-md-6 d-inline-flex">
-            <div class="card card-body border mb-7 mb-md-5 lift">
+            <!-- Card -->
+            <div class="card border mb-4">
+              <div class="card-body">
+                <div class="row mx-0 align-items-center">
+                  <div class="col-12 col-md px-0">
+                    <h3 class="h3 font-weight-bold mb-4 mb-md-0">
+                      Lead Package 2
+                    </h3>
+                  </div>
+                  <div class="col-12 col-md-auto px-0">
+                    <a href="signin-illustration.html" type="button"
+                      class="btn btn-sm btn-success rounded-pill w-100 lift" data-toggle="tooltip"
+                      data-placement="top" title="Sign in to see preview of 3 rows of data">
+                      <i class="fe fe-download mr-2"></i>Download sample
+                    </a>
+                  </div>
+                </div>
 
-              <h2 class="h3 font-weight-bold">
-                Lead Package 3
-              </h2>
-            
-              <h3 class="h1 font-weight-bold mb-0">
-                $2000
-              </h3>
+                <hr />
 
-              <div class="mb-5 border-200 mt-4">
-                <button class="btn btn-sm btn-success rounded-pill w-100 lift mb-3">
-                  Buy it now
-                </button>
-                <a href="signin-illustration.html" type="button"
-                  class="btn btn-sm btn-success-soft rounded-pill w-100 lift" data-toggle="tooltip" data-placement="top"
-                  title="Sign in to see preview of 3 rows of data">
-                  Download sample data
-                </a>
+                <p class="text-gray-700 small mb-4">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi, minima commodi soluta, vel amet,
+                  expedita sapiente tempora officia itaque non? Consequatur repellat aut atque dolorem laboriosam vel,
+                  quisquam ad?
+                </p>
+
+                <div class="row mx-0 align-items-center">
+                  <div class="col-12 col-md px-0">
+                    <span class="small badge badge-success-soft">Customer Profile</span>
+                  </div>
+                  <div class="col-12 col-md-auto px-0 text-right mt-3 mt-md-0">
+                    <a href="lead-store-profile.html" class="h4 text-success font-weight-bolder d-inline-flex align-items-center mb-0">
+                      Learn more <i class="fe fe-arrow-right ml-2"></i>
+                    </a>
+                  </div>
+                </div>
+
               </div>
-
-              <hr />
-
-              <small class="h6 font-weight-bold text-muted">
-                Type Data
-              </small>
-              <h3 class="mb-0 text-success">
-                Lead List for Microsoft
-              </h3>
-
-              <hr />
-
-              <p class="text-gray-700 small mb-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi, minima commodi soluta, vel amet,
-                expedita sapiente tempora officia itaque non? Consequatur repellat aut atque dolorem laboriosam vel,
-                quisquam ad?
-              </p>
-
             </div>
-          </div>
 
-          <!-- Card -->
-          <div class="col-12 col-md-6 d-inline-flex">
-            <div class="card card-body border mb-7 mb-md-5 lift">
+            <!-- Card -->
+            <div class="card border mb-4">
+              <div class="card-body">
+                <div class="row mx-0 align-items-center">
+                  <div class="col-12 col-md px-0">
+                    <h3 class="h3 font-weight-bold mb-4 mb-md-0">
+                      Lead Package 3
+                    </h3>
+                  </div>
+                  <div class="col-12 col-md-auto px-0">
+                    <a href="signin-illustration.html" type="button"
+                      class="btn btn-sm btn-success rounded-pill w-100 lift" data-toggle="tooltip"
+                      data-placement="top" title="Sign in to see preview of 3 rows of data">
+                      <i class="fe fe-download mr-2"></i>Download sample
+                    </a>
+                  </div>
+                </div>
 
-              <h2 class="h3 font-weight-bold">
-                Lead Package 4
-              </h2>
-            
-              <h3 class="h1 font-weight-bold mb-0">
-                $2500
-              </h3>
+                <hr />
 
-              <div class="mb-5 border-200 mt-4">
-                <button class="btn btn-sm btn-success rounded-pill w-100 lift mb-3">
-                  Buy it now
-                </button>
-                <a href="signin-illustration.html" type="button"
-                  class="btn btn-sm btn-success-soft rounded-pill w-100 lift" data-toggle="tooltip" data-placement="top"
-                  title="Sign in to see preview of 3 rows of data">
-                  Download sample data
-                </a>
+                <p class="text-gray-700 small mb-4">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi, minima commodi soluta, vel amet,
+                  expedita sapiente tempora officia itaque non? Consequatur repellat aut atque dolorem laboriosam vel,
+                  quisquam ad?
+                </p>
+
+                <div class="row mx-0 align-items-center">
+                  <div class="col-12 col-md px-0">
+                    <span class="small badge badge-success-soft">Lead list for Microsoft</span>
+                  </div>
+                  <div class="col-12 col-md-auto px-0 text-right mt-3 mt-md-0">
+                    <a href="lead-store-profile.html" class="h4 text-success font-weight-bolder d-inline-flex align-items-center mb-0">
+                      Learn more <i class="fe fe-arrow-right ml-2"></i>
+                    </a>
+                  </div>
+                </div>
+
               </div>
-
-              <hr />
-
-              <small class="h6 font-weight-bold text-muted">
-                Type Data
-              </small>
-              <h3 class="mb-0 text-success">
-                Top Lead
-              </h3>
-
-              <hr />
-
-              <p class="text-gray-700 small mb-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi, minima commodi soluta, vel amet,
-                expedita sapiente tempora officia itaque non? Consequatur repellat aut atque dolorem laboriosam vel,
-                quisquam ad?
-              </p>
-
             </div>
-          </div>
 
-          <!-- Card -->
-          <div class="col-12 col-md-6 d-inline-flex">
-            <div class="card card-body border mb-7 mb-md-5 lift">
+            <!-- Card -->
+            <div class="card border mb-4">
+              <div class="card-body">
+                <div class="row mx-0 align-items-center">
+                  <div class="col-12 col-md px-0">
+                    <h3 class="h3 font-weight-bold mb-4 mb-md-0">
+                      Lead Package 4
+                    </h3>
+                  </div>
+                  <div class="col-12 col-md-auto px-0">
+                    <a href="signin-illustration.html" type="button"
+                      class="btn btn-sm btn-success rounded-pill w-100 lift" data-toggle="tooltip"
+                      data-placement="top" title="Sign in to see preview of 3 rows of data">
+                      <i class="fe fe-download mr-2"></i>Download sample
+                    </a>
+                  </div>
+                </div>
 
-              <h2 class="h3 font-weight-bold">
-                Lead Package 5
-              </h2>
-            
-              <h3 class="h1 font-weight-bold mb-0">
-                $1500
-              </h3>
+                <hr />
 
-              <div class="mb-5 border-200 mt-4">
-                <button class="btn btn-sm btn-success rounded-pill w-100 lift mb-3">
-                  Buy it now
-                </button>
-                <a href="signin-illustration.html" type="button"
-                  class="btn btn-sm btn-success-soft rounded-pill w-100 lift" data-toggle="tooltip" data-placement="top"
-                  title="Sign in to see preview of 3 rows of data">
-                  Download sample data
-                </a>
+                <p class="text-gray-700 small mb-4">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi, minima commodi soluta, vel amet,
+                  expedita sapiente tempora officia itaque non? Consequatur repellat aut atque dolorem laboriosam vel,
+                  quisquam ad?
+                </p>
+
+                <div class="row mx-0 align-items-center">
+                  <div class="col-12 col-md px-0">
+                    <span class="small badge badge-success-soft">Top Lead</span>
+                  </div>
+                  <div class="col-12 col-md-auto px-0 text-right mt-3 mt-md-0">
+                    <a href="lead-store-profile.html" class="h4 text-success font-weight-bolder d-inline-flex align-items-center mb-0">
+                      Learn more <i class="fe fe-arrow-right ml-2"></i>
+                    </a>
+                  </div>
+                </div>
+
               </div>
-
-              <hr />
-
-              <small class="h6 font-weight-bold text-muted">
-                Type Data
-              </small>
-              <h3 class="mb-0 text-success">
-                Customer Profile
-              </h3>
-
-              <hr />
-
-              <p class="text-gray-700 small mb-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi, minima commodi soluta, vel amet,
-                expedita sapiente tempora officia itaque non? Consequatur repellat aut atque dolorem laboriosam vel,
-                quisquam ad?
-              </p>
-
             </div>
-          </div>
 
-          <!-- Card -->
-          <div class="col-12 col-md-6 d-inline-flex">
-            <div class="card card-body border mb-7 mb-md-5 lift">
+            <!-- Card -->
+            <div class="card border mb-4">
+              <div class="card-body">
+                <div class="row mx-0 align-items-center">
+                  <div class="col-12 col-md px-0">
+                    <h3 class="h3 font-weight-bold mb-4 mb-md-0">
+                      Lead Package 5
+                    </h3>
+                  </div>
+                  <div class="col-12 col-md-auto px-0">
+                    <a href="signin-illustration.html" type="button"
+                      class="btn btn-sm btn-success rounded-pill w-100 lift" data-toggle="tooltip"
+                      data-placement="top" title="Sign in to see preview of 3 rows of data">
+                      <i class="fe fe-download mr-2"></i>Download sample
+                    </a>
+                  </div>
+                </div>
 
-              <h2 class="h3 font-weight-bold">
-                Lead Package 6
-              </h2>
-            
-              <h3 class="h1 font-weight-bold mb-0">
-                $3500
-              </h3>
+                <hr />
 
-              <div class="mb-5 border-200 mt-4">
-                <button class="btn btn-sm btn-success rounded-pill w-100 lift mb-3">
-                  Buy it now
-                </button>
-                <a href="signin-illustration.html" type="button"
-                  class="btn btn-sm btn-success-soft rounded-pill w-100 lift" data-toggle="tooltip" data-placement="top"
-                  title="Sign in to see preview of 3 rows of data">
-                  Download sample data
-                </a>
+                <p class="text-gray-700 small mb-4">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi, minima commodi soluta, vel amet,
+                  expedita sapiente tempora officia itaque non? Consequatur repellat aut atque dolorem laboriosam vel,
+                  quisquam ad?
+                </p>
+
+                <div class="row mx-0 align-items-center">
+                  <div class="col-12 col-md px-0">
+                    <span class="small badge badge-success-soft">Customer Profile</span>
+                  </div>
+                  <div class="col-12 col-md-auto px-0 text-right mt-3 mt-md-0">
+                    <a href="lead-store-profile.html" class="h4 text-success font-weight-bolder d-inline-flex align-items-center mb-0">
+                      Learn more <i class="fe fe-arrow-right ml-2"></i>
+                    </a>
+                  </div>
+                </div>
+
               </div>
-
-              <hr />
-
-              <small class="h6 font-weight-bold text-muted">
-                Type Data
-              </small>
-              <h3 class="mb-0 text-success">
-                Lead List for Apple
-              </h3>
-
-              <hr />
-
-              <p class="text-gray-700 small mb-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi, minima commodi soluta, vel amet,
-                expedita sapiente tempora officia itaque non? Consequatur repellat aut atque dolorem laboriosam vel,
-                quisquam ad?
-              </p>
-
             </div>
-          </div>
 
+            <!-- Card -->
+            <div class="card border mb-4">
+              <div class="card-body">
+                <div class="row mx-0 align-items-center">
+                  <div class="col-12 col-md px-0">
+                    <h3 class="h3 font-weight-bold mb-4 mb-md-0">
+                      Lead Package 6
+                    </h3>
+                  </div>
+                  <div class="col-12 col-md-auto px-0">
+                    <a href="signin-illustration.html" type="button"
+                      class="btn btn-sm btn-success rounded-pill w-100 lift" data-toggle="tooltip"
+                      data-placement="top" title="Sign in to see preview of 3 rows of data">
+                      <i class="fe fe-download mr-2"></i>Download sample
+                    </a>
+                  </div>
+                </div>
+
+                <hr />
+
+                <p class="text-gray-700 small mb-4">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi, minima commodi soluta, vel amet,
+                  expedita sapiente tempora officia itaque non? Consequatur repellat aut atque dolorem laboriosam vel,
+                  quisquam ad?
+                </p>
+
+                <div class="row mx-0 align-items-center">
+                  <div class="col-12 col-md px-0">
+                    <span class="small badge badge-success-soft">Lead list for Apple</span>
+                  </div>
+                  <div class="col-12 col-md-auto px-0 text-right mt-3 mt-md-0">
+                    <a href="lead-store-profile.html" class="h4 text-success font-weight-bolder d-inline-flex align-items-center mb-0">
+                      Learn more <i class="fe fe-arrow-right ml-2"></i>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
         </div>
+
       </div>
     </section>
   </main>
-
-  <!-- Modal Download ATT -->
-  <div class="modal fade" id="modalDownloadATT" tabindex="-1" aria-labelledby="modalDownloadATTLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalDownloadATTLabel">Download Applicant Tracking Template</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="mb-3">
-              <label for="inputName" class="form-label">Name</label>
-              <input type="text" class="form-control" id="inputName" aria-describedby="inputName"
-                placeholder="input your name">
-            </div>
-            <div class="mb-3">
-              <label for="inputCompanyName" class="form-label">Company Name</label>
-              <input type="text" class="form-control" id="inputCompanyName" aria-describedby="inputCompanyName"
-                placeholder="input your company name">
-            </div>
-            <div class="mb-3">
-              <label for="inputPositionName" class="form-label">Position in company</label>
-              <input type="text" class="form-control" id="inputPositionName" aria-describedby="inputPositionName"
-                placeholder="ex: CXO/Product Manager/Others">
-            </div>
-            <div class="mb-3">
-              <label for="inputWorkEmail" class="form-label">Work email address</label>
-              <input type="email" class="form-control" id="inputWorkEmail" aria-describedby="inputWorkEmail"
-                placeholder="ex: name@company.com">
-            </div>
-            <button type="submit" class="btn btn-success w-100 mt-3">Send File To Email</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal Download LTT -->
-  <div class="modal fade" id="modalDownloadLTT" tabindex="-1" aria-labelledby="modalDownloadLTTLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalDownloadLTTLabel">Download Lead Tracker Template</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="mb-3">
-              <label for="inputName" class="form-label">Name</label>
-              <input type="text" class="form-control" id="inputName" aria-describedby="inputName"
-                placeholder="input your name">
-            </div>
-            <div class="mb-3">
-              <label for="inputCompanyName" class="form-label">Company Name</label>
-              <input type="text" class="form-control" id="inputCompanyName" aria-describedby="inputCompanyName"
-                placeholder="input your company name">
-            </div>
-            <div class="mb-3">
-              <label for="inputPositionName" class="form-label">Position in company</label>
-              <input type="text" class="form-control" id="inputPositionName" aria-describedby="inputPositionName"
-                placeholder="ex: CXO/Product Manager/Others">
-            </div>
-            <div class="mb-3">
-              <label for="inputWorkEmail" class="form-label">Work email address</label>
-              <input type="email" class="form-control" id="inputWorkEmail" aria-describedby="inputWorkEmail"
-                placeholder="ex: name@company.com">
-            </div>
-            <button type="submit" class="btn btn-success w-100 mt-3">Send File To Email</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal Download CET -->
-  <div class="modal fade" id="modalDownloadCET" tabindex="-1" aria-labelledby="modalDownloadCETLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalDownloadCETLabel">Download CRM Enrichment Template</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="mb-3">
-              <label for="inputName" class="form-label">Name</label>
-              <input type="text" class="form-control" id="inputName" aria-describedby="inputName"
-                placeholder="input your name">
-            </div>
-            <div class="mb-3">
-              <label for="inputCompanyName" class="form-label">Company Name</label>
-              <input type="text" class="form-control" id="inputCompanyName" aria-describedby="inputCompanyName"
-                placeholder="input your company name">
-            </div>
-            <div class="mb-3">
-              <label for="inputPositionName" class="form-label">Position in company</label>
-              <input type="text" class="form-control" id="inputPositionName" aria-describedby="inputPositionName"
-                placeholder="ex: CXO/Product Manager/Others">
-            </div>
-            <div class="mb-3">
-              <label for="inputWorkEmail" class="form-label">Work email address</label>
-              <input type="email" class="form-control" id="inputWorkEmail" aria-describedby="inputWorkEmail"
-                placeholder="ex: name@company.com">
-            </div>
-            <button type="submit" class="btn btn-success w-100 mt-3">Send File To Email</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- FOOTER 
   ================================================== -->

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Libs CSS -->
+  <link rel="stylesheet" href="./assets/fonts/Feather/feather.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/neuicons@1.9.0/css/neu.min.css" />
+  <link rel="stylesheet" href="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="./assets/libs/aos/dist/aos.css" />
+  <link rel="stylesheet" href="./assets/libs/choices.js/public/assets/styles/choices.min.css" />
+  <link rel="stylesheet" href="./assets/libs/flickity-fade/flickity-fade.css" />
+  <link rel="stylesheet" href="./assets/libs/flickity/dist/flickity.min.css" />
+  <link rel="stylesheet" href="./assets/libs/highlightjs/styles/vs2015.css" />
+  <link rel="stylesheet" href="./assets/libs/jarallax/dist/jarallax.css" />
+  <link rel="stylesheet" href="./assets/libs/quill/dist/quill.core.css" />
+  <link rel="stylesheet" href="./style_blog.css" />
+
+  <!-- Map -->
+  <link href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" rel="stylesheet" />
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="./assets/css/theme.min.css" />
+
+  <!-- Import Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style-2.css" />
+
+  <title>Sapiengraph - Lead Store Profile</title>
+
+  <!-- Import jquery -->
+  <script src="./assets/libs/jquery/dist/jquery.min.js"></script>
+
+  <!-- Import Bootstrap -->
+  <script src="./assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="bg-light">
+  <!-- NAVBAR
+  ================================================== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container-fluid">
+      <!-- Brand -->
+      <a class="navbar-brand" href="./index.html">
+        <img src="./assets/img/Sapiengraph logo.svg" class="navbar-brand-img" alt="Sapiengraph logo" />
+      </a>
+
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fe fe-x"></i>
+        </button>
+
+        <!-- Navigation -->
+        <ul class="navbar-nav ml-auto">
+          <li class="dropdown nav-item">
+            <a class="dropdown-toggle nav-link" id="navbarAccount" data-toggle="dropdown" href="#" aria-haspopup="true"
+              aria-expanded="false">
+              Products <i class="fe fe-chevron-down"></i>
+            </a>
+
+            <div class="dropdown-menu pb-4" aria-labelledby="navbarSolutions">
+              <div class="row justify-content-center">
+                <div class="col-12">
+                  <h2 class="small text-uppercase font-weight-bold text-success mb-1">
+                    <svg class="d-inline-flex mb-2" xmlns="http://www.w3.org/2000/svg" width="18" height="auto"
+                      viewBox="0 0 24 24">
+                      <g fill="currentColor">
+                        <path
+                          d="m7.303 13.51 2.83-1.415a4.4 4.4 0 0 0 1.962-1.962l1.414-2.83a.548.548 0 0 1 .981 0l1.415 2.83a4.4 4.4 0 0 0 1.962 1.962l2.83 1.414a.548.548 0 0 1 0 .981l-2.83 1.415a4.4 4.4 0 0 0-1.962 1.962l-1.414 2.83a.548.548 0 0 1-.982 0l-1.414-2.83a4.4 4.4 0 0 0-1.962-1.962l-2.83-1.414a.548.548 0 0 1 0-.981m.354-6.693L8.87 6.21a.235.235 0 0 0 0-.42l-1.213-.606a1.88 1.88 0 0 1-.84-.841L6.21 3.13a.235.235 0 0 0-.42 0l-.607 1.213a1.88 1.88 0 0 1-.84.84L3.13 5.79a.235.235 0 0 0 0 .42l1.213.607c.363.182.658.477.84.84L5.79 8.87a.235.235 0 0 0 .42 0l.606-1.212a1.88 1.88 0 0 1 .841-.841">
+                        </path>
+                      </g>
+                    </svg>
+                    5-Minute Growth Tools
+                  </h2>
+
+                  <div class="dropdown-item">
+                    <a class="dropdown-link custom-link" href="#">
+                      B2B Enrichment for Excel / Google Sheets
+                    </a>
+                  </div>
+
+                  <div class="dropdown-item">
+                    <a class="dropdown-link custom-link pl-4" href="#">
+                      ᴸ Formula Documentation
+                    </a>
+                  </div>
+
+                  <div class="dropdown-item">
+                    <a class="dropdown-link custom-link" href="prospector.html">
+                      Prospector with Export
+                    </a>
+                  </div>
+
+                  <div class="dropdown-item">
+                    <a class="dropdown-link custom-link" href="#">
+                      Job Change Monitor
+                      <span class="text-success font-weight-bold">(FREE)</span>
+                    </a>
+                  </div>
+
+                  <div class="dropdown-item mb-0">
+                    <a class="dropdown-link custom-link" href="#"> API </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="dropdown nav-item">
+            <a class="dropdown-toggle nav-link" id="navbarAccount" data-toggle="dropdown" href="#" aria-haspopup="true"
+              aria-expanded="false">
+              Solutions <i class="fe fe-chevron-down"></i>
+            </a>
+
+            <div class="dropdown-menu pb-4" aria-labelledby="navbarSolutions">
+              <div class="row justify-content-center">
+                <div class="col-12">
+                  <div class="dropdown-item mb-2">
+                    <a class="dropdown-link custom-link" href="template-gallery.html">
+                      Spreadsheet Template Gallery
+                      <span class="text-success font-weight-bold">(FREE)</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="pricing.html"> Pricing </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html"> Blog </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#!"> FAQ </a>
+          </li>
+        </ul>
+
+        <!-- Button -->
+
+        <div class="text-center ml-auto">
+          <!-- Button -->
+          <a class="btn btn-sm btn-link font-weight-bold text-white text-md-gray" href="signin-illustration.html">
+            Sign in
+          </a>
+
+          <a class="navbar-btn btn btn-pill btn-sm btn-white text-success text-md-gray lift ml-auto shadow-light-lg"
+            href="#!" target="_blank">
+            Set up new account
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content
+  ================================================== -->
+  <main>
+
+    <!-- Content -->
+    <section class="py-5">
+      <div class="container-fluid">
+
+        <div class="row">
+          <div class="col-12 col-lg-8 pt-3">
+
+            <!-- Card -->
+            <div class="card border mb-4">
+              <div class="card-body">
+                <div class="row mx-0 align-items-center">
+                  <div class="col-12 col-md px-0">
+                    <h1 class="h2 font-weight-bold mb-4 mb-md-0">
+                      Lead Package 1
+                    </h1>
+                    <span class="small badge badge-success-soft">Top Lead</span>
+                  </div>
+                  <div class="col-12 col-md-auto px-0">
+                    <a href="signin-illustration.html" type="button"
+                      class="btn btn-sm btn-success rounded-pill w-100 lift" data-toggle="tooltip" data-placement="top"
+                      title="Sign in to see preview of 3 rows of data">
+                      <i class="fe fe-download mr-2"></i>Download sample
+                    </a>
+                  </div>
+                </div>
+
+                <hr />
+
+                <p class="mb-4">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil. Veniam accusantium ea quod tempora ipsum dolor sit amet, consectetur adipisicing elit.
+                  <br /><br />
+                  Animi nesciunt voluptas, quisquam aspernatur quos nisi aperiam error commodi nobis eligendi soluta et accusamus laboriosam perferendis ex, sequi dicta praesentium vitae! Voluptatibus minima facere dolore assumenda natus quia numquam eaque ab!
+                  <br /><br />
+                  Corporis, ipsam voluptatum doloremque iure a quis beatae quam placeat quisquam ipsum quos, maxime eius inventore perferendis provident asperiores vitae! Laudantium, aperiam excepturi architecto provident nostrum soluta laborum perferendis labore distinctio.
+                  <br /><br />
+                  Possimus, eum natus distinctio provident magnam cupiditate asperiores modi! Accusantium, quaerat. Vel, quisquam quis eum numquam iusto obcaecati, explicabo sapiente error deserunt perspiciatis nisi laboriosam possimus debitis totam! Delectus, quae dolore.
+                  <br /><br />
+                  Ratione, magnam. Beatae nesciunt expedita nemo, accusamus sequi eligendi corporis possimus reiciendis perspiciatis cum recusandae tempora necessitatibus soluta deserunt explicabo quia neque incidunt!
+                </p>
+
+              </div>
+            </div>
+
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="sticky-top pt-3">
+              <div class="card border">
+                <div class="card-body">
+                  <h5 class="h5 font-weight-bold text-uppercase text-muted text-center mb-6 letter-spacing-lg">
+                    Price
+                  </h5>
+                  <h1 class="display-3 text-center mb-6">
+                    $1588
+                  </h1>
+                  <a href="signin-illustration.html" type="button"
+                    class="btn btn-sm btn-success rounded-pill w-100 lift d-inline-flex align-items-center justify-content-center ">
+                    <i class="fe fe-credit-card mr-2"></i>Buy it now
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER 
+  ================================================== -->
+  <footer class="py-8 py-md-11 bg-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4 col-lg-3">
+          <!-- Brand -->
+          <img src="./assets/img/Sapiengraph logo.svg" alt="proxycurl logo" class="footer-brand img-fluid mb-2" />
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">
+            Sapiengraph
+          </h6>
+
+          <!-- List -->
+          <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
+            <li class="mb-3">
+              <a href="index.html" class="text-reset"> Home </a>
+            </li>
+            <li class="mb-3">
+              <a href="#pricing" class="text-reset"> Pricing </a>
+            </li>
+            <li class="mb-3">
+              <a href="#!" class="text-reset"> Blog </a>
+            </li>
+            <li class="mb-3">
+              <a href="terms-of-use.html" class="text-reset">
+                Terms Of Use
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="#" class="text-reset"> Privacy Policy </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">
+            Products
+          </h6>
+
+          <!-- List -->
+          <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
+            <li class="mb-3">
+              <a href="#!" class="text-reset">
+                B2B Data Enrichment for Excel / Google Sheets
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="prospector.html" class="text-reset">
+                Prospector with Export
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="#!" class="text-reset"> Job Change Monitor (FREE) </a>
+            </li>
+            <li class="mb-3">
+              <a href="#!" class="text-reset">
+                Spreadsheet Template Gallery
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="https://nubela.co/proxycurl" class="text-reset" target="_blank">
+                API
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4 offset-md-4 col-lg-2 offset-lg-0">
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">
+            Solution
+          </h6>
+
+          <ul class="list-unstyled text-muted mb-6">
+            <li class="mb-3">
+              <a href="#" class="text-reset"> Solution </a>
+            </li>
+          </ul>
+
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">
+            Company
+          </h6>
+
+          <!-- List -->
+          <ul class="list-unstyled text-muted mb-0">
+            <li class="mb-3">
+              <a href="https://nubela.co" class="text-reset"> Company </a>
+            </li>
+            <li class="mb-3">
+              <a href="team.html" class="text-reset"> Team </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">Help</h6>
+
+          <!-- List -->
+          <ul class="list-unstyled text-muted mb-0">
+            <li class="mb-3">
+              <a href="mailto:hello@sapiengraph.com" class="text-reset">
+                Email us
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="#" class="text-reset"> Support </a>
+            </li>
+            <li class="mb-3">
+              <a href="#" class="text-reset"> FAQ </a>
+            </li>
+            <li class="mb-3">
+              <a href="#" class="text-reset"> Refund Policy </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- / .row -->
+      <br />
+
+      <hr />
+      <br />
+
+      <div class="text-center">
+        <p class="caption">Nubela Pte Ltd. All rights reserved.</p>
+      </div>
+    </div>
+    <!-- / .container -->
+  </footer>
+
+  <!-- JAVASCRIPT
+    ================================================== -->
+  <!-- Libs JS -->
+  <script src="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+  <script src="./assets/libs/aos/dist/aos.js"></script>
+  <script src="./assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+  <script src="./assets/libs/countup.js/dist/countUp.min.js"></script>
+  <script src="./assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+  <script src="./assets/libs/flickity/dist/flickity.pkgd.min.js"></script>
+  <script src="./assets/libs/flickity-fade/flickity-fade.js"></script>
+  <script src="./assets/libs/highlightjs/highlight.pack.min.js"></script>
+  <script src="./assets/libs/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="./assets/libs/isotope-layout/dist/isotope.pkgd.min.js"></script>
+  <script src="./assets/libs/jarallax/dist/jarallax.min.js"></script>
+  <script src="./assets/libs/jarallax/dist/jarallax-video.min.js"></script>
+  <script src="./assets/libs/jarallax/dist/jarallax-element.min.js"></script>
+  <script src="./assets/libs/quill/dist/quill.min.js"></script>
+  <script src="./assets/libs/smooth-scroll/dist/smooth-scroll.min.js"></script>
+  <script src="./assets/libs/typed.js/lib/typed.min.js"></script>
+
+  <!-- Map -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js"></script>
+
+  <!-- Theme JS -->
+  <script src="./assets/js/theme.min.js"></script>
+</body>
+
+</html>
