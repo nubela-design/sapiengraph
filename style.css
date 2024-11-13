@@ -632,31 +632,43 @@ ul.timeline > li:nth-child(5):after {
 }
 
 .fresh-data-section-monthly {
-  min-height: 120px; /* Default height */
+  min-height: 230px; /* Default height */
   display: flex;
   flex-direction: column;
 }
 
 @media (min-width: 1671px) and (max-width: 1741px) {
   .fresh-data-section-monthly {
-    min-height: 20px; /* Increased height to accommodate 2 lines of text */
+    min-height: 220px; /* Increased height to accommodate 2 lines of text */
+  }
+}
+
+@media (min-width: 1329px) and (max-width: 1408px) {
+  .fresh-data-section-monthly {
+    min-height: 200px; /* Increased height to accommodate 2 lines of text */
+  }
+}
+
+@media (min-width: 1230px) and (max-width: 1328px) {
+  .fresh-data-section-monthly {
+    min-height: 220px; /* Increased height to accommodate 2 lines of text */
   }
 }
 
 @media (max-width: 1200px) {
   .fresh-data-section-monthly {
-    min-height: 120px;
+    min-height: 220px;
   }
 }
 
 @media (max-width: 992px) {
   .fresh-data-section-monthly {
-    min-height: 120px;
+    min-height: 220px;
   }
 }
 /*---*/
 
-@media (min-width: 1200px) and (max-width: 1394px) {
+@media (min-width: 1200px) and (max-width: 1408px) {
   .h1-custom {
     font-size: 1.7rem !important;
   }
