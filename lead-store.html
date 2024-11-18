@@ -218,8 +218,8 @@
     <section class="py-5">
       <div class="container-fluid">
 
-        <!-- Card Search -->
-        <div class="card border mb-0 mb-md-3 mt-0 mt-md-0">
+        <!-- Search Mobile -->
+        <div class="card border mb-0 mb-md-3 mt-0 mt-md-0 d-md-none">
           <div class="card-body p-3">
             <form class="">
               <div class="row justify-content-between align-items-center mx-0">
@@ -243,13 +243,35 @@
           </div>
         </div>
 
+        <!-- Search Tablet & Desktop -->
+        <div class="row d-none d-md-block">
+          <div class="col-12">
+            <form class="">
+              <div class="input-group mb-3">
+                <select class="custom-select" id="inputGroupSelect02">
+                  <option selected>Search by Company</option>
+                  <option value="1">Search by Keyword</option>
+                </select>
+                <input type="text" class="form-control" placeholder="Search leads..." aria-label="Search" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-success" type="button" id="button-addon2">
+                    <i class="fe fe-search"></i>
+                  </button>
+                </div>
+              </div>              
+            </form>
+          </div>
+        </div>
+
         <div class="row">
           <div class="col-12 col-lg-3 pr-lg-2">
             <div class="sticky-top pt-3">
               <div class="card border">
                 <div class="card-body p-4">
                   <!-- Add collapse toggle button for mobile only -->
-                  <button class="btn btn-link w-100 d-lg-none px-0 text-dark text-decoration-none" type="button" data-toggle="collapse" data-target="#filterCollapse" aria-expanded="true" aria-controls="filterCollapse">
+                  <button class="btn btn-link w-100 d-lg-none px-0 text-dark text-decoration-none" type="button"
+                    data-toggle="collapse" data-target="#filterCollapse" aria-expanded="true"
+                    aria-controls="filterCollapse">
                     <div class="d-flex justify-content-between align-items-center">
                       <span class="h3 mb-0 font-weight-bold">Filters</span>
                       <span class="fe fe-chevron-down"></span>
@@ -258,7 +280,7 @@
 
                   <!-- Modify collapse div to stay expanded on desktop -->
                   <div class="collapse d-lg-block" id="filterCollapse">
-                    <!-- Select -->
+                    <!-- Filter Data Type -->
                     <div class="form-group mb-3">
                       <label class="small text-muted">Data Type</label>
                       <div class="custom-control custom-checkbox mb-2">
@@ -270,7 +292,7 @@
                         <label class="custom-control-label" for="customerProfile">Customer Profile</label>
                       </div>
                     </div>
-                    <!-- Select -->
+                    <!-- Filter Region -->
                     <div class="form-group mb-3">
                       <label class="small text-muted">Region</label>
                       <div class="custom-control custom-checkbox mb-2">
@@ -286,6 +308,76 @@
                         <label class="custom-control-label" for="northAmerica">North America</label>
                       </div>
                     </div>
+                    <!-- Filter Date -->
+                    <div class="form-group">
+                      <label class="small text-muted">Scrapped Date</label>
+                      <input type="date" class="form-control form-control-xs mb-3" id="dateFrom">
+                      <input type="date" class="form-control form-control-xs" id="dateTo">
+                    </div>
+                    <!-- Filter Ratings -->
+                    <div class="form-group mb-3">
+                      <label class="small text-muted">Ratings</label>
+                      <div class="custom-control custom-checkbox mb-2">
+                        <input type="checkbox" class="custom-control-input" id="rating5">
+                        <label class="custom-control-label" for="rating5">
+                          <div class="d-flex mt-md-1">
+                            <span class="rating neu-so-stars fs-14 checked"></span>
+                            <span class="rating neu-so-stars fs-14 checked"></span>
+                            <span class="rating neu-so-stars fs-14 checked"></span>
+                            <span class="rating neu-so-stars fs-14 checked"></span>
+                            <span class="rating neu-so-stars fs-14 checked"></span>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="custom-control custom-checkbox mb-2">
+                        <input type="checkbox" class="custom-control-input" id="rating4">
+                        <label class="custom-control-label" for="rating4">
+                          <div class="d-flex mt-md-1">
+                            <span class="rating neu-so-stars fs-14 checked"></span>
+                            <span class="rating neu-so-stars fs-14 checked"></span>
+                            <span class="rating neu-so-stars fs-14 checked"></span>
+                            <span class="rating neu-so-stars fs-14 checked"></span>
+                            <span class="rating neu-so-stars fs-14"></span>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="custom-control custom-checkbox mb-2">
+                        <input type="checkbox" class="custom-control-input" id="rating3">
+                        <label class="custom-control-label" for="rating3">
+                          <div class="d-flex mt-md-1">
+                            <span class="rating neu-so-stars fs-14 checked"></span>
+                            <span class="rating neu-so-stars fs-14 checked"></span>
+                            <span class="rating neu-so-stars fs-14 checked"></span>
+                            <span class="rating neu-so-stars fs-14"></span>
+                            <span class="rating neu-so-stars fs-14"></span>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="custom-control custom-checkbox mb-2">
+                        <input type="checkbox" class="custom-control-input" id="rating2">
+                        <label class="custom-control-label" for="rating2">
+                          <div class="d-flex mt-md-1">
+                            <span class="rating neu-so-stars fs-14 checked"></span>
+                            <span class="rating neu-so-stars fs-14 checked"></span>
+                            <span class="rating neu-so-stars fs-14"></span>
+                            <span class="rating neu-so-stars fs-14"></span>
+                            <span class="rating neu-so-stars fs-14"></span>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="custom-control custom-checkbox mb-2">
+                        <input type="checkbox" class="custom-control-input" id="rating1">
+                        <label class="custom-control-label" for="rating1">
+                          <div class="d-flex mt-md-1">
+                            <span class="rating neu-so-stars fs-14 checked"></span>
+                            <span class="rating neu-so-stars fs-14"></span>
+                            <span class="rating neu-so-stars fs-14"></span>
+                            <span class="rating neu-so-stars fs-14"></span>
+                            <span class="rating neu-so-stars fs-14"></span>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
 
                   </div>
                 </div>
@@ -298,34 +390,50 @@
             <div class="card border mb-4">
               <div class="card-body">
                 <div class="row mx-0 align-items-center">
-                  <div class="col-12 col-md px-0">
-                    <a href="lead-store-profile.html" class="h3 text-dark font-weight-bold mb-4 mb-md-0">
+                  <div class="col-12 col-md px-0 order-0 order-md-0">
+                    <a href="lead-store-profile.html" class="d-block h3 text-dark font-weight-bold mb-3 mb-md-0">
                       Lead Package 1
                     </a>
                   </div>
-                  <div class="col-12 col-md-auto px-0">
+                  <div class="col-12 col-md-auto px-0 order-5 order-md-1">
                     <a href="signin-illustration.html" type="button"
-                      class="btn btn-sm btn-secondary-soft rounded-pill w-100 lift mt-4 mt-md-0" data-toggle="tooltip"
-                      data-placement="top" title="Sign in to see preview of 3 rows of data">
+                      class="btn btn-xs btn-secondary-soft bg-transparent rounded-pill w-100 mt-4 mt-md-0"
+                      data-toggle="tooltip" data-placement="top" title="Sign in to see preview of data">
                       <i class="fe fe-download mr-2"></i>Download sample
                     </a>
                   </div>
-                </div>
-
-                <hr />
-
-                <p class="text-gray-700 small mb-4">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi, minima commodi soluta, vel amet,
-                  expedita sapiente tempora officia itaque non? Consequatur repellat aut atque dolorem laboriosam vel,
-                  quisquam ad?
-                </p>
-
-                <div class="row mx-0 align-items-center">
-                  <div class="col-12 col-md px-0">
-                    <span class="small badge badge-success-soft">Top Lead</span>
+                  <div class="col-12 px-0 order-2 order-md-2">
+                    <hr />
                   </div>
-                  <div class="col-12 col-md-auto px-0 text-right mt-3 mt-md-0">
-                    <a href="lead-store-profile.html" class="h4 text-dark d-inline-flex align-items-center mb-0">
+                  <div class="col-12 px-0 order-3 order-md-3">
+                    <p class="text-gray-700 small mb-4">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi, minima commodi soluta, vel
+                      amet,
+                      expedita sapiente tempora officia itaque non? Consequatur repellat aut atque dolorem laboriosam
+                      vel,
+                      quisquam ad?
+                    </p>
+                    <p class="text-gray-700 h6 mb-0">
+                      Rows of data: <span class="text-success">1000</span>
+                    </p>
+                    <p class="text-gray-700 h6 mb-4">
+                      Last scraped: <span class="text-success">2 days ago</span>
+                    </p>
+                  </div>
+                  <div class="col-12 col-md-auto px-0 order-1 order-md-4 d-flex justify-content-between justify-content-md-start align-items-center align-items-md-start flex-row flex-md-column">
+                    <span class="small badge badge-success-soft">Top Lead</span>
+                    <!-- Ratings -->
+                    <div class="d-flex mt-md-1">
+                      <span class="rating neu-so-stars fs-14 checked"></span>
+                      <span class="rating neu-so-stars fs-14 checked"></span>
+                      <span class="rating neu-so-stars fs-14 checked"></span>
+                      <span class="rating neu-so-stars fs-14 checked"></span>
+                      <span class="rating neu-so-stars fs-14 checked"></span>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-auto px-0 text-right mt-2 mt-md-0 order-4 order-md-5 ml-auto">
+                    <a href="lead-store-profile.html"
+                      class="btn btn-xs btn-outline-success rounded-pill d-inline-flex justify-content-center align-items-center mb-0 w-100 w-lg-auto">
                       Learn more <i class="fe fe-arrow-right ml-2"></i>
                     </a>
                   </div>
@@ -338,34 +446,50 @@
             <div class="card border mb-4">
               <div class="card-body">
                 <div class="row mx-0 align-items-center">
-                  <div class="col-12 col-md px-0">
-                    <a href="lead-store-profile.html" class="h3 text-dark font-weight-bold mb-4 mb-md-0">
+                  <div class="col-12 col-md px-0 order-0 order-md-0">
+                    <a href="lead-store-profile.html" class="d-block h3 text-dark font-weight-bold mb-3 mb-md-0">
                       Lead Package 2
                     </a>
                   </div>
-                  <div class="col-12 col-md-auto px-0">
+                  <div class="col-12 col-md-auto px-0 order-5 order-md-1">
                     <a href="signin-illustration.html" type="button"
-                      class="btn btn-sm btn-secondary-soft rounded-pill w-100 lift mt-4 mt-md-0" data-toggle="tooltip"
-                      data-placement="top" title="Sign in to see preview of 3 rows of data">
+                      class="btn btn-xs btn-secondary-soft bg-transparent rounded-pill w-100 mt-4 mt-md-0"
+                      data-toggle="tooltip" data-placement="top" title="Sign in to see preview of data">
                       <i class="fe fe-download mr-2"></i>Download sample
                     </a>
                   </div>
-                </div>
-
-                <hr />
-
-                <p class="text-gray-700 small mb-4">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi, minima commodi soluta, vel amet,
-                  expedita sapiente tempora officia itaque non? Consequatur repellat aut atque dolorem laboriosam vel,
-                  quisquam ad?
-                </p>
-
-                <div class="row mx-0 align-items-center">
-                  <div class="col-12 col-md px-0">
-                    <span class="small badge badge-success-soft">Customer Profile</span>
+                  <div class="col-12 px-0 order-2 order-md-2">
+                    <hr />
                   </div>
-                  <div class="col-12 col-md-auto px-0 text-right mt-3 mt-md-0">
-                    <a href="lead-store-profile.html" class="h4 text-dark font-weight-bolder d-inline-flex align-items-center mb-0">
+                  <div class="col-12 px-0 order-3 order-md-3">
+                    <p class="text-gray-700 small mb-4">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi, minima commodi soluta, vel
+                      amet,
+                      expedita sapiente tempora officia itaque non? Consequatur repellat aut atque dolorem laboriosam
+                      vel,
+                      quisquam ad?
+                    </p>
+                    <p class="text-gray-700 h6 mb-0">
+                      Rows of data: <span class="text-success">500</span>
+                    </p>
+                    <p class="text-gray-700 h6 mb-4">
+                      Last scraped: <span class="text-success">13 Nov 2024</span>
+                    </p>
+                  </div>
+                  <div class="col-12 col-md-auto px-0 order-1 order-md-4 d-flex justify-content-between justify-content-md-start align-items-center align-items-md-start flex-row flex-md-column">
+                    <span class="small badge badge-success-soft">Customer Profile</span>
+                    <!-- Ratings -->
+                    <div class="d-flex mt-md-1">
+                      <span class="rating neu-so-stars fs-14 checked"></span>
+                      <span class="rating neu-so-stars fs-14 checked"></span>
+                      <span class="rating neu-so-stars fs-14 checked"></span>
+                      <span class="rating neu-so-stars fs-14 "></span>
+                      <span class="rating neu-so-stars fs-14 "></span>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-auto px-0 text-right mt-2 mt-md-0 order-4 order-md-5 ml-auto">
+                    <a href="lead-store-profile.html"
+                      class="btn btn-xs btn-outline-success rounded-pill d-inline-flex justify-content-center align-items-center mb-0 w-100 w-lg-auto">
                       Learn more <i class="fe fe-arrow-right ml-2"></i>
                     </a>
                   </div>
@@ -378,34 +502,50 @@
             <div class="card border mb-4">
               <div class="card-body">
                 <div class="row mx-0 align-items-center">
-                  <div class="col-12 col-md px-0">
-                    <a href="lead-store-profile.html" class="h3 text-dark font-weight-bold mb-4 mb-md-0">
+                  <div class="col-12 col-md px-0 order-0 order-md-0">
+                    <a href="lead-store-profile.html" class="d-block h3 text-dark font-weight-bold mb-3 mb-md-0">
                       Lead Package 3
                     </a>
                   </div>
-                  <div class="col-12 col-md-auto px-0">
+                  <div class="col-12 col-md-auto px-0 order-5 order-md-1">
                     <a href="signin-illustration.html" type="button"
-                      class="btn btn-sm btn-secondary-soft rounded-pill w-100 lift mt-4 mt-md-0" data-toggle="tooltip"
-                      data-placement="top" title="Sign in to see preview of 3 rows of data">
+                      class="btn btn-xs btn-secondary-soft bg-transparent rounded-pill w-100 mt-4 mt-md-0"
+                      data-toggle="tooltip" data-placement="top" title="Sign in to see preview of data">
                       <i class="fe fe-download mr-2"></i>Download sample
                     </a>
                   </div>
-                </div>
-
-                <hr />
-
-                <p class="text-gray-700 small mb-4">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi, minima commodi soluta, vel amet,
-                  expedita sapiente tempora officia itaque non? Consequatur repellat aut atque dolorem laboriosam vel,
-                  quisquam ad?
-                </p>
-
-                <div class="row mx-0 align-items-center">
-                  <div class="col-12 col-md px-0">
-                    <span class="small badge badge-success-soft">Lead list for Microsoft</span>
+                  <div class="col-12 px-0 order-2 order-md-2">
+                    <hr />
                   </div>
-                  <div class="col-12 col-md-auto px-0 text-right mt-3 mt-md-0">
-                    <a href="lead-store-profile.html" class="h4 text-dark font-weight-bolder d-inline-flex align-items-center mb-0">
+                  <div class="col-12 px-0 order-3 order-md-3">
+                    <p class="text-gray-700 small mb-4">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi, minima commodi soluta, vel
+                      amet,
+                      expedita sapiente tempora officia itaque non? Consequatur repellat aut atque dolorem laboriosam
+                      vel,
+                      quisquam ad?
+                    </p>
+                    <p class="text-gray-700 h6 mb-0">
+                      Rows of data: <span class="text-success">1330</span>
+                    </p>
+                    <p class="text-gray-700 h6 mb-4">
+                      Last scraped: <span class="text-success">15 Oct 2024</span>
+                    </p>
+                  </div>
+                  <div class="col-12 col-md-auto px-0 order-1 order-md-4 d-flex justify-content-between justify-content-md-start align-items-center align-items-md-start flex-row flex-md-column">
+                    <span class="small badge badge-success-soft">Lead list for Microsoft</span>
+                    <!-- Ratings -->
+                    <div class="d-flex mt-md-1">
+                      <span class="rating neu-so-stars fs-14 checked"></span>
+                      <span class="rating neu-so-stars fs-14 checked"></span>
+                      <span class="rating neu-so-stars fs-14 checked"></span>
+                      <span class="rating neu-so-stars fs-14 checked"></span>
+                      <span class="rating neu-so-stars fs-14"></span>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-auto px-0 text-right mt-2 mt-md-0 order-4 order-md-5 ml-auto">
+                    <a href="lead-store-profile.html"
+                      class="btn btn-xs btn-outline-success rounded-pill d-inline-flex justify-content-center align-items-center mb-0 w-100 w-lg-auto">
                       Learn more <i class="fe fe-arrow-right ml-2"></i>
                     </a>
                   </div>
@@ -418,34 +558,50 @@
             <div class="card border mb-4">
               <div class="card-body">
                 <div class="row mx-0 align-items-center">
-                  <div class="col-12 col-md px-0">
-                    <a href="lead-store-profile.html" class="h3 text-dark font-weight-bold mb-4 mb-md-0">
+                  <div class="col-12 col-md px-0 order-0 order-md-0">
+                    <a href="lead-store-profile.html" class="d-block h3 text-dark font-weight-bold mb-3 mb-md-0">
                       Lead Package 4
                     </a>
                   </div>
-                  <div class="col-12 col-md-auto px-0">
+                  <div class="col-12 col-md-auto px-0 order-5 order-md-1">
                     <a href="signin-illustration.html" type="button"
-                      class="btn btn-sm btn-secondary-soft rounded-pill w-100 lift mt-4 mt-md-0" data-toggle="tooltip"
-                      data-placement="top" title="Sign in to see preview of 3 rows of data">
+                      class="btn btn-xs btn-secondary-soft bg-transparent rounded-pill w-100 mt-4 mt-md-0"
+                      data-toggle="tooltip" data-placement="top" title="Sign in to see preview of data">
                       <i class="fe fe-download mr-2"></i>Download sample
                     </a>
                   </div>
-                </div>
-
-                <hr />
-
-                <p class="text-gray-700 small mb-4">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi, minima commodi soluta, vel amet,
-                  expedita sapiente tempora officia itaque non? Consequatur repellat aut atque dolorem laboriosam vel,
-                  quisquam ad?
-                </p>
-
-                <div class="row mx-0 align-items-center">
-                  <div class="col-12 col-md px-0">
-                    <span class="small badge badge-success-soft">Top Lead</span>
+                  <div class="col-12 px-0 order-2 order-md-2">
+                    <hr />
                   </div>
-                  <div class="col-12 col-md-auto px-0 text-right mt-3 mt-md-0">
-                    <a href="lead-store-profile.html" class="h4 text-dark font-weight-bolder d-inline-flex align-items-center mb-0">
+                  <div class="col-12 px-0 order-3 order-md-3">
+                    <p class="text-gray-700 small mb-4">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi, minima commodi soluta, vel
+                      amet,
+                      expedita sapiente tempora officia itaque non? Consequatur repellat aut atque dolorem laboriosam
+                      vel,
+                      quisquam ad?
+                    </p>
+                    <p class="text-gray-700 h6 mb-0">
+                      Rows of data: <span class="text-success">1588</span>
+                    </p>
+                    <p class="text-gray-700 h6 mb-4">
+                      Last scraped: <span class="text-success">10 Jul 2024</span>
+                    </p>
+                  </div>
+                  <div class="col-12 col-md-auto px-0 order-1 order-md-4 d-flex justify-content-between justify-content-md-start align-items-center align-items-md-start flex-row flex-md-column">
+                    <span class="small badge badge-success-soft">Top Lead</span>
+                    <!-- Ratings -->
+                    <div class="d-flex mt-md-1">
+                      <span class="rating neu-so-stars fs-14 checked"></span>
+                      <span class="rating neu-so-stars fs-14 checked"></span>
+                      <span class="rating neu-so-stars fs-14 checked"></span>
+                      <span class="rating neu-so-stars fs-14 "></span>
+                      <span class="rating neu-so-stars fs-14 "></span>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-auto px-0 text-right mt-2 mt-md-0 order-4 order-md-5 ml-auto">
+                    <a href="lead-store-profile.html"
+                      class="btn btn-xs btn-outline-success rounded-pill d-inline-flex justify-content-center align-items-center mb-0 w-100 w-lg-auto">
                       Learn more <i class="fe fe-arrow-right ml-2"></i>
                     </a>
                   </div>
@@ -458,34 +614,50 @@
             <div class="card border mb-4">
               <div class="card-body">
                 <div class="row mx-0 align-items-center">
-                  <div class="col-12 col-md px-0">
-                    <a href="lead-store-profile.html" class="h3 text-dark font-weight-bold mb-4 mb-md-0">
+                  <div class="col-12 col-md px-0 order-0 order-md-0">
+                    <a href="lead-store-profile.html" class="d-block h3 text-dark font-weight-bold mb-3 mb-md-0">
                       Lead Package 5
                     </a>
                   </div>
-                  <div class="col-12 col-md-auto px-0">
+                  <div class="col-12 col-md-auto px-0 order-5 order-md-1">
                     <a href="signin-illustration.html" type="button"
-                      class="btn btn-sm btn-secondary-soft rounded-pill w-100 lift mt-4 mt-md-0" data-toggle="tooltip"
-                      data-placement="top" title="Sign in to see preview of 3 rows of data">
+                      class="btn btn-xs btn-secondary-soft bg-transparent rounded-pill w-100 mt-4 mt-md-0"
+                      data-toggle="tooltip" data-placement="top" title="Sign in to see preview of data">
                       <i class="fe fe-download mr-2"></i>Download sample
                     </a>
                   </div>
-                </div>
-
-                <hr />
-
-                <p class="text-gray-700 small mb-4">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi, minima commodi soluta, vel amet,
-                  expedita sapiente tempora officia itaque non? Consequatur repellat aut atque dolorem laboriosam vel,
-                  quisquam ad?
-                </p>
-
-                <div class="row mx-0 align-items-center">
-                  <div class="col-12 col-md px-0">
-                    <span class="small badge badge-success-soft">Customer Profile</span>
+                  <div class="col-12 px-0 order-2 order-md-2">
+                    <hr />
                   </div>
-                  <div class="col-12 col-md-auto px-0 text-right mt-3 mt-md-0">
-                    <a href="lead-store-profile.html" class="h4 text-dark font-weight-bolder d-inline-flex align-items-center mb-0">
+                  <div class="col-12 px-0 order-3 order-md-3">
+                    <p class="text-gray-700 small mb-4">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi, minima commodi soluta, vel
+                      amet,
+                      expedita sapiente tempora officia itaque non? Consequatur repellat aut atque dolorem laboriosam
+                      vel,
+                      quisquam ad?
+                    </p>
+                    <p class="text-gray-700 h6 mb-0">
+                      Rows of data: <span class="text-success">334</span>
+                    </p>
+                    <p class="text-gray-700 h6 mb-4">
+                      Last scraped: <span class="text-success">23 Apr 2024</span>
+                    </p>
+                  </div>
+                  <div class="col-12 col-md-auto px-0 order-1 order-md-4 d-flex justify-content-between justify-content-md-start align-items-center align-items-md-start flex-row flex-md-column">
+                    <span class="small badge badge-success-soft">Customer Profile</span>
+                    <!-- Ratings -->
+                    <div class="d-flex mt-md-1">
+                      <span class="rating neu-so-stars fs-14 checked"></span>
+                      <span class="rating neu-so-stars fs-14 checked"></span>
+                      <span class="rating neu-so-stars fs-14 checked"></span>
+                      <span class="rating neu-so-stars fs-14 checked"></span>
+                      <span class="rating neu-so-stars fs-14 checked"></span>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-auto px-0 text-right mt-2 mt-md-0 order-4 order-md-5 ml-auto">
+                    <a href="lead-store-profile.html"
+                      class="btn btn-xs btn-outline-success rounded-pill d-inline-flex justify-content-center align-items-center mb-0 w-100 w-lg-auto">
                       Learn more <i class="fe fe-arrow-right ml-2"></i>
                     </a>
                   </div>
@@ -498,34 +670,50 @@
             <div class="card border mb-4">
               <div class="card-body">
                 <div class="row mx-0 align-items-center">
-                  <div class="col-12 col-md px-0">
-                    <a href="lead-store-profile.html" class="h3 text-dark font-weight-bold mb-4 mb-md-0">
+                  <div class="col-12 col-md px-0 order-0 order-md-0">
+                    <a href="lead-store-profile.html" class="d-block h3 text-dark font-weight-bold mb-3 mb-md-0">
                       Lead Package 6
                     </a>
                   </div>
-                  <div class="col-12 col-md-auto px-0">
+                  <div class="col-12 col-md-auto px-0 order-5 order-md-1">
                     <a href="signin-illustration.html" type="button"
-                      class="btn btn-sm btn-secondary-soft rounded-pill w-100 lift mt-4 mt-md-0" data-toggle="tooltip"
-                      data-placement="top" title="Sign in to see preview of 3 rows of data">
+                      class="btn btn-xs btn-secondary-soft bg-transparent rounded-pill w-100 mt-4 mt-md-0"
+                      data-toggle="tooltip" data-placement="top" title="Sign in to see preview of data">
                       <i class="fe fe-download mr-2"></i>Download sample
                     </a>
                   </div>
-                </div>
-
-                <hr />
-
-                <p class="text-gray-700 small mb-4">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi, minima commodi soluta, vel amet,
-                  expedita sapiente tempora officia itaque non? Consequatur repellat aut atque dolorem laboriosam vel,
-                  quisquam ad?
-                </p>
-
-                <div class="row mx-0 align-items-center">
-                  <div class="col-12 col-md px-0">
-                    <span class="small badge badge-success-soft">Lead list for Apple</span>
+                  <div class="col-12 px-0 order-2 order-md-2">
+                    <hr />
                   </div>
-                  <div class="col-12 col-md-auto px-0 text-right mt-3 mt-md-0">
-                    <a href="lead-store-profile.html" class="h4 text-dark font-weight-bolder d-inline-flex align-items-center mb-0">
+                  <div class="col-12 px-0 order-3 order-md-3">
+                    <p class="text-gray-700 small mb-4">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi, minima commodi soluta, vel
+                      amet,
+                      expedita sapiente tempora officia itaque non? Consequatur repellat aut atque dolorem laboriosam
+                      vel,
+                      quisquam ad?
+                    </p>
+                    <p class="text-gray-700 h6 mb-0">
+                      Rows of data: <span class="text-success">3600</span>
+                    </p>
+                    <p class="text-gray-700 h6 mb-4">
+                      Last scraped: <span class="text-success">06 Apr 2024</span>
+                    </p>
+                  </div>
+                  <div class="col-12 col-md-auto px-0 order-1 order-md-4 d-flex justify-content-between justify-content-md-start align-items-center align-items-md-start flex-row flex-md-column">
+                    <span class="small badge badge-success-soft">Lead list for Apple</span>
+                    <!-- Ratings -->
+                    <div class="d-flex mt-md-1">
+                      <span class="rating neu-so-stars fs-14 checked"></span>
+                      <span class="rating neu-so-stars fs-14 checked"></span>
+                      <span class="rating neu-so-stars fs-14 checked"></span>
+                      <span class="rating neu-so-stars fs-14 checked"></span>
+                      <span class="rating neu-so-stars fs-14 checked"></span>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-auto px-0 text-right mt-2 mt-md-0 order-4 order-md-5 ml-auto">
+                    <a href="lead-store-profile.html"
+                      class="btn btn-xs btn-outline-success rounded-pill d-inline-flex justify-content-center align-items-center mb-0 w-100 w-lg-auto">
                       Learn more <i class="fe fe-arrow-right ml-2"></i>
                     </a>
                   </div>
