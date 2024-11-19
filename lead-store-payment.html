@@ -176,7 +176,7 @@
       <div class="container">
 
         <div class="row">
-          <div class="col-12 col-lg-8 pr-lg-2 pt-3 order-1 order-md-0">
+          <div class="col-12 col-lg-8 pr-lg-2 pt-3 order-1 order-lg-0">
 
             <!-- Card -->
             <div class="card border mb-4">
@@ -212,7 +212,7 @@
                       <div class="my-6">
                         <h3 class="h3 font-weight-bold mb-2">Contact</h3>
                         <div class="form-groupform-floating">
-                          <input type="email" class="form-control" id="cardEmail" placeholder="Email">
+                          <input type="email" class="form-control form-control-sm" id="cardEmail" placeholder="Email">
                         </div>
                       </div>
 
@@ -221,29 +221,51 @@
                       <div class="my-6">
                         <h3 class="h3 font-weight-bold mb-4">Payment</h3>
                         <div class="form-group mb-3">
-                          <label for="cardNumber" class="small">Card number</label>
-                          <input type="text" class="form-control" id="cardNumber" placeholder="1234 1234 1234 1234">
+                          <div class="row mx-0 align-items-center">
+                            <div class="col px-0">
+                              <label for="cardNumber" class="small">Card number</label>
+                            </div>
+                            <div class="col-auto px-0">
+                              <ul class="list-unstyled mb-2 d-flex justify-content-end">
+                                <li>
+                                  <img src="./assets/img/icons/payment-methods/visa.svg" alt="visa" height="16" class="w-auto ml-1">
+                                </li>
+                                <li>
+                                  <img src="./assets/img/icons/payment-methods/mastercard-old.svg" alt="mastercard" height="16" class="w-auto ml-1">
+                                </li>
+                                <li>
+                                  <img src="./assets/img/icons/payment-methods/amex.svg" alt="amex" height="16" class="w-auto ml-1">
+                                </li>
+                                <li>
+                                  <img src="./assets/img/icons/payment-methods/jcb.svg" alt="jcb" height="16" class="w-auto ml-1">
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="col-12 px-0">
+                              <input type="text" class="form-control form-control-sm" id="cardNumber" placeholder="1234 1234 1234 1234">
+                            </div>
+                          </div>
                         </div>
 
                         <div class="form-row mb-3">
                           <div class="form-group col-md-6">
                             <label for="cardExpiry" class="small">Expiry date</label>
-                            <input type="text" class="form-control" id="cardExpiry" placeholder="MM/YY">
+                            <input type="text" class="form-control form-control-sm" id="cardExpiry" placeholder="MM/YY">
                           </div>
                           <div class="form-group col-md-6">
                             <label for="cardCVC" class="small">CVC</label>
-                            <input type="text" class="form-control" id="cardCVC" placeholder="CVC">
+                            <input type="text" class="form-control form-control-sm" id="cardCVC" placeholder="CVC">
                           </div>
                         </div>
 
                         <div class="form-group">
                           <label for="cardName" class="small">Name on card</label>
-                          <input type="text" class="form-control" id="cardName" placeholder="Name on card">
+                          <input type="text" class="form-control form-control-sm" id="cardName" placeholder="Name on card">
                         </div>
 
                         <div class="form-group">
                           <label for="cardCountry" class="small">Country or region</label>
-                          <select class="form-control" id="cardCountry">
+                          <select class="form-control form-control-sm" id="cardCountry">
                             <option value="" selected disabled>Select country or region</option>
                             <option value="US">United States</option>
                             <option value="GB">United Kingdom</option>
@@ -283,7 +305,7 @@
                                   <div class="custom-control custom-checkbox">
                                     <input type="checkbox" class="custom-control-input" id="saveInfo">
                                     <label class="custom-control-label" for="saveInfo">
-                                      Save my information for a faster checkout with a Shop account
+                                      Save my information for a faster checkout with a Sapiengraph account
                                     </label>
                                   </div>
                                 </button>
@@ -294,12 +316,12 @@
                               data-parent="#paymentAccordion">
                               <div class="card-body p-4">
                                 <div class="form-group">
-                                  <label for="fullName">Full name</label>
-                                  <input type="text" class="form-control" id="fullName" placeholder="Enter your full name">
+                                  <label for="fullName" class="small">Full name</label>
+                                  <input type="text" class="form-control form-control-sm" id="fullName" placeholder="Enter your full name">
                                 </div>
                                 <div class="form-group">
-                                  <label for="phoneNumber">Phone number</label>
-                                  <input type="tel" class="form-control" id="phoneNumber" placeholder="Enter your phone number">
+                                  <label for="phoneNumber" class="small">Phone number</label>
+                                  <input type="tel" class="form-control form-control-sm" id="phoneNumber" placeholder="Enter your phone number">
                                 </div>
                               </div>
                             </div>
@@ -322,7 +344,7 @@
                       <hr />
 
                       <button type="submit"
-                        class="btn btn-success rounded-pill w-100 lift d-inline-flex align-items-center justify-content-center mt-4 mb-3"
+                        class="btn btn-success btn-sm rounded-pill w-100 lift d-inline-flex align-items-center justify-content-center mt-4 mb-3"
                         onclick="window.location.href='lead-store.html'">
                         <i class="fe fe-credit-card mr-2"></i>Pay Now
                       </button>
@@ -339,7 +361,7 @@
             </div>
 
           </div>
-          <div class="col-12 col-lg-4 pl-lg-2 order-0 order-md-1">
+          <div class="col-12 col-lg-4 pl-lg-2 order-0 order-lg-1">
             <div class="sticky-top pt-3 mb-4">
               <div class="card border">
                 <div class="card-body">
