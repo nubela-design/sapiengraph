@@ -457,7 +457,7 @@ ul.timeline > li:nth-child(5):after {
 }
 
 .card-header-section {
-  min-height: 0px;
+  min-height: 220px;
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
@@ -493,7 +493,7 @@ ul.timeline > li:nth-child(5):after {
 /* Responsive adjustments */
 @media (min-width: 1395px) and (max-width: 2380px) {
   .credits-section {
-    min-height: 60px; /* Menyesuaikan untuk 2 baris teks */
+    min-height: 70px; /* Menyesuaikan untuk 2 baris teks */
   }
 }
 
