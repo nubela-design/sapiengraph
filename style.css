@@ -478,7 +478,6 @@ ul.timeline > li:nth-child(5):after {
 .credits-section {
   min-height: 50px;
   margin-top: auto;
-  margin-bottom: 1.5rem !important;
   flex-shrink: 0;
   display: flex;
   align-items: flex-start;
@@ -493,16 +492,16 @@ ul.timeline > li:nth-child(5):after {
 /* Responsive adjustments */
 @media (min-width: 1395px) and (max-width: 2380px) {
   .credits-section {
-    min-height: 60px; /* Menyesuaikan untuk 2 baris teks */
+    min-height: 70px; /* Menyesuaikan untuk 2 baris teks */
   }
 }
 
 @media (max-width: 1200px) {
   .card-header-section {
-    min-height: 240px;
+    min-height: 160px;
   }
   .credits-section {
-    min-height: 60px;
+    min-height: 70px;
   }
 }
 
@@ -520,7 +519,7 @@ ul.timeline > li:nth-child(5):after {
     min-height: 100px;
   }
   .credits-section {
-    min-height: 30px;
+    min-height: 65px;
   }
 }
 
@@ -538,9 +537,9 @@ ul.timeline > li:nth-child(5):after {
 }
 
 /* Responsive adjustments */
-@media (min-width: 1710px) and (max-width: 2321px) {
+@media (min-width: 1710px) and (max-width: 2338px) {
   .fresh-data-content {
-    min-height: 100px;
+    min-height: 60px;
   }
 }
 
@@ -568,16 +567,33 @@ ul.timeline > li:nth-child(5):after {
   }
 }
 
+@media (min-width: 1742px) {
+  .fresh-data-section {
+    min-height: 210px;
+  }
+}
 
-@media (min-width: 1687px) and (max-width: 1709px) {
+@media (min-width: 1687px) and (max-width: 1741px) {
   .fresh-data-section {
     min-height: 230px; /* Increased height to accommodate 2 lines of text */
   }
 }
 
-@media (min-width: 1395px) and (max-width: 1686px) {
+@media (min-width: 1548px) and (max-width: 1686px) {
   .fresh-data-section {
-    min-height: 270px; /* Increased height to accommodate 2 lines of text */
+    min-height: 220px; /* Increased height to accommodate 2 lines of text */
+  }
+}
+
+@media (min-width: 1441px) and (max-width: 1547px) {
+  .fresh-data-section {
+    min-height: 250px; /* Increased height to accommodate 2 lines of text */
+  }
+}
+
+@media (min-width: 1395px) and (max-width: 1440px) {
+  .fresh-data-section {
+    min-height: 210px; /* Increased height to accommodate 2 lines of text */
   }
 }
 
@@ -589,14 +605,31 @@ ul.timeline > li:nth-child(5):after {
 
 @media (max-width: 1200px) {
   .fresh-data-section {
-    min-height: 250px;
+    min-height: 220px;
   }
 }
 
 @media (max-width: 992px) {
   .fresh-data-section {
-    min-height: 250px;
+    min-height: 200px;
   }
+}
+
+/*monthly*/
+
+.card-header-section-monthly {
+  min-height: 0px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.credits-section-monthly {
+  min-height: 50px;
+  margin-top: auto;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
 }
 
 .fresh-data-content-monthly {
@@ -637,21 +670,39 @@ ul.timeline > li:nth-child(5):after {
   flex-direction: column;
 }
 
-@media (min-width: 1671px) and (max-width: 1741px) {
+@media (min-width: 1742px) {
   .fresh-data-section-monthly {
-    min-height: 220px; /* Increased height to accommodate 2 lines of text */
+    min-height: 200px;
   }
 }
 
-@media (min-width: 1329px) and (max-width: 1408px) {
+@media (min-width: 1671px) and (max-width: 1741px) {
   .fresh-data-section-monthly {
-    min-height: 200px; /* Increased height to accommodate 2 lines of text */
+    min-height: 210px; /* Increased height to accommodate 2 lines of text */
+  }
+}
+
+@media (min-width: 1441px) and (max-width: 1670px) {
+  .fresh-data-section-monthly {
+    min-height: 210px; /* Increased height to accommodate 2 lines of text */
+  }
+}
+
+@media (min-width: 1395px) and (max-width: 1440px) {
+  .fresh-data-section-monthly {
+    min-height: 190px; /* Increased height to accommodate 2 lines of text */
+  }
+}
+
+@media (min-width: 1329px) and (max-width: 1394px) {
+  .fresh-data-section-monthly {
+    min-height: 190px; /* Increased height to accommodate 2 lines of text */
   }
 }
 
 @media (min-width: 1230px) and (max-width: 1328px) {
   .fresh-data-section-monthly {
-    min-height: 220px; /* Increased height to accommodate 2 lines of text */
+    min-height: 200px; /* Increased height to accommodate 2 lines of text */
   }
 }
 
@@ -668,12 +719,19 @@ ul.timeline > li:nth-child(5):after {
 }
 /*---*/
 
-@media (min-width: 1200px) and (max-width: 1408px) {
+.h6-custom {
+  font-size: 0.60rem !important;
+}
+
+@media (min-width: 1200px) and (max-width: 1440px) {
   .h1-custom {
     font-size: 1.7rem !important;
   }
   .p-custom {
     font-size: 0.8rem !important;
+  }
+  .h6-custom {
+    font-size: 0.54rem !important;
   }
   .button-custom {
     font-size: 0.8rem !important;
