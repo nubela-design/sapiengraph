@@ -587,7 +587,7 @@ ul.timeline > li:nth-child(5):after {
 
 @media (min-width: 1441px) and (max-width: 1547px) {
   .fresh-data-section {
-    min-height: 250px; /* Increased height to accommodate 2 lines of text */
+    min-height: 210px; /* Increased height to accommodate 2 lines of text */
   }
 }
 
@@ -599,7 +599,7 @@ ul.timeline > li:nth-child(5):after {
 
 @media (min-width: 1201) and (max-width: 1394px) {
   .fresh-data-section {
-    min-height: 270px; /* Increased height to accommodate 2 lines of text */
+    min-height: 250px; /* Increased height to accommodate 2 lines of text */
   }
 }
 
@@ -684,7 +684,7 @@ ul.timeline > li:nth-child(5):after {
 
 @media (min-width: 1441px) and (max-width: 1670px) {
   .fresh-data-section-monthly {
-    min-height: 210px; /* Increased height to accommodate 2 lines of text */
+    min-height: 190px; /* Increased height to accommodate 2 lines of text */
   }
 }
 
@@ -723,6 +723,21 @@ ul.timeline > li:nth-child(5):after {
   font-size: 0.60rem !important;
 }
 
+@media (min-width: 1441px) and (max-width: 1547px) {
+  .h1-custom {
+    font-size: 1.7rem !important;
+  }
+  .p-custom {
+    font-size: 0.8rem !important;
+  }
+  .h6-custom {
+    font-size: 0.50rem !important;
+  }
+  .button-custom {
+    font-size: 0.8rem !important;
+  }
+}
+
 @media (min-width: 1200px) and (max-width: 1440px) {
   .h1-custom {
     font-size: 1.7rem !important;
@@ -731,7 +746,7 @@ ul.timeline > li:nth-child(5):after {
     font-size: 0.8rem !important;
   }
   .h6-custom {
-    font-size: 0.54rem !important;
+    font-size: 0.50rem !important;
   }
   .button-custom {
     font-size: 0.8rem !important;
