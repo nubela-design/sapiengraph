@@ -339,7 +339,7 @@
           <div class="card card-body border bg-light mb-5">
       
             <!-- Tabs desktop -->
-            <div class="mb-4 d-flex justify-content-between">
+            <div class="mb-4 d-block d-md-flex justify-content-between">
       
               <div class="d-none d-lg-block">
                 <ul class="nav d-flex justify-content-center">
@@ -357,8 +357,25 @@
                   </li>
                 </ul>
               </div>
+
+              <div class="d-block d-lg-none">
+                <ul class="nav d-flex justify-content-center">
+                  <li class="nav-item">
+                    <a class="border border-success text-success small px-3 py-2" href="spreadsheet-template-single-page.html"
+                      style="background-color: #e6f5ea; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-top-left-radius: 8px; border-bottom-left-radius: 8px;">
+                      <i class="ph-bold ph-table"></i> Table view
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="border px-3 py-2 small text-muted pb-0" href="#"
+                      style="border-top-left-radius: 0px; border-bottom-left-radius: 0px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-left: none!important; border-color: #869ab8!important;">
+                      <i class="ph-bold ph-chart-line"></i> Graph view
+                    </a>
+                  </li>
+                </ul>
+              </div>
       
-              <div class="">
+              <div class="d-none d-md-block">
                 <a class="btn btn-xs btn-success" href="#!">
                   <i class="ph-bold ph-copy"></i> Use this template
                 </a>
@@ -370,7 +387,7 @@
       
               <table class="table table-sm table-bordered table-hover">
       
-                <thead class="thead-light">
+                <thead class="thead-dark small">
                   <tr>
                     <th class="text-nowrap">S/N</th>
                     <th class="text-nowrap">
@@ -402,13 +419,69 @@
                     <th class="text-nowrap">Resume link</th>
                     <th class="text-nowrap">Remarks</th>
                     <th class="text-nowrap">Hiring stage</th>
-                    <th class="text-nowrap">Location</th>
-                    <th class="text-nowrap">Current role</th>
-                    <th class="text-nowrap">Company</th>
-                    <th class="text-nowrap">Education</th>
-                    <th class="text-nowrap">School</th>
-                    <th class="text-nowrap">Headline</th>
-                    <th class="text-nowrap">Social media profile</th>
+                    <th class="text-nowrap">
+                      Location
+                      <span class="text-muted ml-1" 
+                            data-toggle="tooltip" 
+                            data-placement="top" 
+                            title="Can be enriched">
+                        <i class="ph-bold ph-info text-xs"></i>
+                      </span>
+                    </th>
+                    <th class="text-nowrap">
+                      Current role
+                      <span class="text-muted ml-1" 
+                            data-toggle="tooltip" 
+                            data-placement="top" 
+                            title="Can be enriched">
+                        <i class="ph-bold ph-info text-xs"></i>
+                      </span>
+                    </th>
+                    <th class="text-nowrap">
+                      Company
+                      <span class="text-muted ml-1" 
+                            data-toggle="tooltip" 
+                            data-placement="top" 
+                            title="Can be enriched">
+                        <i class="ph-bold ph-info text-xs"></i>
+                      </span>
+                    </th>
+                    <th class="text-nowrap">
+                      Education
+                      <span class="text-muted ml-1" 
+                            data-toggle="tooltip" 
+                            data-placement="top" 
+                            title="Can be enriched">
+                        <i class="ph-bold ph-info text-xs"></i>
+                      </span>
+                    </th>
+                    <th class="text-nowrap">
+                      School
+                      <span class="text-muted ml-1" 
+                            data-toggle="tooltip" 
+                            data-placement="top" 
+                            title="Can be enriched">
+                        <i class="ph-bold ph-info text-xs"></i>
+                      </span>
+                    </th>
+                    <th class="text-nowrap">
+                      Headline
+                      <span class="text-muted ml-1" 
+                            data-toggle="tooltip" 
+                            data-placement="top" 
+                            title="Can be enriched">
+                        <i class="ph-bold ph-info text-xs"></i>
+                      </span>
+                    </th>
+                    <th class="text-nowrap">
+                      Social media profile
+                      <span class="text-muted ml-1" 
+                            data-toggle="tooltip" 
+                            data-placement="top" 
+                            title="Can be enriched">
+                        <i class="ph-bold ph-info text-xs"></i>
+                      </span>
+                    </th>
                   </tr>
                 </thead>
       
@@ -446,11 +519,18 @@
                     <td class="text-nowrap"></td>
                     <td class="text-nowrap"></td>
                     <td class="text-nowrap"></td>
+                    <td class="text-nowrap"></td>
                   </tr>
                 </tbody>
       
               </table>
       
+            </div>
+
+            <div class="d-block d-md-none">
+              <a class="btn btn-sm btn-success w-100 mt-4" href="#!">
+                <i class="ph-bold ph-copy"></i> Use this template
+              </a>
             </div>
       
           </div>
@@ -465,7 +545,7 @@
   
   <!-- YT
       ================================================== -->
-  <section class="py-10 border-bottom" id="customersection">
+  <section class="py-lg-10 mb-8 mb-lg-0 border-bottom" id="customersection">
   
     <div class="container">
   
@@ -479,7 +559,7 @@
   
       <div class="row align-items-stretch justify-content-center">
   
-        <div class="col-12 col-lg-6 d-flex">
+        <div class="col-12 col-lg-6 d-flex mb-6 mb-lg-0">
           <div class="card card-body border lift">
 
             <iframe class="rounded w-100" height="210" src="https://www.youtube.com/embed/-lePRBeTQAg?si=5555555555555555" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -522,20 +602,25 @@
   </section>
 
   <!-- Gallery -->
-  <section class="py-10 border-bottom bg-white">
+  <section class="py-lg-10 pt-8 pt-lg-0 border-bottom bg-white">
+
     <div class="container">
 
-      <div class="row justify-content-center align-items-stretch mt-5">
+      <div class="row justify-content-center">
 
         <div class="col-12">
-          <h2 class="text-center h1 font-weight-bold mb-6">
+          <h2 class="text-center h1 font-weight-bold mb-lg-0 mb-4">
             Other templates for your needs
           </h2>
+
+          <p class="text-center text-muted lead mb-6">
+            Sapiengraph has a wide range of templates to help you manage your business.
+          </p>
         </div>
 
         <!-- Card -->
-        <div class="col-12 col-md-6 col-lg-4 d-flex">
-          <div class="card shadow-light-lg h-100">
+        <div class="col-12 col-lg-4 mb-5 mb-lg-0">
+          <div class="card shadow-light-lg">
             <!-- Image -->
             <div class="card-zoom">
               <img class="card-img-top" src="./assets/img/illustrations/Ultimate-Applicant-Tracking-Sheets-Template.png"
@@ -543,55 +628,89 @@
             </div>
   
             <!-- Body -->
-            <div class="card-body d-flex flex-column">
+            <div class="card-body">
+              <!-- Shape -->
+              <div class="shape shape-bottom-100 shape-fluid-x text-white">
+                <img src="./assets/img/shapes/curves/curve-1-w.svg" class="text-white" />
+              </div>
+  
+
+              <div class="d-flex justify-content-between align-items-center border-bottom pb-lg-4 mb-4">
+
+                <h6 class="badge rounded-pill bg-light border mb-0 text-uppercase">
+                  Sales & HR
+                </h6>
+
+                <h6 class="badge rounded-pill bg-success mb-0 text-white text-uppercase">
+                  Free
+                </h6>
+
+              </div>
+
+              <h5 class="mb-4 lead font-weight-bold">
+                Applicant Tracking Template
+              </h5>
+
+              <p class="text-muted mb-4">
+                Track and manage all your candidates with this Applicant Tracking Template.
+              </p>
+
+              <!-- Button -->
+              <a href="spreadsheet-template-single-page.html" class="btn btn-outline-success btn-sm w-100 mt-auto">
+                Learn more
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card -->
+        <div class="col-12 col-lg-4 mb-5 mb-lg-0">
+          <div class="card shadow-light-lg">
+            <!-- Image -->
+            <div class="card-zoom">
+              <img class="card-img-top" src="./assets/img/illustrations/Ultimate-Lead-Tracker-Template-For-Sales-Team.png"
+                alt="..." />
+            </div>
+  
+            <!-- Body -->
+            <div class="card-body">
               <!-- Shape -->
               <div class="shape shape-bottom-100 shape-fluid-x text-white">
                 <img src="./assets/img/shapes/curves/curve-1-w.svg" alt="" srcset="" class="text-white" />
               </div>
   
-              <div class="d-flex mb-3 justify-content-between align-items-center">
-                <div class="d-inline-flex flex-column">
-                  <!-- Preheading -->
-                  <h6 class="text-uppercase mb-1 text-secondary fs-10">
-                    Google Sheets
-                  </h6>
-  
-                  <!-- Heading -->
-                  <h5 class="mb-0 fs-16">
-                    Applicant Tracking <br />Template
-                  </h5>
-                </div>
-                <div class="d-inline-flex">
-                  <h6 class="badge rounded-pill bg-success mb-0 fs-12 fw-900 text-white text-uppercase lh-base">
-                    Free
-                  </h6>
-                </div>
+
+              <div class="d-flex justify-content-between align-items-center border-bottom pb-4 mb-4">
+
+                <h6 class="badge rounded-pill bg-light border mb-0 text-uppercase">
+                  Business
+                </h6>
+
+                <h6 class="badge rounded-pill bg-success mb-0 text-white text-uppercase">
+                  Free
+                </h6>
+
               </div>
-  
-              <hr />
-  
-              <div class="d-flex justify-content-between align-content-center flex-grow-1">
-  
-                <p class="mb-0 text-muted">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi, minima commodi soluta, vel amet,
-                  expedita sapiente tempora officia itaque non? Consequatur repellat aut atque dolorem laboriosam vel,
-                  quisquam ad?
-                </p>
-              </div>
-  
-              <hr />
-  
+
+              <h5 class="mb-4 lead font-weight-bold">
+                Lead Tracker Template
+              </h5>
+
+              <p class="text-muted mb-4">
+                Track and manage all your leads with this Lead Tracker Template for your sales team.
+              </p>
+
               <!-- Button -->
-              <a href="spreadsheet-template-single-page.html" class="btn btn-outline-success w-100 mt-auto">
-                Use template
+              <a href="spreadsheet-template-single-page.html" class="btn btn-outline-success btn-sm w-100 mt-auto">
+                Learn more
               </a>
             </div>
           </div>
         </div>
-  
+
         <!-- Card -->
-        <div class="col-12 col-md-6 col-lg-4 d-flex">
-          <div class="card shadow-light-lg h-100">
+        <div class="col-12 col-lg-4">
+          <div class="card shadow-light-lg">
             <!-- Image -->
             <div class="card-zoom">
               <img class="card-img-top" src="./assets/img/illustrations/Ultimate-Google-Sheets-CRM-Enrichment-Template.png"
@@ -599,99 +718,36 @@
             </div>
   
             <!-- Body -->
-            <div class="card-body d-flex flex-column">
+            <div class="card-body">
               <!-- Shape -->
               <div class="shape shape-bottom-100 shape-fluid-x text-white">
                 <img src="./assets/img/shapes/curves/curve-1-w.svg" alt="" srcset="" class="text-white" />
               </div>
   
-              <div class="d-flex mb-3 justify-content-between align-items-center">
-                <div class="d-inline-flex flex-column">
-                  <!-- Preheading -->
-                  <h6 class="text-uppercase mb-1 text-secondary fs-10">
-                    Google Sheets
-                  </h6>
-  
-                  <!-- Heading -->
-                  <h5 class="mb-0 fs-16">CRM Enrichment <br />Template</h5>
-                </div>
-                <div class="d-inline-flex">
-                  <h6 class="badge rounded-pill bg-success mb-0 fs-12 fw-900 text-white text-uppercase lh-base">
-                    Free
-                  </h6>
-                </div>
+
+              <div class="d-flex justify-content-between align-items-center border-bottom pb-4 mb-4">
+
+                <h6 class="badge rounded-pill bg-light border mb-0 text-uppercase">
+                  Business
+                </h6>
+
+                <h6 class="badge rounded-pill bg-success mb-0 text-white text-uppercase">
+                  Free
+                </h6>
+
               </div>
-  
-              <hr />
-  
-              <div class="d-flex justify-content-between align-content-center flex-grow-1">
-  
-                <p class="mb-0 text-muted">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, dolorum praesentium dolorem ex
-                  repudiandae error placeat non vel omnis libero atque tempora repellendus, provident illo tempore
-                  rem, porro consectetur eius!
-                </p>
-              </div>
-  
-              <hr />
-  
+
+              <h5 class="mb-4 lead font-weight-bold">
+                CRM Enrichment Template
+              </h5>
+
+              <p class="text-muted mb-4">
+                Expand your business relationships with this CRM Enrichment Template.
+              </p>
+
               <!-- Button -->
-              <a href="spreadsheet-template-single-page.html" class="btn btn-outline-success w-100 mt-auto">
-                Use template
-              </a>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Card -->
-        <div class="col-12 col-md-6 col-lg-4 d-flex">
-          <div class="card shadow-light-lg h-100">
-            <!-- Image -->
-            <div class="card-zoom">
-              <img class="card-img-top"
-                src="./assets/img/illustrations/Ultimate-Google-Sheets-CRM-Enrichment-Template.png" alt="..." />
-            </div>
-  
-            <!-- Body -->
-            <div class="card-body d-flex flex-column">
-              <!-- Shape -->
-              <div class="shape shape-bottom-100 shape-fluid-x text-white">
-                <img src="./assets/img/shapes/curves/curve-1-w.svg" alt="" srcset="" class="text-white" />
-              </div>
-  
-              <div class="d-flex mb-3 justify-content-between align-items-center">
-                <div class="d-inline-flex flex-column">
-                  <!-- Preheading -->
-                  <h6 class="text-uppercase mb-1 text-secondary fs-10">
-                    Google Sheets
-                  </h6>
-  
-                  <!-- Heading -->
-                  <h5 class="mb-0 fs-16">CRM Enrichment <br />Template</h5>
-                </div>
-                <div class="d-inline-flex">
-                  <h6 class="badge rounded-pill bg-success mb-0 fs-12 fw-900 text-white text-uppercase lh-base">
-                    Free
-                  </h6>
-                </div>
-              </div>
-  
-              <hr />
-  
-              <div class="d-flex justify-content-between align-content-center flex-grow-1">
-  
-                <p class="mb-0 text-muted">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, dolorum praesentium dolorem ex
-                  repudiandae error placeat non vel omnis libero atque tempora repellendus, provident illo tempore
-                  rem, porro consectetur eius!
-                </p>
-              </div>
-  
-              <hr />
-  
-              <!-- Button -->
-              <a href="spreadsheet-template-single-page.html" class="btn btn-outline-success w-100 mt-auto">
-                Use template
+              <a href="spreadsheet-template-single-page.html" class="btn btn-outline-success btn-sm w-100 mt-auto">
+                Learn more
               </a>
             </div>
           </div>
@@ -699,6 +755,7 @@
 
       </div>
     </div>
+
   </section>
 
   <!-- FAQ -->
