@@ -338,37 +338,50 @@
           <!-- Table -->
           <div class="card card-body border bg-light mb-5">
       
-            <!-- Tabs desktop -->
+            <!-- Tabs -->
             <div class="mb-4 d-block d-md-flex justify-content-between">
-      
+              <!-- Desktop Tabs -->
               <div class="d-none d-lg-block">
                 <ul class="nav d-flex justify-content-center">
                   <li class="nav-item">
-                    <a class="border border-success text-success small px-3 py-2" href="spreadsheet-template-single-page.html"
-                      style="background-color: #e6f5ea; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-top-left-radius: 8px; border-bottom-left-radius: 8px;">
+                    <a class="border px-3 py-2 small tab-link active" 
+                       href="#tableView" 
+                       data-toggle="tab"
+                       id="tableTab"
+                       style="border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-top-left-radius: 8px; border-bottom-left-radius: 8px;">
                       <i class="ph-bold ph-table"></i> Table view
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="border px-3 py-2 small text-muted pb-0" href="#"
-                      style="border-top-left-radius: 0px; border-bottom-left-radius: 0px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-left: none!important; border-color: #869ab8!important;">
+                    <a class="border px-3 py-2 small tab-link" 
+                       href="#graphView" 
+                       data-toggle="tab"
+                       id="graphTab"
+                       style="border-top-left-radius: 0px; border-bottom-left-radius: 0px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-left: none!important;">
                       <i class="ph-bold ph-chart-line"></i> Graph view
                     </a>
                   </li>
                 </ul>
               </div>
 
+              <!-- Mobile Tabs -->
               <div class="d-block d-lg-none">
                 <ul class="nav d-flex justify-content-center">
                   <li class="nav-item">
-                    <a class="border border-success text-success small px-3 py-2" href="spreadsheet-template-single-page.html"
-                      style="background-color: #e6f5ea; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-top-left-radius: 8px; border-bottom-left-radius: 8px;">
+                    <a class="border px-3 py-2 small tab-link active" 
+                       href="#tableView" 
+                       data-toggle="tab"
+                       id="tableTabMobile"
+                       style="border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-top-left-radius: 8px; border-bottom-left-radius: 8px;">
                       <i class="ph-bold ph-table"></i> Table view
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="border px-3 py-2 small text-muted pb-0" href="#"
-                      style="border-top-left-radius: 0px; border-bottom-left-radius: 0px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-left: none!important; border-color: #869ab8!important;">
+                    <a class="border px-3 py-2 small tab-link" 
+                       href="#graphView" 
+                       data-toggle="tab"
+                       id="graphTabMobile"
+                       style="border-top-left-radius: 0px; border-bottom-left-radius: 0px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-left: none!important;">
                       <i class="ph-bold ph-chart-line"></i> Graph view
                     </a>
                   </li>
@@ -383,156 +396,211 @@
       
             </div>
       
-            <div class="table-responsive rounded">
-      
-              <table class="table table-sm table-bordered table-hover">
-      
-                <thead class="thead-dark small">
-                  <tr>
-                    <th class="text-nowrap">S/N</th>
-                    <th class="text-nowrap">
-                      <button class="btn btn-xs btn-secondary py-0 px-2">
-                        Enrich
-                      </button>
-                    </th>
-                    <th class="text-nowrap">LinkedIn profile URL</th>
-                    <th class="text-nowrap">First name</th>
-                    <th class="text-nowrap">Last name</th>
-                    <th class="text-nowrap">
-                      Email
-                      <span class="text-muted ml-1" 
-                            data-toggle="tooltip" 
-                            data-placement="top" 
-                            title="Can be enriched">
-                        <i class="ph-bold ph-info text-xs"></i>
-                      </span>
-                    </th>
-                    <th class="text-nowrap">
-                      Phone
-                      <span class="text-muted ml-1" 
-                            data-toggle="tooltip" 
-                            data-placement="top" 
-                            title="Can be enriched">
-                        <i class="ph-bold ph-info text-xs"></i>
-                      </span>
-                    </th>
-                    <th class="text-nowrap">Resume link</th>
-                    <th class="text-nowrap">Remarks</th>
-                    <th class="text-nowrap">Hiring stage</th>
-                    <th class="text-nowrap">
-                      Location
-                      <span class="text-muted ml-1" 
-                            data-toggle="tooltip" 
-                            data-placement="top" 
-                            title="Can be enriched">
-                        <i class="ph-bold ph-info text-xs"></i>
-                      </span>
-                    </th>
-                    <th class="text-nowrap">
-                      Current role
-                      <span class="text-muted ml-1" 
-                            data-toggle="tooltip" 
-                            data-placement="top" 
-                            title="Can be enriched">
-                        <i class="ph-bold ph-info text-xs"></i>
-                      </span>
-                    </th>
-                    <th class="text-nowrap">
-                      Company
-                      <span class="text-muted ml-1" 
-                            data-toggle="tooltip" 
-                            data-placement="top" 
-                            title="Can be enriched">
-                        <i class="ph-bold ph-info text-xs"></i>
-                      </span>
-                    </th>
-                    <th class="text-nowrap">
-                      Education
-                      <span class="text-muted ml-1" 
-                            data-toggle="tooltip" 
-                            data-placement="top" 
-                            title="Can be enriched">
-                        <i class="ph-bold ph-info text-xs"></i>
-                      </span>
-                    </th>
-                    <th class="text-nowrap">
-                      School
-                      <span class="text-muted ml-1" 
-                            data-toggle="tooltip" 
-                            data-placement="top" 
-                            title="Can be enriched">
-                        <i class="ph-bold ph-info text-xs"></i>
-                      </span>
-                    </th>
-                    <th class="text-nowrap">
-                      Headline
-                      <span class="text-muted ml-1" 
-                            data-toggle="tooltip" 
-                            data-placement="top" 
-                            title="Can be enriched">
-                        <i class="ph-bold ph-info text-xs"></i>
-                      </span>
-                    </th>
-                    <th class="text-nowrap">
-                      Social media profile
-                      <span class="text-muted ml-1" 
-                            data-toggle="tooltip" 
-                            data-placement="top" 
-                            title="Can be enriched">
-                        <i class="ph-bold ph-info text-xs"></i>
-                      </span>
-                    </th>
-                  </tr>
-                </thead>
-      
-                <tbody>
-                  <tr>
-                    <td class="text-nowrap">1</td>
-                    <td class="text-nowrap"></td>
-                    <td class="text-nowrap"></td>
-                    <td class="text-nowrap"></td>
-                    <td class="text-nowrap"></td>
-                    <td class="text-nowrap"></td>
-                    <td class="text-nowrap"></td>
-                    <td class="text-nowrap"></td>
-                    <td class="text-nowrap"></td>
-                    <td class="text-nowrap">
-                      <div class="dropdown">
-                        <button class="btn btn-xs py-0 px-1 btn-outline-secondary dropdown-toggle disabled" type="button" id="hiringStageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Select Stage
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="hiringStageDropdown">
-                          <a class="dropdown-item" href="#!">Applied</a>
-                          <a class="dropdown-item" href="#!">Shortlisted</a>
-                          <a class="dropdown-item" href="#!">Screening Interview</a>
-                          <a class="dropdown-item" href="#!">In-depth Interview</a>
-                          <a class="dropdown-item" href="#!">Offer Made</a>
-                          <a class="dropdown-item" href="#!">Hired</a>
-                          <div class="dropdown-divider"></div>
-                          <a class="dropdown-item text-danger" href="#!">Dropped</a>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="text-nowrap"></td>
-                    <td class="text-nowrap"></td>
-                    <td class="text-nowrap"></td>
-                    <td class="text-nowrap"></td>
-                    <td class="text-nowrap"></td>
-                    <td class="text-nowrap"></td>
-                    <td class="text-nowrap"></td>
-                  </tr>
-                </tbody>
-      
-              </table>
-      
-            </div>
+            <!-- Tab Content -->
+            <div class="tab-content">
 
-            <div class="d-block d-md-none">
-              <a class="btn btn-sm btn-success w-100 mt-4" href="#!">
-                <i class="ph-bold ph-copy"></i> Use this template
-              </a>
+              <!-- Table View -->
+              <div class="tab-pane fade show active" id="tableView">
+                <div class="table-responsive rounded">
+                  <table class="table table-sm table-bordered table-hover">
+                    <thead class="thead-dark small">
+                      <tr>
+                        <th class="text-nowrap">S/N</th>
+                        <th class="text-nowrap">
+                          <button class="btn btn-xs btn-secondary py-0 px-2">
+                            Enrich
+                          </button>
+                        </th>
+                        <th class="text-nowrap">LinkedIn profile URL</th>
+                        <th class="text-nowrap">First name</th>
+                        <th class="text-nowrap">Last name</th>
+                        <th class="text-nowrap">
+                          Email
+                          <span class="text-muted ml-1" 
+                                data-toggle="tooltip" 
+                                data-placement="top" 
+                                title="Can be enriched">
+                            <i class="ph-bold ph-info text-xs"></i>
+                          </span>
+                        </th>
+                        <th class="text-nowrap">
+                          Phone
+                          <span class="text-muted ml-1" 
+                                data-toggle="tooltip" 
+                                data-placement="top" 
+                                title="Can be enriched">
+                            <i class="ph-bold ph-info text-xs"></i>
+                          </span>
+                        </th>
+                        <th class="text-nowrap">Resume link</th>
+                        <th class="text-nowrap">Remarks</th>
+                        <th class="text-nowrap">Hiring stage</th>
+                        <th class="text-nowrap">
+                          Location
+                          <span class="text-muted ml-1" 
+                                data-toggle="tooltip" 
+                                data-placement="top" 
+                                title="Can be enriched">
+                            <i class="ph-bold ph-info text-xs"></i>
+                          </span>
+                        </th>
+                        <th class="text-nowrap">
+                          Current role
+                          <span class="text-muted ml-1" 
+                                data-toggle="tooltip" 
+                                data-placement="top" 
+                                title="Can be enriched">
+                            <i class="ph-bold ph-info text-xs"></i>
+                          </span>
+                        </th>
+                        <th class="text-nowrap">
+                          Company
+                          <span class="text-muted ml-1" 
+                                data-toggle="tooltip" 
+                                data-placement="top" 
+                                title="Can be enriched">
+                            <i class="ph-bold ph-info text-xs"></i>
+                          </span>
+                        </th>
+                        <th class="text-nowrap">
+                          Education
+                          <span class="text-muted ml-1" 
+                                data-toggle="tooltip" 
+                                data-placement="top" 
+                                title="Can be enriched">
+                            <i class="ph-bold ph-info text-xs"></i>
+                          </span>
+                        </th>
+                        <th class="text-nowrap">
+                          School
+                          <span class="text-muted ml-1" 
+                                data-toggle="tooltip" 
+                                data-placement="top" 
+                                title="Can be enriched">
+                            <i class="ph-bold ph-info text-xs"></i>
+                          </span>
+                        </th>
+                        <th class="text-nowrap">
+                          Headline
+                          <span class="text-muted ml-1" 
+                                data-toggle="tooltip" 
+                                data-placement="top" 
+                                title="Can be enriched">
+                            <i class="ph-bold ph-info text-xs"></i>
+                          </span>
+                        </th>
+                        <th class="text-nowrap">
+                          Social media profile
+                          <span class="text-muted ml-1" 
+                                data-toggle="tooltip" 
+                                data-placement="top" 
+                                title="Can be enriched">
+                            <i class="ph-bold ph-info text-xs"></i>
+                          </span>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-nowrap">1</td>
+                        <td class="text-nowrap"></td>
+                        <td class="text-nowrap"></td>
+                        <td class="text-nowrap"></td>
+                        <td class="text-nowrap"></td>
+                        <td class="text-nowrap"></td>
+                        <td class="text-nowrap"></td>
+                        <td class="text-nowrap"></td>
+                        <td class="text-nowrap"></td>
+                        <td class="text-nowrap">
+                          <div class="dropdown">
+                            <button class="btn btn-xs py-0 px-1 btn-outline-secondary dropdown-toggle disabled" type="button" id="hiringStageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Select Stage
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="hiringStageDropdown">
+                              <a class="dropdown-item" href="#!">Applied</a>
+                              <a class="dropdown-item" href="#!">Shortlisted</a>
+                              <a class="dropdown-item" href="#!">Screening Interview</a>
+                              <a class="dropdown-item" href="#!">In-depth Interview</a>
+                              <a class="dropdown-item" href="#!">Offer Made</a>
+                              <a class="dropdown-item" href="#!">Hired</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item text-danger" href="#!">Dropped</a>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="text-nowrap"></td>
+                        <td class="text-nowrap"></td>
+                        <td class="text-nowrap"></td>
+                        <td class="text-nowrap"></td>
+                        <td class="text-nowrap"></td>
+                        <td class="text-nowrap"></td>
+                        <td class="text-nowrap"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="d-block d-md-none">
+                  <a class="btn btn-sm btn-success w-100 mt-4" href="#!">
+                    <i class="ph-bold ph-copy"></i> Use this template
+                  </a>
+                </div>
+              </div>
+
+              <!-- Graph View -->
+              <div class="tab-pane fade" id="graphView">
+                <div class="row">
+                  <!-- Profile Completion Status -->
+                  <div class="col-12 col-lg-6 mb-6">
+                    <div class="card border">
+                      <div class="card-header">
+                        <h5 class="card-title mb-0">Profile Completion Status</h5>
+                      </div>
+                      <div class="card-body">
+                        <canvas id="profileCompletionChart"></canvas>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Hiring Stage Distribution -->
+                  <div class="col-12 col-lg-6 mb-6">
+                    <div class="card border">
+                      <div class="card-header">
+                        <h5 class="card-title mb-0">Hiring Stage Distribution</h5>
+                      </div>
+                      <div class="card-body">
+                        <canvas id="hiringStageChart"></canvas>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Location Distribution -->
+                  <div class="col-12 col-lg-6 mb-6">
+                    <div class="card border">
+                      <div class="card-header">
+                        <h5 class="card-title mb-0">Candidate Locations</h5>
+                      </div>
+                      <div class="card-body">
+                        <canvas id="locationChart"></canvas>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Company Distribution -->
+                  <div class="col-12 col-lg-6 mb-6">
+                    <div class="card border">
+                      <div class="card-header">
+                        <h5 class="card-title mb-0">Current Companies</h5>
+                      </div>
+                      <div class="card-body">
+                        <canvas id="companyChart"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
-      
           </div>
       
         </div>
@@ -1176,6 +1244,204 @@
   <!-- Theme JS -->
   <script src="./assets/js/theme.min.js"></script>
   <script src="script.js"></script>
+
+  <!-- Add Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Initialize Charts -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Color palette for charts
+    const chartColors = {
+      backgrounds: [
+        'rgba(40, 167, 69, 0.5)',   // success (green)
+        'rgba(0, 123, 255, 0.5)',   // primary (blue)
+        'rgba(255, 193, 7, 0.5)',   // warning (yellow)
+        'rgba(220, 53, 69, 0.5)',   // danger (red)
+        'rgba(23, 162, 184, 0.5)',  // info (cyan)
+        'rgba(111, 66, 193, 0.5)',  // purple
+        'rgba(253, 126, 20, 0.5)',  // orange
+      ],
+      borders: [
+        'rgb(40, 167, 69)',    // success
+        'rgb(0, 123, 255)',    // primary
+        'rgb(255, 193, 7)',    // warning
+        'rgb(220, 53, 69)',    // danger
+        'rgb(23, 162, 184)',   // info
+        'rgb(111, 66, 193)',   // purple
+        'rgb(253, 126, 20)',   // orange
+      ]
+    };
+
+    // Profile Completion Chart (Doughnut)
+    new Chart(document.getElementById('profileCompletionChart'), {
+      type: 'doughnut',
+      data: {
+        labels: [
+          'LinkedIn URL',
+          'Name',
+          'Contact Info',
+          'Resume',
+          'Location',
+          'Current Role',
+          'Education'
+        ],
+        datasets: [{
+          data: [80, 75, 60, 70, 65, 55, 50], // Percentage of profiles with this info
+          backgroundColor: chartColors.backgrounds,
+          borderColor: chartColors.borders,
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'right'
+          },
+          title: {
+            display: true,
+            text: 'Profile Information Completion Rate (%)'
+          }
+        }
+      }
+    });
+
+    // Hiring Stage Chart (Bar)
+    new Chart(document.getElementById('hiringStageChart'), {
+      type: 'bar',
+      data: {
+        labels: ['Applied', 'Shortlisted', 'Screening', 'In-depth', 'Offer', 'Hired', 'Dropped'],
+        datasets: [{
+          label: 'Number of Candidates',
+          data: [30, 25, 20, 15, 10, 5, 8],
+          backgroundColor: chartColors.backgrounds,
+          borderColor: chartColors.borders,
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    // Location Chart (Pie)
+    new Chart(document.getElementById('locationChart'), {
+      type: 'pie',
+      data: {
+        labels: ['USA', 'UK', 'Singapore', 'Australia', 'Others'],
+        datasets: [{
+          data: [40, 20, 15, 15, 10],
+          backgroundColor: chartColors.backgrounds,
+          borderColor: chartColors.borders,
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'bottom'
+          }
+        }
+      }
+    });
+
+    // Company Chart (Horizontal Bar)
+    new Chart(document.getElementById('companyChart'), {
+      type: 'bar',
+      data: {
+        labels: ['Google', 'Microsoft', 'Apple', 'Meta', 'Amazon'],
+        datasets: [{
+          label: 'Number of Candidates',
+          data: [8, 7, 6, 5, 4],
+          backgroundColor: chartColors.backgrounds,
+          borderColor: chartColors.borders,
+          borderWidth: 1
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        scales: {
+          x: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  });
+  </script>
+
+  <!-- Add this JavaScript -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Function to handle tab switching
+    function handleTabSwitch(e) {
+      e.preventDefault();
+      
+      // Remove active classes from all tabs (both mobile and desktop)
+      $('.tab-link').removeClass('active');
+      $('.tab-link').css('background-color', '');
+      
+      // Add active class to clicked tab
+      $(this).addClass('active');
+      $(this).css('background-color', '#e6f5ea');
+      
+      // Get the target content
+      const target = $(this).attr('href');
+      
+      // Update both mobile and desktop tabs
+      $(`[href="${target}"]`).addClass('active').css('background-color', '#e6f5ea');
+      
+      // Show corresponding content
+      $('.tab-pane').removeClass('show active');
+      $(target).addClass('show active');
+
+      // If switching to graph view, trigger chart resize
+      if (target === '#graphView') {
+        window.dispatchEvent(new Event('resize'));
+      }
+    }
+    
+    // Add click handlers to all tabs
+    $('.tab-link').on('click', handleTabSwitch);
+    
+    // Set initial state
+    const initialTab = window.location.hash || '#tableView';
+    $(`[href="${initialTab}"]`).trigger('click');
+  });
+  </script>
+
+  <!-- Add this CSS -->
+  <style>
+  .tab-link {
+    color: #6c757d;
+    border-color: #869ab8 !important;
+  }
+
+  .tab-link.active {
+    background-color: #e6f5ea !important;
+    border-color: #28a745 !important;
+    color: #28a745 !important;
+  }
+
+  .tab-link:not(.active) {
+    border-color: #869ab8 !important;
+  }
+
+  /* Ensure mobile tabs have proper spacing */
+  @media (max-width: 991.98px) {
+    .nav {
+      margin-bottom: 1rem;
+    }
+  }
+  </style>
 
 </body>
 
