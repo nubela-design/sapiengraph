@@ -752,3 +752,78 @@ ul.timeline > li:nth-child(5):after {
     font-size: 0.8rem !important;
   }
 }
+
+.logo-scroll-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.logo-scroll {
+  padding: 20px 0;
+  position: relative;
+}
+
+.logo-scroll::before,
+.logo-scroll::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50px; /* reduced from 100px */
+  z-index: 2;
+  pointer-events: none;
+}
+
+.logo-scroll::before {
+  left: 0;
+  background: linear-gradient(to right, white 20%, rgba(255, 255, 255, 0) 100%);
+}
+
+.logo-scroll::after {
+  right: 0;
+  background: linear-gradient(to left, white 20%, rgba(255, 255, 255, 0) 100%);
+}
+
+.logos-container {
+  display: flex;
+  animation: scroll 20s linear infinite;
+  width: fit-content;
+}
+
+.logo-item {
+  flex: 0 0 auto;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-item img {
+  max-height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-124%);
+  }
+}
+
+.logo-scroll:hover .logos-container {
+  animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+  .logo-item {
+    padding: 0 15px;
+  }
+  
+  .logo-item img {
+    max-height: 40px;
+  }
+}
