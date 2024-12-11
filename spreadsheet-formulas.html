@@ -324,7 +324,7 @@
 
         <div class="col-12 col-md-10">
 
-          <div class="text-center mb-6 mb-md-8">
+          <div class="text-center mb-6 mb-lg-8">
           
             <h1 class="display-3 font-weight-bolder" data-aos="fade-up">
               Add B2B Data Enrichment Formulas to <span class="text-success">Excel / Google Sheets</span>
@@ -333,7 +333,7 @@
           </div>
 
           <!-- People table -->
-          <div class="mb-6 mb-md-8">
+          <div class="mb-6">
 
             <h2 class="font-weight-bold text-center h3 mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" class="mb-1" width="24" height="auto" viewBox="0 0 24 24">
@@ -423,6 +423,106 @@
 
           </div>
 
+          <div class="text-center">
+            <div class="h4 text-gray-700" data-aos="fade-up" data-aos-delay="100">
+              Try it yourself
+              <a class="text-success d-block" href="#spreadsheetDemo">
+                <i class="fe fe-arrow-down"></i>
+              </a>
+            </div>
+          </div>
+
+          <div id="enrichmentPeopleDemo" class="mb-6" data-aos="fade-up" data-aos-delay="150">
+  
+            <!-- TABLET - DESKTOP-->
+            <div class="card card-body border custom-rounded mb-8"
+              style="border-color: #e2e8f0; background-color: #f1f5f9;">
+    
+              <div class="d-flex mb-6">
+                <span class="bg-danger rounded-circle" style="width: 12px; height: 12px;"></span>
+                <span class="bg-warning rounded-circle ml-1" style="width: 12px; height: 12px;"></span>
+                <span class="bg-success rounded-circle ml-1" style="width: 12px; height: 12px;"></span>
+              </div>
+    
+              <div class="table-responsive">
+  
+                <table class="table table-bordered rounded-table table-hover custom-table">
+    
+                  <thead style="background-color: #F9FAFB;">
+                    <tr>
+                      <th scope="col">A</th>
+                      <th scope="col">B</th>
+                      <th scope="col">C</th>
+                      <th scope="col">D</th>
+                    </tr>
+                  </thead>
+    
+                  <tbody class="small">
+    
+                    <tr class="vertical-align-middle">
+                      <th scope="row" class="text-nowrap">
+                        Get person's first name
+                      </th>
+                      <td>
+                        <input type="text" class="form-control form-control-xs w-auto" value="https://www.linkedin.com/in/johnrmarty">
+                      </td>
+                      <td class="text-nowrap">
+                        <div class="d-flex">
+                          <input type="text" class="form-control form-control-xs border-success w-auto bg-success-light" value="=SG_PERSON(A2, 'first_name')">
+                          <button class="btn btn-success btn-xs ml-2 lift">Go</button>
+                        </div>
+                      </td>
+                      <td>
+                        John
+                      </td>
+                    </tr>
+    
+                    <tr>
+                      <th scope="row" class="text-nowrap">
+                        Get profile's current company
+                      </th>
+                      <td>
+                        <input type="text" class="form-control form-control-xs w-auto" value="https://www.linkedin.com/in/johnrmarty">
+                      </td>
+                      <td class="text-nowrap">
+                        <div class="d-flex">
+                          <input type="text" class="form-control form-control-xs border-success w-auto bg-success-light" value="=SG_PERSON_WORK(A2, 'company')">
+                          <button class="btn btn-success btn-xs ml-2 lift">Go</button>
+                        </div>
+                      </td>
+                      <td class="text-nowrap">
+                        FF Real Estate
+                      </td>
+                    </tr>
+    
+                    <tr>
+                      <th scope="row" class="text-nowrap">
+                        Get profile's current job title
+                      </th>
+                      <td>
+                        <input type="text" class="form-control form-control-xs w-auto" value="https://www.linkedin.com/in/johnrmarty">
+                      </td>
+                      <td class="text-nowrap">
+                        <div class="d-flex">
+                          <input type="text" class="form-control form-control-xs border-success w-auto bg-success-light" value="=SG_PERSON_WORK(A2, 'title')">
+                          <button class="btn btn-success btn-xs ml-2 lift">Go</button>
+                        </div>
+                      </td>
+                      <td class="text-nowrap">
+                        Co-Founder
+                      </td>
+                    </tr>
+    
+                  </tbody>
+    
+                </table>
+    
+              </div>
+    
+            </div>
+    
+          </div>
+
           <!-- Company table -->
           <div class="mb-6 mb-md-8">
 
@@ -454,55 +554,55 @@
   
                   <tr>
                     <th scope="row" class="text-nowrap">
-                      Get company name
+                      Get company’s description
                     </th>
                     <td>
-                      https://www.linkedin.com/in/johnrmarty
+                      https://www.linkedin.com/company/proxycurl
                     </td>
                     <td class="text-nowrap">
                       <span class="border rounded h6 py-2 px-2 text-monospace copy-text" style="background-color: #f0fdf4;">
-                        =SG_PERSON(A2, "first_name")
+                        =SG_COMPANY(B2, "description")
                         <svg class="bg-white border rounded copy-icon" data-toggle="tooltip" data-placement="top" title="Copy" style="padding: 2px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg" width="20" height="auto" viewBox="0 0 24 24"><path d="M18,5.25h-.25v-.25c0-.96484-.78516-1.75-1.75-1.75h-1.35352c-.32812-1.15283-1.38965-2-2.64648-2s-2.31836.84717-2.64648,2h-1.35352c-.96484,0-1.75.78516-1.75,1.75v.25h-.25c-1.5166,0-2.75,1.2334-2.75,2.75v12c0,1.5166,1.2334,2.75,2.75,2.75h12c1.5166,0,2.75-1.2334,2.75-2.75v-12c0-1.5166-1.2334-2.75-2.75-2.75ZM7.75,5c0-.1377.1123-.25.25-.25h2c.41406,0,.75-.33594.75-.75,0-.68945.56055-1.25,1.25-1.25s1.25.56055,1.25,1.25c0,.41406.33594.75.75.75h2c.1377,0,.25.1123.25.25v2c0,.1377-.1123.25-.25.25h-8c-.1377,0-.25-.1123-.25-.25v-2ZM19.25,20c0,.68945-.56055,1.25-1.25,1.25H6c-.68945,0-1.25-.56055-1.25-1.25v-12c0-.68945.56055-1.25,1.25-1.25h.25v.25c0,.96484.78516,1.75,1.75,1.75h8c.96484,0,1.75-.78516,1.75-1.75v-.25h.25c.68945,0,1.25.56055,1.25,1.25v12ZM16.75,12c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,15c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,18c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75Z" fill="currentColor"/></svg>
                       </span>
                     </td>
                     <td>
-                      John
+                      Fresh and accurate data enrichment APIs and datasets on people and companies worldwide.
                     </td>
                   </tr>
   
                   <tr>
                     <th scope="row" class="text-nowrap">
-                      Get profile's current company
+                      Get company’s funding amount
                     </th>
                     <td>
-                      https://www.linkedin.com/in/johnrmarty
+                      https://www.linkedin.com/company/posthog
                     </td>
                     <td class="text-nowrap">
                       <span class="border rounded h6 py-2 px-2 text-monospace copy-text" style="background-color: #f0fdf4;">
-                        =SG_PERSON_WORK(A2, "company")
+                        =SG_COMPANY_FUNDING(B3, "money_raised")
                         <svg class="bg-white border rounded copy-icon" data-toggle="tooltip" data-placement="top" title="Copy" style="padding: 2px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg" width="20" height="auto" viewBox="0 0 24 24"><path d="M18,5.25h-.25v-.25c0-.96484-.78516-1.75-1.75-1.75h-1.35352c-.32812-1.15283-1.38965-2-2.64648-2s-2.31836.84717-2.64648,2h-1.35352c-.96484,0-1.75.78516-1.75,1.75v.25h-.25c-1.5166,0-2.75,1.2334-2.75,2.75v12c0,1.5166,1.2334,2.75,2.75,2.75h12c1.5166,0,2.75-1.2334,2.75-2.75v-12c0-1.5166-1.2334-2.75-2.75-2.75ZM7.75,5c0-.1377.1123-.25.25-.25h2c.41406,0,.75-.33594.75-.75,0-.68945.56055-1.25,1.25-1.25s1.25.56055,1.25,1.25c0,.41406.33594.75.75.75h2c.1377,0,.25.1123.25.25v2c0,.1377-.1123.25-.25.25h-8c-.1377,0-.25-.1123-.25-.25v-2ZM19.25,20c0,.68945-.56055,1.25-1.25,1.25H6c-.68945,0-1.25-.56055-1.25-1.25v-12c0-.68945.56055-1.25,1.25-1.25h.25v.25c0,.96484.78516,1.75,1.75,1.75h8c.96484,0,1.75-.78516,1.75-1.75v-.25h.25c.68945,0,1.25.56055,1.25,1.25v12ZM16.75,12c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,15c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,18c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75Z" fill="currentColor"/></svg>
                       </span>
                     </td>
                     <td class="text-nowrap">
-                      FF Real Estate
+                      150000
                     </td>
                   </tr>
   
                   <tr>
                     <th scope="row" class="text-nowrap">
-                      Get profile's current job title
+                      Get company’s industry
                     </th>
                     <td>
-                      https://www.linkedin.com/in/johnrmarty
+                      https://www.linkedin.com/company/posthog
                     </td>
                     <td class="text-nowrap">
                       <span class="border rounded h6 py-2 px-2 text-monospace copy-text" style="background-color: #f0fdf4;">
-                        =SG_PERSON_WORK(A2, "title")
+                        =SG_COMPANY(B4, "industry")
                         <svg class="bg-white border rounded copy-icon" data-toggle="tooltip" data-placement="top" title="Copy" style="padding: 2px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg" width="20" height="auto" viewBox="0 0 24 24"><path d="M18,5.25h-.25v-.25c0-.96484-.78516-1.75-1.75-1.75h-1.35352c-.32812-1.15283-1.38965-2-2.64648-2s-2.31836.84717-2.64648,2h-1.35352c-.96484,0-1.75.78516-1.75,1.75v.25h-.25c-1.5166,0-2.75,1.2334-2.75,2.75v12c0,1.5166,1.2334,2.75,2.75,2.75h12c1.5166,0,2.75-1.2334,2.75-2.75v-12c0-1.5166-1.2334-2.75-2.75-2.75ZM7.75,5c0-.1377.1123-.25.25-.25h2c.41406,0,.75-.33594.75-.75,0-.68945.56055-1.25,1.25-1.25s1.25.56055,1.25,1.25c0,.41406.33594.75.75.75h2c.1377,0,.25.1123.25.25v2c0,.1377-.1123.25-.25.25h-8c-.1377,0-.25-.1123-.25-.25v-2ZM19.25,20c0,.68945-.56055,1.25-1.25,1.25H6c-.68945,0-1.25-.56055-1.25-1.25v-12c0-.68945.56055-1.25,1.25-1.25h.25v.25c0,.96484.78516,1.75,1.75,1.75h8c.96484,0,1.75-.78516,1.75-1.75v-.25h.25c.68945,0,1.25.56055,1.25,1.25v12ZM16.75,12c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,15c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,18c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75Z" fill="currentColor"/></svg>
                       </span>
                     </td>
                     <td class="text-nowrap">
-                      Co-Founder
+                      Software Development
                     </td>
                   </tr>
   
@@ -515,6 +615,112 @@
           </div>
 
           <div class="text-center">
+            <div class="h4 text-gray-700" data-aos="fade-up" data-aos-delay="100">
+              Try it yourself
+              <a class="text-success d-block" href="#spreadsheetDemo">
+                <i class="fe fe-arrow-down"></i>
+              </a>
+            </div>
+          </div>
+
+          <div id="enrichmentCompanyDemo" class="mb-6" data-aos="fade-up" data-aos-delay="150">
+  
+            <!-- TABLET - DESKTOP-->
+            <div class="card card-body border custom-rounded mb-8"
+              style="border-color: #e2e8f0; background-color: #f1f5f9;">
+    
+              <div class="d-flex mb-6">
+                <span class="bg-danger rounded-circle" style="width: 12px; height: 12px;"></span>
+                <span class="bg-warning rounded-circle ml-1" style="width: 12px; height: 12px;"></span>
+                <span class="bg-success rounded-circle ml-1" style="width: 12px; height: 12px;"></span>
+              </div>
+    
+              <div class="table-responsive">
+  
+                <table class="table table-bordered rounded-table table-hover custom-table">
+    
+                  <thead style="background-color: #F9FAFB;">
+                    <tr>
+                      <th scope="col">A</th>
+                      <th scope="col">B</th>
+                      <th scope="col">C</th>
+                      <th scope="col">D</th>
+                    </tr>
+                  </thead>
+    
+                  <tbody class="small">
+    
+                    <tr class="vertical-align-middle">
+                      <th scope="row" class="text-nowrap">
+                        Get company’s description
+                      </th>
+                      <td>
+                        <input type="text" class="form-control form-control-xs w-auto" value="https://www.linkedin.com/company/proxycurl">
+                      </td>
+                      <td class="text-nowrap">
+                        <div class="d-flex">
+                          <input type="text" class="form-control form-control-xs border-success w-auto bg-success-light" value="=SG_COMPANY(B2, 'description')">
+                          <button class="btn btn-success btn-xs ml-2 lift">Go</button>
+                        </div>
+                      </td>
+                      <td>
+                        Fresh and accurate data enrichment APIs and datasets on people and companies worldwide.
+                      </td>
+                    </tr>
+    
+                    <tr>
+                      <th scope="row" class="text-nowrap">
+                        Get company’s funding amount
+                      </th>
+                      <td>
+                        <input type="text" class="form-control form-control-xs w-auto" value="https://www.linkedin.com/company/posthog">
+                      </td>
+                      <td class="text-nowrap">
+                        <div class="d-flex">
+                          <input type="text" class="form-control form-control-xs border-success w-auto bg-success-light" value="=SG_COMPANY_FUNDING(B3, 'money_raised')">
+                          <button class="btn btn-success btn-xs ml-2 lift">Go</button>
+                        </div>
+                      </td>
+                      <td class="text-nowrap">
+                        150000
+                      </td>
+                    </tr>
+    
+                    <tr>
+                      <th scope="row" class="text-nowrap">
+                        Get company’s industry
+                      </th>
+                      <td>
+                        <input type="text" class="form-control form-control-xs w-auto" value="https://www.linkedin.com/company/posthog">
+                      </td>
+                      <td class="text-nowrap">
+                        <div class="d-flex">
+                          <input type="text" class="form-control form-control-xs border-success w-auto bg-success-light" value="=SG_COMPANY(B4, 'industry')">
+                          <button class="btn btn-success btn-xs ml-2 lift">Go</button>
+                        </div>
+                      </td>
+                      <td class="text-nowrap">
+                        Software Development
+                      </td>
+                    </tr>
+    
+                  </tbody>
+    
+                </table>
+    
+              </div>
+    
+            </div>
+    
+          </div>
+
+          <div class="text-center">
+            <a href="#!" class="btn btn-success lift">
+              Go to the Dashboard to start enriching your data
+            </a>
+          </div>
+
+          <!-- <div class="text-center">
 
             <button class="btn btn-success lift">
               Sign Up For Free Trial
@@ -524,7 +730,7 @@
               See Formulas
             </button>
 
-          </div>
+          </div> -->
 
         </div>
 
