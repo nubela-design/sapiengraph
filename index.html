@@ -211,11 +211,11 @@
         <div class="col-12 col-md-11 col-lg-12 text-center">
           <div class="row justify-content-center">
 
-            <div class="col-12 mb-6 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
-              <img class="img-fluid custom-rounded mb-6 shadow-light" alt="Lead Enrichment In Excel and CRMs" src="Illustration_landscape_placement-wider.png">
+            <div class="col-12 mb-6 mb-md-8 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+              <img class="img-fluid custom-rounded shadow-light-lg" alt="Lead Enrichment In Excel and CRMs" src="assets/img/illustrations/track person and spreadsheet.png">
             </div>
 
-            <div class="col-12 d-flex flex-column align-items-center mt-lg-8" data-aos="fade-up">
+            <div class="col-12 d-flex flex-column align-items-center mt-lg-9" data-aos="fade-up">
               <button class="btn btn-lg btn-success btn-rounded-circle px-6 lift mb-9 d-none d-md-block px-10" >
                 Track 10 Profiles For Free
               </button>
@@ -389,7 +389,7 @@
       <div class="row justify-content-center mb-6" data-aos="fade-up">
         <div class="col-12">
           <!-- Nav tabs -->
-          <div class="card rounded-pill border shadow-light-lg">
+          <div class="d-none d-md-block card rounded-pill border shadow-light-lg">
             <div class="card-body py-4 px-4">
               <ul class="nav nav-pills nav-fill flex-column flex-sm-row" id="nav-tab" role="tablist">
                 <li class="nav-item">
@@ -403,10 +403,26 @@
               </ul>
             </div>
           </div>
+
+          <!-- Nav tabs Mobile-->
+          <div class="d-block d-md-none card custom-rounded border shadow-light-lg">
+            <div class="card-body py-4 px-4">
+              <ul class="nav nav-pills nav-fill flex-column flex-sm-row" id="nav-tab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active font-weight-bold text-muted rounded-pill" id="nav-tracking-tab" data-toggle="tab" href="#tracking"
+                    role="tab" aria-controls="tracking" aria-selected="true"> Tracking</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link font-weight-bold text-muted rounded-pill" id="nav-outreach-tab" data-toggle="tab" href="#outreach"
+                    role="tab" aria-controls="outreach" aria-selected="false">Outreach</a>
+                </li>
+              </ul>
+            </div>
+          </div>          
         </div>
       </div>
       
-      <div class="row justify-content-center">
+      <div class="row justify-content-center" data-aos="fade-up">
         <div class="col-12">
       
           <!-- Tab content -->
@@ -416,17 +432,21 @@
               <div class="card custom-rounded border">
                 <div class="card-body">
                   <div class="row">
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-5">
                       <!-- Cards Container -->
                       <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                         <!-- Card 1 -->
-                        <div class="mb-4 card card-body custom-rounded lift" id="v-pills-point-tab" data-aos="fade-up" data-toggle="pill" href="#v-pills-point" role="tab">
-                          <div class="d-flex align-items-center py-4">
-                            <div class="avatar avatar-xxl badge-success-soft custom-rounded mr-5 d-flex align-items-center justify-content-center">
-                              <i class="fe fe-user text-success"></i>
+                        <div class="mb-4 card card-body custom-rounded lift" id="v-pills-point-tab"  
+                        data-toggle="pill" href="#v-pills-point" role="tab" style="cursor: pointer;">
+                          <div class="row align-items-center justify-content-between">
+                            <div class="col-3">
+                              <div class="avatar avatar-xl badge-success-soft rounded-circle d-flex align-items-center justify-content-center">
+                                <i class="fe fe-user text-success"></i>
+                              </div>
                             </div>
-                            <div>
-                              <h3 class="font-weight-bold mb-2">Point and Click</h3>
+
+                            <div class="col-9">
+                              <h3 class="font-weight-bold mb-1">Point and Click</h3>
                               <p class="text-muted mb-0">
                                 Click directly on LinkedIn Profile Page
                               </p>
@@ -435,28 +455,36 @@
                         </div>
                   
                         <!-- Card 2 -->
-                        <div class="mb-4 card card-body custom-rounded lift" id="v-pills-csv-tab" data-aos="fade-up" data-aos-delay="100" data-toggle="pill" href="#v-pills-csv" role="tab">
-                          <div class="d-flex align-items-center py-4">
-                            <div class="avatar avatar-xxl badge-success-soft custom-rounded mr-5 d-flex align-items-center justify-content-center">
-                              <i class="fe fe-upload-cloud text-success"></i>
+                        <div class="mb-4 card card-body custom-rounded lift" id="v-pills-csv-tab" data-toggle="pill" href="#v-pills-csv"
+                          role="tab" style="cursor: pointer;">
+                          <div class="row align-items-center justify-content-between">
+                            <div class="col-3">
+                              <div class="avatar avatar-xl badge-success-soft rounded-circle d-flex align-items-center justify-content-center">
+                                <i class="fe fe-upload-cloud text-success"></i>
+                              </div>
                             </div>
-                            <div>
-                              <h3 class="font-weight-bold mb-2">Upload CSV</h3>
+                        
+                            <div class="col-9">
+                              <h3 class="font-weight-bold mb-1">Upload CSV</h3>
                               <p class="text-muted mb-0">
-                                Bulk upload LinkedIn profile URLs
+                                Bulk upload CSV or paste LinkedIn URLs
                               </p>
                             </div>
                           </div>
                         </div>
                   
                         <!-- Card 3 -->
-                        <div class="mb-4 card card-body custom-rounded lift" id="v-pills-prospector-tab" data-aos="fade-up" data-aos-delay="200" data-toggle="pill" href="#v-pills-prospector" role="tab">
-                          <div class="d-flex align-items-center py-4">
-                            <div class="avatar avatar-xxl badge-success-soft custom-rounded mr-5 d-flex align-items-center justify-content-center">
-                              <i class="fe fe-search text-success"></i>
+                        <div class="mb-4 card card-body custom-rounded lift" id="v-pills-prospector-tab" 
+                        data-toggle="pill" href="#v-pills-prospector" role="tab" style="cursor: pointer;">
+                          <div class="row align-items-center justify-content-between">
+                            <div class="col-3">
+                              <div class="avatar avatar-xl badge-success-soft rounded-circle d-flex align-items-center justify-content-center">
+                                <i class="fe fe-search text-success"></i>
+                              </div>
                             </div>
-                            <div>
-                              <h3 class="font-weight-bold mb-2">Search on Prospector</h3>
+
+                            <div class="col-9">
+                              <h3 class="font-weight-bold mb-1">Search on Prospector</h3>
                               <p class="text-muted mb-0">
                                 Follow results from Prospector search
                               </p>
@@ -466,17 +494,17 @@
                       </div>
                     </div>
                   
-                    <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="col-12 col-md-7" data-aos="fade-up" data-aos-delay="300">
                       <!-- Tab Content for Images -->
                       <div class="tab-content" id="v-pills-tabContent">
                         <div class="tab-pane fade show active" id="v-pills-point" role="tabpanel">
-                          <img src="illustration_placement_portrait.png" alt="Point and Click" class="img-fluid custom-rounded">
+                          <img src="assets/img/illustrations/tracking point and click.png" alt="Point and Click" class="img-fluid custom-rounded shadow-light-lg">
                         </div>
                         <div class="tab-pane fade" id="v-pills-csv" role="tabpanel">
-                          <img src="illustration_placement_portrait.png" alt="Upload CSV" class="img-fluid custom-rounded">
+                          <img src="assets/img/illustrations/upload csv or pastle url.png" alt="Upload CSV" class="img-fluid custom-rounded shadow-light-lg">
                         </div>
                         <div class="tab-pane fade" id="v-pills-prospector" role="tabpanel">
-                          <img src="illustration_placement_portrait.png" alt="Prospector Search" class="img-fluid custom-rounded ">
+                          <img src="assets/img/illustrations/search using prospector.png" alt="Prospector Search" class="img-fluid custom-rounded shadow-light-lg">
                         </div>
                       </div>
                     </div>
@@ -494,8 +522,8 @@
                       <!-- Single Card Container -->
                       <div class="nav flex-column nav-pills" id="v-pills-tab-outreach" role="tablist" aria-orientation="vertical">
                         <!-- Single Card -->
-                        <div class="card card-body custom-rounded lift card-border border-success shadow-light-lg" id="v-pills-spreadsheet-tab" data-toggle="pill" href="#v-pills-spreadsheet" role="tab">
-                          <div class="d-flex align-items-center py-4 mb-2">
+                        <div class="card card-body custom-rounded lift border shadow-light-lg" id="v-pills-spreadsheet-tab" data-toggle="pill" href="#v-pills-spreadsheet" role="tab">
+                          <div class="d-flex align-items-center py-4 mb-3">
                             <div class="avatar avatar-xxl badge-success-soft custom-rounded mr-5 d-flex align-items-center justify-content-center">
                               <i class="fe fe-file-text text-success"></i>
                             </div>
@@ -1211,15 +1239,15 @@
   <script>
     $(document).ready(function() {
       // Add active classes to first card by default
-      $('#v-pills-point-tab').addClass('card-border border-success shadow-light-lg');
+      $('#v-pills-point-tab').addClass('border shadow-light-lg');
       
       // Handle pill changes
       $('#v-pills-tab .card').on('click', function() {
         // Remove classes from all cards
-        $('#v-pills-tab .card').removeClass('card-border border-success shadow-light-lg');
+        $('#v-pills-tab .card').removeClass('border shadow-light-lg');
         
         // Add classes to clicked card
-        $(this).addClass('card-border border-success shadow-light-lg');
+        $(this).addClass('border shadow-light-lg');
       });
     });
     </script>  
