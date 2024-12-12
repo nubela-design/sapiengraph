@@ -463,7 +463,7 @@ ul.timeline > li:nth-child(5):after {
   margin-bottom: 1rem;
 }
 
-.card {
+/* .card {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -473,7 +473,7 @@ ul.timeline > li:nth-child(5):after {
   display: flex;
   flex-direction: column;
   height: 100%;
-}
+} */
 
 .credits-section {
   min-height: 50px;
@@ -827,3 +827,18 @@ ul.timeline > li:nth-child(5):after {
     max-height: 40px;
   }
 }
+
+/* Start Add by Rifki 12 Dec 2024 - Spreadsheet Formulas */
+.card-img-spreadsheet-formulas {
+  border-top-left-radius: .375rem !important;
+  border-top-right-radius: .375rem !important;
+}
+
+@media (min-width: 992px) {
+  .card-img-spreadsheet-formulas{
+    border-top-left-radius: .375rem !important;
+    border-bottom-left-radius: .375rem !important;
+    border-top-right-radius: 0rem !important;
+  }
+}
+/* End Add by Rifki 12 Dec 2024 - Spreadsheet Formulas */
