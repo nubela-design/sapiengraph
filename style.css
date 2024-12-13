@@ -841,4 +841,48 @@ ul.timeline > li:nth-child(5):after {
     border-top-right-radius: 0rem !important;
   }
 }
+
+/* Sticky elements */
+.sticky-action {
+  position: sticky !important;
+  right: -1px;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.sticky-action:before {
+  content: "\00a0";
+  display: block;
+  position: absolute;
+  background: #fff;
+  top: 0;
+  right: -1px;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-left: 1px solid #f1f4f8;
+  border-right: 1px solid #f1f4f8;
+}
+
+
+/* Table styles */
+.table-responsive {
+  overflow-x: auto;
+  overflow-y: auto;
+  position: relative !important;
+}
+
+th.sticky-action {
+  z-index: 2;
+}
+
+td.sticky-action {
+  box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+  background-color: #fff; /* Default background color is white */
+}
+
+tr:hover td.sticky-action {
+  background-color: #f8f9fa; /* Bootstrap's default table hover color on hover */
+}
+
 /* End Add by Rifki 12 Dec 2024 - Spreadsheet Formulas */
