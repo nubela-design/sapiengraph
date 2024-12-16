@@ -220,173 +220,170 @@
 
         <div class="row">
           <div class="col-12 col-lg-3 pr-lg-2">
-            <div class="sticky-top pt-3">
+            <div class="sticky-top pt-3 mb-3">
               <div class="card border">
                 <div class="card-body p-4">
                   <!-- Add collapse toggle button for mobile only -->
-                  <button class="btn btn-link w-100 d-lg-none px-0 text-dark text-decoration-none" type="button"
-                    data-toggle="collapse" data-target="#filterCollapse" aria-expanded="true"
-                    aria-controls="filterCollapse">
+                  <button class="btn btn-link w-100 p-0 text-dark text-decoration-none" type="button"
+                    data-toggle="collapse" data-target="#filterCheckCollapse" aria-expanded="true"
+                    aria-controls="filterCheckCollapse">
                     <div class="d-flex justify-content-between align-items-center">
-                      <span class="h3 mb-0 font-weight-bold">Filters</span>
+                      <span class="small mb-0 font-weight-bold">Selected Filter</span>
                       <span class="fe fe-chevron-down"></span>
                     </div>
                   </button>
 
                   <!-- Modify collapse div to stay expanded on desktop -->
-                  <div class="collapse d-lg-block" id="filterCollapse">
+                  <div class="collapse" id="filterCheckCollapse">
+                    <hr />
                     <!-- Filter Data Type -->
                     <div class="form-group mb-3">
                       <label class="small text-muted">Popular Keywords</label>
                       <div class="custom-control custom-checkbox mb-2">
-                        <input type="checkbox" class="custom-control-input" id="topLead">
-                        <label class="custom-control-label" for="topLead">CEO</label>
+                        <input type="checkbox" class="custom-control-input" id="topLead" checked>
+                        <label class="custom-control-label small" for="topLead">CEO</label>
                       </div>
                       <div class="custom-control custom-checkbox mb-2">
-                        <input type="checkbox" class="custom-control-input" id="customerProfile">
-                        <label class="custom-control-label" for="customerProfile">CTO</label>
-                      </div>
-                      <div class="custom-control custom-checkbox mb-2">
-                        <input type="checkbox" class="custom-control-input" id="customerProfile">
-                        <label class="custom-control-label" for="customerProfile">Software Engineer</label>
-                      </div>
-                      <div class="custom-control custom-checkbox mb-2">
-                        <input type="checkbox" class="custom-control-input" id="customerProfile">
-                        <label class="custom-control-label" for="customerProfile">Marketing</label>
-                      </div>
-                      <div class="custom-control custom-checkbox mb-2">
-                        <input type="checkbox" class="custom-control-input" id="customerProfile">
-                        <label class="custom-control-label" for="customerProfile">Sales</label>
+                        <input type="checkbox" class="custom-control-input" id="customerProfile" checked>
+                        <label class="custom-control-label small" for="customerProfile">CTO</label>
                       </div>
                     </div>
                     <!-- Filter Data Type -->
                     <div class="form-group mb-3">
                       <label class="small text-muted">Popular Companies</label>
                       <div class="custom-control custom-checkbox mb-2">
-                        <input type="checkbox" class="custom-control-input" id="topLead">
-                        <label class="custom-control-label" for="topLead">Microsoft</label>
-                      </div>
-                      <div class="custom-control custom-checkbox mb-2">
-                        <input type="checkbox" class="custom-control-input" id="customerProfile">
-                        <label class="custom-control-label" for="customerProfile">Google</label>
-                      </div>
-                      <div class="custom-control custom-checkbox mb-2">
-                        <input type="checkbox" class="custom-control-input" id="customerProfile">
-                        <label class="custom-control-label" for="customerProfile">Apple</label>
-                      </div>
-                      <div class="custom-control custom-checkbox mb-2">
-                        <input type="checkbox" class="custom-control-input" id="customerProfile">
-                        <label class="custom-control-label" for="customerProfile">Amazon</label>
+                        <input type="checkbox" class="custom-control-input" id="topLead" checked>
+                        <label class="custom-control-label small" for="topLead">Microsoft</label>
                       </div>
                     </div>
                     <!-- Filter Data Type -->
                     <div class="form-group mb-3">
                       <label class="small text-muted">Data Type</label>
                       <div class="custom-control custom-checkbox mb-2">
-                        <input type="checkbox" class="custom-control-input" id="topLead">
-                        <label class="custom-control-label" for="topLead">Top Lead</label>
-                      </div>
-                      <div class="custom-control custom-checkbox mb-2">
-                        <input type="checkbox" class="custom-control-input" id="customerProfile">
-                        <label class="custom-control-label" for="customerProfile">Customer Profile</label>
+                        <input type="checkbox" class="custom-control-input" id="topLead" checked>
+                        <label class="custom-control-label small" for="topLead">Top Lead</label>
                       </div>
                     </div>
                     <!-- Filter Region -->
                     <div class="form-group mb-3">
                       <label class="small text-muted">Region</label>
                       <div class="custom-control custom-checkbox mb-2">
-                        <input type="checkbox" class="custom-control-input" id="india">
-                        <label class="custom-control-label" for="india">India</label>
-                      </div>
-                      <div class="custom-control custom-checkbox mb-2">
-                        <input type="checkbox" class="custom-control-input" id="europe">
-                        <label class="custom-control-label" for="europe">Europe</label>
-                      </div>
-                      <div class="custom-control custom-checkbox mb-2">
-                        <input type="checkbox" class="custom-control-input" id="northAmerica">
-                        <label class="custom-control-label" for="northAmerica">North America</label>
+                        <input type="checkbox" class="custom-control-input" id="india" checked>
+                        <label class="custom-control-label small" for="india">India</label>
                       </div>
                     </div>
                     <!-- Filter Date -->
                     <div class="form-group">
                       <label class="small text-muted">Scrapped Date</label>
-                      <input type="date" class="form-control form-control-xs mb-3" id="dateFrom">
-                      <input type="date" class="form-control form-control-xs" id="dateTo">
+                      <input type="date" class="form-control form-control-xs mb-3 small" id="dateFrom"
+                        value="2024-01-01">
                     </div>
-                    <!-- Filter Ratings -->
-                    <!-- <div class="form-group mb-3">
-                      <label class="small text-muted">Ratings</label>
-                      <div class="custom-control custom-checkbox mb-2">
-                        <input type="checkbox" class="custom-control-input" id="rating5">
-                        <label class="custom-control-label" for="rating5">
-                          <div class="d-flex mt-md-1">
-                            <span class="rating neu-so-stars fs-14 checked"></span>
-                            <span class="rating neu-so-stars fs-14 checked"></span>
-                            <span class="rating neu-so-stars fs-14 checked"></span>
-                            <span class="rating neu-so-stars fs-14 checked"></span>
-                            <span class="rating neu-so-stars fs-14 checked"></span>
-                          </div>
-                        </label>
+
+                    <div class="row mx-0">
+                      <div class="col-12 col-lg-6 pl-0 pr-1">
+                        <button class="btn btn-xs btn-success w-100 font-weight-light h6">Apply</button>
                       </div>
-                      <div class="custom-control custom-checkbox mb-2">
-                        <input type="checkbox" class="custom-control-input" id="rating4">
-                        <label class="custom-control-label" for="rating4">
-                          <div class="d-flex mt-md-1">
-                            <span class="rating neu-so-stars fs-14 checked"></span>
-                            <span class="rating neu-so-stars fs-14 checked"></span>
-                            <span class="rating neu-so-stars fs-14 checked"></span>
-                            <span class="rating neu-so-stars fs-14 checked"></span>
-                            <span class="rating neu-so-stars fs-14"></span>
-                          </div>
-                        </label>
+                      <div class="col-12 col-lg-6 pr-0 pl-1">
+                        <button class="btn btn-xs btn-outline-secondary w-100 font-weight-light h6">Reset</button>
                       </div>
-                      <div class="custom-control custom-checkbox mb-2">
-                        <input type="checkbox" class="custom-control-input" id="rating3">
-                        <label class="custom-control-label" for="rating3">
-                          <div class="d-flex mt-md-1">
-                            <span class="rating neu-so-stars fs-14 checked"></span>
-                            <span class="rating neu-so-stars fs-14 checked"></span>
-                            <span class="rating neu-so-stars fs-14 checked"></span>
-                            <span class="rating neu-so-stars fs-14"></span>
-                            <span class="rating neu-so-stars fs-14"></span>
-                          </div>
-                        </label>
-                      </div>
-                      <div class="custom-control custom-checkbox mb-2">
-                        <input type="checkbox" class="custom-control-input" id="rating2">
-                        <label class="custom-control-label" for="rating2">
-                          <div class="d-flex mt-md-1">
-                            <span class="rating neu-so-stars fs-14 checked"></span>
-                            <span class="rating neu-so-stars fs-14 checked"></span>
-                            <span class="rating neu-so-stars fs-14"></span>
-                            <span class="rating neu-so-stars fs-14"></span>
-                            <span class="rating neu-so-stars fs-14"></span>
-                          </div>
-                        </label>
-                      </div>
-                      <div class="custom-control custom-checkbox mb-2">
-                        <input type="checkbox" class="custom-control-input" id="rating1">
-                        <label class="custom-control-label" for="rating1">
-                          <div class="d-flex mt-md-1">
-                            <span class="rating neu-so-stars fs-14 checked"></span>
-                            <span class="rating neu-so-stars fs-14"></span>
-                            <span class="rating neu-so-stars fs-14"></span>
-                            <span class="rating neu-so-stars fs-14"></span>
-                            <span class="rating neu-so-stars fs-14"></span>
-                          </div>
-                        </label>
-                      </div>
-                    </div> -->
+                    </div>
 
                   </div>
                 </div>
               </div>
             </div>
+
+            <div class="card border mb-3">
+              <div class="card-body p-4">
+
+                <!-- Add collapse toggle button for mobile only -->
+                <button class="btn btn-link w-100 d-lg-none p-0 text-dark text-decoration-none" type="button"
+                  data-toggle="collapse" data-target="#filterCollapse" aria-expanded="true"
+                  aria-controls="filterCollapse">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="small mb-0 font-weight-bold">Filters</span>
+                    <span class="fe fe-chevron-down"></span>
+                  </div>
+                </button>
+
+                <!-- Modify collapse div to stay expanded on desktop -->
+                <div class="collapse d-lg-block" id="filterCollapse">
+                  <hr class="d-lg-none" />
+                  <!-- Filter Data Type -->
+                  <div class="form-group mb-3">
+                    <label class="small text-muted">Popular Keywords</label>
+                    <div class="custom-control custom-checkbox mb-2">
+                      <input type="checkbox" class="custom-control-input" id="customerProfile">
+                      <label class="custom-control-label small" for="customerProfile">Software Engineer</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-2">
+                      <input type="checkbox" class="custom-control-input" id="customerProfile">
+                      <label class="custom-control-label small" for="customerProfile">Marketing</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-2">
+                      <input type="checkbox" class="custom-control-input" id="customerProfile">
+                      <label class="custom-control-label small" for="customerProfile">Sales</label>
+                    </div>
+                  </div>
+                  <!-- Filter Data Type -->
+                  <div class="form-group mb-3">
+                    <label class="small text-muted">Popular Companies</label>
+                    <div class="custom-control custom-checkbox mb-2">
+                      <input type="checkbox" class="custom-control-input" id="customerProfile">
+                      <label class="custom-control-label small" for="customerProfile">Google</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-2">
+                      <input type="checkbox" class="custom-control-input" id="customerProfile">
+                      <label class="custom-control-label small" for="customerProfile">Apple</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-2">
+                      <input type="checkbox" class="custom-control-input" id="customerProfile">
+                      <label class="custom-control-label small" for="customerProfile">Amazon</label>
+                    </div>
+                  </div>
+                  <!-- Filter Data Type -->
+                  <div class="form-group mb-3">
+                    <label class="small text-muted">Data Type</label>
+                    <div class="custom-control custom-checkbox mb-2">
+                      <input type="checkbox" class="custom-control-input" id="customerProfile">
+                      <label class="custom-control-label small" for="customerProfile">Customer Profile</label>
+                    </div>
+                  </div>
+                  <!-- Filter Region -->
+                  <div class="form-group mb-3">
+                    <label class="small text-muted">Region</label>
+                    <div class="custom-control custom-checkbox mb-2">
+                      <input type="checkbox" class="custom-control-input" id="europe">
+                      <label class="custom-control-label small" for="europe">Europe</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-2">
+                      <input type="checkbox" class="custom-control-input" id="northAmerica">
+                      <label class="custom-control-label small" for="northAmerica">North America</label>
+                    </div>
+                  </div>
+                  <!-- Filter Date -->
+                  <div class="form-group">
+                    <label class="small text-muted">Scrapped Date</label>
+                    <input type="date" class="form-control form-control-xs small mb-3" id="dateFrom">
+                    <input type="date" class="form-control form-control-xs small" id="dateTo">
+                  </div>
+                  <div class="row mx-0">
+                    <div class="col-12 col-lg-6 pl-0 pr-1">
+                      <button class="btn btn-xs btn-success w-100 font-weight-light h6">Apply</button>
+                    </div>
+                    <div class="col-12 col-lg-6 pr-0 pl-1">
+                      <button class="btn btn-xs btn-outline-secondary w-100 font-weight-light h6">Reset</button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-12 col-lg-9 pl-lg-2 pt-3">
+          <div class="col-12 col-lg-9 pl-lg-2">
 
             <!-- Search Mobile -->
-            <div class="card border mb-0 mb-md-3 mt-0 mt-md-0 d-md-none">
+            <div class="card border mb-3 mt-0 mt-md-0 d-md-none">
               <div class="card-body p-3">
                 <form class="">
                   <div class="row justify-content-between align-items-center mx-0">
@@ -401,9 +398,14 @@
                         placeholder="Microsoft" aria-label="Search">
                     </div>
                     <div class="col-12 col-md-1 px-0 text-right">
-                      <button class="btn btn-sm btn-success w-100 w-lg-auto mt-3 mt-md-0" type="submit">
+                      <button class="btn btn-sm btn-success w-100 w-lg-auto mt-3 mt-md-0 mb-3" type="submit">
                         <i class="fe fe-search"></i>
                       </button>
+                    </div>
+                    <div class="col-12 px-1">
+                      <small class="h6 text-muted lh-sm">
+                        Enter the keyword that you want to search, for example: google, microsoft, software engineer, marketing etc.
+                      </small>
                     </div>
                   </div>
                 </form>
@@ -411,23 +413,28 @@
             </div>
 
             <!-- Search Tablet & Desktop -->
-            <div class="row d-none d-md-block">
-              <div class="col-12">
-                <form class="">
-                  <div class="input-group mb-3">
-                    <select class="custom-select" id="inputGroupSelect02">
-                      <option selected>Search by Company</option>
-                      <option value="1">Search by Keyword</option>
-                    </select>
-                    <input id="searchInput" type="search" class="form-control" placeholder="Microsoft"
-                      aria-label="Search" aria-describedby="Search">
-                    <div class="input-group-append">
-                      <button class="btn btn-success" type="button" id="button-addon2">
-                        <i class="fe fe-search"></i>
-                      </button>
-                    </div>
+            <div class="row mx-0 justify-content-between align-items-center d-none d-md-flex mt-3 mb-3">
+              <div class="col-4 px-0">
+                <select class="custom-select" id="inputGroupSelect02">
+                  <option selected>Search by Company</option>
+                  <option value="1">Search by Keyword</option>
+                </select>
+              </div>
+              <div class="col-8 px-0">
+                <div class="input-group">
+                  <input id="searchInput" type="search" class="form-control" placeholder="Microsoft" aria-label="Search"
+                    aria-describedby="Search">
+                  <div class="input-group-append">
+                    <button class="btn btn-success" type="button" id="button-addon2">
+                      <i class="fe fe-search"></i>
+                    </button>
                   </div>
-                </form>
+                </div>
+              </div>
+              <div class="col-12 px-1">
+                <small class="h6 text-muted">
+                  Enter the keyword that you want to search, for example: google, microsoft, software engineer, marketing etc.
+                </small>
               </div>
             </div>
 

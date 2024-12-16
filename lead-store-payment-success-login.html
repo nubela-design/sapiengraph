@@ -28,7 +28,7 @@
   <!-- Import Custom CSS -->
   <link rel="stylesheet" href="./assets/css/style-2.css" />
 
-  <title>Sapiengraph - Lead Store Payment Confirmation</title>
+  <title>Sapiengraph - Lead Store Payment Success</title>
 
   <!-- Import jquery -->
   <script src="./assets/libs/jquery/dist/jquery.min.js"></script>
@@ -153,14 +153,10 @@
         <!-- Button -->
 
         <div class="text-center ml-auto">
-          <!-- Button -->
-          <a class="btn btn-sm btn-link font-weight-bold text-white text-md-gray" href="signin-illustration.html">
-            Sign in
-          </a>
 
-          <a class="navbar-btn btn btn-pill btn-sm btn-white text-success text-md-gray lift ml-auto shadow-light-lg"
+          <a class="navbar-btn btn btn-pill btn-sm btn-outline-white text-white lift ml-auto shadow-light-lg text-uppercase"
             href="#!" target="_blank">
-            Set up new account
+            Dashboard
           </a>
         </div>
       </div>
@@ -175,8 +171,8 @@
     <section class="py-5">
       <div class="container">
 
-        <div class="row">
-          <div class="col-12 col-lg-8 pr-lg-2 pt-3 order-1 order-lg-0">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8">
 
             <!-- Card -->
             <div class="card border mb-4">
@@ -184,214 +180,45 @@
 
                 <div class="row mb-3">
                   <div class="col-12">
-                    <h6 class="h6 text-gray-700 text-center mb-2 letter-spacing-lg">
-                      Express checkout
-                    </h6>
-                    <a href="#"
-                      class="btn btn-sm fs-20 btn-black w-100 lift d-inline-flex align-items-center justify-content-center">
-                      <img src="./assets/img/logo/Google-logoicon.svg" alt="stripe" class="w-auto h-auto mr-2" />
-                      Pay
-                    </a>
-                  </div>
-                </div>
 
-                <div class="row mb-3 mt-6">
-                  <div class="col-12">
-                    <div class="position-relative">
-                      <hr />
-                      <h6 class="small text-center bg-white position-absolute px-3"
-                        style="top:50%;left:50%;transform:translate(-50%, -50%)">or</h6>
+                    <div class="text-center mb-4">
+                      <div class="avatar avatar-xl mb-3">
+                        <div class="avatar-title bg-success rounded-circle text-white">
+                          <i class="fe fe-check fs-30"></i>
+                        </div>
+                      </div>
                     </div>
+
+                    <h1 class="h1 font-weight-bold text-center">
+                      Payment Successful
+                    </h1>
+
+                    <p class="text-center text-muted">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam repudiandae in, aperiam vero quas accusamus, placeat nobis sapiente corrupti eveniet cum magnam velit sed veritatis. Asperiores qui beatae voluptatibus architecto?
+                    </p>
                   </div>
                 </div>
 
                 <div class="row mb-3">
                   <div class="col-12">
-                    <form action="">
-
-                      <div class="my-6">
-                        <h3 class="h3 font-weight-bold mb-2">Contact</h3>
-                        <div class="form-groupform-floating">
-                          <input type="email" class="form-control form-control-sm" id="cardEmail" placeholder="Email">
-                        </div>
-                      </div>
-
-                      <hr />
-
-                      <div class="my-6">
-                        <h3 class="h3 font-weight-bold mb-4">Payment</h3>
-                        <div class="form-group mb-3">
-                          <div class="row mx-0 align-items-center">
-                            <div class="col px-0">
-                              <label for="cardNumber" class="small">Card number</label>
-                            </div>
-                            <div class="col-auto px-0">
-                              <ul class="list-unstyled mb-2 d-flex justify-content-end">
-                                <li>
-                                  <img src="./assets/img/icons/payment-methods/visa.svg" alt="visa" height="16" class="w-auto ml-1">
-                                </li>
-                                <li>
-                                  <img src="./assets/img/icons/payment-methods/mastercard-old.svg" alt="mastercard" height="16" class="w-auto ml-1">
-                                </li>
-                                <li>
-                                  <img src="./assets/img/icons/payment-methods/amex.svg" alt="amex" height="16" class="w-auto ml-1">
-                                </li>
-                                <li>
-                                  <img src="./assets/img/icons/payment-methods/jcb.svg" alt="jcb" height="16" class="w-auto ml-1">
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="col-12 px-0">
-                              <input type="text" class="form-control form-control-sm" id="cardNumber" placeholder="1234 1234 1234 1234">
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="form-row mb-3">
-                          <div class="form-group col-md-6">
-                            <label for="cardExpiry" class="small">Expiry date</label>
-                            <input type="text" class="form-control form-control-sm" id="cardExpiry" placeholder="MM/YY">
-                          </div>
-                          <div class="form-group col-md-6">
-                            <label for="cardCVC" class="small">CVC</label>
-                            <input type="text" class="form-control form-control-sm" id="cardCVC" placeholder="CVC">
-                          </div>
-                        </div>
-
-                        <div class="form-group">
-                          <label for="cardName" class="small">Name on card</label>
-                          <input type="text" class="form-control form-control-sm" id="cardName" placeholder="Name on card">
-                        </div>
-
-                        <div class="form-group">
-                          <label for="cardCountry" class="small">Country or region</label>
-                          <select class="form-control form-control-sm" id="cardCountry">
-                            <option value="" selected disabled>Select country or region</option>
-                            <option value="US">United States</option>
-                            <option value="GB">United Kingdom</option>
-                            <option value="CA">Canada</option>
-                            <option value="AU">Australia</option>
-                            <option value="DE">Germany</option>
-                            <option value="FR">France</option>
-                            <option value="IT">Italy</option>
-                            <option value="ES">Spain</option>
-                            <option value="NL">Netherlands</option>
-                            <option value="BE">Belgium</option>
-                            <option value="AT">Austria</option>
-                            <option value="CH">Switzerland</option>
-                            <option value="SE">Sweden</option>
-                            <option value="NO">Norway</option>
-                            <option value="DK">Denmark</option>
-                            <option value="FI">Finland</option>
-                            <option value="IE">Ireland</option>
-                            <option value="NZ">New Zealand</option>
-                            <option value="SG">Singapore</option>
-                            <option value="HK">Hong Kong</option>
-                          </select>
-                        </div>
-                      </div>
-
-                      <hr />
-
-                      <div class="my-6">
-                        <div class="accordion" id="paymentAccordion">
-                          <div class="card border">
-                            <div class="card-header p-2" id="headingOne">
-                              <h2 class="mb-0">
-                                <button
-                                  class="btn btn-link btn-xs btn-block text-left text-dark d-flex justify-content-between align-items-center"
-                                  type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
-                                  aria-controls="collapseOne">
-                                  <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="saveInfo">
-                                    <label class="custom-control-label" for="saveInfo">
-                                      Save my information for a faster checkout with a Sapiengraph account
-                                    </label>
-                                  </div>
-                                </button>
-                              </h2>
-                            </div>
-
-                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
-                              data-parent="#paymentAccordion">
-                              <div class="card-body p-4">
-                                <div class="form-group">
-                                  <label for="fullName" class="small">Full name</label>
-                                  <input type="text" class="form-control form-control-sm" id="fullName" placeholder="Enter your full name">
-                                </div>
-                                <div class="form-group">
-                                  <label for="phoneNumber" class="small">Phone number</label>
-                                  <input type="tel" class="form-control form-control-sm" id="phoneNumber" placeholder="Enter your phone number">
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                        </div>
-                      </div>
-
-                      <hr />
-
-                      <div class="mb-3">
-                        <div class="custom-control custom-checkbox">
-                          <input type="checkbox" class="custom-control-input" id="termsCheck" required>
-                          <label class="custom-control-label" for="termsCheck">
-                            FREE: Track up to 10 LinkedIn profiles for job changes
-                          </label>
-                        </div>
-                      </div>
-
-                      <hr />
-
-                      <button type="submit"
-                        class="btn btn-success btn-sm rounded-pill w-100 lift d-inline-flex align-items-center justify-content-center mt-4 mb-3"
-                        onclick="window.location.href='lead-store-payment-success.html'">
-                        <i class="fe fe-credit-card mr-2"></i>Pay Now
-                      </button>
-
-                      <small class="small text-muted">
-                        <span class="text-danger">*</span> Data will be downloadable after purchase
-                      </small>
-                    </form>
+                    <button type="submit"
+                      class="btn btn-success btn-sm rounded-pill w-100 lift d-inline-flex align-items-center justify-content-center mt-4 mb-3"
+                      onclick="window.location.href='lead-store.html'">
+                      <i class="fe fe-download mr-2"></i>Download Data (35MB)
+                    </button>
+  
+                    <a href="lead-store.html" class="btn btn-sm btn-outline-success rounded-pill lift w-100">
+                      Go to the dashboard
+                    </a>
                   </div>
                 </div>
 
               </div>
             </div>
+          </div>
 
-          </div>
-          <div class="col-12 col-lg-4 pl-lg-2 order-0 order-lg-1">
-            <div class="sticky-top pt-3 mb-4">
-              <div class="card border">
-                <div class="card-body">
-                  <div class="row justify-content-between align-items-center mb-3">
-                    <div class="col-12">
-                      <h5 class="h5 font-weight-bold mb-2">
-                        Lead Package 1
-                      </h5>
-                      <span class="small badge badge-success-soft d-inline-block mb-3">Top Lead</span>
-                      <p class="text-gray-700 h6 mb-0">
-                        Rows of data: <span class="text-success">1000</span>
-                      </p>
-                      <p class="text-gray-700 h6 mb-0">
-                        Total size of data: <span class="text-success">35MB</span>
-                      </p>
-                      <p class="text-gray-700 h6 mb-4">
-                        Last scraped: <span class="text-success">2 days ago</span>
-                      </p>
-                      
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row justify-content-between align-items-center">
-                    <div class="col"><span class="h3 font-weight-bolder">Total</span></div>
-                    <div class="col-auto">USD <span class="h3 font-weight-bolder">$1588</span></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
+      </div>
 
       </div>
     </section>
