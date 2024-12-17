@@ -864,7 +864,6 @@ ul.timeline > li:nth-child(5):after {
   border-right: 1px solid #f1f4f8;
 }
 
-
 /* Table styles */
 .table-responsive {
   overflow-x: auto;
@@ -886,3 +885,28 @@ tr:hover td.sticky-action {
 }
 
 /* End Add by Rifki 12 Dec 2024 - Spreadsheet Formulas */
+
+/* Start Add by Rifki 17 Dec 2024 - Result Table */
+.result-table-demo th:first-child {
+  border-radius: 6px 0 0 0;
+  -moz-border-radius: 6px 0 0 0;
+  -webkit-border-radius: 6px 0 0 0;
+  border-left: 0;
+}
+
+.result-table-demo th:last-child {
+  border-radius: 0 6px 0 0;
+  -moz-border-radius: 0 6px 0 0;
+  -webkit-border-radius: 0 6px 0 0;
+  border-right: 0;
+}
+
+.result-table-demo-one th {
+  border-radius: 6px 6px 0 0;
+  -moz-border-radius: 6px 6px 0 0;
+  -webkit-border-radius: 6px 6px 0 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+/* End Add by Rifki 17 Dec 2024 - Result Table */
