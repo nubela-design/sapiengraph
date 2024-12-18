@@ -26,10 +26,23 @@
 
   <!-- Theme CSS -->
   <link rel="stylesheet" href="./assets/css/theme.min.css">
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/neuicons@1.9.0/css/neu.min.css">
+  <link rel="stylesheet" href="style.css">
 
   <title>Sapiengraph Spreadsheet Formulas</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/@univerjs/preset-sheets-core/lib/index.css" />
+
+  <style>
+    html,
+    body,
+    #root,
+    #univer-sheet {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+    }
+  </style>
 
 </head>
 
@@ -348,7 +361,7 @@
 
           </div>
 
-          <div id="enrichmentPeopleDemo" class="mb-6" data-aos="fade-up" data-aos-delay="150">
+          <div id="enrichmentPeopleDemo" class="mb-6">
 
             <!-- TABLET - DESKTOP-->
             <div class="card card-body border custom-rounded mb-8"
@@ -362,32 +375,31 @@
 
               <div class="table-responsive">
 
-                <table class="table table-bordered table-hover custom-table-demo overflow-auto">
+                <table class="table table-hover result-table-demo overflow-auto table-rounded table-bordered">
 
-                  <thead style="background-color: #F9FAFB;">
+                  <thead class="thead-dark">
                     <tr>
                       <th scope="col">A</th>
                       <th scope="col">B</th>
                       <th scope="col">C</th>
-                      <th scope="col" class="sticky-action">Action</th>
+                      <th scope="col">D</th>
                     </tr>
                   </thead>
 
                   <tbody class="small">
 
                     <tr>
-                      <th scope="row" class="text-nowrap">
-                        Get person's first name
-                      </th>
                       <td>
-                        <input type="text" class="form-control form-control-xs w-auto"
-                          value="https://www.linkedin.com/in/johnrmarty">
+                        Get person's first name
+                      </td>
+                      <td>
+                        https://www.linkedin.com/in/johnrmarty
                       </td>
                       <td class="text-nowrap">
                         <div class="d-flex">
                           <p class="d-inline-flex mb-0 border rounded h6 py-2 px-2 text-monospace copy-text"
                             style="background-color: #f0fdf4;">
-                            =SG_PERSON(A2, "first_name")
+                            =SG_PERSON_WORK(B1, 'title')
                             <svg class="bg-white border rounded copy-icon" data-toggle="tooltip" data-placement="top"
                               title="Copy" style="padding: 2px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg"
                               width="20" height="auto" viewBox="0 0 24 24">
@@ -398,8 +410,8 @@
                           </p>
                         </div>
                       </td>
-                      <td class="text-nowrap bg-white sticky-action">
-                        <button class="btn btn-success btn-xs ml-2 lift">Try me</button>
+                      <td>
+                        John
                       </td>
                     </tr>
 
@@ -408,14 +420,13 @@
                         Get profile's current company
                       </th>
                       <td>
-                        <input type="text" class="form-control form-control-xs w-auto"
-                          value="https://www.linkedin.com/in/johnrmarty">
+                        https://www.linkedin.com/in/johnrmarty
                       </td>
                       <td class="text-nowrap">
                         <div class="d-flex">
                           <p class="d-inline-flex mb-0 border rounded h6 py-2 px-2 text-monospace copy-text"
                             style="background-color: #f0fdf4;">
-                            =SG_PERSON_WORK(A2, 'company')
+                            =SG_PERSON_WORK(B2, 'company')
                             <svg class="bg-white border rounded copy-icon" data-toggle="tooltip" data-placement="top"
                               title="Copy" style="padding: 2px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg"
                               width="20" height="auto" viewBox="0 0 24 24">
@@ -426,8 +437,8 @@
                           </p>
                         </div>
                       </td>
-                      <td class="text-nowrap bg-white sticky-action">
-                        <button class="btn btn-success btn-xs ml-2 lift">Try me</button>
+                      <td class="text-nowrap">
+                        FF Real Estate
                       </td>
                     </tr>
 
@@ -436,14 +447,13 @@
                         Get profile's current job title
                       </th>
                       <td>
-                        <input type="text" class="form-control form-control-xs w-auto"
-                          value="https://www.linkedin.com/in/johnrmarty">
+                        https://www.linkedin.com/in/johnrmarty
                       </td>
                       <td class="text-nowrap">
                         <div class="d-flex">
                           <p class="d-inline-flex mb-0 border rounded h6 py-2 px-2 text-monospace copy-text"
                             style="background-color: #f0fdf4;">
-                            =SG_PERSON_WORK(A2, 'title')
+                            =SG_PERSON_WORK(B3, 'title')
                             <svg class="bg-white border rounded copy-icon" data-toggle="tooltip" data-placement="top"
                               title="Copy" style="padding: 2px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg"
                               width="20" height="auto" viewBox="0 0 24 24">
@@ -454,8 +464,8 @@
                           </p>
                         </div>
                       </td>
-                      <td class="text-nowrap bg-white sticky-action">
-                        <button class="btn btn-success btn-xs ml-2 lift">Try me</button>
+                      <td class="text-nowrap">
+                        Co-Founder
                       </td>
                     </tr>
 
@@ -467,58 +477,14 @@
 
               <div class="text-center py-4">
                 <h3 class="h3 mb-0">
-                  Result
+                  Let's try on this sheet
                 </h3>
                 <p class="mb-0">
                   <i class="fe fe-arrow-down text-success"></i>
                 </p>
               </div>
 
-              <div class="table-responsive">
-
-                <table class="table table-hover result-table-demo overflow-auto table-rounded table-bordered">
-
-                  <thead class="thead-dark">
-                    <tr>
-                      <th scope="col">A</th>
-                      <th scope="col">Output</th>
-                    </tr>
-                  </thead>
-
-                  <tbody class="small">
-
-                    <tr>
-                      <th scope="row" class="text-nowrap">
-                        Get person's first name
-                      </th>
-                      <td>
-                        John
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <th scope="row" class="text-nowrap">
-                        Get profile's current company
-                      </th>
-                      <td class="text-nowrap">
-                        FF Real Estate
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <th scope="row" class="text-nowrap">
-                        Get profile's current job title
-                      </th>
-                      <td class="text-nowrap">
-                        Co-Founder
-                      </td>
-                    </tr>
-
-                  </tbody>
-
-                </table>
-
-              </div>
+              <div id="univer-sheet" class="w-100" style="height: 450px;"></div>
 
             </div>
 
@@ -540,7 +506,7 @@
 
           </div>
 
-          <div id="enrichmentCompanyDemo" class="mb-6" data-aos="fade-up" data-aos-delay="150">
+          <div id="enrichmentCompanyDemo" class="mb-6">
 
             <!-- TABLET - DESKTOP-->
             <div class="card card-body border custom-rounded mb-8"
@@ -905,7 +871,7 @@
               Lookup a person
             </h2>
 
-            <div id="enrichmentLookupPersonDemo" class="mb-6" data-aos="fade-up" data-aos-delay="150">
+            <div id="enrichmentLookupPersonDemo" class="mb-6">
 
               <!-- TABLET - DESKTOP-->
               <div class="card card-body border custom-rounded mb-8"
@@ -1020,7 +986,7 @@
               Lookup a company
             </h2>
 
-            <div id="enrichmentLookupCompanyDemo" class="mb-6" data-aos="fade-up" data-aos-delay="150">
+            <div id="enrichmentLookupCompanyDemo" class="mb-6">
 
               <!-- TABLET - DESKTOP-->
               <div class="card card-body border custom-rounded mb-8"
@@ -1127,7 +1093,7 @@
               Search and Prospect (like LinkedIn Sales Navigator, but in your spreadsheet)
             </h2>
 
-            <div id="enrichmentSearchProspectDemo" class="mb-6" data-aos="fade-up" data-aos-delay="150">
+            <div id="enrichmentSearchProspectDemo" class="mb-6">
 
               <!-- TABLET - DESKTOP-->
               <div class="card card-body border custom-rounded mb-8"
@@ -1279,7 +1245,7 @@
               Get phone numbers and emails
             </h2>
 
-            <div id="enrichmentPhoneEmailDemo" class="mb-6" data-aos="fade-up" data-aos-delay="150">
+            <div id="enrichmentPhoneEmailDemo" class="mb-6">
 
               <!-- TABLET - DESKTOP-->
               <div class="card card-body border custom-rounded mb-8"
@@ -1432,7 +1398,7 @@
               Jobs jobs jobs
             </h2>
 
-            <div id="enrichmentJobsDemo" class="mb-6" data-aos="fade-up" data-aos-delay="150">
+            <div id="enrichmentJobsDemo" class="mb-6">
 
               <!-- TABLET - DESKTOP-->
               <div class="card card-body border custom-rounded mb-8"
@@ -1583,7 +1549,7 @@
               Get employees
             </h2>
 
-            <div id="enrichmentEmployeesDemo" class="mb-6" data-aos="fade-up" data-aos-delay="150">
+            <div id="enrichmentEmployeesDemo" class="mb-6">
 
               <!-- TABLET - DESKTOP-->
               <div class="card card-body border custom-rounded mb-8"
@@ -2217,9 +2183,39 @@
   <!-- Map -->
   <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
 
+  <!-- With these correct React script tags -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/rxjs/dist/bundles/rxjs.umd.min.js"></script>
+
+  <script src="https://unpkg.com/@univerjs/presets@0.5.0/lib/umd/index.js"></script>
+
+  <script src="https://unpkg.com/@univerjs/preset-sheets-core/lib/umd/index.js"></script>
+  <script src="https://unpkg.com/@univerjs/preset-sheets-core/lib/umd/locales/en-US.js"></script>
+
   <!-- Theme JS -->
   <script src="./assets/js/theme.min.js"></script>
   <script src="script.js"></script>
+
+  <script>
+    const { createUniver, LocaleType, Tools, defaultTheme } = UniverPresets
+    const { UniverSheetsCorePreset } = UniverPresetSheetsCore
+
+    const { univerAPI } = createUniver({
+      locale: LocaleType.EN_US,
+      locales: {
+        enUS: UniverPresetSheetsCoreEnUS,
+      },
+      theme: defaultTheme,
+      presets: [
+        UniverSheetsCorePreset({
+          container: 'univer-sheet',
+        }),
+      ],
+    });
+
+    univerAPI.createUniverSheet({ name: 'EnrichPeople' }); // Create your first sheet named 'EnrichPeople'
+  </script>
 
 </body>
 
