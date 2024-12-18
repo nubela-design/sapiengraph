@@ -33,17 +33,6 @@
 
   <link rel="stylesheet" href="https://unpkg.com/@univerjs/preset-sheets-core/lib/index.css" />
 
-  <style>
-    html,
-    body,
-    #root,
-    #univer-sheet {
-      padding: 0;
-      margin: 0;
-      height: 100%;
-    }
-  </style>
-
 </head>
 
 <body>
@@ -346,9 +335,9 @@
           </div>
 
           <!-- People table -->
-          <div class="mb-6">
+          <div class="mb-3">
 
-            <h2 class="font-weight-bold text-center h3 mb-4">
+            <h2 class="font-weight-bold text-center h2 mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" class="mb-1" width="24" height="auto" viewBox="0 0 24 24">
                 <g fill="currentColor">
                   <path
@@ -358,6 +347,15 @@
               </svg>
               Pull rich data about people
             </h2>
+
+            <div class="text-center">
+              <h4 class="h4 mb-0">
+                Let's try on this sheet
+              </h4>
+              <p class="mb-0">
+                <i class="fe fe-arrow-down text-success"></i>
+              </p>
+            </div>
 
           </div>
 
@@ -371,117 +369,6 @@
                 <span class="bg-danger rounded-circle" style="width: 12px; height: 12px;"></span>
                 <span class="bg-warning rounded-circle ml-1" style="width: 12px; height: 12px;"></span>
                 <span class="bg-success rounded-circle ml-1" style="width: 12px; height: 12px;"></span>
-              </div>
-
-              <div class="table-responsive">
-
-                <table class="table table-hover result-table-demo overflow-auto table-rounded table-bordered">
-
-                  <thead class="thead-dark">
-                    <tr>
-                      <th scope="col">A</th>
-                      <th scope="col">B</th>
-                      <th scope="col">C</th>
-                      <th scope="col">D</th>
-                    </tr>
-                  </thead>
-
-                  <tbody class="small">
-
-                    <tr>
-                      <td>
-                        Get person's first name
-                      </td>
-                      <td>
-                        https://www.linkedin.com/in/johnrmarty
-                      </td>
-                      <td class="text-nowrap">
-                        <div class="d-flex">
-                          <p class="d-inline-flex mb-0 border rounded h6 py-2 px-2 text-monospace copy-text"
-                            style="background-color: #f0fdf4;">
-                            =SG_PERSON_WORK(B1, 'title')
-                            <svg class="bg-white border rounded copy-icon" data-toggle="tooltip" data-placement="top"
-                              title="Copy" style="padding: 2px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg"
-                              width="20" height="auto" viewBox="0 0 24 24">
-                              <path
-                                d="M18,5.25h-.25v-.25c0-.96484-.78516-1.75-1.75-1.75h-1.35352c-.32812-1.15283-1.38965-2-2.64648-2s-2.31836.84717-2.64648,2h-1.35352c-.96484,0-1.75.78516-1.75,1.75v.25h-.25c-1.5166,0-2.75,1.2334-2.75,2.75v12c0,1.5166,1.2334,2.75,2.75,2.75h12c1.5166,0,2.75-1.2334,2.75-2.75v-12c0-1.5166-1.2334-2.75-2.75-2.75ZM7.75,5c0-.1377.1123-.25.25-.25h2c.41406,0,.75-.33594.75-.75,0-.68945.56055-1.25,1.25-1.25s1.25.56055,1.25,1.25c0,.41406.33594.75.75.75h2c.1377,0,.25.1123.25.25v2c0,.1377-.1123.25-.25.25h-8c-.1377,0-.25-.1123-.25-.25v-2ZM19.25,20c0,.68945-.56055,1.25-1.25,1.25H6c-.68945,0-1.25-.56055-1.25-1.25v-12c0-.68945.56055-1.25,1.25-1.25h.25v.25c0,.96484.78516,1.75,1.75,1.75h8c.96484,0,1.75-.78516,1.75-1.75v-.25h.25c.68945,0,1.25.56055,1.25,1.25v12ZM16.75,12c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,15c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,18c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75Z"
-                                fill="currentColor" />
-                            </svg>
-                          </p>
-                        </div>
-                      </td>
-                      <td>
-                        John
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <th scope="row" class="text-nowrap">
-                        Get profile's current company
-                      </th>
-                      <td>
-                        https://www.linkedin.com/in/johnrmarty
-                      </td>
-                      <td class="text-nowrap">
-                        <div class="d-flex">
-                          <p class="d-inline-flex mb-0 border rounded h6 py-2 px-2 text-monospace copy-text"
-                            style="background-color: #f0fdf4;">
-                            =SG_PERSON_WORK(B2, 'company')
-                            <svg class="bg-white border rounded copy-icon" data-toggle="tooltip" data-placement="top"
-                              title="Copy" style="padding: 2px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg"
-                              width="20" height="auto" viewBox="0 0 24 24">
-                              <path
-                                d="M18,5.25h-.25v-.25c0-.96484-.78516-1.75-1.75-1.75h-1.35352c-.32812-1.15283-1.38965-2-2.64648-2s-2.31836.84717-2.64648,2h-1.35352c-.96484,0-1.75.78516-1.75,1.75v.25h-.25c-1.5166,0-2.75,1.2334-2.75,2.75v12c0,1.5166,1.2334,2.75,2.75,2.75h12c1.5166,0,2.75-1.2334,2.75-2.75v-12c0-1.5166-1.2334-2.75-2.75-2.75ZM7.75,5c0-.1377.1123-.25.25-.25h2c.41406,0,.75-.33594.75-.75,0-.68945.56055-1.25,1.25-1.25s1.25.56055,1.25,1.25c0,.41406.33594.75.75.75h2c.1377,0,.25.1123.25.25v2c0,.1377-.1123.25-.25.25h-8c-.1377,0-.25-.1123-.25-.25v-2ZM19.25,20c0,.68945-.56055,1.25-1.25,1.25H6c-.68945,0-1.25-.56055-1.25-1.25v-12c0-.68945.56055-1.25,1.25-1.25h.25v.25c0,.96484.78516,1.75,1.75,1.75h8c.96484,0,1.75-.78516,1.75-1.75v-.25h.25c.68945,0,1.25.56055,1.25,1.25v12ZM16.75,12c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,15c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,18c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75Z"
-                                fill="currentColor" />
-                            </svg>
-                          </p>
-                        </div>
-                      </td>
-                      <td class="text-nowrap">
-                        FF Real Estate
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <th scope="row" class="text-nowrap">
-                        Get profile's current job title
-                      </th>
-                      <td>
-                        https://www.linkedin.com/in/johnrmarty
-                      </td>
-                      <td class="text-nowrap">
-                        <div class="d-flex">
-                          <p class="d-inline-flex mb-0 border rounded h6 py-2 px-2 text-monospace copy-text"
-                            style="background-color: #f0fdf4;">
-                            =SG_PERSON_WORK(B3, 'title')
-                            <svg class="bg-white border rounded copy-icon" data-toggle="tooltip" data-placement="top"
-                              title="Copy" style="padding: 2px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg"
-                              width="20" height="auto" viewBox="0 0 24 24">
-                              <path
-                                d="M18,5.25h-.25v-.25c0-.96484-.78516-1.75-1.75-1.75h-1.35352c-.32812-1.15283-1.38965-2-2.64648-2s-2.31836.84717-2.64648,2h-1.35352c-.96484,0-1.75.78516-1.75,1.75v.25h-.25c-1.5166,0-2.75,1.2334-2.75,2.75v12c0,1.5166,1.2334,2.75,2.75,2.75h12c1.5166,0,2.75-1.2334,2.75-2.75v-12c0-1.5166-1.2334-2.75-2.75-2.75ZM7.75,5c0-.1377.1123-.25.25-.25h2c.41406,0,.75-.33594.75-.75,0-.68945.56055-1.25,1.25-1.25s1.25.56055,1.25,1.25c0,.41406.33594.75.75.75h2c.1377,0,.25.1123.25.25v2c0,.1377-.1123.25-.25.25h-8c-.1377,0-.25-.1123-.25-.25v-2ZM19.25,20c0,.68945-.56055,1.25-1.25,1.25H6c-.68945,0-1.25-.56055-1.25-1.25v-12c0-.68945.56055-1.25,1.25-1.25h.25v.25c0,.96484.78516,1.75,1.75,1.75h8c.96484,0,1.75-.78516,1.75-1.75v-.25h.25c.68945,0,1.25.56055,1.25,1.25v12ZM16.75,12c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,15c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,18c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75Z"
-                                fill="currentColor" />
-                            </svg>
-                          </p>
-                        </div>
-                      </td>
-                      <td class="text-nowrap">
-                        Co-Founder
-                      </td>
-                    </tr>
-
-                  </tbody>
-
-                </table>
-
-              </div>
-
-              <div class="text-center py-4">
-                <h3 class="h3 mb-0">
-                  Let's try on this sheet
-                </h3>
-                <p class="mb-0">
-                  <i class="fe fe-arrow-down text-success"></i>
-                </p>
               </div>
 
               <div id="univer-sheet" class="w-100" style="height: 450px;"></div>
@@ -2198,7 +2085,7 @@
   <script src="script.js"></script>
 
   <script>
-    const { createUniver, LocaleType, Tools, defaultTheme } = UniverPresets
+    const { createUniver, IWorkbookData, LocaleType, Tools, defaultTheme } = UniverPresets
     const { UniverSheetsCorePreset } = UniverPresetSheetsCore
 
     const { univerAPI } = createUniver({
@@ -2214,7 +2101,78 @@
       ],
     });
 
-    univerAPI.createUniverSheet({ name: 'EnrichPeople' }); // Create your first sheet named 'EnrichPeople'
+    const data = {
+      id: 'test',
+      sheets: {
+        sheet1: {
+          id: 'sheet1',
+          name: 'sheet1',
+          cellData: {
+            0: {
+              0: {
+                v: '→',
+                t: 2,
+              },
+              1: {
+                v: 'Get person\'s first name',
+                t: 2,
+              },
+              2: {
+                v: 'https://www.linkedin.com/in/johnrmarty',
+                t: 2,
+              },
+              3: {
+                f: '=SG_PERSON(C1, "first_name")',
+                t: 2,
+              },
+            },
+            1: {
+              0: {
+                v: '→',
+                t: 2,
+              },
+              1: {
+                v: 'Get profile\'s current company',
+                t: 2,
+              },
+              2: {
+                v: 'https://www.linkedin.com/in/johnrmarty',
+                t: 2,
+              },
+              3: {
+                f: '=SG_PERSON_WORK(C2, "company")',
+                t: 2,
+              },
+            },
+            2: {
+              0: {
+                v: '→',
+                t: 2,
+              },
+              1: {
+                v: 'Get profile\'s current job title',
+                t: 2,
+              },
+              2: {
+                v: 'https://www.linkedin.com/in/johnrmarty',
+                t: 2,
+              },
+              3: {
+                f: '=SG_PERSON_WORK(C3, "title")',
+                t: 2,
+              },
+            },
+          },
+          rowCount: 50,
+          columnCount: 50,
+        },
+      },
+      locale: LocaleType.EN_US,
+      name: 'Test Workbook',
+      sheetOrder: ['sheet1'],
+    };
+
+    univerAPI.createUniverSheet(data); // Create your first sheet named 'EnrichPeople'
   </script>
 
 </body>
