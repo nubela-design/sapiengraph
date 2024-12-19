@@ -359,6 +359,16 @@
 
           </div>
 
+        </div>
+
+      </div> <!-- / .row -->
+
+    </div> <!-- / .container -->
+
+    <div class="container-fluid">
+
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10">
           <div id="enrichmentPeopleDemo" class="mb-6">
 
             <!-- TABLET - DESKTOP-->
@@ -371,16 +381,24 @@
                 <span class="bg-success rounded-circle ml-1" style="width: 12px; height: 12px;"></span>
               </div>
 
-              <div id="univer-sheet" class="w-100" style="height: 450px;"></div>
+              <div id="enrichment-people-sheet" class="w-100" style="height: 500px;"></div>
 
             </div>
 
           </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10">
 
           <!-- Company table -->
           <div class="mb-6 mb-md-8">
 
-            <h2 class="font-weight-bold text-center h3 mb-4">
+            <h2 class="font-weight-bold text-center h2 mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" class="mb-1" width="24" height="auto" viewBox="0 0 24 24">
                 <g fill="currentColor">
                   <path
@@ -391,8 +409,24 @@
               Pull rich data on companies
             </h2>
 
+            <div class="text-center">
+              <h4 class="h4 mb-0">
+                Let's try on this sheet
+              </h4>
+              <p class="mb-0">
+                <i class="fe fe-arrow-down text-success"></i>
+              </p>
+            </div>
+
           </div>
 
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10">
           <div id="enrichmentCompanyDemo" class="mb-6">
 
             <!-- TABLET - DESKTOP-->
@@ -405,176 +439,18 @@
                 <span class="bg-success rounded-circle ml-1" style="width: 12px; height: 12px;"></span>
               </div>
 
-              <div class="table-responsive">
-
-                <table class="table table-bordered table-hover custom-table-demo overflow-auto">
-
-                  <thead style="background-color: #F9FAFB;">
-                    <tr>
-                      <th scope="col">A</th>
-                      <th scope="col">B</th>
-                      <th scope="col">C</th>
-                      <th scope="col" class="sticky-action">Action</th>
-                    </tr>
-                  </thead>
-
-                  <tbody class="small">
-
-                    <tr>
-                      <th scope="row" class="text-nowrap">
-                        Get company’s description
-                      </th>
-                      <td>
-                        <input type="text" class="form-control form-control-xs w-auto"
-                          value="https://www.linkedin.com/company/proxycurl">
-                      </td>
-                      <td class="text-nowrap">
-                        <div class="d-flex">
-                          <p class="d-inline-flex mb-0 border rounded h6 py-2 px-2 text-monospace copy-text"
-                            style="background-color: #f0fdf4;">
-                            =SG_COMPANY(B2, 'description')
-                            <svg class="bg-white border rounded copy-icon" data-toggle="tooltip" data-placement="top"
-                              title="Copy" style="padding: 2px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg"
-                              width="20" height="auto" viewBox="0 0 24 24">
-                              <path
-                                d="M18,5.25h-.25v-.25c0-.96484-.78516-1.75-1.75-1.75h-1.35352c-.32812-1.15283-1.38965-2-2.64648-2s-2.31836.84717-2.64648,2h-1.35352c-.96484,0-1.75.78516-1.75,1.75v.25h-.25c-1.5166,0-2.75,1.2334-2.75,2.75v12c0,1.5166,1.2334,2.75,2.75,2.75h12c1.5166,0,2.75-1.2334,2.75-2.75v-12c0-1.5166-1.2334-2.75-2.75-2.75ZM7.75,5c0-.1377.1123-.25.25-.25h2c.41406,0,.75-.33594.75-.75,0-.68945.56055-1.25,1.25-1.25s1.25.56055,1.25,1.25c0,.41406.33594.75.75.75h2c.1377,0,.25.1123.25.25v2c0,.1377-.1123.25-.25.25h-8c-.1377,0-.25-.1123-.25-.25v-2ZM19.25,20c0,.68945-.56055,1.25-1.25,1.25H6c-.68945,0-1.25-.56055-1.25-1.25v-12c0-.68945.56055-1.25,1.25-1.25h.25v.25c0,.96484.78516,1.75,1.75,1.75h8c.96484,0,1.75-.78516,1.75-1.75v-.25h.25c.68945,0,1.25.56055,1.25,1.25v12ZM16.75,12c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,15c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,18c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75Z"
-                                fill="currentColor" />
-                            </svg>
-                          </p>
-                        </div>
-                      </td>
-                      <td class="text-nowrap bg-white sticky-action">
-                        <button class="btn btn-success btn-xs ml-2 lift">Try me</button>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <th scope="row" class="text-nowrap">
-                        Get company’s funding amount
-                      </th>
-                      <td>
-                        <input type="text" class="form-control form-control-xs w-auto"
-                          value="https://www.linkedin.com/company/posthog">
-                      </td>
-                      <td class="text-nowrap">
-                        <div class="d-flex">
-                          <p class="d-inline-flex mb-0 border rounded h6 py-2 px-2 text-monospace copy-text"
-                            style="background-color: #f0fdf4;">
-                            =SG_COMPANY_FUNDING(B3, 'money_raised')
-                            <svg class="bg-white border rounded copy-icon" data-toggle="tooltip" data-placement="top"
-                              title="Copy" style="padding: 2px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg"
-                              width="20" height="auto" viewBox="0 0 24 24">
-                              <path
-                                d="M18,5.25h-.25v-.25c0-.96484-.78516-1.75-1.75-1.75h-1.35352c-.32812-1.15283-1.38965-2-2.64648-2s-2.31836.84717-2.64648,2h-1.35352c-.96484,0-1.75.78516-1.75,1.75v.25h-.25c-1.5166,0-2.75,1.2334-2.75,2.75v12c0,1.5166,1.2334,2.75,2.75,2.75h12c1.5166,0,2.75-1.2334,2.75-2.75v-12c0-1.5166-1.2334-2.75-2.75-2.75ZM7.75,5c0-.1377.1123-.25.25-.25h2c.41406,0,.75-.33594.75-.75,0-.68945.56055-1.25,1.25-1.25s1.25.56055,1.25,1.25c0,.41406.33594.75.75.75h2c.1377,0,.25.1123.25.25v2c0,.1377-.1123.25-.25.25h-8c-.1377,0-.25-.1123-.25-.25v-2ZM19.25,20c0,.68945-.56055,1.25-1.25,1.25H6c-.68945,0-1.25-.56055-1.25-1.25v-12c0-.68945.56055-1.25,1.25-1.25h.25v.25c0,.96484.78516,1.75,1.75,1.75h8c.96484,0,1.75-.78516,1.75-1.75v-.25h.25c.68945,0,1.25.56055,1.25,1.25v12ZM16.75,12c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,15c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,18c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75Z"
-                                fill="currentColor" />
-                            </svg>
-                          </p>
-                        </div>
-                      </td>
-                      <td class="text-nowrap bg-white sticky-action">
-                        <button class="btn btn-success btn-xs ml-2 lift">Try me</button>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <th scope="row" class="text-nowrap">
-                        Get company’s industry
-                      </th>
-                      <td>
-                        <input type="text" class="form-control form-control-xs w-auto"
-                          value="https://www.linkedin.com/company/posthog">
-                      </td>
-                      <td class="text-nowrap">
-                        <div class="d-flex">
-                          <p class="d-inline-flex mb-0 border rounded h6 py-2 px-2 text-monospace copy-text"
-                            style="background-color: #f0fdf4;">
-                            =SG_COMPANY(B4, 'industry')
-                            <svg class="bg-white border rounded copy-icon" data-toggle="tooltip" data-placement="top"
-                              title="Copy" style="padding: 2px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg"
-                              width="20" height="auto" viewBox="0 0 24 24">
-                              <path
-                                d="M18,5.25h-.25v-.25c0-.96484-.78516-1.75-1.75-1.75h-1.35352c-.32812-1.15283-1.38965-2-2.64648-2s-2.31836.84717-2.64648,2h-1.35352c-.96484,0-1.75.78516-1.75,1.75v.25h-.25c-1.5166,0-2.75,1.2334-2.75,2.75v12c0,1.5166,1.2334,2.75,2.75,2.75h12c1.5166,0,2.75-1.2334,2.75-2.75v-12c0-1.5166-1.2334-2.75-2.75-2.75ZM7.75,5c0-.1377.1123-.25.25-.25h2c.41406,0,.75-.33594.75-.75,0-.68945.56055-1.25,1.25-1.25s1.25.56055,1.25,1.25c0,.41406.33594.75.75.75h2c.1377,0,.25.1123.25.25v2c0,.1377-.1123.25-.25.25h-8c-.1377,0-.25-.1123-.25-.25v-2ZM19.25,20c0,.68945-.56055,1.25-1.25,1.25H6c-.68945,0-1.25-.56055-1.25-1.25v-12c0-.68945.56055-1.25,1.25-1.25h.25v.25c0,.96484.78516,1.75,1.75,1.75h8c.96484,0,1.75-.78516,1.75-1.75v-.25h.25c.68945,0,1.25.56055,1.25,1.25v12ZM16.75,12c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,15c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,18c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75Z"
-                                fill="currentColor" />
-                            </svg>
-                          </p>
-                        </div>
-                      </td>
-                      <td class="text-nowrap bg-white sticky-action">
-                        <button class="btn btn-success btn-xs ml-2 lift">Try me</button>
-                      </td>
-                    </tr>
-
-                  </tbody>
-
-                </table>
-
-              </div>
-
-              <div class="text-center py-4">
-                <h3 class="h3 mb-0">
-                  Result
-                </h3>
-                <p class="mb-0">
-                  <i class="fe fe-arrow-down text-success"></i>
-                </p>
-              </div>
-
-              <div class="table-responsive">
-
-                <table class="table table-hover result-table-demo overflow-auto table-rounded table-bordered">
-
-                  <thead class="thead-dark">
-                    <tr>
-                      <th scope="col">A</th>
-                      <th scope="col">Output</th>
-                    </tr>
-                  </thead>
-
-                  <tbody class="small">
-
-                    <tr>
-                      <th scope="row" class="text-nowrap">
-                        Get company’s description
-                      </th>
-                      <td>
-                        Fresh and accurate data enrichment APIs and datasets on people and companies worldwide.
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <th scope="row" class="text-nowrap">
-                        Get company’s funding amount
-                      </th>
-                      <td class="text-nowrap">
-                        150000
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <th scope="row" class="text-nowrap">
-                        Get company’s industry
-                      </th>
-                      <td class="text-nowrap">
-                        Software Development
-                      </td>
-                    </tr>
-
-                  </tbody>
-
-                </table>
-
-              </div>
+              <div id="enrichment-company-sheet" class="w-100" style="height: 500px;"></div>
 
             </div>
 
           </div>
+        </div>
+      </div>
+    </div>
 
-          <!-- <div class="text-center">
-            <a href="#!" class="btn btn-success lift">
-              Go to the Dashboard to start enriching your data
-            </a>
-          </div> -->
-
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10">
           <div class="text-center">
 
             <a href="#!" class="btn btn-success lift mb-3 mb-md-0">
@@ -586,12 +462,10 @@
             </a>
 
           </div>
-
         </div>
+      </div>
+    </div>
 
-      </div> <!-- / .row -->
-
-    </div> <!-- / .container -->
   </section>
 
   <!-- BRANDS
@@ -744,19 +618,42 @@
 
           </div>
 
-          <!-- Lookup person table -->
+        </div>
+
+      </div> <!-- / .row -->
+
+    </div> <!-- / .container -->
+
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10">
+
+          <!-- Lookup Person table -->
           <div class="mb-6 mb-md-8">
 
-            <h2 class="font-weight-bold text-center h3 mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" class="mb-1" width="24" height="auto" viewBox="0 0 24 24">
-                <g fill="currentColor">
-                  <path
-                    d="m22.119 15.979-2.022-1.011a2.4 2.4 0 0 1-1.065-1.066l-1.01-2.02c-.195-.39-.587-.632-1.022-.632s-.827.242-1.022.632l-1.01 2.02c-.23.458-.608.837-1.066 1.066l-2.02 1.01c-.39.195-.632.586-.632 1.022s.242.827.631 1.022l2.022 1.01a2.4 2.4 0 0 1 1.065 1.066l1.01 2.02c.195.39.587.632 1.022.632s.827-.242 1.022-.632l1.01-2.02c.23-.458.608-.837 1.066-1.066l2.02-1.01c.39-.195.632-.586.632-1.022s-.242-.827-.631-1.022m-2.692 1.711a3.9 3.9 0 0 0-1.737 1.738l-.69 1.38-.69-1.38a3.9 3.9 0 0 0-1.737-1.738l-1.38-.69 1.38-.69a3.9 3.9 0 0 0 1.737-1.738l.69-1.38.69 1.38c.374.748.99 1.366 1.737 1.738l1.38.69zM9 12.75c3.17 0 5.75-2.58 5.75-5.75S12.17 1.25 9 1.25 3.25 3.83 3.25 7 5.83 12.75 9 12.75m0-10c2.343 0 4.25 1.906 4.25 4.25S11.343 11.25 9 11.25 4.75 9.344 4.75 7 6.657 2.75 9 2.75m-3 12.5h4.762c-.419.388-.666.92-.727 1.5H6A3.254 3.254 0 0 0 2.75 20v2a.75.75 0 0 1-1.5 0v-2c0-2.62 2.13-4.75 4.75-4.75">
-                  </path>
-                </g>
-              </svg>
-              Lookup a person
-            </h2>
+            <div class="mb-3">
+
+              <h2 class="font-weight-bold text-center h2 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mb-1" width="24" height="auto" viewBox="0 0 24 24">
+                  <g fill="currentColor">
+                    <path
+                      d="M12 12.75c3.17 0 5.75-2.58 5.75-5.75S15.17 1.25 12 1.25 6.25 3.83 6.25 7s2.58 5.75 5.75 5.75m0-10c2.343 0 4.25 1.907 4.25 4.25s-1.907 4.25-4.25 4.25S7.75 9.343 7.75 7 9.657 2.75 12 2.75M21.75 20v2a.75.75 0 0 1-1.5 0v-2A3.254 3.254 0 0 0 17 16.75H7A3.254 3.254 0 0 0 3.75 20v2a.75.75 0 0 1-1.5 0v-2c0-2.62 2.13-4.75 4.75-4.75h10c2.62 0 4.75 2.13 4.75 4.75">
+                    </path>
+                  </g>
+                </svg>
+                Lookup a person
+              </h2>
+  
+              <div class="text-center">
+                <h4 class="h4 mb-0">
+                  Let's try on this sheet
+                </h4>
+                <p class="mb-0">
+                  <i class="fe fe-arrow-down text-success"></i>
+                </p>
+              </div>
+  
+            </div>
 
             <div id="enrichmentLookupPersonDemo" class="mb-6">
 
@@ -770,88 +667,7 @@
                   <span class="bg-success rounded-circle ml-1" style="width: 12px; height: 12px;"></span>
                 </div>
 
-                <div class="table-responsive">
-
-                  <table class="table table-bordered table-hover custom-table-demo overflow-auto">
-
-                    <thead style="background-color: #F9FAFB;">
-                      <tr>
-                        <th scope="col">A (First Name)</th>
-                        <th scope="col">B (Last Name)</th>
-                        <th scope="col">C (Company Name)</th>
-                        <th scope="col">D (Formula)</th>
-                        <th scope="col" class="sticky-action">Action</th>
-                      </tr>
-                    </thead>
-
-                    <tbody class="small">
-                      <tr>
-                        <th scope="row" class="text-nowrap">
-                          <input type="text" class="form-control form-control-xs w-auto" value="John">
-                        </th>
-                        <td>
-                          <input type="text" class="form-control form-control-xs w-auto" value="Marty">
-                        </td>
-                        <td>
-                          <input type="text" class="form-control form-control-xs w-auto" value="FF Real Estate">
-                        </td>
-                        <td class="text-nowrap">
-                          <div class="d-flex">
-                            <p class="d-inline-flex mb-0 border rounded h6 py-2 px-2 text-monospace copy-text"
-                              style="background-color: #f0fdf4;">
-                              =SG_LOOKUP_PERSON(A2, C2, A2)
-                              <svg class="bg-white border rounded copy-icon" data-toggle="tooltip" data-placement="top"
-                                title="Copy" style="padding: 2px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg"
-                                width="20" height="auto" viewBox="0 0 24 24">
-                                <path
-                                  d="M18,5.25h-.25v-.25c0-.96484-.78516-1.75-1.75-1.75h-1.35352c-.32812-1.15283-1.38965-2-2.64648-2s-2.31836.84717-2.64648,2h-1.35352c-.96484,0-1.75.78516-1.75,1.75v.25h-.25c-1.5166,0-2.75,1.2334-2.75,2.75v12c0,1.5166,1.2334,2.75,2.75,2.75h12c1.5166,0,2.75-1.2334,2.75-2.75v-12c0-1.5166-1.2334-2.75-2.75-2.75ZM7.75,5c0-.1377.1123-.25.25-.25h2c.41406,0,.75-.33594.75-.75,0-.68945.56055-1.25,1.25-1.25s1.25.56055,1.25,1.25c0,.41406.33594.75.75.75h2c.1377,0,.25.1123.25.25v2c0,.1377-.1123.25-.25.25h-8c-.1377,0-.25-.1123-.25-.25v-2ZM19.25,20c0,.68945-.56055,1.25-1.25,1.25H6c-.68945,0-1.25-.56055-1.25-1.25v-12c0-.68945.56055-1.25,1.25-1.25h.25v.25c0,.96484.78516,1.75,1.75,1.75h8c.96484,0,1.75-.78516,1.75-1.75v-.25h.25c.68945,0,1.25.56055,1.25,1.25v12ZM16.75,12c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,15c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,18c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75Z"
-                                  fill="currentColor" />
-                              </svg>
-                            </p>
-                          </div>
-                        </td>
-                        <td class="text-nowrap bg-white sticky-action">
-                          <button class="btn btn-success btn-xs ml-2 lift">Try me</button>
-                        </td>
-                      </tr>
-
-                    </tbody>
-
-                  </table>
-
-                </div>
-
-                <div class="text-center py-4">
-                  <h3 class="h3 mb-0">
-                    Result
-                  </h3>
-                  <p class="mb-0">
-                    <i class="fe fe-arrow-down text-success"></i>
-                  </p>
-                </div>
-
-                <div class="table-responsive">
-
-                  <table class="table table-hover result-table-demo-one overflow-auto table-rounded table-bordered">
-
-                    <thead class="thead-dark">
-                      <tr>
-                        <th scope="col" class="text-nowrap">Output</th>
-                      </tr>
-                    </thead>
-
-                    <tbody class="small">
-                      <tr>
-                        <td>
-                          https://www.linkedin.com/in/johnrmarty
-                        </td>
-                      </tr>
-
-                    </tbody>
-
-                  </table>
-
-                </div>
+                <div id="lookup-person-sheet" class="w-100" style="height: 500px;"></div>
 
               </div>
 
@@ -862,16 +678,29 @@
           <!-- Lookup company table -->
           <div class="font-weight-bold mb-6 mb-md-8">
 
-            <h2 class="text-center h3 mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" class="mb-1" width="24" height="auto" viewBox="0 0 24 24">
-                <g fill="currentColor">
-                  <path
-                    d="M19 5.25h-2.25V4A2.753 2.753 0 0 0 14 1.25h-4A2.753 2.753 0 0 0 7.25 4v1.25H5A2.753 2.753 0 0 0 2.25 8v12A2.753 2.753 0 0 0 5 22.75h14A2.753 2.753 0 0 0 21.75 20V8A2.753 2.753 0 0 0 19 5.25M7.25 10H5.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1.75v2H5.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1.75v2H5.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1.75v1.25H5c-.69 0-1.25-.56-1.25-1.25V8c0-.69.56-1.25 1.25-1.25h2.25zm5.5 11.25h-1.5V18.5a.75.75 0 0 1 1.5 0zm2.5 0h-1V18.5c0-1.24-1.01-2.25-2.25-2.25s-2.25 1.01-2.25 2.25v2.75h-1V4c0-.69.56-1.25 1.25-1.25h4c.69 0 1.25.56 1.25 1.25zm5-1.25c0 .69-.56 1.25-1.25 1.25h-2.25V20h1.75a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.75v-2h1.75a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.75v-2h1.75a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.75V6.75H19c.69 0 1.25.56 1.25 1.25zM14 4.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5m0 4v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5m0 4v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5">
-                  </path>
-                </g>
-              </svg>
-              Lookup a company
-            </h2>
+            <div class="mb-3">
+
+              <h2 class="font-weight-bold text-center h2 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mb-1" width="24" height="auto" viewBox="0 0 24 24">
+                  <g fill="currentColor">
+                    <path
+                      d="M19 5.25h-2.25V4A2.753 2.753 0 0 0 14 1.25h-4A2.753 2.753 0 0 0 7.25 4v1.25H5A2.753 2.753 0 0 0 2.25 8v12A2.753 2.753 0 0 0 5 22.75h14A2.753 2.753 0 0 0 21.75 20V8A2.753 2.753 0 0 0 19 5.25M7.25 10H5.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1.75v2H5.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1.75v2H5.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1.75v1.25H5c-.69 0-1.25-.56-1.25-1.25V8c0-.69.56-1.25 1.25-1.25h2.25zm5.5 11.25h-1.5V18.5a.75.75 0 0 1 1.5 0zm2.5 0h-1V18.5c0-1.24-1.01-2.25-2.25-2.25s-2.25 1.01-2.25 2.25v2.75h-1V4c0-.69.56-1.25 1.25-1.25h4c.69 0 1.25.56 1.25 1.25zm5-1.25c0 .69-.56 1.25-1.25 1.25h-2.25V20h1.75a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.75v-2h1.75a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.75v-2h1.75a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.75V6.75H19c.69 0 1.25.56 1.25 1.25zM14 4.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5m0 4v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5m0 4v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5">
+                    </path>
+                  </g>
+                </svg>
+                Lookup a company
+              </h2>
+  
+              <div class="text-center">
+                <h4 class="h4 mb-0">
+                  Let's try on this sheet
+                </h4>
+                <p class="mb-0">
+                  <i class="fe fe-arrow-down text-success"></i>
+                </p>
+              </div>
+  
+            </div>
 
             <div id="enrichmentLookupCompanyDemo" class="mb-6">
 
@@ -885,80 +714,7 @@
                   <span class="bg-success rounded-circle ml-1" style="width: 12px; height: 12px;"></span>
                 </div>
 
-                <div class="table-responsive">
-
-                  <table class="table table-bordered table-hover custom-table-demo overflow-auto">
-
-                    <thead style="background-color: #F9FAFB;">
-                      <tr>
-                        <th scope="col">A (Company Name)</th>
-                        <th scope="col">B (Formula)</th>
-                        <th scope="col">Action</th>
-                      </tr>
-                    </thead>
-
-                    <tbody class="small">
-                      <tr>
-                        <th scope="row" class="text-nowrap">
-                          <input type="text" class="form-control form-control-xs w-auto" value="Apple">
-                        </th>
-                        <td class="text-nowrap">
-                          <div class="d-flex">
-                            <p class="d-inline-flex mb-0 border rounded h6 py-2 px-2 text-monospace copy-text"
-                              style="background-color: #f0fdf4;">
-                              =SG_LOOKUP_COMPANY(A2)
-                              <svg class="bg-white border rounded copy-icon" data-toggle="tooltip" data-placement="top"
-                                title="Copy" style="padding: 2px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg"
-                                width="20" height="auto" viewBox="0 0 24 24">
-                                <path
-                                  d="M18,5.25h-.25v-.25c0-.96484-.78516-1.75-1.75-1.75h-1.35352c-.32812-1.15283-1.38965-2-2.64648-2s-2.31836.84717-2.64648,2h-1.35352c-.96484,0-1.75.78516-1.75,1.75v.25h-.25c-1.5166,0-2.75,1.2334-2.75,2.75v12c0,1.5166,1.2334,2.75,2.75,2.75h12c1.5166,0,2.75-1.2334,2.75-2.75v-12c0-1.5166-1.2334-2.75-2.75-2.75ZM7.75,5c0-.1377.1123-.25.25-.25h2c.41406,0,.75-.33594.75-.75,0-.68945.56055-1.25,1.25-1.25s1.25.56055,1.25,1.25c0,.41406.33594.75.75.75h2c.1377,0,.25.1123.25.25v2c0,.1377-.1123.25-.25.25h-8c-.1377,0-.25-.1123-.25-.25v-2ZM19.25,20c0,.68945-.56055,1.25-1.25,1.25H6c-.68945,0-1.25-.56055-1.25-1.25v-12c0-.68945.56055-1.25,1.25-1.25h.25v.25c0,.96484.78516,1.75,1.75,1.75h8c.96484,0,1.75-.78516,1.75-1.75v-.25h.25c.68945,0,1.25.56055,1.25,1.25v12ZM16.75,12c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,15c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,18c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75Z"
-                                  fill="currentColor" />
-                              </svg>
-                            </p>
-                          </div>
-                        </td>
-                        <td class="text-nowrap bg-white sticky-action">
-                          <button class="btn btn-success btn-xs ml-2 lift">Try me</button>
-                        </td>
-                      </tr>
-
-                    </tbody>
-
-                  </table>
-
-                </div>
-
-                <div class="text-center py-4">
-                  <h3 class="h3 mb-0">
-                    Result
-                  </h3>
-                  <p class="mb-0">
-                    <i class="fe fe-arrow-down text-success"></i>
-                  </p>
-                </div>
-
-                <div class="table-responsive">
-
-                  <table class="table table-hover result-table-demo-one overflow-auto table-rounded table-bordered">
-
-                    <thead class="thead-dark">
-                      <tr>
-                        <th scope="col">Output</th>
-                      </tr>
-                    </thead>
-
-                    <tbody class="small">
-                      <tr>
-                        <td>
-                          https://www.linkedin.com/company/apple
-                        </td>
-                      </tr>
-
-                    </tbody>
-
-                  </table>
-
-                </div>
+                <div id="lookup-company-sheet" class="w-100" style="height: 500px;"></div>
 
               </div>
 
@@ -969,16 +725,29 @@
           <!-- Search and Prospect (like LinkedIn Sales Navigator, but in your spreadsheet) -->
           <div class="font-weight-bold mb-6 mb-md-8">
 
-            <h2 class="font-weight-bold text-center h3 mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" class="mb-1" width="24" height="auto" viewBox="0 0 24 24">
-                <g fill="currentColor">
-                  <path
-                    d="M16.69 15.629A8.7 8.7 0 0 0 18.75 10c0-4.825-3.925-8.75-8.75-8.75S1.25 5.175 1.25 10s3.925 8.75 8.75 8.75a8.7 8.7 0 0 0 5.629-2.06l5.84 5.84a.747.747 0 0 0 1.061 0 .75.75 0 0 0 0-1.06zM10 17.25c-3.998 0-7.25-3.252-7.25-7.25S6.002 2.75 10 2.75s7.25 3.252 7.25 7.25-3.252 7.25-7.25 7.25">
-                  </path>
-                </g>
-              </svg>
-              Search and Prospect (like LinkedIn Sales Navigator, but in your spreadsheet)
-            </h2>
+            <div class="mb-3">
+
+              <h2 class="font-weight-bold text-center h2 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mb-1" width="24" height="auto" viewBox="0 0 24 24">
+                  <g fill="currentColor">
+                    <path
+                      d="M16.69 15.629A8.7 8.7 0 0 0 18.75 10c0-4.825-3.925-8.75-8.75-8.75S1.25 5.175 1.25 10s3.925 8.75 8.75 8.75a8.7 8.7 0 0 0 5.629-2.06l5.84 5.84a.747.747 0 0 0 1.061 0 .75.75 0 0 0 0-1.06zM10 17.25c-3.998 0-7.25-3.252-7.25-7.25S6.002 2.75 10 2.75s7.25 3.252 7.25 7.25-3.252 7.25-7.25 7.25">
+                    </path>
+                  </g>
+                </svg>
+                Search and Prospect (like LinkedIn Sales Navigator, but in your spreadsheet)
+              </h2>
+  
+              <div class="text-center">
+                <h4 class="h4 mb-0">
+                  Let's try on this sheet
+                </h4>
+                <p class="mb-0">
+                  <i class="fe fe-arrow-down text-success"></i>
+                </p>
+              </div>
+  
+            </div>
 
             <div id="enrichmentSearchProspectDemo" class="mb-6">
 
@@ -992,125 +761,7 @@
                   <span class="bg-success rounded-circle ml-1" style="width: 12px; height: 12px;"></span>
                 </div>
 
-                <div class="table-responsive">
-
-                  <table class="table table-bordered table-hover custom-table-demo overflow-auto">
-
-                    <thead style="background-color: #F9FAFB;">
-                      <tr>
-                        <th scope="col">A</th>
-                        <th scope="col">B</th>
-                        <th scope="col" class="sticky-action">Action</th>
-                      </tr>
-                    </thead>
-
-                    <tbody class="small">
-                      <tr>
-                        <th scope="row" class="text-nowrap">
-                          Find anyone based in the US named either "Sarah Jackson" or "Sarah Johnson"
-                        </th>
-                        <td class="text-nowrap">
-                          <div class="d-flex">
-                            <p class="d-inline-flex mb-0 border rounded h6 py-2 px-2 text-monospace copy-text"
-                              style="background-color: #f0fdf4;">
-                              =SG_PERSON_SEARCH("US", 10, "Sarah", "Jackson OR Johnson")
-                              <svg class="bg-white border rounded copy-icon" data-toggle="tooltip" data-placement="top"
-                                title="Copy" style="padding: 2px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg"
-                                width="20" height="auto" viewBox="0 0 24 24">
-                                <path
-                                  d="M18,5.25h-.25v-.25c0-.96484-.78516-1.75-1.75-1.75h-1.35352c-.32812-1.15283-1.38965-2-2.64648-2s-2.31836.84717-2.64648,2h-1.35352c-.96484,0-1.75.78516-1.75,1.75v.25h-.25c-1.5166,0-2.75,1.2334-2.75,2.75v12c0,1.5166,1.2334,2.75,2.75,2.75h12c1.5166,0,2.75-1.2334,2.75-2.75v-12c0-1.5166-1.2334-2.75-2.75-2.75ZM7.75,5c0-.1377.1123-.25.25-.25h2c.41406,0,.75-.33594.75-.75,0-.68945.56055-1.25,1.25-1.25s1.25.56055,1.25,1.25c0,.41406.33594.75.75.75h2c.1377,0,.25.1123.25.25v2c0,.1377-.1123.25-.25.25h-8c-.1377,0-.25-.1123-.25-.25v-2ZM19.25,20c0,.68945-.56055,1.25-1.25,1.25H6c-.68945,0-1.25-.56055-1.25-1.25v-12c0-.68945.56055-1.25,1.25-1.25h.25v.25c0,.96484.78516,1.75,1.75,1.75h8c.96484,0,1.75-.78516,1.75-1.75v-.25h.25c.68945,0,1.25.56055,1.25,1.25v12ZM16.75,12c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,15c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,18c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75Z"
-                                  fill="currentColor" />
-                              </svg>
-                            </p>
-                          </div>
-                        </td>
-                        <td class="text-nowrap bg-white sticky-action">
-                          <button class="btn btn-success btn-xs ml-2 lift">Try me</button>
-                        </td>
-                      </tr>
-
-                    </tbody>
-
-                  </table>
-
-                </div>
-
-                <div class="text-center py-4">
-                  <h3 class="h3 mb-0">
-                    Result
-                  </h3>
-                  <p class="mb-0">
-                    <i class="fe fe-arrow-down text-success"></i>
-                  </p>
-                </div>
-
-                <div class="table-responsive">
-
-                  <table class="table table-hover result-table-demo-one overflow-auto table-rounded table-bordered">
-
-                    <thead class="thead-dark">
-                      <tr>
-                        <th scope="col">Output</th>
-                      </tr>
-                    </thead>
-
-                    <tbody class="small">
-                      <tr>
-                        <td>
-                          https://www.linkedin.com/in/sarah-johnson20
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          https://www.linkedin.com/in/sarah-johnson-1110941a9
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          https://www.linkedin.com/in/sarahrumonjohnson
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          https://www.linkedin.com/in/sarjacks
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          https://www.linkedin.com/in/sarahnellsells
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          https://www.linkedin.com/in/sarah-johnson-997b4378
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          https://www.linkedin.com/in/sli01
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          https://www.linkedin.com/in/sarah-johnson-b89634295
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          https://www.linkedin.com/in/sarah-johnson-6734b0188
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          https://www.linkedin.com/in/sarah-johnson-6721113b
-                        </td>
-                      </tr>
-
-                    </tbody>
-
-                  </table>
-
-                </div>
+                <div id="search-prospect-sheet" class="w-100" style="height: 500px;"></div>
 
               </div>
 
@@ -1121,16 +772,29 @@
           <!-- Get phone numbers and emails -->
           <div class="font-weight-bold mb-6 mb-md-8">
 
-            <h2 class="font-weight-bold text-center h3 mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" class="mb-1" width="24" height="auto" viewBox="0 0 24 24">
-                <g fill="currentColor">
-                  <path
-                    d="M16 1.25H4A2.753 2.753 0 0 0 1.25 4v16A2.753 2.753 0 0 0 4 22.75h12A2.753 2.753 0 0 0 18.75 20V4A2.753 2.753 0 0 0 16 1.25M17.25 20c0 .69-.56 1.25-1.25 1.25H4c-.69 0-1.25-.56-1.25-1.25V4c0-.69.56-1.25 1.25-1.25h12c.69 0 1.25.56 1.25 1.25zM10 12.75c1.517 0 2.75-1.233 2.75-2.75S11.517 7.25 10 7.25 7.25 8.483 7.25 10s1.233 2.75 2.75 2.75m0-4a1.251 1.251 0 0 1 0 2.5 1.251 1.251 0 0 1 0-2.5M13.75 16a.75.75 0 0 1-1.5 0c0-.69-.56-1.25-1.25-1.25H9c-.69 0-1.25.56-1.25 1.25a.75.75 0 0 1-1.5 0A2.753 2.753 0 0 1 9 13.25h2A2.753 2.753 0 0 1 13.75 16m9-5v2a.75.75 0 0 1-1.5 0v-2a.75.75 0 0 1 1.5 0m0-5v2a.75.75 0 0 1-1.5 0V6a.75.75 0 0 1 1.5 0m0 10v2a.75.75 0 0 1-1.5 0v-2a.75.75 0 0 1 1.5 0">
-                  </path>
-                </g>
-              </svg>
-              Get phone numbers and emails
-            </h2>
+            <div class="mb-3">
+
+              <h2 class="font-weight-bold text-center h2 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mb-1" width="24" height="auto" viewBox="0 0 24 24">
+                  <g fill="currentColor">
+                    <path
+                      d="M16 1.25H4A2.753 2.753 0 0 0 1.25 4v16A2.753 2.753 0 0 0 4 22.75h12A2.753 2.753 0 0 0 18.75 20V4A2.753 2.753 0 0 0 16 1.25M17.25 20c0 .69-.56 1.25-1.25 1.25H4c-.69 0-1.25-.56-1.25-1.25V4c0-.69.56-1.25 1.25-1.25h12c.69 0 1.25.56 1.25 1.25zM10 12.75c1.517 0 2.75-1.233 2.75-2.75S11.517 7.25 10 7.25 7.25 8.483 7.25 10s1.233 2.75 2.75 2.75m0-4a1.251 1.251 0 0 1 0 2.5 1.251 1.251 0 0 1 0-2.5M13.75 16a.75.75 0 0 1-1.5 0c0-.69-.56-1.25-1.25-1.25H9c-.69 0-1.25.56-1.25 1.25a.75.75 0 0 1-1.5 0A2.753 2.753 0 0 1 9 13.25h2A2.753 2.753 0 0 1 13.75 16m9-5v2a.75.75 0 0 1-1.5 0v-2a.75.75 0 0 1 1.5 0m0-5v2a.75.75 0 0 1-1.5 0V6a.75.75 0 0 1 1.5 0m0 10v2a.75.75 0 0 1-1.5 0v-2a.75.75 0 0 1 1.5 0">
+                    </path>
+                  </g>
+                </svg>
+                Get phone numbers and emails
+              </h2>
+  
+              <div class="text-center">
+                <h4 class="h4 mb-0">
+                  Let's try on this sheet
+                </h4>
+                <p class="mb-0">
+                  <i class="fe fe-arrow-down text-success"></i>
+                </p>
+              </div>
+  
+            </div>
 
             <div id="enrichmentPhoneEmailDemo" class="mb-6">
 
@@ -1144,126 +808,7 @@
                   <span class="bg-success rounded-circle ml-1" style="width: 12px; height: 12px;"></span>
                 </div>
 
-                <div class="table-responsive">
-
-                  <table class="table table-bordered table-hover custom-table-demo overflow-auto">
-
-                    <thead style="background-color: #F9FAFB;">
-                      <tr>
-                        <th scope="col">A</th>
-                        <th scope="col">B</th>
-                        <th scope="col">C</th>
-                        <th scope="col" class="sticky-action">Action</th>
-                      </tr>
-                    </thead>
-
-                    <tbody class="small">
-                      <tr>
-                        <th scope="row" class="text-nowrap">
-                          Get phone number
-                        </th>
-                        <th scope="row" class="text-nowrap">
-                          <input type="text" class="form-control form-control-xs w-auto"
-                            value="https://www.linkedin.com/in/johnrmarty/">
-                        </th>
-                        <td class="text-nowrap">
-                          <div class="d-flex">
-                            <p class="d-inline-flex mb-0 border rounded h6 py-2 px-2 text-monospace copy-text"
-                              style="background-color: #f0fdf4;">
-                              =SG_PERSONAL_NUMBERS(B2)
-                              <svg class="bg-white border rounded copy-icon" data-toggle="tooltip" data-placement="top"
-                                title="Copy" style="padding: 2px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg"
-                                width="20" height="auto" viewBox="0 0 24 24">
-                                <path
-                                  d="M18,5.25h-.25v-.25c0-.96484-.78516-1.75-1.75-1.75h-1.35352c-.32812-1.15283-1.38965-2-2.64648-2s-2.31836.84717-2.64648,2h-1.35352c-.96484,0-1.75.78516-1.75,1.75v.25h-.25c-1.5166,0-2.75,1.2334-2.75,2.75v12c0,1.5166,1.2334,2.75,2.75,2.75h12c1.5166,0,2.75-1.2334,2.75-2.75v-12c0-1.5166-1.2334-2.75-2.75-2.75ZM7.75,5c0-.1377.1123-.25.25-.25h2c.41406,0,.75-.33594.75-.75,0-.68945.56055-1.25,1.25-1.25s1.25.56055,1.25,1.25c0,.41406.33594.75.75.75h2c.1377,0,.25.1123.25.25v2c0,.1377-.1123.25-.25.25h-8c-.1377,0-.25-.1123-.25-.25v-2ZM19.25,20c0,.68945-.56055,1.25-1.25,1.25H6c-.68945,0-1.25-.56055-1.25-1.25v-12c0-.68945.56055-1.25,1.25-1.25h.25v.25c0,.96484.78516,1.75,1.75,1.75h8c.96484,0,1.75-.78516,1.75-1.75v-.25h.25c.68945,0,1.25.56055,1.25,1.25v12ZM16.75,12c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,15c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,18c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75Z"
-                                  fill="currentColor" />
-                              </svg>
-                            </p>
-                          </div>
-                        </td>
-                        <td class="text-nowrap bg-white sticky-action">
-                          <button class="btn btn-success btn-xs ml-2 lift">Try me</button>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <th scope="row" class="text-nowrap">
-                          Get personal email address
-                        </th>
-                        <th scope="row" class="text-nowrap">
-                          <input type="text" class="form-control form-control-xs w-auto"
-                            value="https://www.linkedin.com/in/williamhgates">
-                        </th>
-                        <td class="text-nowrap">
-                          <div class="d-flex">
-                            <p class="d-inline-flex mb-0 border rounded h6 py-2 px-2 text-monospace copy-text"
-                              style="background-color: #f0fdf4;">
-                              =SG_PERSONAL_EMAILS(B3)
-                              <svg class="bg-white border rounded copy-icon" data-toggle="tooltip" data-placement="top"
-                                title="Copy" style="padding: 2px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg"
-                                width="20" height="auto" viewBox="0 0 24 24">
-                                <path
-                                  d="M18,5.25h-.25v-.25c0-.96484-.78516-1.75-1.75-1.75h-1.35352c-.32812-1.15283-1.38965-2-2.64648-2s-2.31836.84717-2.64648,2h-1.35352c-.96484,0-1.75.78516-1.75,1.75v.25h-.25c-1.5166,0-2.75,1.2334-2.75,2.75v12c0,1.5166,1.2334,2.75,2.75,2.75h12c1.5166,0,2.75-1.2334,2.75-2.75v-12c0-1.5166-1.2334-2.75-2.75-2.75ZM7.75,5c0-.1377.1123-.25.25-.25h2c.41406,0,.75-.33594.75-.75,0-.68945.56055-1.25,1.25-1.25s1.25.56055,1.25,1.25c0,.41406.33594.75.75.75h2c.1377,0,.25.1123.25.25v2c0,.1377-.1123.25-.25.25h-8c-.1377,0-.25-.1123-.25-.25v-2ZM19.25,20c0,.68945-.56055,1.25-1.25,1.25H6c-.68945,0-1.25-.56055-1.25-1.25v-12c0-.68945.56055-1.25,1.25-1.25h.25v.25c0,.96484.78516,1.75,1.75,1.75h8c.96484,0,1.75-.78516,1.75-1.75v-.25h.25c.68945,0,1.25.56055,1.25,1.25v12ZM16.75,12c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,15c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,18c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75Z"
-                                  fill="currentColor" />
-                              </svg>
-                            </p>
-                          </div>
-                        </td>
-                        <td class="text-nowrap bg-white sticky-action">
-                          <button class="btn btn-success btn-xs ml-2 lift">Try me</button>
-                        </td>
-                      </tr>
-
-                    </tbody>
-
-                  </table>
-
-                </div>
-
-                <div class="text-center py-4">
-                  <h3 class="h3 mb-0">
-                    Result
-                  </h3>
-                  <p class="mb-0">
-                    <i class="fe fe-arrow-down text-success"></i>
-                  </p>
-                </div>
-
-                <div class="table-responsive">
-
-                  <table class="table table-hover result-table-demo overflow-auto table-rounded table-bordered">
-
-                    <thead class="thead-dark">
-                      <tr>
-                        <th scope="col">A</th>
-                        <th scope="col">Output</th>
-                      </tr>
-                    </thead>
-
-                    <tbody class="small">
-                      <tr>
-                        <th scope="row" class="text-nowrap">
-                          Get phone number
-                        </th>
-                        <td>
-                          +6299988887777
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <th scope="row" class="text-nowrap">
-                          Get personal email address
-                        </th>
-                        <td>
-                          williamgates@microsoft.com
-                        </td>
-                      </tr>
-
-                    </tbody>
-
-                  </table>
-
-                </div>
+                <div id="phone-email-sheet" class="w-100" style="height: 500px;"></div>
 
               </div>
 
@@ -1274,16 +819,29 @@
           <!-- Jobs jobs jobs -->
           <div class="font-weight-bold mb-6 mb-md-8">
 
-            <h2 class="font-weight-bold text-center h3 mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" class="mb-1" width="24" height="auto" viewBox="0 0 24 24">
-                <g fill="currentColor">
-                  <path
-                    d="M20 6.25h-2.25V5A2.753 2.753 0 0 0 15 2.25H9A2.753 2.753 0 0 0 6.25 5v1.25H4A2.753 2.753 0 0 0 1.25 9v10A2.753 2.753 0 0 0 4 21.75h16A2.753 2.753 0 0 0 22.75 19V9A2.753 2.753 0 0 0 20 6.25M7.75 5c0-.69.56-1.25 1.25-1.25h6c.69 0 1.25.56 1.25 1.25v1.25h-8.5zm13.5 14c0 .69-.56 1.25-1.25 1.25H4c-.69 0-1.25-.56-1.25-1.25v-6.892l8.972 3.588a.75.75 0 0 0 .556 0l8.972-3.588zm0-8.508-9.25 3.7-9.25-3.7V9c0-.69.56-1.25 1.25-1.25h16c.69 0 1.25.56 1.25 1.25z">
-                  </path>
-                </g>
-              </svg>
-              Jobs jobs jobs
-            </h2>
+            <div class="mb-3">
+
+              <h2 class="font-weight-bold text-center h2 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mb-1" width="24" height="auto" viewBox="0 0 24 24">
+                  <g fill="currentColor">
+                    <path
+                      d="M20 6.25h-2.25V5A2.753 2.753 0 0 0 15 2.25H9A2.753 2.753 0 0 0 6.25 5v1.25H4A2.753 2.753 0 0 0 1.25 9v10A2.753 2.753 0 0 0 4 21.75h16A2.753 2.753 0 0 0 22.75 19V9A2.753 2.753 0 0 0 20 6.25M7.75 5c0-.69.56-1.25 1.25-1.25h6c.69 0 1.25.56 1.25 1.25v1.25h-8.5zm13.5 14c0 .69-.56 1.25-1.25 1.25H4c-.69 0-1.25-.56-1.25-1.25v-6.892l8.972 3.588a.75.75 0 0 0 .556 0l8.972-3.588zm0-8.508-9.25 3.7-9.25-3.7V9c0-.69.56-1.25 1.25-1.25h16c.69 0 1.25.56 1.25 1.25z">
+                    </path>
+                  </g>
+                </svg>
+                Jobs jobs jobs
+              </h2>
+  
+              <div class="text-center">
+                <h4 class="h4 mb-0">
+                  Let's try on this sheet
+                </h4>
+                <p class="mb-0">
+                  <i class="fe fe-arrow-down text-success"></i>
+                </p>
+              </div>
+  
+            </div>
 
             <div id="enrichmentJobsDemo" class="mb-6">
 
@@ -1297,125 +855,7 @@
                   <span class="bg-success rounded-circle ml-1" style="width: 12px; height: 12px;"></span>
                 </div>
 
-                <div class="table-responsive">
-
-                  <table class="table table-bordered table-hover custom-table-demo overflow-auto">
-
-                    <thead style="background-color: #F9FAFB;">
-                      <tr>
-                        <th scope="col">A</th>
-                        <th scope="col">B</th>
-                        <th scope="col" class="sticky-action">Action</th>
-                      </tr>
-                    </thead>
-
-                    <tbody class="small">
-                      <tr>
-                        <th scope="row" class="text-nowrap">
-                          Get 10 job postings from Google seeking
-                        </th>
-                        <td class="text-nowrap">
-                          <div class="d-flex">
-                            <p class="d-inline-flex mb-0 border rounded h6 py-2 px-2 text-monospace copy-text"
-                              style="background-color: #f0fdf4;">
-                              =SG_JOBS_SEARCH("https://www.linkedin.com/google", 10, "software engineer")
-                              <svg class="bg-white border rounded copy-icon" data-toggle="tooltip" data-placement="top"
-                                title="Copy" style="padding: 2px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg"
-                                width="20" height="auto" viewBox="0 0 24 24">
-                                <path
-                                  d="M18,5.25h-.25v-.25c0-.96484-.78516-1.75-1.75-1.75h-1.35352c-.32812-1.15283-1.38965-2-2.64648-2s-2.31836.84717-2.64648,2h-1.35352c-.96484,0-1.75.78516-1.75,1.75v.25h-.25c-1.5166,0-2.75,1.2334-2.75,2.75v12c0,1.5166,1.2334,2.75,2.75,2.75h12c1.5166,0,2.75-1.2334,2.75-2.75v-12c0-1.5166-1.2334-2.75-2.75-2.75ZM7.75,5c0-.1377.1123-.25.25-.25h2c.41406,0,.75-.33594.75-.75,0-.68945.56055-1.25,1.25-1.25s1.25.56055,1.25,1.25c0,.41406.33594.75.75.75h2c.1377,0,.25.1123.25.25v2c0,.1377-.1123.25-.25.25h-8c-.1377,0-.25-.1123-.25-.25v-2ZM19.25,20c0,.68945-.56055,1.25-1.25,1.25H6c-.68945,0-1.25-.56055-1.25-1.25v-12c0-.68945.56055-1.25,1.25-1.25h.25v.25c0,.96484.78516,1.75,1.75,1.75h8c.96484,0,1.75-.78516,1.75-1.75v-.25h.25c.68945,0,1.25.56055,1.25,1.25v12ZM16.75,12c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,15c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,18c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75Z"
-                                  fill="currentColor" />
-                              </svg>
-                            </p>
-                          </div>
-                        </td>
-                        <td class="text-nowrap bg-white sticky-action">
-                          <button class="btn btn-success btn-xs ml-2 lift">Try me</button>
-                        </td>
-                      </tr>
-
-                    </tbody>
-
-                  </table>
-
-                </div>
-
-                <div class="text-center py-4">
-                  <h3 class="h3 mb-0">
-                    Result
-                  </h3>
-                  <p class="mb-0">
-                    <i class="fe fe-arrow-down text-success"></i>
-                  </p>
-                </div>
-
-                <div class="table-responsive">
-
-                  <table class="table table-hover result-table-demo-one overflow-auto table-rounded table-bordered">
-
-                    <thead class="thead-dark">
-                      <tr>
-                        <th scope="col">Output</th>
-                      </tr>
-                    </thead>
-
-                    <tbody class="small">
-                      <tr>
-                        <td>
-                          https://www.linkedin.com/in/sarah-johnson20
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          https://www.linkedin.com/in/sarah-johnson-1110941a9
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          https://www.linkedin.com/in/sarahrumonjohnson
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          https://www.linkedin.com/in/sarjacks
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          https://www.linkedin.com/in/sarahnellsells
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          https://www.linkedin.com/in/sarah-johnson-997b4378
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          https://www.linkedin.com/in/sli01
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          https://www.linkedin.com/in/sarah-johnson-b89634295
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          https://www.linkedin.com/in/sarah-johnson-6734b0188
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          https://www.linkedin.com/in/sarah-johnson-6721113b
-                        </td>
-                      </tr>
-
-                    </tbody>
-
-                  </table>
-
-                </div>
+                <div id="job-sheet" class="w-100" style="height: 500px;"></div>
 
               </div>
 
@@ -1425,16 +865,29 @@
           <!-- Get employees -->
           <div class="font-weight-bold font-weight-bold mb-6 mb-md-8">
 
-            <h2 class="font-weight-bold text-center h3 mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" class="mb-1" width="24" height="auto" viewBox="0 0 24 24">
-                <g fill="currentColor">
-                  <path
-                    d="M19.708 17.58A3.73 3.73 0 0 0 20.75 15c0-2.068-1.683-3.75-3.75-3.75s-3.75 1.682-3.75 3.75c0 1.001.4 1.907 1.042 2.58A4.76 4.76 0 0 0 12 19.46a4.76 4.76 0 0 0-2.292-1.88A3.73 3.73 0 0 0 10.75 15c0-2.068-1.683-3.75-3.75-3.75S3.25 12.932 3.25 15c0 1.001.4 1.907 1.042 2.58-1.775.69-3.042 2.405-3.042 4.42 0 .414.336.75.75.75h20a.75.75 0 0 0 .75-.75c0-2.015-1.267-3.73-3.042-4.42M7 12.75c1.24 0 2.25 1.01 2.25 2.25S8.24 17.25 7 17.25 4.75 16.24 4.75 15 5.76 12.75 7 12.75m-4.163 8.5A3.256 3.256 0 0 1 6 18.75h2a3.26 3.26 0 0 1 3.163 2.5zM17 12.75c1.24 0 2.25 1.01 2.25 2.25s-1.01 2.25-2.25 2.25-2.25-1.01-2.25-2.25 1.01-2.25 2.25-2.25m-4.163 8.5A3.256 3.256 0 0 1 16 18.75h2a3.26 3.26 0 0 1 3.163 2.5zM8.3 10.193A3.25 3.25 0 0 1 11 8.75h2c1.124 0 2.115.574 2.7 1.443A5 5 0 0 1 17 10c.106 0 .206.025.31.031a4.78 4.78 0 0 0-2.602-2.45A3.73 3.73 0 0 0 15.75 5c0-2.068-1.683-3.75-3.75-3.75S8.25 2.932 8.25 5c0 1.001.4 1.907 1.042 2.58a4.78 4.78 0 0 0-2.602 2.451c.105-.006.204-.031.31-.031.453 0 .884.08 1.301.193ZM12 2.75c1.24 0 2.25 1.01 2.25 2.25S13.24 7.25 12 7.25 9.75 6.24 9.75 5 10.76 2.75 12 2.75">
-                  </path>
-                </g>
-              </svg>
-              Get employees
-            </h2>
+            <div class="mb-3">
+
+              <h2 class="font-weight-bold text-center h2 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mb-1" width="24" height="auto" viewBox="0 0 24 24">
+                  <g fill="currentColor">
+                    <path
+                      d="M19.708 17.58A3.73 3.73 0 0 0 20.75 15c0-2.068-1.683-3.75-3.75-3.75s-3.75 1.682-3.75 3.75c0 1.001.4 1.907 1.042 2.58A4.76 4.76 0 0 0 12 19.46a4.76 4.76 0 0 0-2.292-1.88A3.73 3.73 0 0 0 10.75 15c0-2.068-1.683-3.75-3.75-3.75S3.25 12.932 3.25 15c0 1.001.4 1.907 1.042 2.58-1.775.69-3.042 2.405-3.042 4.42 0 .414.336.75.75.75h20a.75.75 0 0 0 .75-.75c0-2.015-1.267-3.73-3.042-4.42M7 12.75c1.24 0 2.25 1.01 2.25 2.25S8.24 17.25 7 17.25 4.75 16.24 4.75 15 5.76 12.75 7 12.75m-4.163 8.5A3.256 3.256 0 0 1 6 18.75h2a3.26 3.26 0 0 1 3.163 2.5zM17 12.75c1.24 0 2.25 1.01 2.25 2.25s-1.01 2.25-2.25 2.25-2.25-1.01-2.25-2.25 1.01-2.25 2.25-2.25m-4.163 8.5A3.256 3.256 0 0 1 16 18.75h2a3.26 3.26 0 0 1 3.163 2.5zM8.3 10.193A3.25 3.25 0 0 1 11 8.75h2c1.124 0 2.115.574 2.7 1.443A5 5 0 0 1 17 10c.106 0 .206.025.31.031a4.78 4.78 0 0 0-2.602-2.45A3.73 3.73 0 0 0 15.75 5c0-2.068-1.683-3.75-3.75-3.75S8.25 2.932 8.25 5c0 1.001.4 1.907 1.042 2.58a4.78 4.78 0 0 0-2.602 2.451c.105-.006.204-.031.31-.031.453 0 .884.08 1.301.193ZM12 2.75c1.24 0 2.25 1.01 2.25 2.25S13.24 7.25 12 7.25 9.75 6.24 9.75 5 10.76 2.75 12 2.75">
+                    </path>
+                  </g>
+                </svg>
+                Get employees
+              </h2>
+  
+              <div class="text-center">
+                <h4 class="h4 mb-0">
+                  Let's try on this sheet
+                </h4>
+                <p class="mb-0">
+                  <i class="fe fe-arrow-down text-success"></i>
+                </p>
+              </div>
+  
+            </div>
 
             <div id="enrichmentEmployeesDemo" class="mb-6">
 
@@ -1448,125 +901,7 @@
                   <span class="bg-success rounded-circle ml-1" style="width: 12px; height: 12px;"></span>
                 </div>
 
-                <div class="table-responsive">
-
-                  <table class="table table-bordered table-hover custom-table-demo overflow-auto">
-
-                    <thead style="background-color: #F9FAFB;">
-                      <tr>
-                        <th scope="col">A</th>
-                        <th scope="col">B</th>
-                        <th scope="col" class="sticky-action">Action</th>
-                      </tr>
-                    </thead>
-
-                    <tbody class="small">
-                      <tr>
-                        <th scope="row" class="text-nowrap">
-                          Get (10) employees of Microsoft
-                        </th>
-                        <td class="text-nowrap">
-                          <div class="d-flex">
-                            <p class="d-inline-flex mb-0 border rounded h6 py-2 px-2 text-monospace copy-text"
-                              style="background-color: #f0fdf4;">
-                              =SG_EMPLOYEES("https://www.linkedin.com/company/microsoft")
-                              <svg class="bg-white border rounded copy-icon" data-toggle="tooltip" data-placement="top"
-                                title="Copy" style="padding: 2px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg"
-                                width="20" height="auto" viewBox="0 0 24 24">
-                                <path
-                                  d="M18,5.25h-.25v-.25c0-.96484-.78516-1.75-1.75-1.75h-1.35352c-.32812-1.15283-1.38965-2-2.64648-2s-2.31836.84717-2.64648,2h-1.35352c-.96484,0-1.75.78516-1.75,1.75v.25h-.25c-1.5166,0-2.75,1.2334-2.75,2.75v12c0,1.5166,1.2334,2.75,2.75,2.75h12c1.5166,0,2.75-1.2334,2.75-2.75v-12c0-1.5166-1.2334-2.75-2.75-2.75ZM7.75,5c0-.1377.1123-.25.25-.25h2c.41406,0,.75-.33594.75-.75,0-.68945.56055-1.25,1.25-1.25s1.25.56055,1.25,1.25c0,.41406.33594.75.75.75h2c.1377,0,.25.1123.25.25v2c0,.1377-.1123.25-.25.25h-8c-.1377,0-.25-.1123-.25-.25v-2ZM19.25,20c0,.68945-.56055,1.25-1.25,1.25H6c-.68945,0-1.25-.56055-1.25-1.25v-12c0-.68945.56055-1.25,1.25-1.25h.25v.25c0,.96484.78516,1.75,1.75,1.75h8c.96484,0,1.75-.78516,1.75-1.75v-.25h.25c.68945,0,1.25.56055,1.25,1.25v12ZM16.75,12c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,15c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75ZM16.75,18c0,.41406-.33594.75-.75.75h-8c-.41406,0-.75-.33594-.75-.75s.33594-.75.75-.75h8c.41406,0,.75.33594.75.75Z"
-                                  fill="currentColor" />
-                              </svg>
-                            </p>
-                          </div>
-                        </td>
-                        <td class="text-nowrap bg-white sticky-action">
-                          <button class="btn btn-success btn-xs ml-2 lift">Try me</button>
-                        </td>
-                      </tr>
-
-                    </tbody>
-
-                  </table>
-
-                </div>
-
-                <div class="text-center py-4">
-                  <h3 class="h3 mb-0">
-                    Result
-                  </h3>
-                  <p class="mb-0">
-                    <i class="fe fe-arrow-down text-success"></i>
-                  </p>
-                </div>
-
-                <div class="table-responsive">
-
-                  <table class="table table-hover result-table-demo-one overflow-auto table-rounded table-bordered">
-
-                    <thead class="thead-dark">
-                      <tr>
-                        <th scope="col">Output</th>
-                      </tr>
-                    </thead>
-
-                    <tbody class="small">
-                      <tr>
-                        <td>
-                          https://www.linkedin.com/in/sarah-johnson20
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          https://www.linkedin.com/in/sarah-johnson-1110941a9
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          https://www.linkedin.com/in/sarahrumonjohnson
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          https://www.linkedin.com/in/sarjacks
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          https://www.linkedin.com/in/sarahnellsells
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          https://www.linkedin.com/in/sarah-johnson-997b4378
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          https://www.linkedin.com/in/sli01
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          https://www.linkedin.com/in/sarah-johnson-b89634295
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          https://www.linkedin.com/in/sarah-johnson-6734b0188
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          https://www.linkedin.com/in/sarah-johnson-6721113b
-                        </td>
-                      </tr>
-
-                    </tbody>
-
-                  </table>
-
-                </div>
+                <div id="employee-sheet" class="w-100" style="height: 500px;"></div>
 
               </div>
 
@@ -1587,10 +922,10 @@
           </div>
 
         </div>
+      </div>
+    </div>
 
-      </div> <!-- / .row -->
 
-    </div> <!-- / .container -->
   </section>
 
   <!-- USE CASES
@@ -2075,104 +1410,696 @@
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
   <script src="https://unpkg.com/rxjs/dist/bundles/rxjs.umd.min.js"></script>
 
-  <script src="https://unpkg.com/@univerjs/presets@0.5.0/lib/umd/index.js"></script>
-
-  <script src="https://unpkg.com/@univerjs/preset-sheets-core/lib/umd/index.js"></script>
-  <script src="https://unpkg.com/@univerjs/preset-sheets-core/lib/umd/locales/en-US.js"></script>
+  <script src="https://unpkg.com/@univerjs/presets@latest/lib/umd/index.js"></script>
+  <script src="https://unpkg.com/@univerjs/preset-sheets-core@latest/lib/umd/index.js"></script>
+  <script src="https://unpkg.com/@univerjs/preset-sheets-core@latest/lib/umd/locales/en-US.js"></script>
 
   <!-- Theme JS -->
   <script src="./assets/js/theme.min.js"></script>
   <script src="script.js"></script>
 
+  <!-- Then add your initialization script -->
   <script>
-    const { createUniver, IWorkbookData, LocaleType, Tools, defaultTheme } = UniverPresets
-    const { UniverSheetsCorePreset } = UniverPresetSheetsCore
+    window.onload = function () {
+      try {
+        // Get required components
+        const { createUniver, LocaleType, defaultTheme } = UniverPresets;
+        const { UniverSheetsCorePreset } = UniverPresetSheetsCore;
+        const { enUS: UniverPresetSheetsCoreEnUS } = UniverPresetSheetsCore;
 
-    const { univerAPI } = createUniver({
-      locale: LocaleType.EN_US,
-      locales: {
-        enUS: UniverPresetSheetsCoreEnUS,
-      },
-      theme: defaultTheme,
-      presets: [
-        UniverSheetsCorePreset({
-          container: 'univer-sheet',
-        }),
-      ],
-    });
+        // People Sheet Data
+        const peopleSheetData = {
+          id: 'peopleWorkbook',
+          name: 'People Enrichment',
+          sheetOrder: ['sheet1'],
+          sheets: {
+            sheet1: {
+              id: 'sheet1',
+              name: 'Sheet1',
+              cellData: {
+                0: {
+                  0: { v: '→', t: 2 },
+                  1: { 
+                    v: 'Get person\'s first name', 
+                    t: 2,
+                    s: {
+                      ht: 1,
+                      bl: 1
+                    }
+                  },
+                  2: { 
+                    v: 'https://www.linkedin.com/in/johnrmarty', 
+                    t: 2,
+                    s: {
+                      ht: 1
+                    }
+                  },
+                  3: {
+                    f: '=SG_PERSON(C1, "first_name")',
+                    t: 2,
+                    s: {
+                      ht: 1,
+                      bg: { rgb: '#f0fdf4' }  // Light green background color
+                    }
+                  },
+                },
+                1: {
+                  0: { v: '→', t: 2 },
+                  1: { 
+                    v: 'Get profile\'s current company', 
+                    t: 2,
+                    s: {
+                      ht: 1,
+                      bl: 1
+                    }
+                  },
+                  2: { 
+                    v: 'https://www.linkedin.com/in/johnrmarty', 
+                    t: 2,
+                    s: {
+                      ht: 1
+                    }
+                  },
+                  3: {
+                    f: '=SG_PERSON_WORK(C2, "company")',
+                    t: 2,
+                    s: {
+                      ht: 1,
+                      bg: { rgb: '#f0fdf4' }  // Light green background color
+                    }
+                  },
+                },
+                2: {
+                  0: { v: '→', t: 2 },
+                  1: { 
+                    v: 'Get profile\'s current job title', 
+                    t: 2,
+                    s: {
+                      ht: 1,
+                      bl: 1
+                    }
+                  },
+                  2: { 
+                    v: 'https://www.linkedin.com/in/johnrmarty', 
+                    t: 2,
+                    s: {
+                      ht: 1
+                    }
+                  },
+                  3: {
+                    f: '=SG_PERSON_WORK(C3, "title")',
+                    t: 2,
+                    s: {
+                      ht: 1,
+                      bg: { rgb: '#f0fdf4' }  // Light green background color
+                    }
+                  },
+                }
+              },
+              rowCount: 50,
+              columnCount: 50,
+              defaultRowHeight: 25,
+              defaultColumnWidth: 120, // Default width for all columns
+              columnData: {            // Specific widths for columns
+                0: { w: 50 },        // First Name column
+                1: { w: 250 },        // Last Name column
+                2: { w: 320 },        // Company column
+                3: { w: 350 },        // Title column
+              }
+            }
+          }
+        };
 
-    const data = {
-      id: 'test',
-      sheets: {
-        sheet1: {
-          id: 'sheet1',
-          name: 'sheet1',
-          cellData: {
-            0: {
-              0: {
-                v: '→',
-                t: 2,
+        // Company Sheet Data
+        const companySheetData = {
+          id: 'companyWorkbook',
+          name: 'Company Enrichment',
+          sheetOrder: ['sheet1'],
+          sheets: {
+            sheet1: {
+              id: 'sheet1',
+              name: 'Sheet1',
+              cellData: {
+                0: {
+                  0: { v: '→', t: 2 },
+                  1: { 
+                    v: 'Get company\'s description', 
+                    t: 2,
+                    s: {
+                      ht: 1,
+                      bl: 1
+                    }
+                  },
+                  2: { 
+                    v: 'https://www.linkedin.com/company/proxycurl', 
+                    t: 2,
+                    s: {
+                      ht: 1
+                    }
+                  },
+                  3: {
+                    f: '=SG_COMPANY(C1, "description")',
+                    t: 2,
+                    s: {
+                      ht: 1,
+                      bg: { rgb: '#f0fdf4' }  // Light green background color
+                    }
+                  },
+                },
+                1: {
+                  0: { v: '→', t: 2 },
+                  1: { 
+                    v: 'Get company\'s funding amount', 
+                    t: 2,
+                    s: {
+                      ht: 1,
+                      bl: 1
+                    }
+                  },
+                  2: { 
+                    v: 'https://www.linkedin.com/company/posthog', 
+                    t: 2,
+                    s: {
+                      ht: 1
+                    }
+                  },
+                  3: {
+                    f: '=SG_COMPANY_FUNDING(C2, "money_raised")',
+                    t: 2,
+                    s: {
+                      ht: 1,
+                      bg: { rgb: '#f0fdf4' }  // Light green background color
+                    }
+                  },
+                },
+                2: {
+                  0: { v: '→', t: 2 },
+                  1: { 
+                    v: 'Get company\'s industry', 
+                    t: 2,
+                    s: {
+                      ht: 1,
+                      bl: 1
+                    }
+                  },
+                  2: { 
+                    v: 'https://www.linkedin.com/company/posthog', 
+                    t: 2,
+                    s: {
+                      ht: 1
+                    }
+                  },
+                  3: {
+                    f: '=SG_COMPANY(C3, "industry")',
+                    t: 2,
+                    s: {
+                      ht: 1,
+                      bg: { rgb: '#f0fdf4' }  // Light green background color
+                    }
+                  },
+                },
               },
-              1: {
-                v: 'Get person\'s first name',
-                t: 2,
+              rowCount: 50,
+              columnCount: 50,
+              defaultRowHeight: 25,
+              defaultColumnWidth: 120,  // Default width for all columns
+              columnData: {             // Specific widths for columns
+                0: { w: 50 },        // First Name column
+                1: { w: 250 },        // Last Name column
+                2: { w: 320 },        // Company column
+                3: { w: 350 },        // Title column
+              }
+            }
+          }
+        };
+
+        // Lookup Person Sheet Data
+        const lookupPersonSheetData = {
+          id: 'lookupPersonWorkbook',
+          name: 'Lookup',
+          sheetOrder: ['sheet1'],
+          sheets: {
+            sheet1: {
+              id: 'sheet1',
+              name: 'Sheet1',
+              cellData: {
+                0: {
+                  0: {
+                    v: 'First Name',
+                    t: 2,
+                    s: {
+                      bl: 1,
+                      ht: 1
+                    }
+                  },
+                  1: {
+                    v: 'Last Name',
+                    t: 2,
+                    s: {
+                      bl: 1,
+                      ht: 1
+                    }
+                  },
+                  2: {
+                    v: 'Company Name',
+                    t: 2,
+                    s: {
+                      bl: 1,
+                      ht: 1
+                    }
+                  },
+                  3: {
+                    v: 'Formula',
+                    t: 2,
+                    s: {
+                      bl: 1,
+                      ht: 1
+                    }
+                  },
+                },
+                1: {
+                  0: {
+                    v: 'John',
+                    t: 2,
+                    s: {
+                      ht: 1
+                    }
+                  },
+                  1: {
+                    v: 'Marty',
+                    t: 2,
+                    s: {
+                      ht: 1
+                    }
+                  },
+                  2: {
+                    v: 'FF Real Estate',
+                    t: 2,
+                    s: {
+                      ht: 1
+                    }
+                  },
+                  3: {
+                    f: '=SG_LOOKUP_PERSON(A2, B2, C2)',
+                    t: 2,
+                    s: {
+                      ht: 1,
+                      bg: { rgb: '#f0fdf4' }  // Light green background color
+                    }
+                  },
+                }
               },
-              2: {
-                v: 'https://www.linkedin.com/in/johnrmarty',
-                t: 2,
+              rowCount: 50,
+              columnCount: 50,
+              defaultRowHeight: 25,
+              defaultColumnWidth: 120,  // Default width for all columns
+              columnData: {             // Specific widths for columns
+                0: { w: 160 },        // First Name column
+                1: { w: 160 },        // Last Name column
+                2: { w: 160 },        // Company column
+                3: { w: 350 },        // Title column
+              }
+            }
+          }
+        };
+
+        // Lookup Company Sheet Data
+        const lookupCompanySheetData = {
+          id: 'lookupCompanyWorkbook',
+          name: 'Lookup',
+          sheetOrder: ['sheet1'],
+          sheets: {
+            sheet1: {
+              id: 'sheet1',
+              name: 'Sheet1',
+              cellData: {
+                0: {
+                  0: {
+                    v: 'Company Name',
+                    t: 2,
+                    s: {
+                      bl: 1,
+                      ht: 1
+                    }
+                  },
+                  1: {
+                    v: 'Formula',
+                    t: 2,
+                    s: {
+                      bl: 1,
+                      ht: 1
+                    }
+                  },
+                },
+                1: {
+                  0: {
+                    v: 'Apple',
+                    t: 2,
+                    s: {
+                      ht: 1
+                    }
+                  },
+                  1: {
+                    f: '=SG_LOOKUP_COMPANY(A2)',
+                    t: 2,
+                    s: {
+                      ht: 1,
+                      bg: { rgb: '#f0fdf4' }  // Light green background color
+                    }
+                  },
+                }
               },
-              3: {
-                f: '=SG_PERSON(C1, "first_name")',
-                t: 2,
+              rowCount: 50,
+              columnCount: 50,
+              defaultRowHeight: 25,
+              defaultColumnWidth: 120,  // Default width for all columns
+              columnData: {             // Specific widths for columns
+                0: { w: 160 },        // Company column
+                1: { w: 350 },        // Title column
+              }
+            }
+          }
+        };
+
+        // Search and Prospect Sheet Data
+        const searchAndProspectSheetData = {
+          id: 'searchAndProspectWorkbook',
+          name: 'Search and Prospect',
+          sheetOrder: ['sheet1'],
+          sheets: {
+            sheet1: {
+              id: 'sheet1',
+              name: 'Sheet1',
+              cellData: {
+                0: {
+                  0: { v: '→', t: 2 },
+                  1: {
+                    v: 'Find anyone based in the US named either "Sarah Jackson" or "Sarah Johnson"',
+                    t: 2,
+                    s: {
+                      bl: 1,
+                      ht: 1
+                    }
+                  },
+                  2: {
+                    f: '=SG_PERSON_SEARCH("US", 10, "Sarah", "Jackson OR Johnson")',
+                    t: 2,
+                    s: {
+                      ht: 1,
+                      bg: { rgb: '#f0fdf4' }  // Light green background color
+                    }
+                  },
+                },
               },
-            },
-            1: {
-              0: {
-                v: '→',
-                t: 2,
+              rowCount: 50,
+              columnCount: 50,
+              defaultRowHeight: 25,
+              defaultColumnWidth: 120,  // Default width for all columns
+              columnData: {             // Specific widths for columns
+                0: { w: 50 },        // arrow column
+                1: { w: 580 },        // Description column
+                2: { w: 480 },        // formula column
+              }
+            }
+          }
+        };
+
+        // Phone and Email Sheet Data
+        const phoneAndEmailSheetData = {
+          id: 'phoneAndEmailWorkbook',
+          name: 'Phone and Email',
+          sheetOrder: ['sheet1'],
+          sheets: {
+            sheet1: {
+              id: 'sheet1',
+              name: 'Sheet1',
+              cellData: {
+                0: {
+                  0: { v: '→', t: 2 },
+                  1: {
+                    v: 'Get phone number',
+                    t: 2,
+                    s: {
+                      bl: 1,
+                      ht: 1
+                    }
+                  },
+                  2: {
+                    f: '=SG_PERSONAL_NUMBERS("https://www.linkedin.com/in/johnrmarty/")',
+                    t: 2,
+                    s: {
+                      ht: 1,
+                      bg: { rgb: '#f0fdf4' }  // Light green background color
+                    }
+                  },
+                },
+                1: {
+                  0: { v: '→', t: 2 },
+                  1: {
+                    v: 'Get personal email address',
+                    t: 2,
+                    s: {
+                      bl: 1,
+                      ht: 1
+                    }
+                  },
+                  2: {
+                    f: '=SG_PERSONAL_EMAILS("https://www.linkedin.com/in/johnrmarty")',
+                    t: 2,
+                    s: {
+                      ht: 1,
+                      bg: { rgb: '#f0fdf4' }  // Light green background color
+                    }
+                  },
+                },
               },
-              1: {
-                v: 'Get profile\'s current company',
-                t: 2,
+              rowCount: 50,
+              columnCount: 50,
+              defaultRowHeight: 25,
+              defaultColumnWidth: 120,  // Default width for all columns
+              columnData: {             // Specific widths for columns
+                0: { w: 50 },        // arrow column
+                1: { w: 230 },        // Description column
+                2: { w: 580 },        // formula column
+              }
+            }
+          }
+        };
+
+        // Job Sheet Data
+        const jobSheetData = {
+          id: 'jobWorkbook',
+          name: 'Job',
+          sheetOrder: ['sheet1'],
+          sheets: {
+            sheet1: {
+              id: 'sheet1',
+              name: 'Sheet1',
+              cellData: {
+                0: {
+                  0: { v: '→', t: 2 },
+                  1: {
+                    v: 'Get 10 job postings from Google seeking',
+                    t: 2,
+                    s: {
+                      bl: 1,
+                      ht: 1
+                    }
+                  },
+                  2: {
+                    f: '=SG_JOBS_SEARCH("https://www.linkedin.com/google", 10, "software engineer")',
+                    t: 2,
+                    s: {
+                      ht: 1,
+                      bg: { rgb: '#f0fdf4' }  // Light green background color
+                    }
+                  },
+                },
               },
-              2: {
-                v: 'https://www.linkedin.com/in/johnrmarty',
-                t: 2,
+              rowCount: 50,
+              columnCount: 50,
+              defaultRowHeight: 25,
+              defaultColumnWidth: 120,  // Default width for all columns
+              columnData: {             // Specific widths for columns
+                0: { w: 50 },        // arrow column
+                1: { w: 320 },        // Description column
+                2: { w: 580 },        // formula column
+              }
+            }
+          }
+        };
+
+        // Employee Sheet Data
+        const employeeSheetData = {
+          id: 'employeeWorkbook',
+          name: 'Employee',
+          sheetOrder: ['sheet1'],
+          sheets: {
+            sheet1: {
+              id: 'sheet1',
+              name: 'Sheet1',
+              cellData: {
+                0: {
+                  0: { v: '→', t: 2 },
+                  1: {
+                    v: 'Get (10) employees of Microsoft',
+                    t: 2,
+                    s: {
+                      bl: 1,
+                      ht: 1
+                    }
+                  },
+                  2: {
+                    f: '=SG_EMPLOYEES("https://www.linkedin.com/company/microsoft", 10)',
+                    t: 2,
+                    s: {
+                      ht: 1,
+                      bg: { rgb: '#f0fdf4' }  // Light green background color
+                    }
+                  },
+                },
               },
-              3: {
-                f: '=SG_PERSON_WORK(C2, "company")',
-                t: 2,
-              },
-            },
-            2: {
-              0: {
-                v: '→',
-                t: 2,
-              },
-              1: {
-                v: 'Get profile\'s current job title',
-                t: 2,
-              },
-              2: {
-                v: 'https://www.linkedin.com/in/johnrmarty',
-                t: 2,
-              },
-              3: {
-                f: '=SG_PERSON_WORK(C3, "title")',
-                t: 2,
-              },
-            },
+              rowCount: 50,
+              columnCount: 50,
+              defaultRowHeight: 25,
+              defaultColumnWidth: 120,  // Default width for all columns
+              columnData: {             // Specific widths for columns
+                0: { w: 50 },        // arrow column
+                1: { w: 320 },        // Description column
+                2: { w: 580 },        // formula column
+              }
+            }
+          }
+        };
+
+        // Initialize first spreadsheet
+        const { univerAPI: peopleAPI } = createUniver({
+          locale: LocaleType.EN_US,
+          locales: {
+            enUS: UniverPresetSheetsCoreEnUS,
           },
-          rowCount: 50,
-          columnCount: 50,
-        },
-      },
-      locale: LocaleType.EN_US,
-      name: 'Test Workbook',
-      sheetOrder: ['sheet1'],
-    };
+          theme: defaultTheme,
+          presets: [
+            UniverSheetsCorePreset({
+              container: 'enrichment-people-sheet',
+            }),
+          ],
+        });
 
-    univerAPI.createUniverSheet(data); // Create your first sheet named 'EnrichPeople'
+        // Initialize second spreadsheet
+        const { univerAPI: companyAPI } = createUniver({
+          locale: LocaleType.EN_US,
+          locales: {
+            enUS: UniverPresetSheetsCoreEnUS,
+          },
+          theme: defaultTheme,
+          presets: [
+            UniverSheetsCorePreset({
+              container: 'enrichment-company-sheet',
+            }),
+          ],
+        });
+
+        // Initialize lookup person spreadsheet
+        const { univerAPI: lookupPersonAPI } = createUniver({
+          locale: LocaleType.EN_US,
+          locales: {
+            enUS: UniverPresetSheetsCoreEnUS,
+          },
+          theme: defaultTheme,
+          presets: [
+            UniverSheetsCorePreset({
+              container: 'lookup-person-sheet',
+            }),
+          ],
+        });
+
+        // Initialize lookup person spreadsheet
+        const { univerAPI: lookupCompanyAPI } = createUniver({
+          locale: LocaleType.EN_US,
+          locales: {
+            enUS: UniverPresetSheetsCoreEnUS,
+          },
+          theme: defaultTheme,
+          presets: [
+            UniverSheetsCorePreset({
+              container: 'lookup-company-sheet',
+            }),
+          ],
+        });
+
+        // Initialize search and prospect spreadsheet
+        const { univerAPI: searchAndProspectAPI } = createUniver({
+          locale: LocaleType.EN_US,
+          locales: {
+            enUS: UniverPresetSheetsCoreEnUS,
+          },
+          theme: defaultTheme,
+          presets: [
+            UniverSheetsCorePreset({
+              container: 'search-prospect-sheet',
+            }),
+          ],
+        });
+
+        // Initialize phone and email spreadsheet
+        const { univerAPI: phoneAndEmailAPI } = createUniver({
+          locale: LocaleType.EN_US,
+          locales: {
+            enUS: UniverPresetSheetsCoreEnUS,
+          },
+          theme: defaultTheme,
+          presets: [
+            UniverSheetsCorePreset({
+              container: 'phone-email-sheet',
+            }),
+          ],
+        });
+
+        // Initialize job spreadsheet
+        const { univerAPI: jobAPI } = createUniver({
+          locale: LocaleType.EN_US,
+          locales: {
+            enUS: UniverPresetSheetsCoreEnUS,
+          },
+          theme: defaultTheme,
+          presets: [
+            UniverSheetsCorePreset({
+              container: 'job-sheet',
+            }),
+          ],
+        });
+
+        // Initialize employee spreadsheet
+        const { univerAPI: employeeAPI } = createUniver({
+          locale: LocaleType.EN_US,
+          locales: {
+            enUS: UniverPresetSheetsCoreEnUS,
+          },
+          theme: defaultTheme,
+          presets: [
+            UniverSheetsCorePreset({
+              container: 'employee-sheet',
+            }),
+          ],
+        });
+
+        // Create both spreadsheets with their respective data
+        peopleAPI.createUniverSheet(peopleSheetData);
+        companyAPI.createUniverSheet(companySheetData);
+        lookupPersonAPI.createUniverSheet(lookupPersonSheetData);
+        lookupCompanyAPI.createUniverSheet(lookupCompanySheetData);
+        searchAndProspectAPI.createUniverSheet(searchAndProspectSheetData);
+        phoneAndEmailAPI.createUniverSheet(phoneAndEmailSheetData);
+        jobAPI.createUniverSheet(jobSheetData);
+        employeeAPI.createUniverSheet(employeeSheetData);
+        
+        console.log('All sheets initialized successfully');
+
+      } catch (error) {
+        console.error('Error initializing sheets:', error);
+      }
+    };
   </script>
 
 </body>
