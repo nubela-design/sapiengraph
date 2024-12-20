@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="./assets/css/theme.min.css">
   <link rel="stylesheet" href="style.css">
 
-  <title>Sapiengraph Is a Job Change Monitor For Sales Reps</title>
+  <title>LinkedIn Email Finder</title>
 
 </head>
 
@@ -197,7 +197,9 @@
 
           <!-- Headin -->
           <h1 class="display-1 font-weight-bolder mb-6" data-aos="fade-up">
-            <span class="text-black">Track Your Customers Job Changes </span> <span class="badge badge-success badge-pill py-2 px-5 shadow-lift">In <span data-countup='{"startVal": 0}' data-to="5" data-aos data-aos-id="countup:in"></span>-Minutes</span>
+            <span class="h1">LinkedIn Email Finder</span>
+            <br><span class="text-black">Find personal emails of a professional
+            </span>
           </h1>
         </div>
 
@@ -386,137 +388,305 @@
 
       </div> <!-- / .row -->
 
-      <!-- CONTENT-->
-      <div class="row justify-content-center mb-10" data-aos="fade-up">
+      <div class="row justify-content-center mb-6" data-aos="fade-up">
         <div class="col-12">
-          <h2 class="text-center mt-n1" style="z-index: 1000;">
-            <span class="badge badge-success badge-pill text-uppercase badge-float badge-float-outside py-2 px-4">Tracking</span>
-          </h2>
-          <div class="card custom-rounded border">
-            <div class="card-body">
-              <div class="row mt-6">
 
-                <div class="col-12 mb-8" data-aos="fade-up" data-aos-delay="50">
-            
-                  <div class="card card-body custom-rounded lift border shadow-light-lg"
-                    data-toggle="pill" role="tab" style="background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), url(assets/img/patterns/pattern-bg.svg)">
-                    <div class="row align-items-center mb-5">
-                      <div class="col-2">
-                        <div
-                          class="avatar avatar-xl badge-success-soft rounded-circle d-flex align-items-center justify-content-center">
-                          <i class="ph-fill ph-cursor-click text-success"></i>
+          <!-- Nav tabs -->
+          <div class="d-none d-lg-block card rounded-pill border shadow-light-lg">
+            <div class="card-body py-4 px-4">
+              <ul class="nav nav-pills nav-fill flex-column flex-sm-row" id="nav-tab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active font-weight-bold text-muted rounded-pill" id="nav-tracking-tab" data-toggle="tab" href="#tracking"
+                    role="tab" aria-controls="tracking" aria-selected="true"> Tracking</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link font-weight-bold text-muted rounded-pill" id="nav-outreach-tab" data-toggle="tab" href="#outreach"
+                    role="tab" aria-controls="outreach" aria-selected="false">Outreach</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Nav tabs Mobile-->
+          <div class="d-block d-md-none card custom-rounded border shadow-light-lg">
+            <div class="card-body py-4 px-4">
+              <ul class="nav nav-pills nav-fill flex-column flex-sm-row" id="nav-tab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active font-weight-bold text-muted rounded-pill" id="nav-tracking-tab" data-toggle="tab" href="#tracking-mobile"
+                    role="tab" aria-controls="tracking" aria-selected="true"> Tracking</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link font-weight-bold text-muted rounded-pill" id="nav-outreach-tab" data-toggle="tab" href="#outreach-mobile"
+                    role="tab" aria-controls="outreach" aria-selected="false">Outreach</a>
+                </li>
+              </ul>
+            </div>
+          </div>  
+
+          <!-- Nav tabs Tablet -->
+          <div class="d-none d-md-block d-lg-none card rounded-pill border shadow-light-lg">
+            <div class="card-body py-4 px-4">
+              <ul class="nav nav-pills nav-fill flex-column flex-sm-row" id="nav-tab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active font-weight-bold text-muted rounded-pill" id="nav-tracking-tab" data-toggle="tab" href="#tracking-mobile"
+                    role="tab" aria-controls="tracking" aria-selected="true"> Tracking</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link font-weight-bold text-muted rounded-pill" id="nav-outreach-tab" data-toggle="tab" href="#outreach-mobile"
+                    role="tab" aria-controls="outreach" aria-selected="false">Outreach</a>
+                </li>
+              </ul>
+            </div>
+          </div>          
+
+        </div>
+      </div>
+      
+      <!-- CONTENT-->
+      <div class="d-none d-lg-flex row justify-content-center" data-aos="fade-up">
+        <div class="col-12">
+      
+          <!-- Tab content -->
+          <div class="tab-content">
+            <!-- Tracking Tab -->
+            <div class="tab-pane fade show active" id="tracking" role="tabpanel">
+              <div class="card custom-rounded border">
+                <div class="card-body" style="background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(assets/img/patterns/pattern-bg.svg)">
+                  <div class="row">
+                    <div class="col-12 col-md-5">
+                      <!-- Cards Container -->
+                      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <!-- Card 1 -->
+                        <div class="mb-4 card card-body custom-rounded lift" id="v-pills-point-tab"  
+                        data-toggle="pill" href="#v-pills-point" role="tab" style="cursor: pointer;">
+                          <div class="row align-items-center justify-content-between">
+                            <div class="col-3">
+                              <div class="avatar avatar-xl badge-success-soft rounded-circle d-flex align-items-center justify-content-center">
+                                <i class="ph-fill ph-cursor-click text-success"></i>
+                              </div>
+                            </div>
+
+                            <div class="col-9">
+                              <h3 class="font-weight-bold mb-1">Point and Click</h3>
+                              <p class="text-muted mb-0">
+                                Click directly on LinkedIn Profile Page
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                  
+                        <!-- Card 2 -->
+                        <div class="mb-4 card card-body custom-rounded border lift" id="v-pills-csv-tab" data-toggle="pill" href="#v-pills-csv"
+                          role="tab" style="cursor: pointer;">
+                          <div class="row align-items-center justify-content-between">
+                            <div class="col-3">
+                              <div class="avatar avatar-xl badge-success-soft rounded-circle d-flex align-items-center justify-content-center">
+                                <i class="ph-fill ph-file-arrow-up text-success"></i>
+                              </div>
+                            </div>
+                        
+                            <div class="col-9">
+                              <h3 class="font-weight-bold mb-1">Upload CSV</h3>
+                              <p class="text-muted mb-0">
+                                Bulk upload CSV or paste LinkedIn URLs
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                  
+                        <!-- Card 3 -->
+                        <div class="mb-4 card card-body custom-rounded border lift" id="v-pills-prospector-tab" 
+                        data-toggle="pill" href="#v-pills-prospector" role="tab" style="cursor: pointer;">
+                          <div class="row align-items-center justify-content-between">
+                            <div class="col-3">
+                              <div class="avatar avatar-xl badge-success-soft rounded-circle d-flex align-items-center justify-content-center">
+                                <i class="ph-fill ph-magnifying-glass-plus text-success"></i>
+                              </div>
+                            </div>
+
+                            <div class="col-9">
+                              <h3 class="font-weight-bold mb-1">Search on Prospector</h3>
+                              <p class="text-muted mb-0">
+                                Follow results from Prospector search
+                              </p>
+                            </div>
+                          </div>
                         </div>
                       </div>
-            
-                      <div class="col-10 ml-lg-n8 ml-xl-n9">
-                        <h3 class="font-weight-bold mb-1">Point and Click</h3>
-                        <p class="text-muted mb-0">
-                          Click directly on LinkedIn Profile Page
-                        </p>
+                    </div>
+                  
+                    <div class="col-12 col-md-7" data-aos="fade-up" data-aos-delay="300">
+                      <!-- Tab Content for Images -->
+                      <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="v-pills-point" role="tabpanel">
+                          <img src="assets/img/illustrations/tracking point and click.png" alt="Point and Click" class="img-fluid custom-rounded shadow-light-lg">
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-csv" role="tabpanel">
+                          <img src="assets/img/illustrations/upload csv or pastle url.png" alt="Upload CSV" class="img-fluid custom-rounded shadow-light-lg">
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-prospector" role="tabpanel">
+                          <img src="assets/img/illustrations/search using prospector.png" alt="Prospector Search" class="img-fluid custom-rounded shadow-light-lg">
+                        </div>
                       </div>
                     </div>
-                    <img src="assets/img/illustrations/tracking point and click.png" alt="Point and Click"
-                      class="img-fluid custom-rounded shadow-light-lg">
                   </div>
-            
                 </div>
+              </div>
+            </div>
+      
+            <!-- Outreach Tab -->
+            <div class="tab-pane fade" id="outreach" role="tabpanel">
+              <div class="card custom-rounded border">
+                <div class="card-body" style="background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), url(assets/img/patterns/pattern-bg.svg)">
+                  <div class="row">
+                    <div class="col-12">
+                      <!-- Single Card Container -->
+                      <div class="nav flex-column nav-pills" id="v-pills-tab-outreach" role="tablist" aria-orientation="vertical">
+                        <!-- Single Card -->
+                        <div class="card card-body custom-rounded lift border shadow-light-lg" id="v-pills-spreadsheet-tab" data-toggle="pill" href="#v-pills-spreadsheet" role="tab">
+                          <div class="row align-items-center mb-5">
+                            <div class="col-2">
+                              <div class="avatar avatar-xl badge-success-soft rounded-circle d-flex align-items-center justify-content-center">
+                                <i class="ph-fill ph-database text-success"></i>
+                              </div>
+                            </div>
 
-                <div class="col-12 mb-8" data-aos="fade-up">
-            
-                  <div class="card card-body custom-rounded lift border shadow-light-lg"
-                    data-toggle="pill" role="tab" style="background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), url(assets/img/patterns/pattern-bg.svg)">
-                    <div class="row align-items-center mb-5">
-                      <div class="col-2">
-                        <div
-                          class="avatar avatar-xl badge-success-soft rounded-circle d-flex align-items-center justify-content-center">
-                          <i class="ph-fill ph-file-arrow-up text-success"></i>
+                            <div class="col-10 ml-lg-n8 ml-xl-n9">
+                              <h3 class="font-weight-bold mb-1">Scale personalized outreach</h3>
+                              <p class="text-muted mb-0">
+                                with Spreadsheet Enrichment
+                              </p>
+                            </div>
+                          </div>
+                          <img src="assets/img/illustrations/scale personalized outreach.png" alt="Spreadsheet Enrichment" class="img-fluid custom-rounded shadow-light-lg">
                         </div>
                       </div>
-            
-                      <div class="col-10 ml-lg-n8 ml-xl-n9">
-                        <h3 class="font-weight-bold mb-1">Upload CSV</h3>
-                        <p class="text-muted mb-0">
-                          Bulk upload CSV or paste LinkedIn URLs
-                        </p>
-                      </div>
                     </div>
-                    <img src="assets/img/illustrations/upload csv or pastle url.png" alt="Upload CSV"
-                      class="img-fluid custom-rounded shadow-light-lg">
-                  </div>
-            
-                </div>                
-            
-                <div class="col-12" data-aos="fade-up">
-            
-                  <div class="card card-body custom-rounded lift border shadow-light-lg"
-                    data-toggle="pill" role="tab" style="background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), url(assets/img/patterns/pattern-bg.svg)">
-                    <div class="row align-items-center mb-5">
-                      <div class="col-2">
-                        <div
-                          class="avatar avatar-xl badge-success-soft rounded-circle d-flex align-items-center justify-content-center">
-                          <i class="ph-fill ph-magnifying-glass-plus text-success"></i>
-                        </div>
-                      </div>
-            
-                      <div class="col-10 ml-lg-n8 ml-xl-n9">
-                        <h3 class="font-weight-bold mb-1">Search on Prospector</h3>
-                        <p class="text-muted mb-0">
-                          Follow results from Prospector search
-                        </p>
-                      </div>
-                    </div>
-                    <img src="assets/img/illustrations/search using prospector.png" alt="Prospector Search"
-                      class="img-fluid custom-rounded shadow-light-lg">
-                  </div>
-            
-                </div>                
 
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- CONTENT OUTREACH-->
-      <div class="row justify-content-center" data-aos="fade-up">
+      <!-- CONTENT MOBILE-->
+      <div class="d-block d-lg-none row justify-content-center" data-aos="fade-up">
         <div class="col-12">
-          <h2 class="text-center mt-n1" style="z-index: 1000;">
-            <span class="badge badge-success badge-pill text-uppercase badge-float badge-float-outside py-2 px-4">Outreach</span>
-          </h2>
-          <div class="card custom-rounded border">
-            <div class="card-body">
-              <div class="row mt-6">
-
-                <div class="col-12" data-aos="fade-up" data-aos-delay="50">
-            
-                  <div class="card card-body custom-rounded lift border shadow-light-lg"
-                    data-toggle="pill" role="tab" style="background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), url(assets/img/patterns/pattern-bg.svg)">
-                    <div class="row align-items-center mb-5">
-                      <div class="col-2">
-                        <div
-                          class="avatar avatar-xl badge-success-soft rounded-circle d-flex align-items-center justify-content-center">
-                          <i class="ph-fill ph-database text-success"></i>
+      
+          <!-- Tab content -->
+          <div class="tab-content">
+            <!-- Tracking Tab -->
+            <div class="tab-pane fade show active" id="tracking-mobile" role="tabpanel">
+              <div class="card custom-rounded border mb-4">
+                <div class="card-body pt-3 pb-3" style="background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(assets/img/patterns/pattern-bg.svg)">
+                  <div class="row">
+                    <div class="card">
+                      <!-- Text content moved to top -->
+                      <div class="card-body">
+                        <div class="row align-items-center">
+                          <div class="col-3 col-md-2 pl-2">
+                            <div class="avatar avatar-xxl badge-success-soft rounded-circle d-flex align-items-center justify-content-center">
+                              <i class="ph-fill ph-cursor-click text-success"></i>
+                            </div>
+                          </div>
+                          <div class="col-9">
+                            <h2 class="font-weight-bold mb-1">Point and Click</h2>
+                            <p class="text-muted mb-0">Click directly on LinkedIn Profile Page</p>
+                          </div>
                         </div>
                       </div>
-            
-                      <div class="col-10 ml-lg-n8 ml-xl-n9">
-                        <h3 class="font-weight-bold mb-1">Scale personalized outreach</h3>
-                        <p class="text-muted mb-0">
-                          With Spreadsheet Enrichment
-                        </p>
-                      </div>
+                      <!-- Image moved to bottom -->
+                      <img src="assets/img/illustrations/tracking point and click.png" class=" shadow-light custom-rounded border" alt="Point and click illustration">
                     </div>
-                    <img src="assets/img/illustrations/scale personalized outreach.png" alt="Spreadsheet Enrichment"
-                      class="img-fluid custom-rounded shadow-light-lg">
                   </div>
-            
                 </div>
-            
               </div>
+
+              <div class="card custom-rounded border mb-4">
+                <div class="card-body pt-3 pb-3" style="background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(assets/img/patterns/pattern-bg.svg)">
+                  <div class="row">
+                    <div class="card">
+                      <!-- Text content moved to top -->
+                      <div class="card-body">
+                        <div class="row align-items-center">
+                          <div class="col-3 col-md-2 pl-2">
+                            <div class="avatar avatar-xxl badge-success-soft rounded-circle d-flex align-items-center justify-content-center">
+                              <i class="ph-fill ph-file-arrow-up text-success"></i>
+                            </div>
+                          </div>
+                          <div class="col-9">
+                            <h2 class="font-weight-bold mb-1">Upload CSV</h2>
+                            <p class="text-muted mb-0">Bulk upload CSV or paste LinkedIn URLs</p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Image moved to bottom -->
+                      <img src="assets/img/illustrations/upload csv or pastle url.png" class=" shadow-light custom-rounded border" alt="Upload CSV">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card custom-rounded border">
+                <div class="card-body pt-3 pb-3" style="background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(assets/img/patterns/pattern-bg.svg)">
+                  <div class="row">
+                    <div class="card">
+                      <!-- Text content moved to top -->
+                      <div class="card-body">
+                        <div class="row align-items-center">
+                          <div class="col-3 col-md-2 pl-2">
+                            <div class="avatar avatar-xxl badge-success-soft rounded-circle d-flex align-items-center justify-content-center">
+                              <i class="ph-fill ph-magnifying-glass-plus text-success"></i>
+                            </div>
+                          </div>
+                          <div class="col-9">
+                            <h2 class="font-weight-bold mb-1">Search on Prospector</h2>
+                            <p class="text-muted mb-0">Follow results from Prospector search</p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Image moved to bottom -->
+                      <img src="assets/img/illustrations/search using prospector.png" class=" shadow-light custom-rounded border" alt="Prospector Search">
+                    </div>
+                  </div>
+                </div>
+              </div>          
+
+            </div>
+      
+            <!-- Outreach Tab -->
+            <div class="tab-pane fade" id="outreach-mobile" role="tabpanel">
+              <div class="card custom-rounded border">
+                <div class="card-body pt-3 pb-3" style="background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(assets/img/patterns/pattern-bg.svg)">
+                  <div class="row">
+                    <div class="card">
+                      <!-- Text content moved to top -->
+                      <div class="card-body">
+                        <div class="row align-items-center">
+                          <div class="col-3 col-md-2 pl-2">
+                            <div class="avatar avatar-xxl badge-success-soft rounded-circle d-flex align-items-center justify-content-center">
+                              <i class="ph-fill ph-database text-success"></i>
+                            </div>
+                          </div>
+                          <div class="col-9">
+                            <h2 class="font-weight-bold mb-1">Scale personalized outreach</h2>
+                            <p class="text-muted mb-0">with Spreadsheet Enrichment</p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Image moved to bottom -->
+                      <img src="assets/img/illustrations/scale personalized outreach.png" class=" shadow-light custom-rounded border" alt="Spreadsheet Enrichment">
+                    </div>
+                  </div>
+                </div>
+              </div> 
             </div>
           </div>
         </div>
-      </div>      
+      </div>       
+
 
     </div> <!-- container heading--> 
 
