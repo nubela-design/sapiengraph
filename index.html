@@ -197,7 +197,10 @@
 
           <!-- Headin -->
           <h1 class="display-1 font-weight-bolder mb-6" data-aos="fade-up">
-            <span class="text-black">Track Your Customers Job Changes </span> <span class="badge badge-success badge-pill py-2 px-5 shadow-lift">In <span data-countup='{"startVal": 0}' data-to="5" data-aos data-aos-id="countup:in"></span>-Minutes</span>
+            <span class="text-black">Track Your Customers Job Changes </span> 
+            <span class="badge badge-success badge-pill py-2 px-5 shadow-lift">
+              In <span id="countdown">9</span>-Minutes
+            </span>
           </h1>
         </div>
 
@@ -365,7 +368,7 @@
 
           <!-- badge-->
           <span class="badge badge-pill badge-success-soft mb-8">
-            <span class="h6 text-uppercase">Instant & Superpower</span>
+            <span class="h6 text-uppercase">Instant Superpower</span>
           </span>
 
           <!-- Heading -->
@@ -1438,6 +1441,25 @@
         const clickedId = $(this).attr('id').replace('v-pills-', '').replace('-tab', '');
         currentTabIndex = tabs.indexOf(clickedId);
       });
+    });
+  </script>
+
+  <!-- COUNTDOWN -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const countdownElement = document.getElementById('countdown');
+      let count = 9;
+      
+      const interval = setInterval(() => {
+        count--;
+        if (count >= 5) {
+          countdownElement.textContent = count;
+        }
+        
+        if (count === 5) {
+          clearInterval(interval);
+        }
+      }, 200);
     });
   </script>
 
