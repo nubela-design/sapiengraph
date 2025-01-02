@@ -217,75 +217,73 @@
         <div class="row">
           <div class="col-12 col-lg-3 pr-lg-2">
 
-            <div class="sticky-top pt-3 mb-3">
-              <div class="card border">
-                <div class="card-body p-4">
-                  <!-- Add collapse toggle button for mobile only -->
-                  <button class="btn btn-link w-100 p-0 text-dark text-decoration-none" type="button"
-                    data-toggle="collapse" data-target="#filterCheckCollapse" aria-expanded="true"
-                    aria-controls="filterCheckCollapse">
-                    <div class="d-flex justify-content-between align-items-center">
-                      <span class="small mb-0 font-weight-bold">Selected Filter</span>
-                      <span class="fe fe-chevron-down"></span>
-                    </div>
-                  </button>
-
-                  <!-- Modify collapse div to stay expanded on desktop -->
-                  <div class="collapse" id="filterCheckCollapse">
-                    <hr />
-                    <!-- Filter Data Type -->
-                    <div class="form-group mb-3">
-                      <label class="small text-muted">Popular Keywords</label>
-                      <div class="custom-control custom-checkbox mb-2">
-                        <input type="checkbox" class="custom-control-input" id="topLead" checked>
-                        <label class="custom-control-label small" for="topLead">CEO</label>
-                      </div>
-                      <div class="custom-control custom-checkbox mb-2">
-                        <input type="checkbox" class="custom-control-input" id="customerProfile" checked>
-                        <label class="custom-control-label small" for="customerProfile">CTO</label>
-                      </div>
-                    </div>
-                    <!-- Filter Data Type -->
-                    <div class="form-group mb-3">
-                      <label class="small text-muted">Popular Companies</label>
-                      <div class="custom-control custom-checkbox mb-2">
-                        <input type="checkbox" class="custom-control-input" id="topLead" checked>
-                        <label class="custom-control-label small" for="topLead">Microsoft</label>
-                      </div>
-                    </div>
-                    <!-- Filter Data Type -->
-                    <div class="form-group mb-3">
-                      <label class="small text-muted">Data Type</label>
-                      <div class="custom-control custom-checkbox mb-2">
-                        <input type="checkbox" class="custom-control-input" id="topLead" checked>
-                        <label class="custom-control-label small" for="topLead">Top Lead</label>
-                      </div>
-                    </div>
-                    <!-- Filter Region -->
-                    <div class="form-group mb-3">
-                      <label class="small text-muted">Region</label>
-                      <div class="custom-control custom-checkbox mb-2">
-                        <input type="checkbox" class="custom-control-input" id="india" checked>
-                        <label class="custom-control-label small" for="india">India</label>
-                      </div>
-                    </div>
-                    <!-- Filter Date -->
-                    <div class="form-group">
-                      <label class="small text-muted">Scrapped Date</label>
-                      <input type="date" class="form-control form-control-xs mb-3 small" id="dateFrom"
-                        value="2024-01-01">
-                    </div>
-
-                    <div class="row mx-0">
-                      <div class="col-12 col-lg-6 pl-0 pr-1">
-                        <button class="btn btn-xs btn-success w-100 font-weight-light h6">Apply</button>
-                      </div>
-                      <div class="col-12 col-lg-6 pr-0 pl-1">
-                        <button class="btn btn-xs btn-outline-secondary w-100 font-weight-light h6">Reset</button>
-                      </div>
-                    </div>
-
+            <div class="card border mb-3">
+              <div class="card-body p-4">
+                <!-- Add collapse toggle button for mobile only -->
+                <button class="btn btn-link w-100 p-0 text-dark text-decoration-none" type="button"
+                  data-toggle="collapse" data-target="#filterCheckCollapse" aria-expanded="true"
+                  aria-controls="filterCheckCollapse">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="small mb-0 font-weight-bold">Selected Filter</span>
+                    <span class="fe fe-chevron-down"></span>
                   </div>
+                </button>
+
+                <!-- Modify collapse div to stay expanded on desktop -->
+                <div class="collapse" id="filterCheckCollapse">
+                  <hr />
+                  <!-- Filter Data Type -->
+                  <div class="form-group mb-3">
+                    <label class="small text-muted">Popular Keywords</label>
+                    <div class="custom-control custom-checkbox mb-2">
+                      <input type="checkbox" class="custom-control-input" id="topLead" checked>
+                      <label class="custom-control-label small" for="topLead">CEO</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-2">
+                      <input type="checkbox" class="custom-control-input" id="customerProfile" checked>
+                      <label class="custom-control-label small" for="customerProfile">CTO</label>
+                    </div>
+                  </div>
+                  <!-- Filter Data Type -->
+                  <div class="form-group mb-3">
+                    <label class="small text-muted">Popular Companies</label>
+                    <div class="custom-control custom-checkbox mb-2">
+                      <input type="checkbox" class="custom-control-input" id="topLead" checked>
+                      <label class="custom-control-label small" for="topLead">Microsoft</label>
+                    </div>
+                  </div>
+                  <!-- Filter Data Type -->
+                  <div class="form-group mb-3">
+                    <label class="small text-muted">Data Type</label>
+                    <div class="custom-control custom-checkbox mb-2">
+                      <input type="checkbox" class="custom-control-input" id="topLead" checked>
+                      <label class="custom-control-label small" for="topLead">Top Lead</label>
+                    </div>
+                  </div>
+                  <!-- Filter Region -->
+                  <div class="form-group mb-3">
+                    <label class="small text-muted">Region</label>
+                    <div class="custom-control custom-checkbox mb-2">
+                      <input type="checkbox" class="custom-control-input" id="india" checked>
+                      <label class="custom-control-label small" for="india">India</label>
+                    </div>
+                  </div>
+                  <!-- Filter Date -->
+                  <div class="form-group">
+                    <label class="small text-muted">Last Scrapped Date</label>
+                    <input type="date" class="form-control form-control-xs mb-3 small" id="dateFrom"
+                      value="2024-01-01">
+                  </div>
+
+                  <div class="row mx-0">
+                    <div class="col-12 col-lg-6 pl-0 pr-1">
+                      <button class="btn btn-xs btn-success w-100 font-weight-light h6">Apply</button>
+                    </div>
+                    <div class="col-12 col-lg-6 pr-0 pl-1">
+                      <button class="btn btn-xs btn-outline-secondary w-100 font-weight-light h6">Reset</button>
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -360,7 +358,7 @@
                   </div>
                   <!-- Filter Date -->
                   <div class="form-group">
-                    <label class="small text-muted">Scrapped Date</label>
+                    <label class="small text-muted">Last Scrapped Date</label>
                     <input type="date" class="form-control form-control-xs small mb-3" id="dateFrom">
                     <input type="date" class="form-control form-control-xs small" id="dateTo">
                   </div>
@@ -411,7 +409,7 @@
             </div>
 
             <!-- Search Tablet & Desktop -->
-            <div class="row mx-0 justify-content-between align-items-center d-none d-md-flex mt-3 mb-3">
+            <div class="row mx-0 justify-content-between align-items-center d-none d-md-flex mb-3">
               <div class="col-4 px-0">
                 <select class="custom-select" id="inputGroupSelect02">
                   <option selected>Search by Company</option>
