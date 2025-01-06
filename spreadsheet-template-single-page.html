@@ -1163,7 +1163,7 @@
               <div class="tab-pane fade" id="graphView">
                 <div class="row">
                   <!-- Profile Completion Status -->
-                  <div class="col-12 col-lg-6 mb-6">
+                  <!-- <div class="col-12 col-lg-6 mb-6">
                     <div class="card border">
                       <div class="card-header">
                         <h5 class="card-title mb-0">Profile Completion Status</h5>
@@ -1172,7 +1172,7 @@
                         <canvas id="profileCompletionChart"></canvas>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
 
                   <!-- Location -->
                   <div class="col-12 col-lg-6 mb-6">
@@ -1219,7 +1219,7 @@
                   </div>
 
                   <!-- Company Chart -->
-                  <div class="col-12 col-lg-6 mb-6">
+                  <!-- <div class="col-12 col-lg-6 mb-6">
                     <div class="card border">
                       <div class="card-header">
                         <h5 class="card-title mb-0">Companies</h5>
@@ -1228,10 +1228,10 @@
                         <canvas id="companyChart"></canvas>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
 
                   <!-- School Chart -->
-                  <div class="col-12 col-lg-6 mb-6">
+                  <!-- <div class="col-12 col-lg-6 mb-6">
                     <div class="card border">
                       <div class="card-header">
                         <h5 class="card-title mb-0">Schools</h5>
@@ -1240,7 +1240,7 @@
                         <canvas id="schoolChart"></canvas>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
 
                 </div>
               </div>
@@ -1994,10 +1994,16 @@
           }],
         },
         options: {
+          indexAxis: 'y',
           responsive: true,
           scales: {
             y: {
               beginAtZero: true
+            }
+          },
+          plugins: {
+            legend: {
+              position: 'top',
             }
           }
         }
@@ -2093,11 +2099,16 @@
           }]
         },
         options: {
-          indexAxis: 'y',
+          indexAxis: 'x',
           responsive: true,
           scales: {
             x: {
               beginAtZero: true
+            }
+          },
+          plugins: {
+            legend: {
+              position: 'top',
             }
           }
         }
