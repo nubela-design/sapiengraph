@@ -329,7 +329,9 @@
           <div class="text-center mb-6 mb-lg-8">
 
             <h1 class="display-3 font-weight-bolder" data-aos="fade-up">
-              Add B2B Data Enrichment Formulas to <span class="text-success">Excel / Google Sheets</span>
+              <span class="text-success">B2B enrichment in Spreadsheet</span>
+              <br class="d-none d-md-block">
+              with LLM personalizations
             </h1>
 
           </div>
@@ -342,36 +344,11 @@
 
     <div class="container-fluid">
 
-      <div class="row justify-content-center">
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
         <div class="col-12 col-md-10">
 
           <!-- People table -->
           <div class="mb-3">
-
-            <h2 class="font-weight-bold text-center h2 mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" class="mb-1" width="24" height="auto" viewBox="0 0 24 24">
-                <g fill="currentColor">
-                  <path
-                    d="M12 12.75c3.17 0 5.75-2.58 5.75-5.75S15.17 1.25 12 1.25 6.25 3.83 6.25 7s2.58 5.75 5.75 5.75m0-10c2.343 0 4.25 1.907 4.25 4.25s-1.907 4.25-4.25 4.25S7.75 9.343 7.75 7 9.657 2.75 12 2.75M21.75 20v2a.75.75 0 0 1-1.5 0v-2A3.254 3.254 0 0 0 17 16.75H7A3.254 3.254 0 0 0 3.75 20v2a.75.75 0 0 1-1.5 0v-2c0-2.62 2.13-4.75 4.75-4.75h10c2.62 0 4.75 2.13 4.75 4.75">
-                  </path>
-                </g>
-              </svg>
-              Pull rich data about people
-            </h2>
-
-            <div class="d-lg-none">
-              <figure>
-                <img src="assets/img/spreadsheet-formulas/pull-rich-data-people-mobile.png" alt="Enrichment people"
-                  class="img-fluid w-100 h-auto">
-              </figure>
-            </div>
-
-            <div class="d-none d-lg-block">
-              <figure>
-                <img src="assets/img/spreadsheet-formulas/pull-rich-data-people.png" alt="Enrichment people"
-                  class="img-fluid w-100 h-auto">
-              </figure>
-            </div>
 
             <div class="text-center">
               <h4 class="h4 mb-0">
@@ -394,6 +371,39 @@
                 <span class="bg-danger rounded-circle" style="width: 12px; height: 12px;"></span>
                 <span class="bg-warning rounded-circle ml-1" style="width: 12px; height: 12px;"></span>
                 <span class="bg-success rounded-circle ml-1" style="width: 12px; height: 12px;"></span>
+              </div>
+
+              <div class="row no-gutters">
+                <div class="col-12 col-md-8 col-lg-4 pr-lg-4">
+                  <div class="card mb-4 px-4 py-4">
+                    <h3 class="h3 font-weight-bold">
+                      Enrich people's first name
+                    </h3>
+                    <code class="text-success border border-success rounded p-2">
+                      =SG_PERSON(C1, "first_name")
+                    </code>
+                  </div>
+                </div>
+                <div class="col-12 col-md-8 col-lg-4">
+                  <div class="card d-flex mb-4 px-4 py-4">
+                    <h3 class="h3 font-weight-bold">
+                      Enrich people's current company
+                    </h3>
+                    <code class="text-success border border-success rounded p-2">
+                      =SG_PERSON_WORK(C2, "company")
+                    </code>
+                  </div>
+                </div>
+                <div class="col-12 col-md-8 col-lg-4 pl-lg-4">
+                  <div class="card d-flex mb-4 px-4 py-4">
+                    <h3 class="h3 font-weight-bold">
+                      Enrich people's current job title
+                    </h3>
+                    <code class="text-success border border-success rounded p-2">
+                      =SG_PERSON_WORK(C3, "title")
+                    </code>
+                  </div>
+                </div>
               </div>
 
               <div id="enrichment-people-sheet" class="w-100" style="height: 500px;"></div>
@@ -1217,7 +1227,7 @@
 
                       <!-- Text -->
                       <p class="small text-muted mb-0">
-                        This applicant tracking template helps recruiters understand candidates’ backgrounds, reach
+                        This applicant tracking template helps recruiters understand candidates' backgrounds, reach
                         out to qualified candidates, and organize the hiring process.
                       </p>
 
