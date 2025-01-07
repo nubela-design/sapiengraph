@@ -24,9 +24,6 @@
   <!-- Phosphor Icons -->
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-  <!-- Theme CSS -->
-  <link rel="stylesheet" href="./assets/css/theme.min.css">
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/neuicons@1.9.0/css/neu.min.css">
 
   <title>Applicant Tracking Template | Sapiengraph</title>
@@ -38,6 +35,12 @@
   <script src="https://code.highcharts.com/maps/modules/data.js"></script>
   <script src="https://code.highcharts.com/maps/modules/accessibility.js"></script>
 
+  <!-- <link rel="stylesheet" href="https://unpkg.com/@univerjs/preset-sheets-core/lib/index.css" /> -->
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="./assets/css/theme.min.css">
+  <link rel="stylesheet" href="style.css">
+
   <style>
     #location-chart {
       height: 310px;
@@ -47,6 +50,178 @@
 
     #csv {
       display: none;
+    }
+
+    .btn-enrich {
+      background-color: #284E13 !important;
+      color: white !important;
+    }
+  </style>
+
+  <!-- Add this CSS -->
+  <style>
+    .tab-link {
+      color: #6c757d;
+      border-color: #869ab8 !important;
+    }
+
+    .tab-link.active {
+      background-color: #e6f5ea !important;
+      border-color: #28a745 !important;
+      color: #28a745 !important;
+    }
+
+    .tab-link:not(.active) {
+      border-color: #869ab8 !important;
+    }
+
+    /* Ensure mobile tabs have proper spacing */
+    @media (max-width: 991.98px) {
+      .nav {
+        margin-bottom: 1rem;
+      }
+    }
+  </style>
+
+  <style>
+    /* Applied Option */
+    /* Existing styles */
+    .stage-select .option-applied {
+      background-color: #37A7F1 !important;
+      color: white !important;
+    }
+
+    /* Add these new styles */
+    .stage-select option[value="applied"]:checked,
+    .stage-select option[value="applied"]:hover {
+      background-color: #37A7F1 !important;
+      color: white !important;
+    }
+
+    /* Style for the select element when "Applied" is selected */
+    .stage-select:has(option[value="applied"]:checked) {
+      background-color: #37A7F1 !important;
+      color: white !important;
+    }
+
+    /* Shortlisted Option */
+    /* Existing styles */
+    .stage-select .option-shortlisted {
+      background-color: #37A7F1 !important;
+      color: white !important;
+    }
+
+    /* Add these new styles */
+    .stage-select option[value="shortlisted"]:checked,
+    .stage-select option[value="shortlisted"]:hover {
+      background-color: #37A7F1 !important;
+      color: white !important;
+    }
+
+    /* Style for the select element when "shortlisted" is selected */
+    .stage-select:has(option[value="shortlisted"]:checked) {
+      background-color: #37A7F1 !important;
+      color: white !important;
+    }
+
+    /* Screening Interview Option */
+    /* Existing styles */
+    .stage-select .option-screening-interview {
+      background-color: #F58331 !important;
+      color: white !important;
+    }
+
+    /* Add these new styles */
+    .stage-select option[value="screening-interview"]:checked,
+    .stage-select option[value="screening-interview"]:hover {
+      background-color: #F58331 !important;
+      color: white !important;
+    }
+
+    /* Style for the select element when "screening-interview" is selected */
+    .stage-select:has(option[value="screening-interview"]:checked) {
+      background-color: #F58331 !important;
+      color: white !important;
+    }
+
+    /* In-depth Interview Option */
+    /* Existing styles */
+    .stage-select .option-in-depth-interview {
+      background-color: #F58331 !important;
+      color: white !important;
+    }
+
+    /* Add these new styles */
+    .stage-select option[value="in-depth-interview"]:checked,
+    .stage-select option[value="in-depth-interview"]:hover {
+      background-color: #F58331 !important;
+      color: white !important;
+    }
+
+    /* Style for the select element when "in-depth-interview" is selected */
+    .stage-select:has(option[value="in-depth-interview"]:checked) {
+      background-color: #F58331 !important;
+      color: white !important;
+    }
+
+    /* Offer Made Option */
+    /* Existing styles */
+    .stage-select .option-offer-made {
+      background-color: #13734B !important;
+      color: white !important;
+    }
+
+    /* Add these new styles */
+    .stage-select option[value="offer-made"]:checked,
+    .stage-select option[value="offer-made"]:hover {
+      background-color: #13734B !important;
+      color: white !important;
+    }
+
+    /* Style for the select element when "offer-made" is selected */
+    .stage-select:has(option[value="offer-made"]:checked) {
+      background-color: #13734B !important;
+      color: white !important;
+    }
+
+    /* Hired Option */
+    /* Existing styles */
+    .stage-select .option-hired {
+      background-color: #13734B !important;
+      color: white !important;
+    }
+
+    /* Add these new styles */
+    .stage-select option[value="hired"]:checked,
+    .stage-select option[value="hired"]:hover {
+      background-color: #13734B !important;
+      color: white !important;
+    }
+
+    /* Style for the select element when "Applied" is selected */
+    .stage-select:has(option[value="hired"]:checked) {
+      background-color: #13734B !important;
+      color: white !important;
+    }
+
+    /* Dropped Option */
+    /* Existing styles */
+    .stage-select .option-dropped {
+      background-color: #3D3D3D !important;
+      color: white !important;
+    }
+
+    /* Add these new styles */
+    .stage-select option[value="dropped"]:checked,
+    .stage-select option[value="dropped"]:hover {
+      background-color: #3D3D3D !important;
+      color: white !important;
+    }
+
+    /* Style for the select element when "dropped" is selected */
+    .stage-select:has(option[value="dropped"]:checked) {
+      background-color: #3D3D3D !important;
+      color: white !important;
     }
   </style>
 
@@ -410,13 +585,14 @@
 
               <!-- Table View -->
               <div class="tab-pane fade show active" id="tableView">
-                <div class="table-responsive rounded">
-                  <table class="table table-sm table-bordered table-hover">
-                    <thead class="thead-dark small">
+
+                <div class="table-responsive rounded mb-3">
+                  <table class="table table-sm table-bordered table-hover table-rounded">
+                    <thead class="small">
                       <tr>
                         <th class="text-nowrap">S/N</th>
                         <th class="text-nowrap">
-                          <button class="btn btn-xs btn-secondary py-0 px-2">
+                          <button class="btn btn-xs btn-enrich py-0 px-2">
                             Enrich
                           </button>
                         </th>
@@ -508,7 +684,7 @@
                           </div>
                         </td>
                         <td class="text-nowrap text-left">
-                          <a class="text-success" href="https://linkedin.com/in/avathompson" target="_blank">
+                          <a class="" href="https://linkedin.com/in/avathompson" target="_blank">
                             linkedin.com/in/avathompson <i class="fe fe-external-link"></i>
                           </a>
                         </td>
@@ -517,7 +693,7 @@
                         <td class="text-nowrap text-left">ava.thompson@example.com</td>
                         <td class="text-nowrap text-left">123-456-7890</td>
                         <td class="text-nowrap text-left">
-                          <a class="text-success" href="http://ava.thompsonportfolio.com" target="_blank">
+                          <a class="" href="http://ava.thompsonportfolio.com" target="_blank">
                             ava.thompsonportfolio.com <i class="fe fe-external-link"></i>
                           </a>
                         </td>
@@ -526,36 +702,38 @@
                           sent laptop.
                         </td>
                         <td class="text-nowrap">
-                          <select class="form-select form-select-sm">
-                            <option value="applied">Applied</option>
-                            <option value="shortlisted">Shortlisted</option>
-                            <option value="screening">Screening Interview</option>
-                            <option value="indepth">In-depth Interview</option>
-                            <option value="offer">Offer Made</option>
-                            <option value="hired" selected class="bg-success text-white">Hired</option>
-                            <option value="dropped" class="text-danger">Dropped</option>
+                          <select class="form-select form-select-sm stage-select btn btn-xs">
+                            <option value="applied" class="option-applied">Applied</option>
+                            <option value="shortlisted" class="option-shortlisted">Shortlisted</option>
+                            <option value="screening-interview" class="option-screening-interview">Screening Interview
+                            </option>
+                            <option value="in-depth-interview" class="option-in-depth-interview">In-depth Interview
+                            </option>
+                            <option value="offer-made" class="option-offer-made">Offer Made</option>
+                            <option value="hired" selected class="option-hired">Hired</option>
+                            <option value="dropped" class="option-dropped">Dropped</option>
                           </select>
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           United States of America
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           Marketing Intern
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           Quanta Marketing Labs
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           BA in Marketing
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           University of California, Berkeley
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           Marketing Intern passionate about branding
                         </td>
-                        <td class="text-nowrap text-left">
-                          <a class="text-success" href="https://linkedin.com/in/avathompson" target="_blank">
+                        <td class="text-nowrap text-left bg-success-light">
+                          <a class="" href="https://linkedin.com/in/avathompson" target="_blank">
                             facebook.com/avathompson <i class="fe fe-external-link"></i>
                           </a>
                         </td>
@@ -574,7 +752,7 @@
                           </div>
                         </td>
                         <td class="text-nowrap text-left">
-                          <a class="text-success" href="linkedin.com/in/liammiller" target="_blank">
+                          <a class="" href="linkedin.com/in/liammiller" target="_blank">
                             linkedin.com/in/liammiller <i class="fe fe-external-link"></i>
                           </a>
                         </td>
@@ -583,43 +761,45 @@
                         <td class="text-nowrap text-left">liam.miller@example.com</td>
                         <td class="text-nowrap text-left">234-567-8901</td>
                         <td class="text-nowrap text-left">
-                          <a class="text-success" href="http://liam.millerresume.com" target="_blank">
+                          <a class="" href="http://liam.millerresume.com" target="_blank">
                             liam.millerresume.com <i class="fe fe-external-link"></i>
                           </a>
                         </td>
                         <td class="text-nowrap text-left">Sales Manager</td>
                         <td class="text-nowrap text-left">Dropped, unable to relocate in time for project.</td>
                         <td class="text-nowrap">
-                          <select class="form-select form-select-sm">
-                            <option value="applied">Applied</option>
-                            <option value="shortlisted">Shortlisted</option>
-                            <option value="screening">Screening Interview</option>
-                            <option value="indepth">In-depth Interview</option>
-                            <option value="offer">Offer Made</option>
-                            <option value="hired" class="bg-success text-white">Hired</option>
-                            <option value="dropped" class="text-danger" selected>Dropped</option>
+                          <select class="form-select form-select-sm stage-select btn btn-xs">
+                            <option value="applied" class="option-applied">Applied</option>
+                            <option value="shortlisted" class="option-shortlisted">Shortlisted</option>
+                            <option value="screening-interview" class="option-screening-interview">Screening Interview
+                            </option>
+                            <option value="in-depth-interview" class="option-in-depth-interview">In-depth Interview
+                            </option>
+                            <option value="offer-made" class="option-offer-made">Offer Made</option>
+                            <option value="hired" class="option-hired">Hired</option>
+                            <option value="dropped" class="option-dropped" selected>Dropped</option>
                           </select>
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           United Kingdom
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           Sales Associate
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           Cirrus Visionary Technologies
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           BA in Business Administration
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           University of Toronto
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           Sales Associate focused on customer relations
                         </td>
-                        <td class="text-nowrap text-left">
-                          <a class="text-success" href="facebook.com/liammiller" target="_blank">
+                        <td class="text-nowrap text-left bg-success-light">
+                          <a class="" href="facebook.com/liammiller" target="_blank">
                             facebook.com/liammiller <i class="fe fe-external-link"></i>
                           </a>
                         </td>
@@ -638,7 +818,7 @@
                           </div>
                         </td>
                         <td class="text-nowrap text-left">
-                          <a class="text-success" href="linkedin.com/in/sophiadavis" target="_blank">
+                          <a class="" href="linkedin.com/in/sophiadavis" target="_blank">
                             linkedin.com/in/sophiadavis <i class="fe fe-external-link"></i>
                           </a>
                         </td>
@@ -647,7 +827,7 @@
                         <td class="text-nowrap text-left">sophia.davis@example.com</td>
                         <td class="text-nowrap text-left">345-678-9012</td>
                         <td class="text-nowrap text-left">
-                          <a class="text-success" href="http://sophia.davisportfolio.net" target="_blank">
+                          <a class="" href="http://sophia.davisportfolio.net" target="_blank">
                             sophia.davisportfolio.net <i class="fe fe-external-link"></i>
                           </a>
                         </td>
@@ -656,36 +836,38 @@
                           paperwork
                           completion.</td>
                         <td class="text-nowrap">
-                          <select class="form-select form-select-sm">
-                            <option value="applied">Applied</option>
-                            <option value="shortlisted">Shortlisted</option>
-                            <option value="screening">Screening Interview</option>
-                            <option value="indepth">In-depth Interview</option>
-                            <option value="offer">Offer Made</option>
-                            <option value="hired" class="bg-success text-white" selected>Hired</option>
-                            <option value="dropped" class="text-danger">Dropped</option>
+                          <select class="form-select form-select-sm stage-select btn btn-xs">
+                            <option value="applied" class="option-applied">Applied</option>
+                            <option value="shortlisted" class="option-shortlisted">Shortlisted</option>
+                            <option value="screening-interview" class="option-screening-interview">Screening Interview
+                            </option>
+                            <option value="in-depth-interview" class="option-in-depth-interview">In-depth Interview
+                            </option>
+                            <option value="offer-made" class="option-offer-made">Offer Made</option>
+                            <option value="hired" class="option-hired" selected>Hired</option>
+                            <option value="dropped" class="option-dropped">Dropped</option>
                           </select>
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           Canada
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           Sales Manager
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           Obsidian Global Sales
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           MBA
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           University of Oxford
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           Experienced Sales Manager with global exposure
                         </td>
-                        <td class="text-nowrap text-left">
-                          <a class="text-success" href="twitter.com/sophiadavis" target="_blank">
+                        <td class="text-nowrap text-left bg-success-light">
+                          <a class="" href="twitter.com/sophiadavis" target="_blank">
                             twitter.com/sophiadavis <i class="fe fe-external-link"></i>
                           </a>
                         </td>
@@ -704,7 +886,7 @@
                           </div>
                         </td>
                         <td class="text-nowrap text-left">
-                          <a class="text-success" href="linkedin.com/in/noahwilson" target="_blank">
+                          <a class="" href="linkedin.com/in/noahwilson" target="_blank">
                             linkedin.com/in/noahwilson <i class="fe fe-external-link"></i>
                           </a>
                         </td>
@@ -713,7 +895,7 @@
                         <td class="text-nowrap text-left">noah.wilson@example.com</td>
                         <td class="text-nowrap text-left">456-789-0123</td>
                         <td class="text-nowrap text-left">
-                          <a class="text-success" href="http://noah.wilsonresume.org" target="_blank">
+                          <a class="" href="http://noah.wilsonresume.org" target="_blank">
                             noah.wilsonresume.org <i class="fe fe-external-link"></i>
                           </a>
                         </td>
@@ -721,36 +903,38 @@
                         <td class="text-nowrap text-left">Dropped, poor fit for team dynamics after interview on
                           2024-11-10.</td>
                         <td class="text-nowrap">
-                          <select class="form-select form-select-sm">
-                            <option value="applied">Applied</option>
-                            <option value="shortlisted">Shortlisted</option>
-                            <option value="screening">Screening Interview</option>
-                            <option value="indepth">In-depth Interview</option>
-                            <option value="offer">Offer Made</option>
-                            <option value="hired" class="bg-success text-white">Hired</option>
-                            <option value="dropped" class="text-danger" selected>Dropped</option>
+                          <select class="form-select form-select-sm stage-select btn btn-xs">
+                            <option value="applied" class="option-applied">Applied</option>
+                            <option value="shortlisted" class="option-shortlisted">Shortlisted</option>
+                            <option value="screening-interview" class="option-screening-interview">Screening Interview
+                            </option>
+                            <option value="in-depth-interview" class="option-in-depth-interview">In-depth Interview
+                            </option>
+                            <option value="offer-made" class="option-offer-made">Offer Made</option>
+                            <option value="hired" class="option-hired">Hired</option>
+                            <option value="dropped" class="option-dropped" selected>Dropped</option>
                           </select>
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           Australia
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           Marketing Manager
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           Lumina Strategies Agency
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           BA in Communications
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           University of Melbourne
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           Marketing Manager with expertise in digital growth
                         </td>
-                        <td class="text-nowrap text-left">
-                          <a class="text-success" href="instagram.com/noahwilson" target="_blank">
+                        <td class="text-nowrap text-left bg-success-light">
+                          <a class="" href="instagram.com/noahwilson" target="_blank">
                             instagram.com/noahwilson <i class="fe fe-external-link"></i>
                           </a>
                         </td>
@@ -769,7 +953,7 @@
                           </div>
                         </td>
                         <td class="text-nowrap text-left">
-                          <a class="text-success" href="linkedin.com/in/isabellamoore" target="_blank">
+                          <a class="" href="linkedin.com/in/isabellamoore" target="_blank">
                             linkedin.com/in/isabellamoore <i class="fe fe-external-link"></i>
                           </a>
                         </td>
@@ -778,7 +962,7 @@
                         <td class="text-nowrap text-left">isabella.moore@example.com</td>
                         <td class="text-nowrap text-left">No Phone</td>
                         <td class="text-nowrap text-left">
-                          <a class="text-success" href="http://isabella.mooreportfolio.com" target="_blank">
+                          <a class="" href="http://isabella.mooreportfolio.com" target="_blank">
                             isabella.mooreportfolio.com <i class="fe fe-external-link"></i>
                           </a>
                         </td>
@@ -787,36 +971,38 @@
                           role.
                         </td>
                         <td class="text-nowrap">
-                          <select class="form-select form-select-sm">
-                            <option value="applied">Applied</option>
-                            <option value="shortlisted">Shortlisted</option>
-                            <option value="screening">Screening Interview</option>
-                            <option value="indepth">In-depth Interview</option>
-                            <option value="offer">Offer Made</option>
-                            <option value="hired" class="bg-success text-white">Hired</option>
-                            <option value="dropped" class="text-danger" selected>Dropped</option>
+                          <select class="form-select form-select-sm stage-select btn btn-xs">
+                            <option value="applied" class="option-applied">Applied</option>
+                            <option value="shortlisted" class="option-shortlisted">Shortlisted</option>
+                            <option value="screening-interview" class="option-screening-interview">Screening Interview
+                            </option>
+                            <option value="in-depth-interview" class="option-in-depth-interview">In-depth Interview
+                            </option>
+                            <option value="offer-made" class="option-offer-made">Offer Made</option>
+                            <option value="hired" class="option-hired">Hired</option>
+                            <option value="dropped" class="option-dropped" selected>Dropped</option>
                           </select>
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           United States of America
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light ">
                           Marketing Associate
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           Veloce Retail Dynamics
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           BA in Marketing
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           University of Sydney
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           Innovative Marketing Associate with a creative edge
                         </td>
-                        <td class="text-nowrap text-left">
-                          <a class="text-success" href="medium.com/@isabellamoore" target="_blank">
+                        <td class="text-nowrap text-left bg-success-light">
+                          <a class="" href="medium.com/@isabellamoore" target="_blank">
                             medium.com/@isabellamoore <i class="fe fe-external-link"></i>
                           </a>
                         </td>
@@ -835,7 +1021,7 @@
                           </div>
                         </td>
                         <td class="text-nowrap text-left">
-                          <a class="text-success" href="linkedin.com/in/ethantaylor" target="_blank">
+                          <a class="" href="linkedin.com/in/ethantaylor" target="_blank">
                             linkedin.com/in/ethantaylor <i class="fe fe-external-link"></i>
                           </a>
                         </td>
@@ -844,7 +1030,7 @@
                         <td class="text-nowrap text-left">ethan.taylor@example.com</td>
                         <td class="text-nowrap text-left">678-901-2345</td>
                         <td class="text-nowrap text-left">
-                          <a class="text-success" href="http://ethan.taylorresume.net" target="_blank">
+                          <a class="" href="http://ethan.taylorresume.net" target="_blank">
                             ethan.taylorresume.net <i class="fe fe-external-link"></i>
                           </a>
                         </td>
@@ -852,36 +1038,38 @@
                         <td class="text-nowrap text-left">Hired on 2024-11-20. Onboarding in progress. Tech setup
                           scheduled.</td>
                         <td class="text-nowrap">
-                          <select class="form-select form-select-sm">
-                            <option value="applied">Applied</option>
-                            <option value="shortlisted">Shortlisted</option>
-                            <option value="screening">Screening Interview</option>
-                            <option value="indepth">In-depth Interview</option>
-                            <option value="offer">Offer Made</option>
-                            <option value="hired" class="bg-success text-white" selected>Hired</option>
-                            <option value="dropped" class="text-danger">Dropped</option>
+                          <select class="form-select form-select-sm stage-select btn btn-xs">
+                            <option value="applied" class="option-applied">Applied</option>
+                            <option value="shortlisted" class="option-shortlisted">Shortlisted</option>
+                            <option value="screening-interview" class="option-screening-interview">Screening Interview
+                            </option>
+                            <option value="in-depth-interview" class="option-in-depth-interview">In-depth Interview
+                            </option>
+                            <option value="offer-made" class="option-offer-made">Offer Made</option>
+                            <option value="hired" class="option-hired" selected>Hired</option>
+                            <option value="dropped" class="option-dropped">Dropped</option>
                           </select>
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           United Kingdom
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           Sales Associate
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           Polaris Insight Consulting
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           BS in Economics
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           Harvard University
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           Sales Associate with a passion for team building
                         </td>
-                        <td class="text-nowrap text-left">
-                          <a class="text-success" href="facebook.com/ethantaylor" target="_blank">
+                        <td class="text-nowrap text-left bg-success-light">
+                          <a class="" href="facebook.com/ethantaylor" target="_blank">
                             facebook.com/ethantaylor <i class="fe fe-external-link"></i>
                           </a>
                         </td>
@@ -900,7 +1088,7 @@
                           </div>
                         </td>
                         <td class="text-nowrap text-left">
-                          <a class="text-success" href="linkedin.com/in/mianderson" target="_blank">
+                          <a class="" href="linkedin.com/in/mianderson" target="_blank">
                             linkedin.com/in/mianderson <i class="fe fe-external-link"></i>
                           </a>
                         </td>
@@ -909,7 +1097,7 @@
                         <td class="text-nowrap text-left">mia.anderson@example.com</td>
                         <td class="text-nowrap text-left">789-012-3456</td>
                         <td class="text-nowrap text-left">
-                          <a class="text-success" href="http://mia.andersonportfolio.org" target="_blank">
+                          <a class="" href="http://mia.andersonportfolio.org" target="_blank">
                             mia.andersonportfolio.org <i class="fe fe-external-link"></i>
                           </a>
                         </td>
@@ -918,36 +1106,38 @@
                           interview on
                           2024-11-12.</td>
                         <td class="text-nowrap">
-                          <select class="form-select form-select-sm">
-                            <option value="applied">Applied</option>
-                            <option value="shortlisted">Shortlisted</option>
-                            <option value="screening">Screening Interview</option>
-                            <option value="indepth">In-depth Interview</option>
-                            <option value="offer">Offer Made</option>
-                            <option value="hired" class="bg-success text-white">Hired</option>
-                            <option value="dropped" class="text-danger" selected>Dropped</option>
+                          <select class="form-select form-select-sm stage-select btn btn-xs">
+                            <option value="applied" class="option-applied">Applied</option>
+                            <option value="shortlisted" class="option-shortlisted">Shortlisted</option>
+                            <option value="screening-interview" class="option-screening-interview">Screening Interview
+                            </option>
+                            <option value="in-depth-interview" class="option-in-depth-interview">In-depth Interview
+                            </option>
+                            <option value="offer-made" class="option-offer-made">Offer Made</option>
+                            <option value="hired" class="option-hired">Hired</option>
+                            <option value="dropped" class="option-dropped" selected>Dropped</option>
                           </select>
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           Canada
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light ">
                           HR Manager
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           Neutron Innovations
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           MA in Human Resources Management
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           University of Queensland
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           HR Manager with a focus on employee engagement
                         </td>
-                        <td class="text-nowrap text-left">
-                          <a class="text-success" href="linkedin.com/in/miaanderson" target="_blank">
+                        <td class="text-nowrap text-left bg-success-light">
+                          <a class="" href="linkedin.com/in/miaanderson" target="_blank">
                             linkedin.com/in/miaanderson <i class="fe fe-external-link"></i>
                           </a>
                         </td>
@@ -966,7 +1156,7 @@
                           </div>
                         </td>
                         <td class="text-nowrap text-left">
-                          <a class="text-success" href="linkedin.com/in/loganthomas" target="_blank">
+                          <a class="" href="linkedin.com/in/loganthomas" target="_blank">
                             linkedin.com/in/loganthomas <i class="fe fe-external-link"></i>
                           </a>
                         </td>
@@ -975,7 +1165,7 @@
                         <td class="text-nowrap text-left">logan.thomas@example.com</td>
                         <td class="text-nowrap text-left">890-123-4567</td>
                         <td class="text-nowrap text-left">
-                          <a class="text-success" href="http://logan.thomasresume.com" target="_blank">
+                          <a class="" href="http://logan.thomasresume.com" target="_blank">
                             logan.thomasresume.com <i class="fe fe-external-link"></i>
                           </a>
                         </td>
@@ -983,36 +1173,38 @@
                         <td class="text-nowrap text-left">Offer extended on 2024-11-14. Awaiting decision by Thursday.
                         </td>
                         <td class="text-nowrap">
-                          <select class="form-select form-select-sm">
-                            <option value="applied">Applied</option>
-                            <option value="shortlisted">Shortlisted</option>
-                            <option value="screening">Screening Interview</option>
-                            <option value="indepth">In-depth Interview</option>
-                            <option value="offer" class="bg-success text-white" selected>Offer Made</option>
-                            <option value="hired" class="bg-success text-white">Hired</option>
-                            <option value="dropped" class="bg-secondary text-white">Dropped</option>
+                          <select class="form-select form-select-sm stage-select btn btn-xs">
+                            <option value="applied" class="option-applied">Applied</option>
+                            <option value="shortlisted" class="option-shortlisted">Shortlisted</option>
+                            <option value="screening-interview" class="option-screening-interview">Screening Interview
+                            </option>
+                            <option value="in-depth-interview" class="option-in-depth-interview">In-depth Interview
+                            </option>
+                            <option value="offer-made" class="option-offer-made" selected>Offer Made</option>
+                            <option value="hired" class="option-hired">Hired</option>
+                            <option value="dropped" class="option-dropped">Dropped</option>
                           </select>
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           United States of America
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           Marketing Manager
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           EmberWave Media Partners
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           BS in Business
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           University of British Columbia
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           Marketing Manager with a strategic vision
                         </td>
-                        <td class="text-nowrap text-left">
-                          <a class="text-success" href="facebook.com/loganthomas" target="_blank">
+                        <td class="text-nowrap text-left bg-success-light">
+                          <a class="" href="facebook.com/loganthomas" target="_blank">
                             facebook.com/loganthomas <i class="fe fe-external-link"></i>
                           </a>
                         </td>
@@ -1031,7 +1223,7 @@
                           </div>
                         </td>
                         <td class="text-nowrap text-left">
-                          <a class="text-success" href="linkedin.com/in/charlottejackson" target="_blank">
+                          <a class="" href="linkedin.com/in/charlottejackson" target="_blank">
                             linkedin.com/in/charlottejackson <i class="fe fe-external-link"></i>
                           </a>
                         </td>
@@ -1040,7 +1232,7 @@
                         <td class="text-nowrap text-left">charlotte.jackson@example.com</td>
                         <td class="text-nowrap text-left">901-234-5678</td>
                         <td class="text-nowrap text-left">
-                          <a class="text-success" href="http://charlotte.jacksonportfolio.net" target="_blank">
+                          <a class="" href="http://charlotte.jacksonportfolio.net" target="_blank">
                             charlotte.jacksonportfolio.net <i class="fe fe-external-link"></i>
                           </a>
                         </td>
@@ -1048,36 +1240,38 @@
                         <td class="text-nowrap text-left">Dropped, candidate failed to meet key experience criteria.
                         </td>
                         <td class="text-nowrap">
-                          <select class="form-select form-select-sm">
-                            <option value="applied">Applied</option>
-                            <option value="shortlisted">Shortlisted</option>
-                            <option value="screening">Screening Interview</option>
-                            <option value="indepth">In-depth Interview</option>
-                            <option value="offer" class="bg-success text-white">Offer Made</option>
-                            <option value="hired" class="bg-success text-white">Hired</option>
-                            <option value="dropped" class="bg-secondary text-white" selected>Dropped</option>
+                          <select class="form-select form-select-sm stage-select btn btn-xs">
+                            <option value="applied" class="option-applied">Applied</option>
+                            <option value="shortlisted" class="option-shortlisted">Shortlisted</option>
+                            <option value="screening-interview" class="option-screening-interview">Screening Interview
+                            </option>
+                            <option value="in-depth-interview" class="option-in-depth-interview">In-depth Interview
+                            </option>
+                            <option value="offer-made" class="option-offer-made">Offer Made</option>
+                            <option value="hired" class="option-hired">Hired</option>
+                            <option value="dropped" class="option-dropped" selected>Dropped</option>
                           </select>
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           Australia
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           Sales Associate
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           ApexEdge Sales Group
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           BA in Marketing
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           University of London
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           Sales Associate with excellent negotiation skills
                         </td>
-                        <td class="text-nowrap text-left">
-                          <a class="text-success" href="twitter.com/charlottejackson" target="_blank">
+                        <td class="text-nowrap text-left bg-success-light">
+                          <a class="" href="twitter.com/charlottejackson" target="_blank">
                             twitter.com/charlottejackson <i class="fe fe-external-link"></i>
                           </a>
                         </td>
@@ -1096,7 +1290,7 @@
                           </div>
                         </td>
                         <td class="text-nowrap text-left">
-                          <a class="text-success" href="linkedin.com/in/oliverwhite" target="_blank">
+                          <a class="" href="linkedin.com/in/oliverwhite" target="_blank">
                             linkedin.com/in/oliverwhite <i class="fe fe-external-link"></i>
                           </a>
                         </td>
@@ -1105,7 +1299,7 @@
                         <td class="text-nowrap text-left">oliver.white@example.com</td>
                         <td class="text-nowrap text-left">012-345-6789</td>
                         <td class="text-nowrap text-left">
-                          <a class="text-success" href="http://oliver.whiteportfolio.org" target="_blank">
+                          <a class="" href="http://oliver.whiteportfolio.org" target="_blank">
                             oliver.whiteportfolio.org <i class="fe fe-external-link"></i>
                           </a>
                         </td>
@@ -1113,36 +1307,38 @@
                         <td class="text-nowrap text-left">Offer extended on 2024-11-16. Awaiting decision by Friday.
                         </td>
                         <td class="text-nowrap">
-                          <select class="form-select form-select-sm">
-                            <option value="applied">Applied</option>
-                            <option value="shortlisted">Shortlisted</option>
-                            <option value="screening">Screening Interview</option>
-                            <option value="indepth">In-depth Interview</option>
-                            <option value="offer" class="bg-success text-white" selected>Offer Made</option>
-                            <option value="hired" class="bg-success text-white">Hired</option>
-                            <option value="dropped" class="bg-secondary text-white">Dropped</option>
+                          <select class="form-select form-select-sm stage-select btn btn-xs">
+                            <option value="applied" class="option-applied">Applied</option>
+                            <option value="shortlisted" class="option-shortlisted">Shortlisted</option>
+                            <option value="screening-interview" class="option-screening-interview">Screening Interview
+                            </option>
+                            <option value="in-depth-interview" class="option-in-depth-interview">In-depth Interview
+                            </option>
+                            <option value="offer-made" class="option-offer-made" selected>Offer Made</option>
+                            <option value="hired" class="option-hired">Hired</option>
+                            <option value="dropped" class="option-dropped">Dropped</option>
                           </select>
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           United Kingdom
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           Sales Manager
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           Fluxx Interactive Media
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           MBA
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           University of California, Los Angeles
                         </td>
-                        <td class="text-nowrap text-left">
+                        <td class="text-nowrap text-left bg-success-light">
                           Experienced Sales Manager with proven results
                         </td>
-                        <td class="text-nowrap text-left">
-                          <a class="text-success" href="facebook.com/oliverwhite" target="_blank">
+                        <td class="text-nowrap text-left bg-success-light">
+                          <a class="" href="facebook.com/oliverwhite" target="_blank">
                             facebook.com/oliverwhite <i class="fe fe-external-link"></i>
                           </a>
                         </td>
@@ -1152,27 +1348,30 @@
                   </table>
                 </div>
 
-                <div class="d-block d-md-none">
+                <!-- <div class="d-block d-md-none">
                   <a class="btn btn-sm btn-success w-100 mt-4" href="#!">
                     <i class="ph-bold ph-copy"></i> Use this template
                   </a>
-                </div>
+                </div> -->
+
+                <!-- <div id="applicant-tracking-sheet" class="w-100" style="height: 500px;"></div> -->
               </div>
 
               <!-- Graph View -->
               <div class="tab-pane fade" id="graphView">
                 <div class="row">
                   <!-- Profile Completion Status -->
-                  <!-- <div class="col-12 col-lg-6 mb-6">
+                  <!-- Pipeline Overview -->
+                  <div class="col-12 col-lg-6 mb-6">
                     <div class="card border">
                       <div class="card-header">
-                        <h5 class="card-title mb-0">Profile Completion Status</h5>
+                        <h5 class="card-title mb-0">Pipeline Overview</h5>
                       </div>
                       <div class="card-body">
-                        <canvas id="profileCompletionChart"></canvas>
+                        <canvas id="pipelineOverviewChart"></canvas>
                       </div>
                     </div>
-                  </div> -->
+                  </div>
 
                   <!-- Location -->
                   <div class="col-12 col-lg-6 mb-6">
@@ -1914,12 +2113,21 @@
   <!-- Map -->
   <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
 
+  <!-- Add Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- With these correct React script tags -->
+  <!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/rxjs/dist/bundles/rxjs.umd.min.js"></script>
+
+  <script src="https://unpkg.com/@univerjs/presets@latest/lib/umd/index.js"></script>
+  <script src="https://unpkg.com/@univerjs/preset-sheets-core@latest/lib/umd/index.js"></script>
+  <script src="https://unpkg.com/@univerjs/preset-sheets-core@latest/lib/umd/locales/en-US.js"></script> -->
+
   <!-- Theme JS -->
   <script src="./assets/js/theme.min.js"></script>
   <script src="script.js"></script>
-
-  <!-- Add Chart.js -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <!-- Initialize Charts -->
   <script>
@@ -1975,6 +2183,79 @@
             title: {
               display: true,
               text: 'Profile Information Completion Rate (%)'
+            }
+          }
+        }
+      });
+
+      // Hiring Stage Chart (Bar)
+      new Chart(document.getElementById('pipelineOverviewChart'), {
+        type: 'bar',
+        data: {
+          labels: ['Marketing Intern', 'Sales Associate	', 'Sales Manager', 'Marketing Manager', 'Marketing Associate', 'HR Manager', 'Designer'],
+          datasets: [
+            {
+              label: 'Applied',
+              data: [0, 0, 0, 0, 0, 0, 0],
+              backgroundColor: chartColors.backgrounds[0],
+              borderColor: chartColors.borders[0],
+              borderWidth: 1
+            },
+            {
+              label: 'Shortlisted',
+              data: [0, 0, 0, 0, 0, 0, 0],
+              backgroundColor: chartColors.backgrounds[1],
+              borderColor: chartColors.borders[1],
+              borderWidth: 1
+            },
+            {
+              label: 'Screening',
+              data: [0, 0, 0, 0, 0, 0, 0],
+              backgroundColor: chartColors.backgrounds[2],
+              borderColor: chartColors.borders[2],
+              borderWidth: 1
+            },
+            {
+              label: 'In-depth',
+              data: [0, 0, 0, 0, 0, 0, 0],
+              backgroundColor: chartColors.backgrounds[3],
+              borderColor: chartColors.borders[3],
+              borderWidth: 1
+            },
+            {
+              label: 'Offer',
+              data: [0, 1, 0, 0, 0, 1, 0],
+              backgroundColor: chartColors.backgrounds[4],
+              borderColor: chartColors.borders[4],
+              borderWidth: 1
+            },
+            {
+              label: 'Hired',
+              data: [0, 0, 0, 0, 3, 0, 0],
+              backgroundColor: chartColors.backgrounds[5],
+              borderColor: chartColors.borders[5],
+              borderWidth: 1
+            },
+            {
+              label: 'Dropped',
+              data: [0, 1, 2, 1, 0, 0, 1],
+              backgroundColor: chartColors.backgrounds[6],
+              borderColor: chartColors.borders[6],
+              borderWidth: 1
+            }
+          ],
+        },
+        options: {
+          indexAxis: 'y',
+          responsive: true,
+          scales: {
+            x: {
+              beginAtZero: true
+            }
+          },
+          plugins: {
+            legend: {
+              position: 'right',
             }
           }
         }
@@ -2204,30 +2485,137 @@
     });
   </script>
 
-  <!-- Add this CSS -->
-  <style>
-    .tab-link {
-      color: #6c757d;
-      border-color: #869ab8 !important;
-    }
+  <!-- <script>
+    window.onload = function () {
+      try {
+        // Get required components
+        const { createUniver, LocaleType, defaultTheme } = UniverPresets;
+        const { UniverSheetsCorePreset } = UniverPresetSheetsCore;
+        const { enUS: UniverPresetSheetsCoreEnUS } = UniverPresetSheetsCore;
 
-    .tab-link.active {
-      background-color: #e6f5ea !important;
-      border-color: #28a745 !important;
-      color: #28a745 !important;
-    }
+        // People Sheet Data
+        const peopleSheetData = {
+          id: 'peopleWorkbook',
+          name: 'People Enrichment',
+          sheetOrder: ['sheet1'],
+          sheets: {
+            sheet1: {
+              id: 'sheet1',
+              name: 'Sheet1',
+              cellData: {
+                0: {
+                  0: {
+                    v: 'Get person\'s first name',
+                    t: 2,
+                    s: {
+                      ht: 1,
+                      bl: 1
+                    }
+                  },
+                  1: {
+                    v: 'https://www.linkedin.com/in/johnrmarty',
+                    t: 2,
+                    s: {
+                      ht: 1
+                    }
+                  },
+                  2: {
+                    f: '=SG_PERSON(C1, "first_name")',
+                    t: 2,
+                    s: {
+                      ht: 1,
+                      bg: { rgb: '#f0fdf4' }  // Light green background color
+                    }
+                  },
+                },
+                1: {
+                  0: {
+                    v: 'Get profile\'s current job title',
+                    t: 2,
+                    s: {
+                      ht: 1,
+                      bl: 1
+                    }
+                  },
+                  1: {
+                    v: 'https://www.linkedin.com/in/johnrmarty',
+                    t: 2,
+                    s: {
+                      ht: 1
+                    }
+                  },
+                  2: {
+                    f: '=SG_PERSON_WORK(C2, "company")',
+                    t: 2,
+                    s: {
+                      ht: 1,
+                      bg: { rgb: '#f0fdf4' }  // Light green background color
+                    }
+                  },
+                },
+                2: {
+                  0: {
+                    v: 'Get profile\'s current job title',
+                    t: 2,
+                    s: {
+                      ht: 1,
+                      bl: 1
+                    }
+                  },
+                  1: {
+                    v: 'https://www.linkedin.com/in/johnrmarty',
+                    t: 2,
+                    s: {
+                      ht: 1
+                    }
+                  },
+                  2: {
+                    f: '=SG_PERSON_WORK(C3, "title")',
+                    t: 2,
+                    s: {
+                      ht: 1,
+                      bg: { rgb: '#f0fdf4' }  // Light green background color
+                    }
+                  },
+                }
+              },
+              rowCount: 50,
+              columnCount: 50,
+              defaultRowHeight: 25,
+              defaultColumnWidth: 120, // Default width for all columns
+              columnData: {            // Specific widths for columns
+                0: { w: 250 },        // Last Name column
+                1: { w: 320 },        // Company column
+                2: { w: 350 },        // Title column
+              }
+            }
+          }
+        };
 
-    .tab-link:not(.active) {
-      border-color: #869ab8 !important;
-    }
+        // Initialize first spreadsheet
+        const { univerAPI: peopleAPI } = createUniver({
+          locale: LocaleType.EN_US,
+          locales: {
+            enUS: UniverPresetSheetsCoreEnUS,
+          },
+          theme: defaultTheme,
+          presets: [
+            UniverSheetsCorePreset({
+              container: 'applicant-tracking-sheet',
+            }),
+          ],
+        });
 
-    /* Ensure mobile tabs have proper spacing */
-    @media (max-width: 991.98px) {
-      .nav {
-        margin-bottom: 1rem;
+        // Create workbook
+        peopleAPI.createUniverSheet(peopleSheetData);
+
+        console.log('All sheets initialized successfully');
+
+      } catch (error) {
+        console.error('Error initializing sheets:', error);
       }
-    }
-  </style>
+    };
+  </script> -->
 
 </body>
 
