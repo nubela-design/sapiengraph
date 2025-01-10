@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="./assets/css/theme.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/neuicons@1.9.0/css/neu.min.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style-formula.css">
 
   <title>Sapiengraph Spreadsheet Formulas</title>
 
@@ -374,23 +375,13 @@
               </div>
 
               <div class="row no-gutters">
-                <div class="col-12 col-md-8 col-lg-4 pr-lg-4">
-                  <div class="card mb-4 px-4 py-4">
-                    <h3 class="h3 font-weight-bold">
-                      Enrich people's first name
-                    </h3>
-                    <code class="text-success border border-success rounded p-2">
-                      =SG_PERSON(C1, "first_name")
-                    </code>
-                  </div>
-                </div>
                 <div class="col-12 col-md-8 col-lg-4">
                   <div class="card d-flex mb-4 px-4 py-4">
                     <h3 class="h3 font-weight-bold">
                       Enrich people's current company
                     </h3>
                     <code class="text-success border border-success rounded p-2">
-                      =SG_PERSON_WORK(C2, "company")
+                      =SG_LOOKUP_PERSON(COMPANY)
                     </code>
                   </div>
                 </div>
@@ -400,7 +391,7 @@
                       Enrich people's current job title
                     </h3>
                     <code class="text-success border border-success rounded p-2">
-                      =SG_PERSON_WORK(C3, "title")
+                      =SG_LOOKUP_PERSON([TITLE])
                     </code>
                   </div>
                 </div>
@@ -1541,7 +1532,7 @@
 
   <!-- Theme JS -->
   <script src="./assets/js/theme.min.js"></script>
-  <script src="script.js"></script>
+  <script src="script-formula.js"></script>
 
   <!-- Then add your initialization script -->
   <script>
@@ -1564,7 +1555,7 @@
               cellData: {
                 0: {
                   0: {
-                    v: 'Get person\'s first name',
+                    v: 'First Name',
                     t: 2,
                     s: {
                       ht: 1,
@@ -1572,68 +1563,109 @@
                     }
                   },
                   1: {
-                    v: 'https://www.linkedin.com/in/johnrmarty',
-                    t: 2,
-                    s: {
-                      ht: 1
-                    }
-                  },
-                  2: {
-                    f: '=SG_PERSON(C1, "first_name")',
+                    v: 'Last Name',
                     t: 2,
                     s: {
                       ht: 1,
-                      bg: { rgb: '#f0fdf4' }  // Light green background color
+                      bl: 1
+                    }
+                  },
+                  2: {
+                    v: 'Company',
+                    t: 2,
+                    s: {
+                      ht: 1,
+                      bl: 1
+                    }
+                  },
+                  3: {
+                    v: 'Location',
+                    t: 2,
+                    s: {
+                      ht: 1,
+                      bl: 1
+                    }
+                  },
+                  4: {
+                    v: 'Title',
+                    t: 2,
+                    s: {
+                      ht: 1,
+                      bl: 1
                     }
                   },
                 },
                 1: {
                   0: {
-                    v: 'Get profile\'s current company',
+                    v: 'Bill',
                     t: 2,
                     s: {
                       ht: 1,
-                      bl: 1
                     }
                   },
                   1: {
-                    v: 'https://www.linkedin.com/in/johnrmarty',
+                    v: 'Gates',
                     t: 2,
                     s: {
                       ht: 1
                     }
                   },
                   2: {
-                    f: '=SG_PERSON_WORK(C2, "company")',
+                    v: 'Gates Foundation',
                     t: 2,
                     s: {
                       ht: 1,
-                      bg: { rgb: '#f0fdf4' }  // Light green background color
+                    }
+                  },
+                  3: {
+                    v: 'Seattle, WA',
+                    t: 2,
+                    s: {
+                      ht: 1,
+                    }
+                  },
+                  4: {
+                    v: 'Co-chair',
+                    t: 2,
+                    s: {
+                      ht: 1,
                     }
                   },
                 },
                 2: {
                   0: {
-                    v: 'Get profile\'s current job title',
+                    v: 'John',
                     t: 2,
                     s: {
                       ht: 1,
-                      bl: 1
                     }
                   },
                   1: {
-                    v: 'https://www.linkedin.com/in/johnrmarty',
+                    v: 'Marty',
                     t: 2,
                     s: {
                       ht: 1
                     }
                   },
                   2: {
-                    f: '=SG_PERSON_WORK(C3, "title")',
+                    v: 'FF Real Estate',
                     t: 2,
                     s: {
                       ht: 1,
-                      bg: { rgb: '#f0fdf4' }  // Light green background color
+                    }
+                  },
+                  3: {
+                    v: 'Seattle, WA',
+                    t: 2,
+                    s: {
+                      ht: 1,
+                    }
+                  },
+                  4: {
+                    v: 'Founder',
+                    t: 2,
+                    s: {
+                      ht: 1,
                     }
                   },
                 }
@@ -1643,9 +1675,11 @@
               defaultRowHeight: 25,
               defaultColumnWidth: 120, // Default width for all columns
               columnData: {            // Specific widths for columns
-                0: { w: 250 },        // Last Name column
-                1: { w: 320 },        // Company column
-                2: { w: 350 },        // Title column
+                0: { w: 150 }, // First Name
+                1: { w: 150 }, // Last Name
+                2: { w: 250 }, // Company
+                3: { w: 150 }, // Location
+                4: { w: 150 }, // Title
               }
             }
           }
@@ -2209,6 +2243,17 @@
       }
     };
   </script>
+
+  <div id="cell-tooltip" class="card position-fixed d-none" style="z-index: 1050; pointer-events: none;">
+    <div class="card mb-0 px-4 py-4">
+      <h3 class="h3 font-weight-bold">
+        Enrich people's first name
+      </h3>
+      <code class="text-success border border-success rounded p-2">
+        =SG_LOOKUP_PERSON(FIRST_NAME)
+      </code>
+    </div>
+  </div>
 
 </body>
 
