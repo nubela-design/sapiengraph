@@ -1,108 +1,122 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Create popover element
-  const popover = document.createElement('div');
-  popover.className = 'card position-fixed d-none';
-  popover.style.zIndex = '9999';
-  popover.innerHTML = `
-    <div class="card mb-0 px-4 py-4">
-      <h3 class="h3 font-weight-bold">
-        Enrich people's first name
-      </h3>
-      <code class="text-success border border-success rounded p-2">
-        =SG_LOOKUP_PERSON(FIRST_NAME)
-      </code>
-    </div>
-  `;
-  document.body.appendChild(popover);
+  // Get the existing card element using text content match
+  const enrichCard = Array.from(document.querySelectorAll('.card h3'))
+    .find(h3 => h3.textContent.trim() === "Enrich people's first name")
+    ?.closest('.card');
 
-  // Track currently active popover
-  let activePopover = null;
+  let activeCell = null;
+  let observer = null;
 
-  // Function to position popover
-  function positionPopover(cell) {
-    const cellRect = cell.getBoundingClientRect();
-    const popoverRect = popover.getBoundingClientRect();
-    const viewportHeight = window.innerHeight;
+  function setupCanvasListener(canvas) {
+    console.log('Setting up canvas listener for:', canvas);
     
-    // Check if there's room below the cell
-    const spaceBelow = viewportHeight - cellRect.bottom;
-    const spaceAbove = cellRect.top;
+    // Remove old listener if exists
+    canvas.removeEventListener('click', handleCanvasClick);
     
-    if (spaceBelow >= popoverRect.height + 10) {
-      // Position below the cell
-      popover.style.top = (cellRect.bottom + 5) + 'px';
-    } else if (spaceAbove >= popoverRect.height + 10) {
-      // Position above the cell
-      popover.style.top = (cellRect.top - popoverRect.height - 5) + 'px';
+    // Add new click listener
+    canvas.addEventListener('click', handleCanvasClick);
+  }
+
+  function handleCanvasClick(e) {
+    console.log('Canvas clicked');
+    
+    // Get the click coordinates relative to the canvas
+    const rect = e.target.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    console.log('Click coordinates:', { x, y });
+    
+    // Adjust these values based on your spreadsheet layout
+    const columnAWidth = 150; // Increased from 100
+    const headerHeight = 50; // Increased from 30
+    
+    // Check if click is in first column
+    const isColumnA = x < columnAWidth;
+    const isNotHeaderRow = y > headerHeight;
+    
+    console.log('Click analysis:', {
+        isColumnA,
+        isNotHeaderRow,
+        columnAWidth,
+        headerHeight
+    });
+    
+    if (isColumnA && isNotHeaderRow) {
+        console.log('Column A clicked (not header)');
+        enrichCard?.classList.add('border-success');
+        activeCell = { x, y };
     } else {
-      // If no space above or below, position at cell's middle
-      popover.style.top = (cellRect.top + (cellRect.height / 2) - (popoverRect.height / 2)) + 'px';
+        console.log('Not column A or is header:', 
+            isColumnA ? 'In column A' : 'Not in column A',
+            isNotHeaderRow ? 'Not in header' : 'In header'
+        );
+        enrichCard?.classList.remove('border-success');
+        activeCell = null;
     }
-
-    // Center horizontally with the cell
-    popover.style.left = (cellRect.left + (cellRect.width / 2) - (popoverRect.width / 2)) + 'px';
   }
 
   // Wait for sheet to be initialized
-  setTimeout(() => {
-    const peopleSheet = document.querySelector('#peopleWorkbook');
-    if (peopleSheet) {
-      // Handle click events
-      peopleSheet.addEventListener('click', function(e) {
-        const cell = e.target.closest('.univer-sheet-cell');
-        
-        // If clicking outside any cell, hide popover
-        if (!cell) {
-          popover.classList.add('d-none');
-          activePopover = null;
-          return;
-        }
-
-        // Check if it's column A (but not A1)
-        if (cell.classList.contains('column-0')) {
-          const rowClass = Array.from(cell.classList).find(c => c.startsWith('row-'));
-          if (rowClass && rowClass !== 'row-0') {
-            // Show popover first (but hidden) to get its dimensions
-            popover.style.visibility = 'hidden';
-            popover.classList.remove('d-none');
-            
-            // Position the popover
-            positionPopover(cell);
-            
-            // Make popover visible
-            popover.style.visibility = 'visible';
-            activePopover = cell;
-            
-            // Prevent event bubbling
-            e.stopPropagation();
-          }
-        } else {
-          // Hide popover when clicking other cells
-          popover.classList.add('d-none');
-          activePopover = null;
+  waitForElement('#enrichment-people-sheet', (peopleSheet) => {
+    console.log('Found sheet, setting up observer');
+    
+    // Create an observer instance
+    observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.addedNodes.length) {
+          mutation.addedNodes.forEach((node) => {
+            if (node.classList?.contains('univer-render-canvas')) {
+              console.log('Canvas added to DOM');
+              setupCanvasListener(node);
+            }
+          });
         }
       });
-    }
-  }, 1000); // Wait for 1 second to ensure sheet is loaded
+    });
 
-  // Optional: Close popover when pressing Escape
+    // Start observing the sheet for canvas changes
+    observer.observe(peopleSheet, {
+      childList: true,
+      subtree: true
+    });
+
+    // Also check for existing canvas
+    const existingCanvas = peopleSheet.querySelector('.univer-render-canvas');
+    if (existingCanvas) {
+      console.log('Found existing canvas');
+      setupCanvasListener(existingCanvas);
+    }
+  });
+
+  // Optional: Remove highlight when pressing Escape
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && activePopover) {
-      popover.classList.add('d-none');
-      activePopover = null;
+    if (e.key === 'Escape' && activeCell) {
+      enrichCard?.classList.remove('border-success');
+      activeCell = null;
     }
   });
 
-  // Optional: Reposition popover on scroll or resize
-  window.addEventListener('scroll', function() {
-    if (activePopover) {
-      positionPopover(activePopover);
-    }
-  }, true);
-
-  window.addEventListener('resize', function() {
-    if (activePopover) {
-      positionPopover(activePopover);
-    }
-  });
+  // Debug logging
+  console.log('All cards:', document.querySelectorAll('.card h3'));
+  console.log('Found card:', enrichCard);
+  console.log('Sheet element:', document.querySelector('#enrichment-people-sheet'));
 });
+
+// Function to check if element exists
+function waitForElement(selector, callback, maxTries = 10) {
+  if (maxTries <= 0) {
+    console.error('Element not found after maximum tries:', selector);
+    return;
+  }
+
+  const element = document.querySelector(selector);
+  if (element) {
+    console.log('Found element:', selector);
+    callback(element);
+  } else {
+    console.log('Waiting for element:', selector, 'Tries left:', maxTries);
+    setTimeout(() => {
+      waitForElement(selector, callback, maxTries - 1);
+    }, 1000);
+  }
+}
