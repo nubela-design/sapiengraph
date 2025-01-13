@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
   let popoverA = null;
   let popoverB = null;
   let popoverC = null;
+  let popoverD = null;
+  let popoverE = null;
 
   // Create popover element
   function createPopoverA() {
@@ -37,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function createPopoverB() {
     const div = document.createElement('div');
     div.className = 'position-absolute bg-white shadow rounded';
-    div.style.cssText = 'z-index: 1000; display: none;';
+    div.style.cssText = 'z-index: 999; display: none;';
     div.innerHTML = `
       <div class="card border border-success shadow-lg px-4 py-4" style="min-width: 300px;">
         <h3 class="font-weight-bold d-inline-flex">
@@ -60,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function createPopoverC() {
     const div = document.createElement('div');
     div.className = 'position-absolute bg-white shadow rounded';
-    div.style.cssText = 'z-index: 1000; display: none;';
+    div.style.cssText = 'z-index: 998; display: none;';
     div.innerHTML = `
       <div class="card border border-success shadow-lg px-4 py-4" style="min-width: 300px;">
         <h3 class="font-weight-bold d-inline-flex">
@@ -80,12 +82,57 @@ document.addEventListener('DOMContentLoaded', function() {
     return div;
   }
 
+  function createPopoverD() {
+    const div = document.createElement('div');
+    div.className = 'position-absolute bg-white shadow rounded';
+    div.style.cssText = 'z-index: 997; display: none;';
+    div.innerHTML = `
+      <div class="card border border-success shadow-lg px-4 py-4" style="min-width: 300px;">
+        <h3 class="font-weight-bold d-inline-flex">
+          <svg style="width: 24px;" class="mb-1 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="currentColor"><path d="M20 15.5c-1.2 0-2.5-.2-3.6-.6h-.3c-.3 0-.5.1-.7.3l-2.2 2.2c-2.8-1.5-5.2-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.3-1.1-.5-2.4-.5-3.6 0-.5-.4-1-1-1H4c-.5 0-1 .5-1 1 0 9.4 7.6 17 17 17 .5 0 1-.5 1-1v-3.5c0-.5-.4-1-1-1M5 5h1.5c.1.9.3 1.8.5 2.6L5.8 8.8C5.4 7.6 5.1 6.3 5 5m14 14c-1.3-.1-2.6-.4-3.8-.8l1.2-1.2c.8.2 1.7.4 2.6.5zm0-7h2a8.999 8.999 0 0 0-9-9v2c3.9 0 7 3.1 7 7m-4 0h2c0-2.8-2.2-5-5-5v2c1.7 0 3 1.3 3 3"></path></g></svg>
+          Enrich people's phone number
+        </h3>
+        <code class="text-success border border-success rounded p-2 mb-3" style="background-color: #f7fee7;">
+          =SG_LOOKUP_PERSON(PHONE)
+        </code>
+        <div class="d-flex justify-content-end">
+          <button class="btn btn-xs btn-secondary-soft mr-2">Dismiss</button>
+          <button class="btn btn-xs btn-success">Try now</button>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(div);
+    return div;
+  }
+
+  function createPopoverE() {
+    const div = document.createElement('div');
+    div.className = 'position-absolute bg-white shadow rounded';
+    div.style.cssText = 'z-index: 996; display: none;';
+    div.innerHTML = `
+      <div class="card border border-success shadow-lg px-4 py-4" style="min-width: 300px;">
+        <h3 class="font-weight-bold d-inline-flex">
+          <svg style="width: 24px;" class="mb-1 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="currentColor"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"></path></g></svg>
+          Enrich people's title
+        </h3>
+        <code class="text-success border border-success rounded p-2 mb-3" style="background-color: #f7fee7;">
+          =SG_LOOKUP_PERSON(TITLE)
+        </code>
+        <div class="d-flex justify-content-end">
+          <button class="btn btn-xs btn-secondary-soft mr-2">Dismiss</button>
+          <button class="btn btn-xs btn-success">Try now</button>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(div);
+    return div;
+  }
+
   function showPopover(x, y, column) {
     // Hide any visible popover first
     hidePopovers();
     
     let currentPopover;
-    let popoverCreator;
     let actionMessage;
 
     switch(column) {
@@ -102,7 +149,17 @@ document.addEventListener('DOMContentLoaded', function() {
       case 'C':
         if (!popoverC) popoverC = createPopoverC();
         currentPopover = popoverC;
-        actionMessage = 'Apply email enrichment';
+        actionMessage = 'Apply company enrichment';
+        break;
+      case 'D':
+        if (!popoverD) popoverD = createPopoverD();
+        currentPopover = popoverD;
+        actionMessage = 'Apply phone enrichment';
+        break;
+      case 'E':
+        if (!popoverE) popoverE = createPopoverE();
+        currentPopover = popoverE;
+        actionMessage = 'Apply title enrichment';
         break;
     }
 
@@ -124,6 +181,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (popoverA) popoverA.style.display = 'none';
     if (popoverB) popoverB.style.display = 'none';
     if (popoverC) popoverC.style.display = 'none';
+    if (popoverD) popoverD.style.display = 'none';
+    if (popoverE) popoverE.style.display = 'none';
     activeCell = null;
   }
 
@@ -213,6 +272,12 @@ document.addEventListener('DOMContentLoaded', function() {
       hidePopovers();
     }
     if (popoverC && !popoverC.contains(e.target) && !e.target.classList.contains('univer-render-canvas')) {
+      hidePopovers();
+    }
+    if (popoverD && !popoverD.contains(e.target) && !e.target.classList.contains('univer-render-canvas')) {
+      hidePopovers();
+    }
+    if (popoverE && !popoverE.contains(e.target) && !e.target.classList.contains('univer-render-canvas')) {
       hidePopovers();
     }
   });

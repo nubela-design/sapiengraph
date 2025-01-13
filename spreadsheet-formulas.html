@@ -374,25 +374,58 @@
                 <span class="bg-success rounded-circle ml-1" style="width: 12px; height: 12px;"></span>
               </div>
 
-              <div class="row no-gutters">
-                <div class="col-12 col-md-8 col-lg-4">
-                  <div class="card d-flex mb-4 px-4 py-4">
-                    <h3 class="h3 font-weight-bold">
-                      Enrich people's current company
-                    </h3>
-                    <code class="text-success border border-success rounded p-2">
-                      =SG_LOOKUP_PERSON(COMPANY)
-                    </code>
+              <!-- desktop -->
+              <div class="card card-body border border-success mb-4 d-none d-lg-block" 
+                   style="background-image: linear-gradient(to right, rgba(255,255,255,0.95), rgba(255,255,255,0.8)), url(assets/img/patterns/pattern-bg.svg);
+                          background-repeat: no-repeat;
+                          background-position: center;
+                          background-size: cover;
+                          background-color: #ffffff;">
+                <div class="d-lg-flex">
+                  <div class="py-4 px-4 mr-4 border border-success rounded-lg icon" style="background-color: #d1fae5;">
+                    <svg class="animate-bounce" width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <g fill="#10b981">
+                        <path
+                          d="m7.303 13.51 2.83-1.415a4.4 4.4 0 0 0 1.962-1.962l1.414-2.83a.548.548 0 0 1 .981 0l1.415 2.83a4.4 4.4 0 0 0 1.962 1.962l2.83 1.414a.548.548 0 0 1 0 .981l-2.83 1.415a4.4 4.4 0 0 0-1.962 1.962l-1.414 2.83a.548.548 0 0 1-.982 0l-1.414-2.83a4.4 4.4 0 0 0-1.962-1.962l-2.83-1.414a.548.548 0 0 1 0-.981m.354-6.693L8.87 6.21a.235.235 0 0 0 0-.42l-1.213-.606a1.88 1.88 0 0 1-.84-.841L6.21 3.13a.235.235 0 0 0-.42 0l-.607 1.213a1.88 1.88 0 0 1-.84.84L3.13 5.79a.235.235 0 0 0 0 .42l1.213.607c.363.182.658.477.84.84L5.79 8.87a.235.235 0 0 0 .42 0l.606-1.212a1.88 1.88 0 0 1 .841-.841">
+                        </path>
+                      </g>
+                    </svg>
+                  </div>
+                  <div>
+                    <h2 class="font-weight-bold mb-2">
+                      Try the magic of Sapiengraph
+                    </h2>
+                    <p class="text-muted lead mb-0">
+                      Click or type to one of the cells to see how Sapiengraph works
+                    </p>
                   </div>
                 </div>
-                <div class="col-12 col-md-8 col-lg-4 pl-lg-4">
-                  <div class="card d-flex mb-4 px-4 py-4">
-                    <h3 class="h3 font-weight-bold">
-                      Enrich people's current job title
-                    </h3>
-                    <code class="text-success border border-success rounded p-2">
-                      =SG_LOOKUP_PERSON([TITLE])
-                    </code>
+              </div>
+
+              <!-- mobile -->
+              <div class="card card-body border border-success mb-4 d-block d-lg-none" 
+                   style="background-image: linear-gradient(to bottom, rgba(255,255,255,0.95), rgba(255,255,255,0.8)), url(assets/img/patterns/pattern-bg.svg);
+                          background-repeat: no-repeat;
+                          background-position: center;
+                          background-size: cover;
+                          background-color: #ffffff;">
+                <div>
+                  <div class="icon mb-2">
+                    <svg class="animate-bounce" width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <g fill="#10b981">
+                        <path
+                          d="m7.303 13.51 2.83-1.415a4.4 4.4 0 0 0 1.962-1.962l1.414-2.83a.548.548 0 0 1 .981 0l1.415 2.83a4.4 4.4 0 0 0 1.962 1.962l2.83 1.414a.548.548 0 0 1 0 .981l-2.83 1.415a4.4 4.4 0 0 0-1.962 1.962l-1.414 2.83a.548.548 0 0 1-.982 0l-1.414-2.83a4.4 4.4 0 0 0-1.962-1.962l-2.83-1.414a.548.548 0 0 1 0-.981m.354-6.693L8.87 6.21a.235.235 0 0 0 0-.42l-1.213-.606a1.88 1.88 0 0 1-.84-.841L6.21 3.13a.235.235 0 0 0-.42 0l-.607 1.213a1.88 1.88 0 0 1-.84.84L3.13 5.79a.235.235 0 0 0 0 .42l1.213.607c.363.182.658.477.84.84L5.79 8.87a.235.235 0 0 0 .42 0l.606-1.212a1.88 1.88 0 0 1 .841-.841">
+                        </path>
+                      </g>
+                    </svg>
+                  </div>
+                  <div>
+                    <h2 class="font-weight-bold mb-2">
+                      Try the magic of Sapiengraph
+                    </h2>
+                    <p class="text-muted lead mb-0">
+                      Click or type to one of the cells to see how Sapiengraph works
+                    </p>
                   </div>
                 </div>
               </div>
@@ -418,7 +451,7 @@
                 <g fill="currentColor">
                   <path
                     d="M17 1.25H7A2.753 2.753 0 0 0 4.25 4v16A2.753 2.753 0 0 0 7 22.75h10A2.753 2.753 0 0 0 19.75 20V4A2.753 2.753 0 0 0 17 1.25m-3.75 20h-2.5V19a1.251 1.251 0 0 1 2.5 0zm5-1.25c0 .69-.56 1.25-1.25 1.25h-2.25V19c0-1.517-1.233-2.75-2.75-2.75S9.25 17.483 9.25 19v2.25H7c-.69 0-1.25-.56-1.25-1.25V4c0-.69.56-1.25 1.25-1.25h10c.69 0 1.25.56 1.25 1.25zM17 4.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5m0 6v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5m0 3v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5m-4-9v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5m0 6v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5m0 3v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5m-4-9v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5m0 6v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5m8-3v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5m-4 0v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5m-4 0v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5m0 6v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5">
-                  </path>
+                    </path>
                 </g>
               </svg>
               Pull rich data on companies
