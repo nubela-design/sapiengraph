@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="./assets/css/theme.min.css">
   <link rel="stylesheet" href="style.css">
 
-  <title>LinkedIn Email Finder</title>
+  <title>LinkedIn Email Finder - Failure</title>
 
 </head>
 
@@ -299,7 +299,7 @@
           <div class="card">
             <div class="card-body custom-rounded border bg-light">
               <div class="input-group border-1 shadow-light custom-rounded mb-4">
-                <input type="text" class="form-control form-control-lg border-0" placeholder="E.g. https://www.linkedin.com/in/sundarpichai/" aria-label="LinkedIn URL" aria-describedby="find-email">
+                <input type="text" class="form-control form-control-lg border-0" value="https://www.linkedin.com/in/bajajbajuri/" placeholder="E.g. https://www.linkedin.com/in/sundarpichai/" aria-label="LinkedIn URL" aria-describedby="find-email">
                 <div class="input-group-append">
                   <button class="btn btn-success d-none d-md-block" type="button" data-toggle="modal" data-target="#captchaModal">
                     Find Email Address
@@ -307,12 +307,21 @@
                 </div>
               </div>
               <div class="d-block d-md-none mb-4">
-                <button class="btn btn-success w-100 custom-rounded" 
+                <button class="btn btn-success w-100 btn-pill" 
                         type="button" 
                         data-toggle="modal" 
                         data-target="#captchaModal">
                   Find Email Address
                 </button>
+              </div>
+
+              <div class="card card-body border border-danger pb-md-6 pt-md-7 mb-4 custom-rounded" style="background-color: #FDECEE;">
+                <div class="row">
+                  <div class="col-12">
+                    <h5 class="text-danger"><i class="neu neu-close-lg text-danger mr-2"></i> Sorry, we couldn't find a match for <span
+                        class="font-weight-bold">https://www.linkedin.com/in/bajajbajuri/</span></h5>
+                  </div>
+                </div>
               </div>
 
               <p class="text-muted h6 mb-0">
