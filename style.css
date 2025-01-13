@@ -977,3 +977,19 @@ tr:hover td.sticky-action {
   } 
 }
 /* End Add by Rifki 06 Jan 2025 - Aplicant Tracking Template Fold */
+
+
+/* Start Add by AJI 13 Jan 2025 - Input border */
+.email-finder-input {
+  border-top-left-radius: 1rem !important;
+  border-bottom-left-radius: 1rem !important;
+}
+
+.email-finder-input:focus {
+  box-shadow: 0 0 0 0.2rem rgba(56, 158, 127, 0.25);
+}
+
+.email-finder-button {
+  border-top-right-radius: 1rem !important;
+  border-bottom-right-radius: 1rem !important;
+}
