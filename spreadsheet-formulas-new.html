@@ -198,7 +198,75 @@
   </nav>
 
   <!-- Add the Univer container -->
-  <div id="univerContainer" style="height: calc(100vh - 300px);"></div>
+  <section class="py-8">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-md-5">
+          <h1 class="display-3 font-weight-bold">
+            <span class="text-success">B2B enrichment in Spreadsheet</span> with LLM personalizations
+          </h1>
+        </div>
+        <div class="col-12 col-md-10 col-lg-8">
+          <div class="card border shadow-light-lg">
+            <div class="card-body">
+              <div id="univerContainer" style="height: calc(100vh - 300px);"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-2 col-lg-4">
+          <div class="card border border-success shadow-light-lg" style="height: calc(100vh - 248px);">
+            <div class="card-body" style="overflow-y: auto;">
+              <h5 class="lead font-weight-bold">Available Formulas</h5>
+              
+              <!-- Person Formulas -->
+              <div class="mb-4">
+                <h6 class="font-weight-bold text-success">Person Formulas</h6>
+                <ul class="list-unstyled small text-gray-700">
+                  <li class="mb-2"><code>=SG_PERSON(profile_url, attribute)</code><br>Get person's profile data</li>
+                  <li class="mb-2"><code>=SG_LOOKUP_ROLE("ceo", "microsoft")</code><br>Find person by role</li>
+                  <li class="mb-2"><code>=SG_PERSON_WORK(profile_url, attribute)</code><br>Get work history</li>
+                </ul>
+              </div>
+
+              <!-- Company Formulas -->
+              <div class="mb-4">
+                <h6 class="font-weight-bold text-success">Company Formulas</h6>
+                <ul class="list-unstyled small text-gray-700">
+                  <li class="mb-2"><code>=SG_COMPANY(company_url, attribute)</code><br>Get company data</li>
+                  <li class="mb-2"><code>=SG_EMPLOYEE_COUNT(company_url)</code><br>Get total employees</li>
+                  <li class="mb-2"><code>=SG_LOOKUP_COMPANY("Apple")</code><br>Find company profile</li>
+                </ul>
+              </div>
+
+              <!-- Contact Formulas -->
+              <div class="mb-4">
+                <h6 class="font-weight-bold text-success">Contact Formulas</h6>
+                <ul class="list-unstyled small text-gray-700">
+                  <li class="mb-2"><code>=SG_PERSONAL_EMAILS(profile_url)</code><br>Get email addresses</li>
+                  <li class="mb-2"><code>=SG_PERSONAL_NUMBERS(profile_url)</code><br>Get phone numbers</li>
+                  <li class="mb-2"><code>=SG_REVERSE_EMAIL_LOOKUP(email)</code><br>Find profile from email</li>
+                </ul>
+              </div>
+
+              <!-- Search Formulas -->
+              <div class="mb-4">
+                <h6 class="font-weight-bold text-success">Search Formulas</h6>
+                <ul class="list-unstyled small text-gray-700">
+                  <li class="mb-2"><code>=SG_PERSON_SEARCH(country, max_results)</code><br>Search for people</li>
+                  <li class="mb-2"><code>=SG_COMPANY_SEARCH(country, max_results)</code><br>Search for companies</li>
+                  <li class="mb-2"><code>=SG_JOBS_SEARCH(company_url, max_results)</code><br>Search for jobs</li>
+                </ul>
+              </div>
+
+              <a href="https://sapiengraph.com/user-guide" class="btn btn-sm btn-outline-success btn-block" target="_blank">
+                View Full Documentation
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- FOOTER 
     ================================================== -->
