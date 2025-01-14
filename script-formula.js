@@ -223,6 +223,12 @@ document.addEventListener('DOMContentLoaded', function() {
       } else if (isColumnC) {
         console.log('Column C clicked');
         showPopover(e.clientX, e.clientY, 'C');
+      } else if (isColumnD) {
+        console.log('Column D clicked');
+        showPopover(e.clientX, e.clientY, 'D');
+      } else if (isColumnE) {
+        console.log('Column E clicked');
+        showPopover(e.clientX, e.clientY, 'E');
       } else {
         hidePopovers();
       }
