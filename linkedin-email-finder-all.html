@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="./assets/css/theme.min.css">
   <link rel="stylesheet" href="style.css">
 
-  <title>LinkedIn Email Finder - Failure</title>
+  <title>LinkedIn Email Finder</title>
 
 </head>
 
@@ -235,7 +235,7 @@
         <div class="col-12 col-md-10 col-lg-11 text-center">
           <!-- Text -->
           <p class="lead text-muted mb-6 mt-n2" data-aos="fade-up" data-aos-delay="50">
-            from just their LinkedIn, Facebook, or X/Twitter profile’s URL
+            from just their LinkedIn, Facebook, or X/Twitter profile's URL
           </p>
 
         </div>        
@@ -243,23 +243,25 @@
         <div class="col-12 col-md-10 col-lg-11 text-center" data-aos="fade-up" data-aos-delay="100">
           <!-- Added d-flex and justify-content-center -->
           <span class="badge badge-pill badge-success-soft border py-2">
-            <div class="d-flex justify-content-center" data-aos="fade-right">
+            <div class="d-flex justify-content-center align-items-center" data-aos="fade-right">
               <div class="avatar avatar-lg">
-                <div class="avatar-img rounded-circle border"
-                  style="border-width: 2px !important; border-color: #E9F4F3; background-color: #0A66C2; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                <div class="avatar-img rounded-circle border position-relative"
+                  style="border-width: 2px !important; border-color: #E9F4F3; background-color: #0A66C2; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; z-index: 3;">
                   <i class="fab fa-linkedin-in text-white" style="font-size: 12px;"></i>
                 </div>
               </div>
-              <div class="avatar avatar-lg">
-                <div class="avatar-img rounded-circle border ml-n2"
-                  style="border-width: 2px !important; border-color: #E9F4F3; background-color: #1877F2; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
-                  <i class="fab fa-facebook-f text-white" style="font-size: 12px;"></i>
+              <div class="avatar avatar-md">
+                <div class="avatar-img rounded-circle border ml-n2 position-relative"
+                  style="border-width: 2px !important; border-color: #E9F4F3; background-color: #1877F2; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; z-index: 2;">
+                  <i class="fab fa-facebook-f text-white" style="font-size: 8px;"></i>
                 </div>
               </div>
-              <div class="avatar avatar-lg">
-                <div class="avatar-img rounded-circle border ml-n4"
-                  style="border-width: 2px !important; border-color: #E9F4F3; background-color: #000000; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 1668.56 1221.19" class="text-white">
+              <div class="avatar avatar-md">
+                <div class="avatar-img rounded-circle border ml-n4 position-relative"
+                  style="border-width: 2px !important; border-color: #E9F4F3; background-color: #000000; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; z-index: 1;">
+                  <!-- Asterisk -->
+                  <span class="position-absolute" style="top: -5px; right: -5px; color: #DF4658; font-size: 16px;">*</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 1668.56 1221.19" class="text-white">
                     <path fill="currentColor"
                       d="M283.94,167.31l386.39,516.64L281.5,1104h87.51l340.42-367.76L984.48,1104h297.8L874.15,558.3l361.92-390.99
                             h-87.51l-313.51,338.7l-253.31-338.7H283.94z M412.63,231.77h136.81l604.13,807.76h-136.81L412.63,231.77z" />
@@ -299,7 +301,7 @@
           <div class="card">
             <div class="card-body custom-rounded border bg-light">
               <div class="input-group border-1 shadow-light custom-rounded mb-4">
-                <input type="text" class="form-control form-control-lg email-finder-input" value="https://www.linkedin.com/in/bajajbajuri/"
+                <input type="text" class="form-control form-control-lg email-finder-input"
                   placeholder="E.g. https://www.linkedin.com/in/sundarpichai/" aria-label="LinkedIn URL"
                   aria-describedby="find-email">
                 <div class="input-group-append">
@@ -310,19 +312,10 @@
                 </div>
               </div>
               <div class="d-block d-md-none mb-4">
-                <button class="btn btn-success w-100 btn-pill" type="button" data-toggle="modal" data-target="#captchaModal">
+                <button class="btn btn-success w-100 custom-rounded" type="button" data-toggle="modal"
+                  data-target="#captchaModal">
                   Find Email Address
                 </button>
-              </div>
-
-              <div class="card card-body border border-danger pb-md-6 pt-md-7 mb-4 custom-rounded" style="background-color: #FDECEE;">
-                <div class="row">
-                  <div class="col-12">
-                    <h5 class="text-danger mb-3"><i class="neu neu-close-lg text-danger mr-2"></i> Sorry, we couldn't find a match for <span
-                        class="font-weight-bold">https://www.linkedin.com/in/bajajbajuri/</span></h5>
-                    <p class="ml-md-7 font-weight-bold mb-2">Try using a different profile URL instead</p>    
-                  </div>
-                </div>
               </div>
 
               <p class="text-muted h6 mb-0">
@@ -533,7 +526,7 @@
                 
                 <div class="col-12 col-md-5">
                   <h2 class="font-weight-bold">Pay only for found emails</h2>
-                  <p class="lead text-muted mb-0">You only pay for the emails we find. If we can’t find an email, you won’t be charged.</p>
+                  <p class="lead text-muted mb-0">You only pay for the emails we find. If we can't find an email, you won't be charged.</p>
                 </div>
               </div>
             </div>
@@ -1266,7 +1259,7 @@ Export up to 10,000 profiles from your search.
   
           <!-- Text -->
           <p class="lead text-gray-300 mb-8">
-            This is our obligatory marketing call-to-action to sign up for our free trial. It’s worth it, trust me.
+            This is our obligatory marketing call-to-action to sign up for our free trial. It's worth it, trust me.
           </p>
   
           <!-- Button -->
