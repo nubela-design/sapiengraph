@@ -1,0 +1,1711 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Libs CSS -->
+  <link rel="stylesheet" href="./assets/fonts/Feather/feather.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/neuicons@1.9.0/css/neu.min.css">
+  <link rel="stylesheet" href="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="./assets/libs/aos/dist/aos.css">
+  <link rel="stylesheet" href="./assets/libs/choices.js/public/assets/styles/choices.min.css">
+  <link rel="stylesheet" href="./assets/libs/flickity-fade/flickity-fade.css">
+  <link rel="stylesheet" href="./assets/libs/flickity/dist/flickity.min.css">
+  <link rel="stylesheet" href="./assets/libs/highlightjs/styles/vs2015.css">
+  <link rel="stylesheet" href="./assets/libs/jarallax/dist/jarallax.css">
+  <link rel="stylesheet" href="./assets/libs/quill/dist/quill.core.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css"/>
+
+  <!-- Map -->
+  <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="./assets/css/theme.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <title>LinkedIn Email Finder</title>
+
+</head>
+
+<body>
+
+<!-- Modal CAPTCHA -->
+<div class="modal fade" id="captchaModal" data-keyboard="false" tabindex="-1" aria-labelledby="captchaModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content mx-md-9">
+      <div class="modal-header">
+        <h5 class="modal-title font-weight-bold" id="captchaModalLabel">Captcha</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="small mb-5 text-muted"> To find the email address, please complete the CAPTCHA below.</p>
+        <div class="text-left">
+          <div class="g-recaptcha d-inline-block" 
+               data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" 
+               data-callback="onCaptchaSuccess"
+               style="transform-origin: 0 0;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  
+
+  <!-- NAVBAR
+    ================================================== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container-fluid">
+
+      <!-- Brand -->
+      <a class="navbar-brand" href="./index.html">
+        <img src="./assets/img/Sapiengraph logo.svg" class="navbar-brand-img" alt="Sapiengraph logo">
+      </a>
+
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fe fe-x"></i>
+        </button>
+
+        <!-- Navigation -->
+        <ul class="navbar-nav ml-auto">
+
+          <li class="dropdown nav-item">
+            <a class="dropdown-toggle nav-link" id="navbarAccount" data-toggle="dropdown" href="#" aria-haspopup="true"
+              aria-expanded="false">
+              Products <i class="fe fe-chevron-down"></i>
+            </a>
+
+            <div class="dropdown-menu pb-4" aria-labelledby="navbarSolutions">
+
+              <div class="row justify-content-center">
+
+                <div class="col-12">
+
+                  <h2 class="small text-uppercase font-weight-bold text-success mb-1">
+                    <svg class="d-inline-flex mb-2" xmlns="http://www.w3.org/2000/svg" width="18" height="auto"
+                      viewBox="0 0 24 24">
+                      <g fill="currentColor">
+                        <path
+                          d="m7.303 13.51 2.83-1.415a4.4 4.4 0 0 0 1.962-1.962l1.414-2.83a.548.548 0 0 1 .981 0l1.415 2.83a4.4 4.4 0 0 0 1.962 1.962l2.83 1.414a.548.548 0 0 1 0 .981l-2.83 1.415a4.4 4.4 0 0 0-1.962 1.962l-1.414 2.83a.548.548 0 0 1-.982 0l-1.414-2.83a4.4 4.4 0 0 0-1.962-1.962l-2.83-1.414a.548.548 0 0 1 0-.981m.354-6.693L8.87 6.21a.235.235 0 0 0 0-.42l-1.213-.606a1.88 1.88 0 0 1-.84-.841L6.21 3.13a.235.235 0 0 0-.42 0l-.607 1.213a1.88 1.88 0 0 1-.84.84L3.13 5.79a.235.235 0 0 0 0 .42l1.213.607c.363.182.658.477.84.84L5.79 8.87a.235.235 0 0 0 .42 0l.606-1.212a1.88 1.88 0 0 1 .841-.841">
+                        </path>
+                      </g>
+                    </svg>
+                    5-Minute Growth Tools
+                  </h2>
+
+                  <div class="dropdown-item">
+                    <a class="dropdown-link custom-link" href="#">
+                      B2B Enrichment for Excel / Google Sheets
+                    </a>
+                  </div>
+
+                  <div class="dropdown-item">
+                    <a class="dropdown-link custom-link pl-4" href="#">
+                      ᴸ Formula Documentation
+                    </a>
+                  </div>
+
+                  <div class="dropdown-item">
+                    <a class="dropdown-link custom-link" href="prospector.html">
+                      Prospector with Export
+                    </a>
+                  </div>
+
+                  <div class="dropdown-item">
+                    <a class="dropdown-link custom-link" href="#">
+                      Job Change Monitor <span class="text-success font-weight-bold">(FREE)</span>
+                    </a>
+                  </div>
+
+                  <div class="dropdown-item mb-0">
+                    <a class="dropdown-link custom-link" href="#">
+                      API
+                    </a>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+          </li>
+
+          <li class="dropdown nav-item">
+            <a class="dropdown-toggle nav-link" id="navbarAccount" data-toggle="dropdown" href="#" aria-haspopup="true"
+              aria-expanded="false">
+              Solutions <i class="fe fe-chevron-down"></i>
+            </a>
+
+            <div class="dropdown-menu pb-4" aria-labelledby="navbarSolutions">
+
+              <div class="row justify-content-center">
+
+                <div class="col-12">
+
+                  <div class="dropdown-item mb-2">
+                    <a class="dropdown-link custom-link" href="#">
+                      Spreadsheet Template Gallery <span class="text-success font-weight-bold">(FREE)</span>
+                    </a>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="pricing.html">
+              Pricing
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">
+              Blog
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#!">
+              FAQ
+            </a>
+          </li>
+
+        </ul>
+
+        <!-- Button -->
+
+        <div class="text-center ml-auto">
+          <!-- Button -->
+          <a class="btn btn-sm btn-link font-weight-bold text-white text-md-gray" href="signin-illustration.html">
+            Sign in
+          </a>
+
+          <a class="navbar-btn btn btn-pill btn-sm btn-white text-success text-md-gray lift ml-auto shadow-light-lg"
+            href="#!" target="_blank">
+            Set up new account
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- FIRST FOLD
+    ================================================== -->
+  <section class="pt-8 pt-md-11 pb-8 pb-md-11 border-bottom">
+    <div class="container">
+
+      <div class="row justify-content-center mb-8 mb-md-9">
+
+        <div class="col-12 col-md-10 col-lg-11 text-center">
+        
+          <h3 class="mb-6 mb-md-0" data-aos="fade-up">
+            <span class="h3 badge badge-success-soft badge-pill text-uppercase d-none d-md-inline-block">LinkedIn Email Finder</span>
+            <span class="badge badge-success-soft badge-pill text-uppercase d-inline-block d-md-none">LinkedIn Email Finder</span>
+          </h3>
+          <!-- Headin -->
+          <h1 class="display-1 font-weight-bolder mt-n9" data-aos="fade-up" data-aos-delay="50">
+        
+            <br><span class="text-success">Find Verified Personal Emails</span> <br>of Any Professional
+        
+          </h1>          
+
+        </div>
+
+        <div class="col-12 col-md-10 col-lg-11 text-center">
+          <!-- Text -->
+          <p class="lead text-muted mb-6 mt-n2" data-aos="fade-up" data-aos-delay="50">
+            from just their LinkedIn, Facebook, or X/Twitter profile's URL
+          </p>
+
+        </div>        
+
+        <div class="col-12 col-md-10 col-lg-11 text-center" data-aos="fade-up" data-aos-delay="100">
+          <!-- Added d-flex and justify-content-center -->
+          <span class="badge badge-pill badge-success-soft border py-2">
+            <div class="d-flex justify-content-center align-items-center" data-aos="fade-right">
+              <div class="avatar avatar-lg mr-4">
+                <div class="avatar-img rounded-circle border position-relative"
+                  style="border-width: 2px !important; border-color: #E9F4F3; background-color: #0A66C2; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; z-index: 3;">
+                  <span class="position-absolute" style="top: -5px; right: -5px; color: #DF4658; font-size: 16px;">*</span>
+                  <i class="fab fa-linkedin-in text-white" style="font-size: 12px;"></i>
+                </div>
+              </div>
+              <!--ARROW-->
+              <div class="ml-n2 d-none d-md-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="120" height="24" viewBox="0 0 120 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-dark">
+                  <line x1="2" y1="12" x2="114" y2="12"></line>
+                  <polyline points="107 5 114 12 107 19"></polyline>
+                </svg>
+              </div>
+              <!--ARROW MOBILE-->
+              <div class="ml-n2 d-flex d-md-none align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="24" viewBox="0 0 60 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-dark">
+                  <line x1="2" y1="12" x2="54" y2="12"></line>
+                  <polyline points="47 5 54 12 47 19"></polyline>
+                </svg>
+              </div>
+              <div class="avatar avatar-lg ml-1">
+                <div class="avatar-img rounded-circle border"
+                  style="border-width: 2px !important; border-color: #E9F4F3; background-color: #389E7F; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+                  <i class="far fa-envelope text-white" style="font-size: 12px;"></i>
+                </div>
+              </div>
+            </div>
+          </span>
+        </div>
+
+      </div> <!-- / .row -->
+
+      <div class="row">
+        <div class="col-12" data-aos="fade-up" data-aos-delay="300">
+          <div class="card">
+            <div class="card-body custom-rounded border bg-light">
+              <div class="text-center">
+                <div class="g-recaptcha d-inline-block" 
+                     data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" 
+                     data-callback="onCaptchaSuccess"
+                     style="transform-origin: 0 0;"></div>
+              </div>
+              <div class="input-group border-1 shadow-light custom-rounded mb-4">
+                <input type="text" class="form-control form-control-lg email-finder-input"
+                  placeholder="E.g. https://www.linkedin.com/in/sundarpichai/" aria-label="LinkedIn URL"
+                  aria-describedby="find-email">
+                <div class="input-group-append">
+                  <button class="btn btn-success d-none d-md-block email-finder-button" type="button" data-toggle="modal"
+                    data-target="#captchaModal">
+                    Find Email Address
+                  </button>
+                </div>
+              </div>
+              <div class="d-block d-md-none mb-4">
+                <button class="btn btn-success w-100 custom-rounded" type="button" data-toggle="modal"
+                  data-target="#captchaModal">
+                  Find Email Address
+                </button>
+              </div>
+
+              <p class="text-muted h6 mb-0">
+                <span class="text-danger">*</span>Disclaimer: These are registered trademarks of the respective companies. Sapiengraph is not affiliated with, endorsed by, or sponsored by these companies.
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- / .container -->
+  </section>
+
+  <!-- BRANDS LIGHT
+    ================================================== -->
+  <section class="bg-light pt-7 pt-md-9 pb-8 pb-md-9" id="customersection" style="background-image: url(assets/img/patterns/pattern-bg.svg);">
+    <div class="container">
+      <h3 class="lead text-center text-muted mb-6">
+       Some of our amazing customers
+      </h3>
+
+      <div class="card card-body bg-light d-none d-md-flex custom-rounded border shadow-lg py-3">
+        <div class="logo-scroll-wrapper-light">
+          <div class="logo-scroll-light">
+            <div class="logos-container">
+              <!-- First set of logos -->
+              <div class="logo-item col-md-2">
+                <img class="svg-shim img-fluid logo" alt="IBM logo SVG" src="assets/img/brands/ibm.png">
+              </div>
+              <div class="logo-item col-md-2 ml-n8">
+                <img class="svg-shim img-fluid logo" style="height: 50px;" alt="Rightbound logo SVG" 
+                  src="assets/img/brands/rightbound.com_logo.svg">
+              </div>
+              <div class="logo-item col-md-2">
+                <img class="svg-shim img-fluid logo" alt="Linux logo SVG" src="assets/img/brands/LinuxFoundation.png">
+              </div>
+              <div class="logo-item col-md-2">
+                <img class="svg-shim img-fluid logo" alt="HP logo PNG" src="assets/img/brands/hp.png">
+              </div>
+              <div class="logo-item col-md-2">
+                <img class="svg-shim img-fluid logo" alt="Agicap logo SVG" src="assets/img/brands/agicap.svg">
+              </div>
+              <div class="logo-item col-md-2">
+                <img class="svg-shim img-fluid logo" alt="Dover logo SVG" src="assets/img/brands/dover.io_logo.svg">
+              </div>
+              <div class="logo-item col-md-2">
+                <img class="svg-shim img-fluid logo" alt="Meetfrank logo SVG" src="assets/img/brands/meetfrank.com_logo.svg">
+              </div>
+              <div class="logo-item col-md-2">
+                <img class="svg-shim img-fluid logo" alt="Replyio logo SVG" src="assets/img/brands/replyio.svg">
+              </div>
+
+              <!-- Second set of logos (exact duplicate) -->
+              <div class="logo-item col-md-2 ml-n7">
+                <img class="svg-shim img-fluid logo" alt="IBM logo SVG" src="assets/img/brands/ibm.png">
+              </div>
+              <div class="logo-item col-md-2 ml-n8">
+                <img class="svg-shim img-fluid logo" style="height: 50px;" alt="Rightbound logo SVG" 
+                  src="assets/img/brands/rightbound.com_logo.svg">
+              </div>
+              <div class="logo-item col-md-2">
+                <img class="svg-shim img-fluid logo" alt="Linux logo SVG" src="assets/img/brands/LinuxFoundation.png">
+              </div>
+              <div class="logo-item col-md-2">
+                <img class="svg-shim img-fluid logo" alt="HP logo PNG" src="assets/img/brands/hp.png">
+              </div>
+              <div class="logo-item col-md-2">
+                <img class="svg-shim img-fluid logo" alt="Agicap logo SVG" src="assets/img/brands/agicap.svg">
+              </div>
+              <div class="logo-item col-md-2">
+                <img class="svg-shim img-fluid logo" alt="Dover logo SVG" src="assets/img/brands/dover.io_logo.svg">
+              </div>
+              <div class="logo-item col-md-2">
+                <img class="svg-shim img-fluid logo" alt="Meetfrank logo SVG" src="assets/img/brands/meetfrank.com_logo.svg">
+              </div>
+              <div class="logo-item col-md-2">
+                <img class="svg-shim img-fluid logo" alt="Replyio logo SVG" src="assets/img/brands/replyio.svg">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card-body d-flex d-md-none custom-rounded shadow-lift">
+
+        <div class="row align-items-center justify-content-between px-8 py-4 mt-n6">
+
+          <div class="col-6 col-sm-4 col-md-2 mb-4 mb-md-0">
+            <img class="svg-shim img-fluid logo" alt="IBM logo SVG" src="assets/img/brands/ibm.png">
+          </div>
+
+          <div class="col-6 col-sm-4 col-md-2 mb-4 mb-md-0">
+            <img class="svg-shim img-fluid logo" style="height: 50px;" alt="Rightbound logo SVG"
+              src="assets/img/brands/rightbound.com_logo.svg">
+          </div>
+
+          <div class="col-6 col-sm-4 col-md-2">
+            <img class="svg-shim img-fluid logo" alt="Linux logo SVG" src="assets/img/brands/LinuxFoundation.png">
+          </div>
+
+          <div class="col-6 col-sm-4 col-md-2 ">
+            <img class="svg-shim img-fluid logo" alt="HP logo PNG" src="assets/img/brands/hp.png">
+          </div>
+        </div>
+
+        <div class="row align-items-center justify-content-between px-8 py-4">
+
+          <div class="col-6 col-sm-4 col-md-2 mb-8 mb-md-0">
+            <img class="svg-shim img-fluid logo" alt="Agicap logo SVG" src="assets/img/brands/agicap.svg">
+          </div>
+
+          <div class="col-6 col-sm-4 col-md-2 mb-8 mb-md-0">
+
+            <img class="svg-shim img-fluid logo" alt="Dover logo SVG" src="assets/img/brands/dover.io_logo.svg">
+          </div>
+
+          <div class="col-6 col-sm-4 col-md-2 mb-4 mb-md-0">
+            <img class="svg-shim img-fluid logo" alt="Meetfrank logo SVG"
+              src="assets/img/brands/meetfrank.com_logo.svg">
+          </div>
+
+          <div class="col-6 col-sm-4 col-md-2 mb-4 mb-md-0">
+
+            <img class="svg-shim img-fluid logo" alt="Replyio logo SVG" src="assets/img/brands/replyio.svg">
+
+          </div>
+
+        </div>
+
+      </div>      
+    </div>
+  </section>
+
+  <!--  2ND FOLD
+  ================================================== -->
+  <section class="pt-8 pt-md-11 pb-8 pb-md-12 bg-white border-bottom border-top">
+
+    <!-- Content heading -->
+    <div class="container">
+      <div class="row pb-6 pb-md-8 align-items-end justify-content-center" data-aos="fade-up">
+
+        <div class="col-12">
+
+          <!-- Heading -->
+          <h2 class="display-3 font-weight-bold text-black text-center">
+            Why use our <span class="text-success">LinkedIn Email Finder?</span>
+          </h2>
+
+
+        </div>
+
+      </div> <!-- / .row -->
+
+      <div class="row mx-n2 mb-10" data-aos="fade-up">
+
+        <div class="col-12 col-md-6 col-lg-3 px-3 d-md-flex mb-4 mb-lg-0">
+          <div class="card custom-rounded border shadow-light ">
+            <div class="card-body ">
+              <p class="mb-8"><i class="neu neu-earth text-success" style="font-size: 24px;"></i></p>
+              <h1 class="font-weight-bold mb-0">XXM+</h1>
+              <lead class="mt-0 text-muted">Countries</lead>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 px-3 d-md-flex mb-4 mb-lg-0">
+          <div class="card custom-rounded border shadow-light ">
+            <div class="card-body">
+              <p class="mb-8"><i class="neu neu-user text-success" style="font-size: 24px;"></i></p>
+              <h1 class="font-weight-bold mb-0">500M+</h1>
+              <lead class="mt-0 text-muted">Profiles</lead>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 px-3 d-md-flex mb-4 mb-md-0">
+          <div class="card custom-rounded border shadow-light ">
+            <div class="card-body">
+              <p class="mb-8"><i class="neu neu-statistic-up text-success" style="font-size: 24px;"></i></p>
+              <h1 class="font-weight-bold mb-0">X%</h1>
+              <lead class="mt-0 text-muted">Productivity increase</lead>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 px-3 d-md-flex mb-0">
+          <div class="card custom-rounded border shadow-light ">
+            <div class="card-body">
+              <p class="mb-8"><i class="neu neu-db-maintenance text-success" style="font-size: 24px;"></i></p>
+              <h1 class="font-weight-bold mb-0">85-92%</h1>
+              <lead class="mt-0 text-muted">Data accuracy</lead>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-12">
+          <!-- Card 1 -->
+          <div class="card border bg-light custom-rounded mb-8" data-aos="fade-up">
+            <div class="card-body py-6">
+              <div class="row align-items-center justify-content-between">
+                <div class="col-12 col-md-6">
+                  <img class="img-fluid custom-rounded" src="assets/img/illustrations/Pay only for found emails.png" alt="Pay only for found emails illustration">
+                </div>
+                
+                <div class="col-12 col-md-5">
+                  <h2 class="font-weight-bold">Pay only for found emails</h2>
+                  <p class="lead text-muted mb-0">You only pay for the emails we find. If we can't find an email, you won't be charged.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Card 2 -->
+          <div class="card custom-rounded mb-8" data-aos="fade-up">
+            <div class="card-body py-6">
+              <div class="row align-items-center justify-content-between">
+                <div class="col-12 col-md-5 order-md-1">
+                  <h2 class="font-weight-bold">Email verification</h2>
+                  <p class="lead text-muted mb-0">Emails are verified via pattern matching for a valid email format and domain. </p>
+                </div>
+                
+                <div class="col-12 col-md-6 order-md-2">
+                  <img class="img-fluid custom-rounded" src="assets/img/illustrations/email verification.png" alt="Email verification illustration">
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Card 3 -->
+          <div class="card border bg-light custom-rounded" data-aos="fade-up">
+            <div class="card-body py-6">
+              <div class="row align-items-center justify-content-between">
+                <div class="col-12 col-md-6">
+                  <img class="img-fluid custom-rounded" src="assets/img/illustrations/not just linkedin.png" alt="Multiple sources illustration">
+                </div>
+                
+                <div class="col-12 col-md-5">
+                  <h2 class="font-weight-bold">Not just reliant on LinkedIn</h2>
+                  <p class="lead text-muted mb-0">We also gather data from multiple sources like Crunchbase to get you the best effort result</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+  
+   
+
+
+    </div> <!-- container heading--> 
+
+  </section> 
+
+  <!--  3RD FOLD
+    ================================================== -->
+  <section class="pt-8 pt-md-11 pb-6 pb-md-6 bg-light border-bottom" 
+  style="background-image: linear-gradient(rgba(249, 251, 253, 0.8), rgba(249, 251, 253, 0.8)), url(assets/img/patterns/pattern-bg.svg)">
+  
+    <!-- Content heading -->
+    <div class="container">
+      <div class="row pb-6 pb-md-8 align-items-end justify-content-center" data-aos="fade-up">
+  
+        <div class="col-8">
+  
+          <!-- Heading -->
+          <h2 class="display-3 font-weight-bold text-black text-center mb-7">
+            Our LinkedIn Email Finder gets your job done  <span class="text-success">in just 5 minutes</span>
+          </h2>
+
+          <p class="lead text-muted text-center"><span class="badge badge-success-soft badge-pill text-uppercase py-2">How you can use Sapiengraph:</span>
+          </p>
+  
+  
+        </div>
+  
+      </div> <!-- / .row -->
+    </div>
+    <div class="container-fluid px-lg-14 px-xl-11">
+      <div class="row">
+        <div class="col-12 col-xl-4 d-flex mb-2 mb-md-8" data-aos="fade-up">
+          <!-- Card -->
+          <div class="card custom-rounded shadow-light-lg mb-6 mb-md-0 lift lift-lg w-100 ">
+            <!-- Image -->
+            <img src="assets/img/illustrations/email finder prospector.png" alt="..." class="card-img-top">
+            <!-- Body -->
+            <div class="card-body d-flex flex-column" style="min-height: 310px;">
+              <!-- Heading -->
+              <h3 class="font-weight-bold">
+                Find emails using Prospector
+              </h3>
+              <!-- Text -->
+              <p class="text-muted">
+                Find verified personal email using 44 filters such as title, industry, and city. 
+Export up to 10,000 profiles from your search.
+              </p>
+              <!-- Link -->
+              <a href="#!" class="btn btn-success-soft btn-pill btn-sm mt-auto">
+                Unlock your prospects emails <i class="fe fe-arrow-right ml-3"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-12 col-xl-4 d-flex mb-2 mb-md-8" data-aos="fade-up" data-aos-delay="100">
+          <!-- Card -->
+          <div class="card custom-rounded shadow-light-lg mb-6 mb-md-0 lift lift-lg w-100">
+            <!-- Image -->
+            <img src="assets/img/illustrations/find directly in google sheets.png" alt="..." class="card-img-top">
+            <!-- Body -->
+            <div class="card-body d-flex flex-column" style="min-height: 310px;">
+              <!-- Heading -->
+              <h3 class="font-weight-bold">
+                Find emails directly in your Google Sheet
+              </h3>
+              <!-- Text -->
+              <p class="text-muted">
+                Lookup verified email addresses and enrich your database using our custom spreadsheet formulas– all without leaving your Google Sheets
+              </p>
+              <!-- Link -->
+              <a href="#!" class="btn btn-success-soft btn-pill btn-sm mt-auto">
+                Find emails using Google Sheets <i class="fe fe-arrow-right ml-3"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-12 col-xl-4 d-flex mb-0 mb-md-8" data-aos="fade-up" data-aos-delay="200">
+          <!-- Card -->
+          <div class="card custom-rounded shadow-light-lg mb-6 mb-md-0 lift lift-lg w-100">
+            <!-- Image -->
+            <img src="assets/img/illustrations/find email with api.png" alt="..." class="card-img-top">
+            <!-- Body -->
+            <div class="card-body d-flex flex-column" style="min-height: 310px;">
+              <!-- Heading -->
+              <h3 class="font-weight-bold">
+                Find emails using our API
+              </h3>
+              <!-- Text -->
+              <p class="text-muted">
+                Tired of data gaps? Supply your existing software or CRM with our API
+              </p>
+              <!-- Link -->
+              <a href="#!" class="btn btn-success-soft btn-pill btn-sm mt-auto">
+                Scale fast with our API <i class="fe fe-arrow-right ml-3"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div> <!-- / .row -->
+  
+    </div> <!-- container heading-->
+  
+  </section>
+
+  <!-- 4TH FOLD
+    ================================================== -->
+    <section class="py-7 pb-md-12 pt-md-10 bg-white">
+      <div class="container">
+        <div class="row align-items-center mb-5">
+          <div class="col-12 col-md">
+  
+            <!-- Heading -->
+            <h3 class="mb-0">
+              Use Cases
+            </h3>
+  
+            <!-- Text -->
+            <p class="mb-0 text-muted">
+              Learn how companies are using our email finder to accelerate their growth.
+            </p>
+  
+          </div>
+          <div class="col-12 col-md-auto">
+  
+            <!-- Button -->
+            <a href="https://nubela.co/blog/" class="btn btn-sm btn-outline-success d-none d-md-inline" target="_blank">
+              View all
+            </a>
+  
+          </div>
+        </div> <!-- / .row -->
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4 d-flex">
+  
+            <!-- Card -->
+            <div class="card mb-6 mb-lg-0 shadow-light-lg lift lift-lg">
+  
+              <!-- Image -->
+              <a class="card-img-top" href="blog-post.html">
+  
+                <!-- Image -->
+                <img src="assets/img/illustrations/How-to-Find-Someone-s-Email-on-Linkedin.png" alt="..." class="card-img-top">
+  
+                <!-- Shape -->
+                <div class="position-relative">
+                  <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
+                    <svg viewBox="0 0 2880 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M2160 0C1440 240 720 240 720 240H0v240h2880V0h-720z" fill="currentColor" />
+                    </svg>
+                  </div>
+                </div>
+  
+              </a>
+  
+              <!-- Body -->
+              <a class="card-body" href="blog-post.html">
+  
+                <!-- Tag -->
+                <h2 class="text-uppercase small text-muted mb-1">
+                  Sales
+                </h2>
+  
+                <!-- Heading -->
+                <h3>
+                  How to Find Someone's Email? (5 LinkedIn Email Finders)
+                </h3>
+  
+                <!-- Text -->
+                <p class="mb-0 text-muted">
+                  Need a LinkedIn Email Finder?
+                
+                  Picture this: you try to connect with key individuals, but they are not very active on LinkedIn...
+                </p>
+  
+              </a>
+  
+              <!-- Meta -->
+              <div class="row card-meta mt-auto">
+  
+                <!-- Divider -->
+                <div class="col-12">
+                  <hr class="card-meta-divide">
+                </div>
+  
+                <div class="col-auto">
+                  <!-- Avatar -->
+                  <div class="avatar avatar-sm mr-2">
+                    <img src="assets/img/logo/sg-square.png" alt="..." class="avatar-img rounded-circle">
+                  </div>
+                </div>
+  
+                <div class="col ml-n6">
+                  <!-- Author -->
+                  <a class="text-black text-uppercase font=font-weight-bold" href="blog-author.html">
+                    <h6 class="font-weight-bold mb-0 pt-1">
+                      Sapiengraph Team
+                    </h6>
+                  </a>
+  
+                  <!-- Publish Date -->
+                  <p class="text-muted text-uppercase h6 mb-0">
+                    12 Sep 2024
+                  </p>
+  
+                </div>
+  
+                <div class="col-auto">
+                  <!-- Time -->
+                  <p class="h6 text-uppercase text-muted text-right mb-0 ml-auto">
+                    <time>1 min <br>read</time>
+                  </p>
+                </div>
+  
+              </div>
+  
+            </div>
+  
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 d-flex">
+  
+            <!-- Card -->
+            <div class="card mb-6 mb-lg-0 shadow-light-lg lift lift-lg">
+  
+              <!-- Image -->
+              <a class="card-img-top" href="blog-post.html">
+  
+                <!-- Image -->
+                <img src="assets/img/illustrations/TLC_fresh-profile-scraping-is-here.png" alt="..." class="card-img-top">
+  
+                <!-- Shape -->
+                <div class="position-relative">
+                  <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
+                    <svg viewBox="0 0 2880 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M2160 0C1440 240 720 240 720 240H0v240h2880V0h-720z" fill="currentColor" />
+                    </svg>
+                  </div>
+                </div>
+  
+              </a>
+  
+              <!-- Body -->
+              <a class="card-body" href="blog-post.html">
+  
+                <!-- Tag -->
+                <h2 class="text-uppercase small text-muted mb-1">
+                  Sales
+                </h2>
+  
+                <!-- Heading -->
+                <h3>
+                  How to Generate Quality Email Leads with Ease
+                </h3>
+  
+                <!-- Text -->
+                <p class="mb-0 text-muted">
+                  Generating quality email leads is essential for success in your sales. However, this process can be time-consuming. Navigating through countless websites...
+                </p>
+  
+              </a>
+  
+              <!-- Meta -->
+              <div class="row card-meta mt-auto">
+  
+                <!-- Divider -->
+                <div class="col-12">
+                  <hr class="card-meta-divide">
+                </div>
+  
+                <div class="col-auto">
+                  <!-- Avatar -->
+                  <div class="avatar avatar-sm mr-2">
+                    <img src="assets/img/logo/sg-square.png" alt="..." class="avatar-img rounded-circle">
+                  </div>
+                </div>
+  
+                <div class="col ml-n6">
+                  <!-- Author -->
+                  <a class="text-black text-uppercase font=font-weight-bold" href="blog-author.html">
+                    <h6 class="font-weight-bold mb-0 pt-1">
+                      Sapiengraph Team
+                    </h6>
+                  </a>
+  
+                  <!-- Publish Date -->
+                  <p class="text-muted text-uppercase h6 mb-0">
+                    20 May 2024
+                  </p>
+  
+                </div>
+  
+                <div class="col-auto">
+                  <!-- Time -->
+                  <p class="h6 text-uppercase text-muted text-right mb-0 ml-auto">
+                    <time>1 min <br>read</time>
+                  </p>
+                </div>
+  
+              </div>
+  
+            </div>
+  
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 d-flex">
+  
+            <!-- Card -->
+            <div class="card mb-6 mb-lg-0 shadow-light-lg lift lift-lg">
+  
+              <!-- Image -->
+              <a class="card-img-top" href="blog-post.html">
+  
+                <!-- Image -->
+                <img src="assets/img/illustrations/How-to-Find-CEO-Email-Addresses.png" alt="..." class="card-img-top">
+  
+                <!-- Shape -->
+                <div class="position-relative">
+                  <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
+                    <svg viewBox="0 0 2880 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M2160 0C1440 240 720 240 720 240H0v240h2880V0h-720z" fill="currentColor" />
+                    </svg>
+                  </div>
+                </div>
+  
+              </a>
+  
+              <!-- Body -->
+              <a class="card-body" href="blog-post.html">
+  
+                <!-- Tag -->
+                <h2 class="text-uppercase small text-muted mb-1">
+                  Sales
+                </h2>
+  
+                <!-- Heading -->
+                <h3>
+                  How to Find CEO Email Addresses (Legally, Easy and Fast)
+                </h3>
+  
+                <!-- Text -->
+                <p class="mb-0 text-muted">
+                  We often assume that CEOs, busy with daily business dealings, only interact with fellow C-suite members. However, CEOs appreciate great ideas, creative...
+                </p>
+  
+              </a>
+  
+              <!-- Meta -->
+              <div class="row card-meta mt-auto">
+  
+                <!-- Divider -->
+                <div class="col-12">
+                  <hr class="card-meta-divide">
+                </div>
+  
+                <div class="col-auto">
+                  <!-- Avatar -->
+                  <div class="avatar avatar-sm mr-2">
+                    <img src="assets/img/logo/sg-square.png" alt="..." class="avatar-img rounded-circle">
+                  </div>
+                </div>
+  
+                <div class="col ml-n6">
+                  <!-- Author -->
+                  <a class="text-black text-uppercase font=font-weight-bold" href="blog-author.html">
+                    <h6 class="font-weight-bold mb-0 pt-1">
+                      Sapiengraph Team
+                    </h6>
+                  </a>
+  
+                  <!-- Publish Date -->
+                  <p class="text-muted text-uppercase h6 mb-0">
+                    12 Sep 2024
+                  </p>
+  
+                </div>
+  
+                <div class="col-auto">
+                  <!-- Time -->
+                  <p class="h6 text-uppercase text-muted text-right mb-0 ml-auto">
+                    <time>1 min <br>read</time>
+                  </p>
+                </div>
+  
+              </div>
+  
+            </div>
+  
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>  
+
+  <!-- PRICING
+  ================================================== -->
+  <section class="">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="card card-body bg-success custom-rounded py-8 py-md-10 "
+            style="background-image: url(assets/img/patterns/pattern-bg.svg);">
+            <div class="row justify-content-center" data-aos="fade-up">
+              <div class="col-12 col-md-10 col-lg-7 text-center mb-7">
+  
+                <!-- Heading -->
+                <h2 class="display-3 text-white font-weight-bold mb-6">
+                  We only charge you for emails found
+                </h2>
+  
+                <p class="lead text-white text-uppercase"><span class="badge badge-white-soft badge-pill py-2">Not found
+                    results are free</span>
+                </p>
+  
+              </div>
+            </div> <!-- / .row -->
+  
+            <div class="row justify-content-center">
+  
+              <div class="col-12 col-md-10 col-lg-8 text-center mb-4">
+  
+                <!-- Card -->
+                <div class="card shadow-lg mb-0 mb-md-0 custom-rounded">
+                  <div class="card-body">
+  
+                    <div class="text-center mb-5">
+                      <span class="badge badge-pill badge-info-soft">
+                        <span class="h6 text-uppercase">Lite plan</span>
+                      </span>
+                    </div>
+  
+                    <div class="text-center">
+                      <h5 class="mb-0 text-gray-700"> Starts from</h5>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                      <span class="h2 mb-0 mt-2">$</span>
+                      <span class="price display-2 mb-0">49</span>
+                      <span class="h2 align-self-end mb-1">/mo</span>
+                    </div>
+  
+                    <p class="text-center mb-5">
+                      <span class="text-info">10 credits</span> per email found
+                    </p>
+  
+                    <a href="/proxycurl/pricing" class="btn btn-block btn-success lift">
+                      See Pricing Table
+                      <i class="fe fe-arrow-right ml-3"></i>
+                    </a>
+                  </div>
+                </div>
+  
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </div> <!-- / .container -->
+  </section>
+  
+  <!-- FAQ -->
+  <section class="bg-white pt-8 pt-md-12 pb-6 pb-md-10 border-bottom">
+    <div class="container">
+  
+      <div class="row">
+        <div class="col-12 pb-6">
+          <h2 class="text-center"> FAQ</h2>
+        </div>
+      </div> <!-- row-->
+  
+      <div class="row justify-content-center pb-8">
+        <div class="col-12">
+  
+          <!-- card-->
+          <div class="card accordion" id="faqAccordion">
+            <div class="card-body shadow-light-lg custom-rounded">
+  
+              <!-- list group-->
+              <div class="list-group list-group-flush">
+  
+                <!-- list group item 0-->
+                <div class="list-group-item">
+  
+                  <!-- toggle-->
+                  <a class="d-flex align-items-center text-reset text-decoration-none" data-toggle="collapse"
+                    href="#faqZero" role="button" aria-expanded="false" aria-controls="faqZero">
+  
+                    <div class="mr-auto">
+  
+                      <!-- title-->
+                      <p class="font-weight-bold">
+                        What is a LinkedIn Email Finder?
+                      </p>
+  
+                    </div>
+  
+                    <!-- chevron-->
+                    <span class="collapse-chevron text-muted ml-4">
+                      <i class="fe fe-lg fe-chevron-down"></i>
+                    </span>
+  
+                  </a> <!-- toggle-->
+  
+                  <!-- collapse-->
+                  <div class="collapse" id="faqZero" data-parent="#faqAccordion">
+                    <div class="pt-2">
+                      <p class="text-muted">
+                        A LinkedIn email finder is a tool that helps you extract email addresses associated with LinkedIn
+                        profiles, enabling targeted outreach for sales, marketing, and recruitment.
+                      </p>
+                    </div>
+                  </div>
+  
+                </div> <!-- list group item-->
+  
+                <!-- list group item 1-->
+                <div class="list-group-item">
+  
+                  <!-- toggle-->
+                  <a class="d-flex align-items-center text-reset text-decoration-none" data-toggle="collapse"
+                    href="#faqOne" role="button" aria-expanded="false" aria-controls="faqOne">
+  
+                    <div class="mr-auto">
+  
+                      <!-- title-->
+                      <p class="font-weight-bold">
+                        How does Sapiengraph LinkedIn Email Finder find emails?
+                      </p>
+  
+                    </div>
+  
+                    <!-- chevron-->
+                    <span class="collapse-chevron text-muted ml-4">
+                      <i class="fe fe-lg fe-chevron-down"></i>
+                    </span>
+  
+                  </a> <!-- toggle-->
+  
+                  <!-- collapse-->
+                  <div class="collapse" id="faqOne" data-parent="#faqAccordion">
+                    <div class="pt-2">
+                      <p class="text-muted">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                      </p>
+                    </div>
+                  </div>
+  
+                </div> <!-- list group item-->
+  
+                <!-- list group item 2-->
+                <div class="list-group-item">
+  
+                  <!-- toggle-->
+                  <a class="d-flex align-items-center text-reset text-decoration-none" data-toggle="collapse"
+                    href="#faqTwo" role="button" aria-expanded="false" aria-controls="faqOne">
+  
+                    <div class="mr-auto">
+  
+                      <!-- title-->
+                      <p class="font-weight-bold">
+                        Can I find emails in bulk?
+                      </p>
+  
+                    </div>
+  
+                    <!-- chevron-->
+                    <span class="collapse-chevron text-muted ml-4">
+                      <i class="fe fe-lg fe-chevron-down"></i>
+                    </span>
+  
+                  </a> <!-- toggle-->
+  
+                  <!-- collapse-->
+                  <div class="collapse" id="faqTwo" data-parent="#faqAccordion">
+                    <div class="pt-2">
+                      <p class="text-muted">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                      </p>
+                    </div>
+                  </div>
+  
+                </div> <!-- list group item-->
+  
+                <!-- list group item 3-->
+                <div class="list-group-item">
+  
+                  <!-- toggle-->
+                  <a class="d-flex align-items-center text-reset text-decoration-none" data-toggle="collapse"
+                    href="#faqThree" role="button" aria-expanded="false" aria-controls="faqThree">
+  
+                    <div class="mr-auto">
+  
+                      <!-- title-->
+                      <p class="font-weight-bold">
+                        Will I be charged for emails that are not found?
+                      </p>
+  
+                    </div>
+  
+                    <!-- chevron-->
+                    <span class="collapse-chevron text-muted ml-4">
+                      <i class="fe fe-lg fe-chevron-down"></i>
+                    </span>
+  
+                  </a> <!-- toggle-->
+  
+                  <!-- collapse-->
+                  <div class="collapse" id="faqThree" data-parent="#faqAccordion">
+                    <div class="pt-2">
+                      <p class="text-muted">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                      </p>
+                    </div>
+                  </div>
+  
+                </div> <!-- list group item-->
+  
+                <!-- list group item 4-->
+                <div class="list-group-item">
+  
+                  <!-- toggle-->
+                  <a class="d-flex align-items-center text-reset text-decoration-none" data-toggle="collapse"
+                    href="#faqFour" role="button" aria-expanded="false" aria-controls="faqFour">
+  
+                    <div class="mr-auto">
+  
+                      <!-- title-->
+                      <p class="font-weight-bold">
+                        How does Sapiengraph LinkedIn Email Finder tools verify email addresses?
+                      </p>
+  
+                    </div>
+  
+                    <!-- chevron-->
+                    <span class="collapse-chevron text-muted ml-4">
+                      <i class="fe fe-lg fe-chevron-down"></i>
+                    </span>
+  
+                  </a> <!-- toggle-->
+  
+                  <!-- collapse-->
+                  <div class="collapse" id="faqFour" data-parent="#faqAccordion">
+                    <div class="pt-2">
+                      <p class="text-muted">
+                        We check if it is a valid email based on the pattern and also its domain (gmail.com, etc). We
+                        currently do not have verification for email deliverability.
+                      </p>
+                    </div>
+                  </div>
+  
+                </div> <!-- list group item-->
+  
+              </div> <!-- list group-->
+  
+            </div> <!-- card-body-->
+  
+          </div> <!-- card accordion-->
+        </div> <!-- col-->
+      </div> <!-- row-->
+  
+    </div> <!-- container-->
+  </section> <!-- FAQ-->
+  
+  <!-- CTA
+      ================================================== -->
+  <section class="pt-9 pt-md-10 pb-9 bg-success" style="background-image: url(assets/img/patterns/pattern-bg.svg);">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8 text-center">
+  
+          <!-- Badge -->
+          <span class="badge badge-pill badge-white-soft mb-4">
+            <span class="h6 text-uppercase">Try Sapiengraph</span>
+          </span>
+  
+          <!-- Heading -->
+          <h1 class="display-3 font-weight-bold text-white">
+            Yep, finding email has never been easier
+          </h1>
+        </div>
+        
+        <div class="col-12 col-md-10 col-lg-8 text-center">
+  
+          <!-- Text -->
+          <p class="lead text-gray-300 mb-8">
+            This is our obligatory marketing call-to-action to sign up for our free trial. It's worth it, trust me.
+          </p>
+  
+          <!-- Button -->
+          <a href="#!" class="btn btn-white btn-pill text-success lift">
+            Get 100 credits for free <i class="fe fe-arrow-right ml-2"></i>
+          </a>
+  
+        </div>
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
+  
+  <!-- FOOTER 
+      ================================================== -->
+  <footer class="py-8 py-md-11 bg-white">
+    <div class="container">
+      <div class="row">
+  
+        <div class="col-12 col-md-4 col-lg-3">
+  
+          <!-- Brand -->
+          <img src="./assets/img/Sapiengraph logo.svg" alt="proxycurl logo" class="footer-brand img-fluid mb-2">
+  
+        </div>
+  
+        <div class="col-6 col-md-4 col-lg-2">
+  
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">
+            Sapiengraph
+          </h6>
+  
+          <!-- List -->
+          <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
+            <li class="mb-3">
+              <a href="index.html" class="text-reset">
+                Home
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="#pricing" class="text-reset">
+                Pricing
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="#!" class="text-reset">
+                Blog
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="terms-of-use.html" class="text-reset">
+                Terms Of Use
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="#" class="text-reset">
+                Privacy Policy
+              </a>
+            </li>
+          </ul>
+  
+        </div>
+  
+        <div class="col-6 col-md-4 col-lg-2">
+  
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">
+            Products
+          </h6>
+  
+          <!-- List -->
+          <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
+            <li class="mb-3">
+              <a href="#!" class="text-reset">
+                B2B Data Enrichment for Excel / Google Sheets
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="prospector.html" class="text-reset">
+                Prospector with Export
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="#!" class="text-reset">
+                Job Change Monitor (FREE)
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="#!" class="text-reset">
+                Spreadsheet Template Gallery
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="https://nubela.co/proxycurl" class="text-reset" target="_blank">
+                API
+              </a>
+            </li>
+          </ul>
+  
+        </div>
+  
+        <div class="col-6 col-md-4 offset-md-4 col-lg-2 offset-lg-0">
+  
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">
+            Solution
+          </h6>
+  
+          <ul class="list-unstyled text-muted mb-6">
+            <li class="mb-3">
+              <a href="#" class="text-reset">
+                Solution
+              </a>
+            </li>
+          </ul>
+  
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">
+            Company
+          </h6>
+  
+          <!-- List -->
+          <ul class="list-unstyled text-muted mb-0">
+            <li class="mb-3">
+              <a href="https://nubela.co" class="text-reset">
+                Company
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="team.html" class="text-reset">
+                Team
+              </a>
+            </li>
+          </ul>
+  
+        </div>
+  
+        <div class="col-6 col-md-4 col-lg-2">
+  
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">
+            Help
+          </h6>
+  
+          <!-- List -->
+          <ul class="list-unstyled text-muted mb-0">
+            <li class="mb-3">
+              <a href="mailto:hello@sapiengraph.com" class="text-reset">
+                Email us
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="#" class="text-reset">
+                Support
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="#" class="text-reset">
+                FAQ
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="#" class="text-reset">
+                Refund Policy
+              </a>
+            </li>
+          </ul>
+  
+        </div>
+      </div> <!-- / .row -->
+      <br>
+  
+      <hr>
+      <br>
+  
+      <div class="text-center">
+        <p class="caption">Nubela Pte Ltd. All rights reserved.</p>
+      </div>
+  
+    </div> <!-- / .container -->
+  </footer>
+
+  <!-- JAVASCRIPT
+    ================================================== -->
+  <!-- Libs JS -->
+  <script src="./assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="./assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+  <script src="./assets/libs/aos/dist/aos.js"></script>
+  <script src="./assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+  <script src="./assets/libs/countup.js/dist/countUp.min.js"></script>
+  <script src="./assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+  <script src="./assets/libs/flickity/dist/flickity.pkgd.min.js"></script>
+  <script src="./assets/libs/flickity-fade/flickity-fade.js"></script>
+  <script src="./assets/libs/highlightjs/highlight.pack.min.js"></script>
+  <script src="./assets/libs/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="./assets/libs/isotope-layout/dist/isotope.pkgd.min.js"></script>
+  <script src="./assets/libs/jarallax/dist/jarallax.min.js"></script>
+  <script src="./assets/libs/jarallax/dist/jarallax-video.min.js"></script>
+  <script src="./assets/libs/jarallax/dist/jarallax-element.min.js"></script>
+  <script src="./assets/libs/quill/dist/quill.min.js"></script>
+  <script src="./assets/libs/smooth-scroll/dist/smooth-scroll.min.js"></script>
+  <script src="./assets/libs/typed.js/lib/typed.min.js"></script>
+
+  <!-- Map -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+  <!-- Theme JS -->
+  <script src="./assets/js/theme.min.js"></script>
+
+  <!-- Content Change JS-->
+  <script>
+    // Function to show content by default
+    function showDefaultContent() {
+      const contents = document.querySelectorAll('.content');
+      contents.forEach(content => {
+        if (content.id === 'hrContent') {
+          content.style.display = 'block';
+        } else {
+          content.style.display = 'none';
+        }
+      });
+    }
+
+    // Show HR content by default when the page loads
+    document.addEventListener('DOMContentLoaded', showDefaultContent);
+
+    // Function to switch content on button click
+    function showContent(contentId) {
+      const contents = document.querySelectorAll('.content');
+      contents.forEach(content => {
+        if (content.id === contentId) {
+          content.style.display = 'block';
+        } else {
+          content.style.display = 'none';
+        }
+      });
+    }
+  </script>
+  <script>
+    function showContent(contentId, button) {
+      const contents = document.querySelectorAll('.content');
+      const buttons = document.querySelectorAll('.btn');
+
+      contents.forEach(content => {
+        content.style.display = 'none';
+      });
+
+      buttons.forEach(btn => {
+        btn.classList.remove('active');
+      });
+
+      document.getElementById(contentId).style.display = 'block';
+      button.classList.add('active');
+    }
+  </script>
+  <script>
+    $(document).ready(function () {
+      function showContent(contentId, button) {
+        $('.content').fadeOut(0); // Fade out all content elements
+        $('#' + contentId).fadeIn(600); // Fade in the content associated with the clicked button
+
+        $('.btn').removeClass('active'); // Remove 'active' class from all buttons
+        $(button).addClass('active'); // Add 'active' class to the clicked button
+      }
+
+      $('#btnHR').on('click', function () {
+        showContent('hrContent', this);
+      });
+
+      $('#btnVC').on('click', function () {
+        showContent('vcContent', this);
+      });
+
+      $('#btnSales').on('click', function () {
+        showContent('salesContent', this);
+      });
+    });
+  </script>
+
+  <!-- Content switching HR,VCs,Sales-->
+  <script>
+    $(document).ready(function () {
+      var currentContent = 1; // Track the current content being displayed
+      var interval; // Variable to hold the interval
+
+      // Function to toggle between contents with smooth transition
+      function toggleContent() {
+        if (currentContent === 1) {
+          $('#hrContent1').fadeOut(300, function () {
+            $('#hrContent2').fadeIn(300);
+          });
+          currentContent = 2;
+        } else {
+          $('#hrContent2').fadeOut(300, function () {
+            $('#hrContent1').fadeIn(300);
+          });
+          currentContent = 1;
+        }
+      }
+
+      // Set interval to automatically change content every 5 seconds (5000 milliseconds)
+      interval = setInterval(toggleContent, 10000);
+
+      // Function to handle hover events
+      $('.content-section').hover(
+        function () {
+          clearInterval(interval); // Pause content switching on hover
+        },
+        function () {
+          interval = setInterval(toggleContent, 10000); // Resume content switching when hover ends
+        }
+      );
+
+      // Click event for previous button
+      $('#prevButton').on('click', function () {
+        clearInterval(interval); // Stop the interval
+        toggleContent();
+        interval = setInterval(toggleContent, 10000); // Restart the interval after manual interaction
+      });
+
+      // Click event for next button
+      $('#nextButton').on('click', function () {
+        clearInterval(interval); // Stop the interval
+        toggleContent();
+        interval = setInterval(toggleContent, 10000); // Restart the interval after manual interaction
+      });
+    });
+  </script> <!-- HR-->
+
+  <script>
+    $(document).ready(function () {
+      var currentContent = 1; // Track the current content being displayed
+      var interval; // Variable to hold the interval
+
+      // Function to toggle between contents with smooth transition
+      function toggleContent() {
+        if (currentContent === 1) {
+          $('#vcContent1').fadeOut(300, function () {
+            $('#vcContent2').fadeIn(300);
+          });
+          currentContent = 2;
+        } else {
+          $('#vcContent2').fadeOut(300, function () {
+            $('#vcContent1').fadeIn(300);
+          });
+          currentContent = 1;
+        }
+      }
+
+      // Set interval to automatically change content every 5 seconds (5000 milliseconds)
+      interval = setInterval(toggleContent, 10000);
+
+      // Function to handle hover events
+      $('.content-section').hover(
+        function () {
+          clearInterval(interval); // Pause content switching on hover
+        },
+        function () {
+          interval = setInterval(toggleContent, 10000); // Resume content switching when hover ends
+        }
+      );
+
+      // Click event for previous button
+      $('#prevButton').on('click', function () {
+        clearInterval(interval); // Stop the interval
+        toggleContent();
+        interval = setInterval(toggleContent, 10000); // Restart the interval after manual interaction
+      });
+
+      // Click event for next button
+      $('#nextButton').on('click', function () {
+        clearInterval(interval); // Stop the interval
+        toggleContent();
+        interval = setInterval(toggleContent, 10000); // Restart the interval after manual interaction
+      });
+    });
+  </script> <!-- VC-->
+
+  <script>
+    $(document).ready(function () {
+      var currentContent = 1; // Track the current content being displayed
+      var interval; // Variable to hold the interval
+
+      // Function to toggle between contents with smooth transition
+      function toggleContent() {
+        if (currentContent === 1) {
+          $('#salesContent1').fadeOut(300, function () {
+            $('#salesContent2').fadeIn(300);
+          });
+          currentContent = 2;
+        } else {
+          $('#salesContent2').fadeOut(300, function () {
+            $('#salesContent1').fadeIn(300);
+          });
+          currentContent = 1;
+        }
+      }
+
+      // Set interval to automatically change content every 5 seconds (5000 milliseconds)
+      interval = setInterval(toggleContent, 10000);
+
+      // Function to handle hover events
+      $('.content-section').hover(
+        function () {
+          clearInterval(interval); // Pause content switching on hover
+        },
+        function () {
+          interval = setInterval(toggleContent, 10000); // Resume content switching when hover ends
+        }
+      );
+
+      // Click event for previous button
+      $('#prevButton').on('click', function () {
+        clearInterval(interval); // Stop the interval
+        toggleContent();
+        interval = setInterval(toggleContent, 10000); // Restart the interval after manual interaction
+      });
+
+      // Click event for next button
+      $('#nextButton').on('click', function () {
+        clearInterval(interval); // Stop the interval
+        toggleContent();
+        interval = setInterval(toggleContent, 10000); // Restart the interval after manual interaction
+      });
+    });
+  </script> <!-- Sales-->
+
+  <script>
+    $(document).ready(function() {
+      // Add active classes to first card by default
+      $('#v-pills-point-tab').addClass('border shadow-light-lg');
+      
+      // Handle pill changes
+      $('#v-pills-tab .card').on('click', function() {
+        // Remove classes from all cards
+        $('#v-pills-tab .card').removeClass('shadow-light-lg');
+        
+        // Add classes to clicked card
+        $(this).addClass('border shadow-light-lg');
+      });
+    });
+    </script>  
+
+  <!-- Google Captcha API -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>  
+
+  <script>
+    function onCaptchaSuccess(token) {
+      // Close the modal
+      $('#captchaModal').modal('hide');
+      
+      // Optional: You can add your email finding logic here
+      // using the token received from reCAPTCHA
+    }
+  </script>
+
+</body>
+
+</html>
