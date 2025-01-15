@@ -216,7 +216,7 @@
                 Try these formulas in action
               </h5>
               
-              <!-- Person Formulas -->
+              <!-- Person Lookup Formulas -->
               <div class="mb-4"> 
                 <ul class="list-unstyled small text-gray-700">
                   <li class="mb-2 d-flex align-items-center mb-4">
@@ -232,7 +232,7 @@
                       <p class="font-weight-bold mb-1 lead">
                         Enrich person's profile data
                       </p>
-                      <code class="mb-4">=SG_PERSON(profile_url, attribute)</code>
+                      <code class="mb-4">=SG_LOOKUP_PERSON(FIRST_NAME, LAST_NAME)</code>
                       <button class="btn btn-xs btn-success-soft">
                         Apply
                       </button>
@@ -249,9 +249,9 @@
                     </div>
                     <div class="card border p-3 px-4">
                       <p class="font-weight-bold mb-1 lead">
-                        Enrich person's by role
+                        Enrich person's by company
                       </p>
-                      <code class="text-muted">=SG_LOOKUP_ROLE("ceo", "microsoft")</code>
+                      <code class="text-muted">=SG_LOOKUP_PERSON(COMPANY)</code>
                     </div>
                   </li>
                   <li class="mb-2 d-flex align-items-center mb-4">
@@ -265,21 +265,15 @@
                     </div>
                     <div class="card border p-3 px-4">
                       <p class="font-weight-bold mb-1 lead">
-                        Enrich person's by work history
+                        Enrich person's by location
                       </p>
-                      <code class="text-muted">=SG_PERSON_WORK(profile_url, attribute)</code>
+                      <code class="text-muted">=SG_LOOKUP_PERSON(LOCATION)</code>
                     </div>
                   </li>
-                </ul>
-              </div>
-
-              <!-- Company Formulas -->
-              <div class="mb-4">
-                <ul class="list-unstyled small text-gray-700">
                   <li class="mb-2 d-flex align-items-center mb-4">
                     <div class="text-center mr-4">
                       <h2 class="display-4 font-weight-bold text-muted mb-0">
-                        B1
+                        A5
                       </h2>
                       <p class="font-weight-bold text-muted text-uppercase mb-0">
                         Cell
@@ -287,11 +281,17 @@
                     </div>
                     <div class="card border p-3 px-4">
                       <p class="font-weight-bold mb-1 lead">
-                        Enrich company's profile data
+                        Enrich person's by title
                       </p>
-                      <code class="text-muted">=SG_COMPANY(company_url, attribute)</code>
+                      <code class="text-muted">=SG_LOOKUP_PERSON(TITLE)</code>
                     </div>
                   </li>
+                </ul>
+              </div>
+
+              <!-- Role Lookup Formulas -->
+              <div class="mb-4">
+                <ul class="list-unstyled small text-gray-700">
                   <li class="mb-2 d-flex align-items-center mb-4">
                     <div class="text-center mr-4">
                       <h2 class="display-4 font-weight-bold text-muted mb-0">
@@ -303,49 +303,17 @@
                     </div>
                     <div class="card border p-3 px-4">
                       <p class="font-weight-bold mb-1 lead">
-                        Enrich company's by total employee count
+                        Enrich company's by role
                       </p>
-                      <code class="text-muted">=SG_EMPLOYEE_COUNT(company_url)</code>
-                    </div>
-                  </li>
-                  <li class="mb-2 d-flex align-items-center mb-4">
-                    <div class="text-center mr-4">
-                      <h2 class="display-4 font-weight-bold text-muted mb-0">
-                        B3
-                      </h2>
-                      <p class="font-weight-bold text-muted text-uppercase mb-0">
-                        Cell
-                      </p>
-                    </div>
-                    <div class="card border p-3 px-4">
-                      <p class="font-weight-bold mb-1 lead">
-                        Enrich company's by name
-                      </p>
-                      <code class="text-muted">=SG_LOOKUP_COMPANY("Apple")</code>
+                      <code class="text-muted">=SG_LOOKUP_ROLE(ROLE, COMPANY)</code>
                     </div>
                   </li>
                 </ul>
               </div>
 
-              <!-- Contact Formulas -->
+              <!-- Person Profile Enrichment Formulas -->
               <div class="mb-4">
                 <ul class="list-unstyled small text-gray-700">
-                  <li class="mb-2 d-flex align-items-center mb-4">
-                    <div class="text-center mr-4">
-                      <h2 class="display-4 font-weight-bold text-muted mb-0">
-                        C1
-                      </h2>
-                      <p class="font-weight-bold text-muted text-uppercase mb-0">
-                        Cell
-                      </p>
-                    </div>
-                    <div class="card border p-3 px-4">
-                      <p class="font-weight-bold mb-1 lead">
-                        Enrich contact by email addresses
-                      </p>
-                      <code class="text-muted">=SG_PERSONAL_EMAILS(profile_url)</code>
-                    </div>
-                  </li>
                   <li class="mb-2 d-flex align-items-center mb-4">
                     <div class="text-center mr-4">
                       <h2 class="display-4 font-weight-bold text-muted mb-0">
@@ -357,79 +325,9 @@
                     </div>
                     <div class="card border p-3 px-4">
                       <p class="font-weight-bold mb-1 lead">
-                        Enrich contact by phone numbers
+                        Enrich person's by profile URL and attribute
                       </p>
-                      <code class="text-muted">=SG_PERSONAL_NUMBERS(profile_url)</code>
-                    </div>
-                  </li>
-                  <li class="mb-2 d-flex align-items-center mb-4">
-                    <div class="text-center mr-4">
-                      <h2 class="display-4 font-weight-bold text-muted mb-0">
-                        C3
-                      </h2>
-                      <p class="font-weight-bold text-muted text-uppercase mb-0">
-                        Cell
-                      </p>
-                    </div>
-                    <div class="card border p-3 px-4">
-                      <p class="font-weight-bold mb-1 lead">
-                        Enrich contact by profile from email
-                      </p>
-                      <code class="text-muted">=SG_REVERSE_EMAIL_LOOKUP(email)</code>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Search Formulas -->
-              <div class="mb-4">
-                <ul class="list-unstyled small text-gray-700">
-                  <li class="mb-2 d-flex align-items-center mb-4">
-                    <div class="text-center mr-4">
-                      <h2 class="display-4 font-weight-bold text-muted mb-0">
-                        D1
-                      </h2>
-                      <p class="font-weight-bold text-muted text-uppercase mb-0">
-                        Cell
-                      </p>
-                    </div>
-                    <div class="card border p-3 px-4">
-                      <p class="font-weight-bold mb-1 lead">
-                        Enrich search by person
-                      </p>
-                      <code class="text-muted">=SG_PERSON_SEARCH(country, max_results)</code>
-                    </div>
-                  </li>
-                  <li class="mb-2 d-flex align-items-center mb-4">
-                    <div class="text-center mr-4">
-                      <h2 class="display-4 font-weight-bold text-muted mb-0">
-                        D2
-                      </h2>
-                      <p class="font-weight-bold text-muted text-uppercase mb-0">
-                        Cell
-                      </p>
-                    </div>
-                    <div class="card border p-3 px-4">
-                      <p class="font-weight-bold mb-1 lead">
-                        Enrich search by company
-                      </p>
-                      <code class="text-muted">=SG_COMPANY_SEARCH(country, max_results)</code>
-                    </div>
-                  </li>
-                  <li class="mb-2 d-flex align-items-center mb-4">
-                    <div class="text-center mr-4">
-                      <h2 class="display-4 font-weight-bold text-muted mb-0">
-                        D3
-                      </h2>
-                      <p class="font-weight-bold text-muted text-uppercase mb-0">
-                        Cell
-                      </p>
-                    </div>
-                    <div class="card border p-3 px-4">
-                      <p class="font-weight-bold mb-1 lead">
-                        Enrich search by jobs
-                      </p>
-                      <code class="text-muted">=SG_JOBS_SEARCH(company_url, max_results)</code>
+                      <code class="text-muted">=SG_PERSON(PROFILE_URL, PERSON_ATTRIBUTE)</code>
                     </div>
                   </li>
                 </ul>
