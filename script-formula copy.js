@@ -49,22 +49,22 @@ document.addEventListener('DOMContentLoaded', function() {
                             },
                         },
                         1: { // Row 2
-                            0: { v: 'Enrich person\'s profile data', t: 0 },
+                            0: { v: 'Bill Gates', t: 0 },
                             1: { // Column B
-                                v: 'Enrich person\'s by company\'s role',
+                                v: 'https://www.linkedin.com/in/williamhgates',
                                 t: 0,
                                 s: { ul: 1, cl: '#0563C1' } // Underlined and blue color for URL
                             },
-                            2: { v: 'Enrich person\'s by profile URL and attribute', t: 0 }
+                            2: { v: 'John', t: 0 }
                         },
                         2: { // Row 3
-                            0: { v: 'Enrich person\'s by company', t: 0 }
+                            0: { v: 'gatesfoundation.org', t: 0 }
                         },
                         3: { // Row 4
-                            0: { v: 'Enrich person\'s by location', t: 0 }
+                            0: { v: 'Seattle', t: 0 }
                         },
                         4: { // Row 5
-                            0: { v: 'Enrich person\'s by role', t: 0 }
+                            0: { v: 'Co-chair', t: 0 }
                         }
                     },
                     columnData: {
@@ -76,32 +76,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 }
             }
-        });
-
-        // Add event listener for all Apply buttons
-        document.querySelectorAll('.apply-formula').forEach(button => {
-            button.addEventListener('click', function() {
-                try {
-                    const formula = this.getAttribute('data-formula');
-                    const workbook = univerAPI.getWorkbook('workbook1');
-                    const worksheet = workbook.getSheet('sheet1');
-                    
-                    // Get the command service
-                    const commandService = univerAPI.getCommandService();
-                    
-                    // Execute the set value command
-                    commandService.executeCommand('sheet.command.set-cell-value', {
-                        value: formula,
-                        row: 1,    // Row 2 (0-based)
-                        col: 0,    // Column A (0-based)
-                    });
-                    
-                    // Hide any popovers that might be open
-                    hidePopovers();
-                } catch (error) {
-                    console.error('Error applying formula:', error);
-                }
-            });
         });
 
         console.log('Sheet initialized successfully');
