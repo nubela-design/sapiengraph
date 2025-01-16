@@ -1,3 +1,7 @@
+#cell-ID {
+  animation: bounce 1s infinite;
+}
+
 @keyframes bounce {
     0%, 100% {
       transform: translateY(-15%);

@@ -32,7 +32,6 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="style-formula.css">
 
-
   <title>Sapiengraph Spreadsheet Formulas</title>
 
 </head>
@@ -213,7 +212,7 @@
           <div class="card border shadow-light-lg" style="height: calc(100vh - 248px);">
             <div class="card-body" style="overflow-y: auto;">
               <h5 class="h2 font-weight-bold text-center text-lg-left mb-6">
-                <svg width="32" height="32" class="mb-1 animate-bounce" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <svg width="32" height="32" class="mb-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                   <g fill="#10b981">
                     <path d="m21.661 13.017-7.85 8.63c-.79.868-2.077.01-1.812-1.21l1.811-8.326H9.093c-1.009 0-1.477-1.438-.716-2.199l7.604-7.599c.816-.815 2.055.084 1.766 1.281l-1.756 7.264h4.916c.984 0 1.465 1.378.754 2.159m-10.333 1.094H9.093c-.591 0-1.142-.171-1.615-.474L6 20.437c-.265 1.219 1.022 2.078 1.812 1.21l2.469-2.714zM6.963 8.498l4.745-4.742.039-.161c.29-1.198-.95-2.097-1.766-1.282l-7.604 7.6c-.761.76-.293 2.198.716 2.198h3.15c-.498-1.26-.22-2.673.72-3.613"></path>
                   </g>
@@ -224,7 +223,7 @@
               <!-- Person Lookup Formulas -->
               <div class="mb-4"> 
                 <ul class="list-unstyled small text-gray-700">
-                  <li class="mb-2 d-flex align-items-center mb-4">
+                  <li class="mb-2 d-flex align-items-center mb-4" id="cell-ID">
                     <div class="text-center mr-4">
                       <h2 class="display-4 font-weight-bold text-success mb-0">
                         A2
@@ -238,7 +237,11 @@
                         Enrich person's profile data
                       </p>
                       <code class="mb-4">=SG_LOOKUP_PERSON(FIRST_NAME, LAST_NAME)</code>
-                      <button class="btn btn-xs btn-success-soft">
+                      <button class="btn btn-xs btn-success-soft apply-formula" 
+                              data-toggle="popover" 
+                              data-placement="left" 
+                              data-content="Try me!"
+                              data-formula="=SG_LOOKUP_PERSON(FIRST_NAME, LAST_NAME)">
                         Apply
                       </button>
                     </div>
@@ -541,7 +544,7 @@
   <script src="./assets/libs/typed.js/lib/typed.min.js"></script>
 
   <!-- Initialize Univer -->
-  <script src="formula.js"></script>
+  <script src="script-formula.js"></script>
 
 </body>
 
