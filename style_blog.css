@@ -177,11 +177,7 @@ body {
   top: 2rem !important;
 }
 
-/* Custom Flickity button positioning */
-.flickity-button-y-adjust {
-  top: 50% !important;  /* Center vertically */
-  transform: translateY(-50%) !important;
-}
+
 
 /* Optionally adjust specific buttons */
 .flickity-button-y-adjust .flickity-prev-next-button {
@@ -204,13 +200,29 @@ body {
 
 /* Additional specific button adjustments if needed */
 .flickity-button-y-adjust .flickity-prev-next-button.previous {
-  top: 34% !important;
+  top: 27% !important;
 }
 
 .flickity-button-y-adjust .flickity-prev-next-button.next {
-  top: 34% !important;
+  top: 27% !important;
+}
+
+@media (min-width: 768px) {
+  .flickity-button-y-adjust .flickity-prev-next-button.previous {
+    top: 33% !important;
+  }
+
+  .flickity-button-y-adjust .flickity-prev-next-button.next {
+    top: 33% !important;
+  }
 }
 
 .hover-success:hover {
   color: #00B074 !important;
+}
+
+@media (min-width: 768px) {
+  .blog-card-image {
+      background-position: 20px center !important;
+  }
 }
