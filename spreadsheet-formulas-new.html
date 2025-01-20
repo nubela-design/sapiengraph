@@ -193,7 +193,7 @@
   </nav>
 
   <!-- Add the Univer container -->
-  <section class="py-8 bg-light">
+  <section class="py-10 bg-light border-bottom">
     <div class="container-fluid">
       <div class="row">
         <div class="col-12 col-lg-5 mx-auto">
@@ -223,7 +223,7 @@
               <!-- Person Lookup Formulas -->
               <div class="mb-4"> 
                 <ul class="list-unstyled small text-gray-700">
-                  <li class="mb-2 d-flex align-items-center mb-4" id="cell-ID">
+                  <li class="mb-2 d-flex align-items-center mb-4">
                     <div class="text-center mr-4">
                       <h2 class="display-4 font-weight-bold text-success mb-0">
                         A2
@@ -260,6 +260,7 @@
                         Enrich person's by company
                       </p>
                       <code class="text-muted">=SG_LOOKUP_PERSON(COMPANY)</code>
+                      <button class="apply-formula" data-formula="=SG_LOOKUP_PERSON(COMPANY)">Apply</button>
                     </div>
                   </li>
                   <li class="mb-2 d-flex align-items-center mb-4">
@@ -276,6 +277,7 @@
                         Enrich person's by location
                       </p>
                       <code class="text-muted">=SG_LOOKUP_PERSON(LOCATION)</code>
+                      <button class="apply-formula" data-formula="=SG_LOOKUP_PERSON(LOCATION)">Apply</button>
                     </div>
                   </li>
                   <li class="mb-2 d-flex align-items-center mb-4">
@@ -292,6 +294,7 @@
                         Enrich person's by title
                       </p>
                       <code class="text-muted">=SG_LOOKUP_PERSON(TITLE)</code>
+                      <button class="apply-formula" data-formula="=SG_LOOKUP_PERSON(TITLE)">Apply</button>
                     </div>
                   </li>
                 </ul>
@@ -314,13 +317,14 @@
                         Enrich company's by role
                       </p>
                       <code class="text-muted">=SG_LOOKUP_ROLE(ROLE, COMPANY)</code>
+                      <button class="apply-formula" data-formula="=SG_LOOKUP_ROLE(ROLE, COMPANY)">Apply</button>
                     </div>
                   </li>
                 </ul>
               </div>
 
               <!-- Person Profile Enrichment Formulas -->
-              <div class="mb-4">
+              <div>
                 <ul class="list-unstyled small text-gray-700">
                   <li class="mb-2 d-flex align-items-center mb-4">
                     <div class="text-center mr-4">
@@ -336,16 +340,22 @@
                         Enrich person's by profile URL and attribute
                       </p>
                       <code class="text-muted">=SG_PERSON(PROFILE_URL, PERSON_ATTRIBUTE)</code>
+                      <button class="apply-formula" data-formula="=SG_PERSON(PROFILE_URL, PERSON_ATTRIBUTE)">Apply</button>
                     </div>
                   </li>
                 </ul>
               </div>
-
-              <a href="https://sapiengraph.com/user-guide" class="btn btn-sm btn-outline-success btn-block" target="_blank">
-                View Full Documentation
-              </a>
             </div>
           </div>
+        </div>
+        <div class="col-12 col-lg-8 mx-auto mt-8 text-center">
+          <a class="btn btn-lg btn-success-soft lift lift-lg mr-md-4 mb-4 mb-md-0" href="https://sapiengraph.com/user-guide" target="_blank">
+            View Full Documentation
+          </a>
+          <a class="btn btn-lg btn-success lift lift-lg" href="#">
+            Start enriching your data
+            <i class="fe fe-arrow-right"></i>
+          </a>
         </div>
       </div>
     </div>
