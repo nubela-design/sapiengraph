@@ -109,3 +109,12 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Error initializing sheet:', error);
     }
 });
+
+document.addEventListener('scroll', function() {
+    const title = document.querySelector('.formula-title');
+    if (window.scrollY > 0) {
+      title.classList.add('is-scrolled');
+    } else {
+      title.classList.remove('is-scrolled');
+    }
+  });

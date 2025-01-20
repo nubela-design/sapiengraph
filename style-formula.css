@@ -13,9 +13,9 @@
   color: #10b981 !important;
 }
 
-/* Remove text-muted class from code on hover */
+/* Remove text-muted color from code on hover */
 .list-unstyled li:hover code.text-muted {
-  color: #f92672 !important; /* This is the pinkish color used in A2 */
+  color: #f92671 !important;
 }
 
 /* Apply button styles */
@@ -101,4 +101,14 @@
 #cell-tooltip:not(.d-none) {
     opacity: 1;
     visibility: visible;
+}
+
+/* Sticky title styles */
+.formula-title {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 1rem 0;
+  z-index: 1020;
+  margin: 0;
 }
