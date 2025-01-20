@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/rxjs/dist/bundles/rxjs.umd.min.js"></script>
+
+  <script src="https://unpkg.com/@univerjs/presets/lib/umd/index.js"></script>
+
+  <script src="https://unpkg.com/@univerjs/preset-sheets-core/lib/umd/index.js"></script>
+  <script src="https://unpkg.com/@univerjs/preset-sheets-core/lib/umd/locales/en-US.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@univerjs/preset-sheets-core/lib/index.css" />
+
+  <!-- Landkit Theme CSS -->
+  <link rel="stylesheet" href="./assets/fonts/Feather/feather.css">
+  <link rel="stylesheet" href="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="./assets/libs/aos/dist/aos.css">
+  <link rel="stylesheet" href="./assets/libs/choices.js/public/assets/styles/choices.min.css">
+  <link rel="stylesheet" href="./assets/libs/flickity-fade/flickity-fade.css">
+  <link rel="stylesheet" href="./assets/libs/flickity/dist/flickity.min.css">
+  <link rel="stylesheet" href="./assets/libs/highlightjs/styles/vs2015.css">
+  <link rel="stylesheet" href="./assets/libs/jarallax/dist/jarallax.css">
+  <link rel="stylesheet" href="./assets/libs/quill/dist/quill.core.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/theme.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/neuicons@1.9.0/css/neu.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style-formula.css">
+
+  <title>Sapiengraph Spreadsheet Formulas</title>
+
+</head>
+
+<body>
+
+  <!-- NAVBAR
+    ================================================== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container-fluid">
+
+      <!-- Brand -->
+      <a class="navbar-brand" href="./index.html">
+        <img src="./assets/img/Sapiengraph logo.svg" class="navbar-brand-img" alt="Sapiengraph logo">
+      </a>
+
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fe fe-x"></i>
+        </button>
+
+        <!-- Navigation -->
+        <ul class="navbar-nav ml-auto">
+
+          <li class="dropdown nav-item">
+            <a class="dropdown-toggle nav-link" id="navbarAccount" data-toggle="dropdown" href="#" aria-haspopup="true"
+              aria-expanded="false">
+              Products <i class="fe fe-chevron-down"></i>
+            </a>
+
+            <div class="dropdown-menu pb-4" aria-labelledby="navbarSolutions">
+
+              <div class="row justify-content-center">
+
+                <div class="col-12">
+
+                  <h2 class="small text-uppercase font-weight-bold text-success mb-1">
+                    <svg class="d-inline-flex mb-2" xmlns="http://www.w3.org/2000/svg" width="18" height="auto"
+                      viewBox="0 0 24 24">
+                      <g fill="currentColor">
+                        <path
+                          d="m7.303 13.51 2.83-1.415a4.4 4.4 0 0 0 1.962-1.962l1.414-2.83a.548.548 0 0 1 .981 0l1.415 2.83a4.4 4.4 0 0 0 1.962 1.962l2.83 1.414a.548.548 0 0 1 0 .981l-2.83 1.415a4.4 4.4 0 0 0-1.962 1.962l-1.414 2.83a.548.548 0 0 1-.982 0l-1.414-2.83a4.4 4.4 0 0 0-1.962-1.962l-2.83-1.414a.548.548 0 0 1 0-.981m.354-6.693L8.87 6.21a.235.235 0 0 0 0-.42l-1.213-.606a1.88 1.88 0 0 1-.84-.841L6.21 3.13a.235.235 0 0 0-.42 0l-.607 1.213a1.88 1.88 0 0 1-.84.84L3.13 5.79a.235.235 0 0 0 0 .42l1.213.607c.363.182.658.477.84.84L5.79 8.87a.235.235 0 0 0 .42 0l.606-1.212a1.88 1.88 0 0 1 .841-.841">
+                        </path>
+                      </g>
+                    </svg>
+                    5-Minute Growth Tools
+                  </h2>
+
+                  <div class="dropdown-item">
+                    <a class="dropdown-link custom-link" href="#">
+                      B2B Enrichment for Excel / Google Sheets
+                    </a>
+                  </div>
+
+                  <div class="dropdown-item">
+                    <a class="dropdown-link custom-link pl-4" href="#">
+                      ᴸ Formula Documentation
+                    </a>
+                  </div>
+
+                  <div class="dropdown-item">
+                    <a class="dropdown-link custom-link" href="prospector.html">
+                      Prospector with Export
+                    </a>
+                  </div>
+
+                  <div class="dropdown-item">
+                    <a class="dropdown-link custom-link" href="#">
+                      Job Change Monitor <span class="text-success font-weight-bold">(FREE)</span>
+                    </a>
+                  </div>
+
+                  <div class="dropdown-item mb-0">
+                    <a class="dropdown-link custom-link" href="#">
+                      API
+                    </a>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+          </li>
+
+          <li class="dropdown nav-item">
+            <a class="dropdown-toggle nav-link" id="navbarAccount" data-toggle="dropdown" href="#" aria-haspopup="true"
+              aria-expanded="false">
+              Solutions <i class="fe fe-chevron-down"></i>
+            </a>
+
+            <div class="dropdown-menu pb-4" aria-labelledby="navbarSolutions">
+
+              <div class="row justify-content-center">
+
+                <div class="col-12">
+
+                  <div class="dropdown-item mb-2">
+                    <a class="dropdown-link custom-link" href="#">
+                      Spreadsheet Template Gallery <span class="text-success font-weight-bold">(FREE)</span>
+                    </a>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="pricing.html">
+              Pricing
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">
+              Blog
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#!">
+              FAQ
+            </a>
+          </li>
+
+        </ul>
+
+        <!-- Button -->
+
+        <div class="text-center ml-auto">
+          <!-- Button -->
+          <a class="btn btn-sm btn-link font-weight-bold text-white text-md-gray" href="signin-illustration.html">
+            Sign in
+          </a>
+
+          <a class="navbar-btn btn btn-pill btn-sm btn-white text-success text-md-gray lift ml-auto shadow-light-lg"
+            href="#!" target="_blank">
+            Set up new account
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Add the Univer container -->
+  <section class="py-10 bg-light border-bottom">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-lg-5 mx-auto">
+          <h1 class="display-3 font-weight-bold text-center mb-8">
+            <span class="text-success">B2B enrichment in Spreadsheet</span> with LLM personalizations
+          </h1>
+        </div>
+        <div class="col-12 col-lg-8 mb-8 mb-lg-0">
+          <div class="card border shadow-light-lg">
+            <div class="card-body">
+              <div id="univerContainer" style="height: calc(100vh - 300px);"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="card border shadow-light-lg" style="height: calc(100vh - 248px);">
+            <div class="card-header py-2">
+              <h5 class="h2 font-weight-bold text-center text-lg-left formula-title">
+                <svg width="32" height="32" class="mb-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <g fill="#10b981">
+                    <path d="m21.661 13.017-7.85 8.63c-.79.868-2.077.01-1.812-1.21l1.811-8.326H9.093c-1.009 0-1.477-1.438-.716-2.199l7.604-7.599c.816-.815 2.055.084 1.766 1.281l-1.756 7.264h4.916c.984 0 1.465 1.378.754 2.159m-10.333 1.094H9.093c-.591 0-1.142-.171-1.615-.474L6 20.437c-.265 1.219 1.022 2.078 1.812 1.21l2.469-2.714zM6.963 8.498l4.745-4.742.039-.161c.29-1.198-.95-2.097-1.766-1.282l-7.604 7.6c-.761.76-.293 2.198.716 2.198h3.15c-.498-1.26-.22-2.673.72-3.613"></path>
+                  </g>
+                </svg>
+                Try these formulas in action
+              </h5>
+            </div>
+            <div class="card-body" style="overflow-y: auto;">
+              
+              <!-- Person Lookup Formulas -->
+              <div class="mb-4"> 
+                <ul class="list-unstyled small text-gray-700">
+                  <li class="mb-2 d-flex align-items-center mb-4">
+                    <div class="text-center mr-4">
+                      <h2 class="display-4 font-weight-bold text-success mb-0">
+                        A2
+                      </h2>
+                      <p class="font-weight-bold text-success text-uppercase mb-0">
+                        Cell
+                      </p>
+                    </div>
+                    <div class="card border border-success shadow-lg p-3 px-4">
+                      <p class="font-weight-bold mb-1 lead">
+                        Enrich person's profile data
+                      </p>
+                      <code class="mb-4">=SG_LOOKUP_PERSON(FIRST_NAME, LAST_NAME)</code>
+                      <button class="btn btn-xs btn-success-soft apply-formula" 
+                              data-toggle="popover" 
+                              data-placement="left" 
+                              data-content="Try me!"
+                              data-formula="=SG_LOOKUP_PERSON(FIRST_NAME, LAST_NAME)">
+                        Apply
+                      </button>
+                    </div>
+                  </li>
+                  <li class="mb-2 d-flex align-items-center mb-4">
+                    <div class="text-center mr-4">
+                      <h2 class="display-4 font-weight-bold text-muted mb-0">
+                        A3
+                      </h2>
+                      <p class="font-weight-bold text-muted text-uppercase mb-0">
+                        Cell
+                      </p>
+                    </div>
+                    <div class="card border p-3 px-4">
+                      <p class="font-weight-bold mb-1 lead">
+                        Enrich person's by company
+                      </p>
+                      <code class="text-muted">=SG_LOOKUP_PERSON(COMPANY)</code>
+                      <button class="apply-formula" data-formula="=SG_LOOKUP_PERSON(COMPANY)">Apply</button>
+                    </div>
+                  </li>
+                  <li class="mb-2 d-flex align-items-center mb-4">
+                    <div class="text-center mr-4">
+                      <h2 class="display-4 font-weight-bold text-muted mb-0">
+                        A4
+                      </h2>
+                      <p class="font-weight-bold text-muted text-uppercase mb-0">
+                        Cell
+                      </p>
+                    </div>
+                    <div class="card border p-3 px-4">
+                      <p class="font-weight-bold mb-1 lead">
+                        Enrich person's by location
+                      </p>
+                      <code class="text-muted">=SG_LOOKUP_PERSON(LOCATION)</code>
+                      <button class="apply-formula" data-formula="=SG_LOOKUP_PERSON(LOCATION)">Apply</button>
+                    </div>
+                  </li>
+                  <li class="mb-2 d-flex align-items-center mb-4">
+                    <div class="text-center mr-4">
+                      <h2 class="display-4 font-weight-bold text-muted mb-0">
+                        A5
+                      </h2>
+                      <p class="font-weight-bold text-muted text-uppercase mb-0">
+                        Cell
+                      </p>
+                    </div>
+                    <div class="card border p-3 px-4">
+                      <p class="font-weight-bold mb-1 lead">
+                        Enrich person's by title
+                      </p>
+                      <code class="text-muted">=SG_LOOKUP_PERSON(TITLE)</code>
+                      <button class="apply-formula" data-formula="=SG_LOOKUP_PERSON(TITLE)">Apply</button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Role Lookup Formulas -->
+              <div class="mb-4">
+                <ul class="list-unstyled small text-gray-700">
+                  <li class="mb-2 d-flex align-items-center mb-4">
+                    <div class="text-center mr-4">
+                      <h2 class="display-4 font-weight-bold text-muted mb-0">
+                        B2
+                      </h2>
+                      <p class="font-weight-bold text-muted text-uppercase mb-0">
+                        Cell
+                      </p>
+                    </div>
+                    <div class="card border p-3 px-4">
+                      <p class="font-weight-bold mb-1 lead">
+                        Enrich company's by role
+                      </p>
+                      <code class="text-muted">=SG_LOOKUP_ROLE(ROLE, COMPANY)</code>
+                      <button class="apply-formula" data-formula="=SG_LOOKUP_ROLE(ROLE, COMPANY)">Apply</button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Person Profile Enrichment Formulas -->
+              <div>
+                <ul class="list-unstyled small text-gray-700">
+                  <li class="mb-2 d-flex align-items-center mb-4">
+                    <div class="text-center mr-4">
+                      <h2 class="display-4 font-weight-bold text-muted mb-0">
+                        C2
+                      </h2>
+                      <p class="font-weight-bold text-muted text-uppercase mb-0">
+                        Cell
+                      </p>
+                    </div>
+                    <div class="card border p-3 px-4">
+                      <p class="font-weight-bold mb-1 lead">
+                        Enrich person's by profile URL and attribute
+                      </p>
+                      <code class="text-muted">=SG_PERSON(PROFILE_URL, PERSON_ATTRIBUTE)</code>
+                      <button class="apply-formula" data-formula="=SG_PERSON(PROFILE_URL, PERSON_ATTRIBUTE)">Apply</button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-8 mx-auto mt-8 text-center">
+          <a class="btn btn-lg btn-success-soft lift lift-lg mr-md-4 mb-4 mb-md-0" href="https://sapiengraph.com/user-guide" target="_blank">
+            View Full Documentation
+          </a>
+          <a class="btn btn-lg btn-success lift lift-lg" href="#">
+            Start enriching your data
+            <i class="fe fe-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER 
+    ================================================== -->
+  <footer class="py-8 py-md-11 bg-white">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-12 col-md-4 col-lg-3">
+
+          <!-- Brand -->
+          <img src="./assets/img/Sapiengraph logo.svg" alt="proxycurl logo" class="footer-brand img-fluid mb-2">
+
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">
+            Sapiengraph
+          </h6>
+
+          <!-- List -->
+          <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
+            <li class="mb-3">
+              <a href="index.html" class="text-reset">
+                Home
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="#pricing" class="text-reset">
+                Pricing
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="#!" class="text-reset">
+                Blog
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="terms-of-use.html" class="text-reset">
+                Terms Of Use
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="#" class="text-reset">
+                Privacy Policy
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">
+            Products
+          </h6>
+
+          <!-- List -->
+          <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
+            <li class="mb-3">
+              <a href="#!" class="text-reset">
+                B2B Data Enrichment for Excel / Google Sheets
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="prospector.html" class="text-reset">
+                Prospector with Export
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="#!" class="text-reset">
+                Job Change Monitor (FREE)
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="#!" class="text-reset">
+                Spreadsheet Template Gallery
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="https://nubela.co/proxycurl" class="text-reset" target="_blank">
+                API
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+        <div class="col-6 col-md-4 offset-md-4 col-lg-2 offset-lg-0">
+
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">
+            Solution
+          </h6>
+
+          <ul class="list-unstyled text-muted mb-6">
+            <li class="mb-3">
+              <a href="#" class="text-reset">
+                Solution
+              </a>
+            </li>
+          </ul>
+
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">
+            Company
+          </h6>
+
+          <!-- List -->
+          <ul class="list-unstyled text-muted mb-0">
+            <li class="mb-3">
+              <a href="https://nubela.co" class="text-reset">
+                Company
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="team.html" class="text-reset">
+                Team
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+
+          <!-- Heading -->
+          <h6 class="font-weight-bold text-uppercase text-gray-700">
+            Help
+          </h6>
+
+          <!-- List -->
+          <ul class="list-unstyled text-muted mb-0">
+            <li class="mb-3">
+              <a href="mailto:hello@sapiengraph.com" class="text-reset">
+                Email us
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="#" class="text-reset">
+                Support
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="#" class="text-reset">
+                FAQ
+              </a>
+            </li>
+            <li class="mb-3">
+              <a href="#" class="text-reset">
+                Refund Policy
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </div> <!-- / .row -->
+      <br>
+
+      <hr>
+      <br>
+
+      <div class="text-center">
+        <p class="caption">Nubela Pte Ltd. All rights reserved.</p>
+      </div>
+
+    </div> <!-- / .container -->
+  </footer>
+
+  <!-- JAVASCRIPT
+    ================================================== -->
+  <!-- Landkit Theme JS -->
+  <script src="./assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="./assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+  <script src="./assets/libs/aos/dist/aos.js"></script>
+  <script src="./assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+  <script src="./assets/libs/countup.js/dist/countUp.min.js"></script>
+  <script src="./assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+  <script src="./assets/libs/flickity/dist/flickity.pkgd.min.js"></script>
+  <script src="./assets/libs/flickity-fade/flickity-fade.js"></script>
+  <script src="./assets/libs/highlightjs/highlight.pack.min.js"></script>
+  <script src="./assets/libs/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="./assets/libs/isotope-layout/dist/isotope.pkgd.min.js"></script>
+  <script src="./assets/libs/jarallax/dist/jarallax.min.js"></script>
+  <script src="./assets/libs/jarallax/dist/jarallax-video.min.js"></script>
+  <script src="./assets/libs/jarallax/dist/jarallax-element.min.js"></script>
+  <script src="./assets/libs/quill/dist/quill.min.js"></script>
+  <script src="./assets/libs/smooth-scroll/dist/smooth-scroll.min.js"></script>
+  <script src="./assets/libs/typed.js/lib/typed.min.js"></script>
+
+  <!-- Initialize Univer -->
+  <script src="script-formula.js"></script>
+
+</body>
+
+</html>
