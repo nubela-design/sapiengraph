@@ -33,43 +33,37 @@ document.addEventListener('DOMContentLoaded', function() {
                     cellData: {
                         0: { // Row 1 (0-based index)
                             0: { // Column A
-                                v: 'Person Lookup',
+                                v: 'LinkedIn Profiles',
                                 t: 0,
                                 s: { bl: 1, fs: 12 }
                             },
                             1: { // Column B
-                                v: 'Role Lookup',
+                                v: 'Name',
                                 t: 0,
                                 s: { bl: 1, fs: 12 }
                             },
                             2: { // Column C
-                                v: 'Person Profile Enrichment',
+                                v: 'Company',
                                 t: 0,
                                 s: { bl: 1, fs: 12 }
                             },
                         },
                         1: { // Row 2
-                            0: { v: 'Enrich person\'s profile data', t: 0 },
-                            1: { // Column B
-                                v: 'Enrich person\'s by company\'s role',
-                                t: 0,
-                                s: { ul: 1, cl: '#0563C1' } // Underlined and blue color for URL
-                            },
-                            2: { v: 'Enrich person\'s by profile URL and attribute', t: 0 }
+                            0: { v: 'https://www.linkedin.com/in/johnrmarty', t: 0 },
                         },
                         2: { // Row 3
-                            0: { v: 'Enrich person\'s by company', t: 0 }
+                            0: { v: 'https://www.linkedin.com/in/williamhgates', t: 0 }
                         },
                         3: { // Row 4
-                            0: { v: 'Enrich person\'s by location', t: 0 }
+                            0: { v: 'https://www.linkedin.com/in/sundarpichai/', t: 0 }
                         },
                         4: { // Row 5
-                            0: { v: 'Enrich person\'s by role', t: 0 }
+                            0: { v: 'https://www.linkedin.com/in/jeffbezos/', t: 0 }
                         }
                     },
                     columnData: {
                         0: { w: 300 }, // Column A width
-                        1: { w: 300 }, // Column B width
+                        1: { w: 200 }, // Column B width
                         2: { w: 300 }, // Column C width
                         3: { w: 300 }, // Column D width
                         4: { w: 300 }  // Column E width
